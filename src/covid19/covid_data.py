@@ -9,7 +9,6 @@ from utils.cache import cache
 
 CACHE_NAME = 'covid19.covid_data'
 JHU_URL = 'https://pomber.github.io/covid19/timeseries.json'
-HPB_URL = 'https://www.hpb.health.gov.lk/api/get-current-statistical'
 
 COUNTRY_NAME_MAP = {
     'Burma': 'Myanmar',
@@ -80,14 +79,3 @@ def load_jhu_data():
             'timeseries': cleaned_timeseries,
         }
     return data
-
-
-@cache(CACHE_NAME)
-def load_hpb_data():
-    """Pull data from HPB.
-
-    Health Promotion Bureau of Sri Lanka.
-
-    Source: https://www.hpb.health.gov.lk/api/get-current-statistical
-    """
-    return www.read_json(HPB_URL)

@@ -7,10 +7,17 @@ from covid19 import lk_data
 class TestCOVIDData(unittest.TestCase):
     """Tests."""
 
+    def test_load_hpb_data_raw(self):
+        """Test."""
+        data = lk_data.load_hpb_data_raw()
+        self.assertIn('success', data)
+        self.assertNotIn('failure', data)
+
     def test_get_timeseries(self):
         """Test."""
-        self.assertIn('cum_deaths', lk_data.get_timeseries()[0])
-        self.assertNotIn('cdeaths', lk_data.get_timeseries()[0])
+        data = lk_data.get_timeseries()[0]
+        self.assertIn('cum_deaths', data)
+        self.assertNotIn('cdeaths', data)
 
 
 if __name__ == '__main__':

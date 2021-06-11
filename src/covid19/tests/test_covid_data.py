@@ -1,6 +1,8 @@
 """Test."""
 import unittest
 
+from utils.cache import cache
+
 from covid19 import covid_data
 
 
@@ -9,13 +11,9 @@ class TestCOVIDData(unittest.TestCase):
 
     def test_load_jhu_data(self):
         """Test."""
-        self.assertIn('LK', covid_data.load_jhu_data())
-        self.assertNotIn('Sri Lanka2', covid_data.load_jhu_data())
-
-    def test_load_hpb_data(self):
-        """Test."""
-        self.assertIn('success', covid_data.load_hpb_data())
-        self.assertNotIn('failure', covid_data.load_hpb_data())
+        data = covid_data.load_jhu_data()
+        self.assertIn('LK', data)
+        self.assertNotIn('Sri Lanka2', data)
 
 
 if __name__ == '__main__':
