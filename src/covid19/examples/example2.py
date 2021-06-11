@@ -17,7 +17,7 @@ y = list(map(
     timeseries,
 ))
 
-plt.bar(x, y, color='red')
+plt.stackplot(x, y, color='red')
 ax = plt.gca()
 ax.get_yaxis().set_major_formatter(
     tkr.FuncFormatter(lambda x, p: format(int(x), ','))
