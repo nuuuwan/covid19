@@ -25,7 +25,7 @@ y2 = list(map(
 plt.stackplot(x, y1, y2, colors=['green', 'lightgreen'])
 
 plt.title(
-    'People Vaccinated in %s.' % (country_data['country_name'])
+    'Total People Vaccinated in %s.' % (country_data['country_name'])
 )
 plt.suptitle(
     'Data Source: https://github.com/CSSEGISandData/COVID-19'
