@@ -1,4 +1,4 @@
-"""Example 2."""
+"""Example 3."""
 
 import datetime
 import matplotlib.pyplot as plt
