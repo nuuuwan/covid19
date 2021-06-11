@@ -17,12 +17,14 @@ pip install -i https://test.pypi.org/simple/ covid19-nuuuwan
 
 ## Release History
 
-### 1.0.1 (PRE-RELEASE ONLY)
+### 1.0.1
 
-* PLANNED - Vaccination Data from (https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations)
+* Vaccination Data from (https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations)
+* More examples
 
-### 1.0.0 Initial Release
+### 1.0.0
 
+* Initial Release
 * Load data from the COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University.
 * Load data from the Health Promotion Bureau of Sri Lanka
 * See https://nuwans.medium.com/analyzing-covid19-in-sri-lanka-with-python-caea03296381 for some examples
