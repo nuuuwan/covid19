@@ -89,7 +89,7 @@ def load_jhu_data():  # TODO: Should change this name to reflect OWID
                 prev_item.get(key, 0),
             )
 
-        return {
+        cleaned_item = {
             'date': str(datetime.datetime.fromtimestamp(unixtime)),
             'unixtime': unixtime,
             'cum_confirmed': item['confirmed'],
@@ -105,7 +105,10 @@ def load_jhu_data():  # TODO: Should change this name to reflect OWID
                 item['deaths'] - prev_item.get('cum_deaths', 0),
             'new_recovered':
                 item['recovered'] - prev_item.get('cum_recovered', 0),
-        } | vaccination_data
+        }
+        for k in vaccination_data:
+            cleaned_item[k] = vaccination_data[k]
+        return cleaned_item
 
     raw_data = load_jhu_data_raw()
     data = {}
