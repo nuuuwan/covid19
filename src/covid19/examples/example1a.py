@@ -23,14 +23,14 @@ for country_meta_data in country_meta_datas:
     country_data = jhu_data[country_meta_data['alpha_2']]
     legend_labels.append(country_data['country_name'])
     timeseries = country_data['timeseries']
-    pop = country_data['population']
+    population = country_data['population']
 
     x = list(map(
         lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
         timeseries,
     ))
     y = list(map(
-        lambda d: 100_000 * d['active'] / pop,
+        lambda d: 100_000 * d['active'] / population,
         timeseries,
     ))
 

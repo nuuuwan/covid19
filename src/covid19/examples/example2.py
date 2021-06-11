@@ -33,7 +33,8 @@ plt.title(
     + '& Total Deaths in %s.' % (country_data['country_name'])
 )
 plt.suptitle(
-    'Data Source: https://github.com/CSSEGISandData/COVID-19 & https://www.hpb.health.gov.lk/api/get-current-statistical',
+    'Data Source: https://github.com/CSSEGISandData/COVID-19 '
+    + '& https://www.hpb.health.gov.lk/api/get-current-statistical',
     fontsize=6,
 )
 plt.legend(
