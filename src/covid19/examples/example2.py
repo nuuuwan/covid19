@@ -4,9 +4,9 @@ import datetime
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 
-from covid19 import covid_data
+from covid19 import lk_data
 
-timeseries = covid_data.load_jhu_data()['LK']['timeseries']
+timeseries = lk_data.get_timeseries()
 
 x = list(map(
     lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
