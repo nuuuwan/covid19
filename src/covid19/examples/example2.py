@@ -6,7 +6,7 @@ import matplotlib.ticker as tkr
 
 from covid19 import covid_data
 
-country_data = covid_data.load_jhu_data()['LK']
+country_data = covid_data.load_jhu_data()['GB']
 timeseries = country_data['timeseries']
 
 x = list(map(

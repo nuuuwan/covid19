@@ -17,6 +17,10 @@ pip install -i https://test.pypi.org/simple/ covid19-nuuuwan
 
 ## Release History
 
+### 1.0.1 (PRE-RELEASE ONLY)
+
+* PLANNED - Vaccination Data from (https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations)
+
 ### 1.0.0 Initial Release
 
 * Load data from the COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University.
