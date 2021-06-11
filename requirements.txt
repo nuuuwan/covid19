@@ -1,2 +1,3 @@
 pycountry
+pypopulation
 utils-nuuuwan

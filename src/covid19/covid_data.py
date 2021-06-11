@@ -2,12 +2,12 @@
 import logging
 import time
 import datetime
-import json
 import pycountry
+import pypopulation
 from utils import www
 from utils.cache import cache
 
-CACHE_NAME = 'covid19.covid_data'
+CACHE_NAME = 'covid19.covid_data.v1'
 JHU_URL = 'https://pomber.github.io/covid19/timeseries.json'
 
 COUNTRY_NAME_MAP = {
@@ -76,6 +76,7 @@ def load_jhu_data():
             'country_name': country.name,
             'country_alpha_2': country.alpha_2,
             'country_alpha_3': country.alpha_3,
+            'population': pypopulation.get_population(country.alpha_2),
             'timeseries': cleaned_timeseries,
         }
     return data

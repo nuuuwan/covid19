@@ -31,8 +31,10 @@ ax.get_yaxis().set_major_formatter(
     tkr.FuncFormatter(lambda x, p: format(int(x), ','))
 )
 plt.gcf().autofmt_xdate()
-plt.title('Daily COVID19 Active Cases, Total Recovered Cases, ' \
-    + '& Total Deaths in China.')
+plt.title(
+    'Daily COVID19 Active Cases, Total Recovered Cases, '
+    + '& Total Deaths in China.'
+)
 plt.suptitle(
     'Data Source: https://github.com/CSSEGISandData/COVID-19',
     fontsize=6,
