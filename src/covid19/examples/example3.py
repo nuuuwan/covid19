@@ -6,7 +6,8 @@ import matplotlib.ticker as tkr
 
 from covid19 import covid_data
 
-timeseries = covid_data.load_jhu_data()['CN']['timeseries']
+country_data = covid_data.load_jhu_data()['IL']
+timeseries = country_data['timeseries']
 
 x = list(map(
     lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
@@ -33,7 +34,7 @@ ax.get_yaxis().set_major_formatter(
 plt.gcf().autofmt_xdate()
 plt.title(
     'Daily COVID19 Active Cases, Total Recovered Cases, '
-    + '& Total Deaths in China.'
+    + '& Total Deaths in %s.' % (country_data['country_name'])
 )
 plt.suptitle(
     'Data Source: https://github.com/CSSEGISandData/COVID-19',

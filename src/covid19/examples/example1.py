@@ -13,6 +13,9 @@ country_meta_datas = [
     {'alpha_2': 'PK', 'color': 'lightgreen'},
     {'alpha_2': 'NP', 'color': 'blue'},
     {'alpha_2': 'BD', 'color': 'darkgreen'},
+    {'alpha_2': 'AF', 'color': 'lightblue'},
+    # {'alpha_2': 'MV', 'color': 'red'},
+    {'alpha_2': 'BT', 'color': 'purple'},
 ]
 
 legend_labels = []
@@ -27,7 +30,7 @@ for country_meta_data in country_meta_datas:
         timeseries,
     ))
     y = list(map(
-        lambda d: d['active'] / pop,
+        lambda d: 100_000 * d['active'] / pop,
         timeseries,
     ))
 
@@ -38,7 +41,7 @@ ax.get_yaxis().set_major_formatter(
     tkr.FuncFormatter(lambda x, p: format(int(x), ','))
 )
 plt.gcf().autofmt_xdate()
-plt.title('Active COVID19 Cases per 100,000 people in India and Sri Lanka.')
+plt.title('Active COVID19 Cases per 100,000 people in South Asia (excl. Maldives).')
 plt.suptitle(
     'Data Source: https://github.com/CSSEGISandData/COVID-19',
     fontsize=6,
