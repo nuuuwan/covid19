@@ -56,6 +56,6 @@ ax.get_yaxis().set_major_formatter(
 fig = plt.gcf()
 fig.autofmt_xdate()
 fig.set_size_inches(12, 6.75)
-fig.savefig('/tmp/example2_%s.png' % country_alpha_2, dpi=600)
+fig.savefig('/tmp/example7_%s.png' % country_alpha_2, dpi=600)
 
 plt.show()
