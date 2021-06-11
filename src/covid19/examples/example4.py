@@ -34,7 +34,7 @@ plt.legend(['Cases per Test', '%d-Day Moving Window' % N])
 
 ax = plt.gca()
 ax.get_yaxis().set_major_formatter(
-    tkr.FuncFormatter(lambda x, p: format(int(x), ','))
+    tkr.FuncFormatter(lambda x, p: format(float(x), '.2%'))
 )
 
 fig = plt.gcf()
