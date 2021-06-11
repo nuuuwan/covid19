@@ -6,7 +6,7 @@ import matplotlib.ticker as tkr
 
 from covid19 import covid_data
 
-country_data = covid_data.load_jhu_data()['IL']
+country_data = covid_data.load_jhu_data()['LK']
 timeseries = country_data['timeseries']
 
 x = list(map(
@@ -27,21 +27,28 @@ y3 = list(map(
 ))
 
 plt.stackplot(x, y1, y2, y3, colors=['blue', 'green', 'red'])
-ax = plt.gca()
-ax.get_yaxis().set_major_formatter(
-    tkr.FuncFormatter(lambda x, p: format(int(x), ','))
-)
-plt.gcf().autofmt_xdate()
+
 plt.title(
     'Daily COVID19 Active Cases, Total Recovered Cases, '
     + '& Total Deaths in %s.' % (country_data['country_name'])
 )
 plt.suptitle(
-    'Data Source: https://github.com/CSSEGISandData/COVID-19',
+    'Data Source: https://github.com/CSSEGISandData/COVID-19 & https://www.hpb.health.gov.lk/api/get-current-statistical',
     fontsize=6,
 )
 plt.legend(
     ['Active', 'Total Recovered', 'Total Deaths'],
     loc='upper left',
 )
+
+ax = plt.gca()
+ax.get_yaxis().set_major_formatter(
+    tkr.FuncFormatter(lambda x, p: format(int(x), ','))
+)
+
+fig = plt.gcf()
+fig.autofmt_xdate()
+fig.set_size_inches(12, 6.75)
+fig.savefig('/tmp/%s.png' % __name__, dpi=100)
+
 plt.show()

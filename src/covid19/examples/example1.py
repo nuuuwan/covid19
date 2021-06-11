@@ -36,11 +36,6 @@ for country_meta_data in country_meta_datas:
 
     plt.plot(x, y, color=country_meta_data['color'])
 
-ax = plt.gca()
-ax.get_yaxis().set_major_formatter(
-    tkr.FuncFormatter(lambda x, p: format(int(x), ','))
-)
-plt.gcf().autofmt_xdate()
 plt.title('Active COVID19 Cases per 100,000 people in South Asia (excl. Maldives).')
 plt.suptitle(
     'Data Source: https://github.com/CSSEGISandData/COVID-19',
@@ -50,4 +45,15 @@ plt.legend(
     legend_labels,
     loc='upper left',
 )
+
+ax = plt.gca()
+ax.get_yaxis().set_major_formatter(
+    tkr.FuncFormatter(lambda x, p: format(int(x), ','))
+)
+
+fig = plt.gcf()
+fig.autofmt_xdate()
+fig.set_size_inches(8, 4.5)
+fig.savefig('/tmp/%s.png' % __name__, dpi=100)
+
 plt.show()

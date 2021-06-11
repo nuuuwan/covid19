@@ -21,6 +21,13 @@ COUNTRY_NAME_MAP = {
 }
 
 
+def parse_time(time_str):
+    """Parse time."""
+    return time.mktime(
+        datetime.datetime.strptime(time_str, "%Y-%m-%d").timetuple(),
+    )
+
+
 @cache(CACHE_NAME)
 def load_jhu_data_raw():
     """Pull data from JHU's CSSE.
@@ -39,9 +46,7 @@ def load_jhu_data():
     """Wrap load_jhu_data_raw, to make data more useful."""
 
     def _cleaned_timeseries_item(item, prev_item):
-        unixtime = time.mktime(
-            datetime.datetime.strptime(item['date'], "%Y-%m-%d").timetuple(),
-        )
+        unixtime = parse_time(item['date'])
         return {
             'date': str(datetime.datetime.fromtimestamp(unixtime)),
             'unixtime': unixtime,

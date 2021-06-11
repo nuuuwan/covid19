@@ -21,4 +21,30 @@ def load_hpb_data_raw():
 
 
 def get_timeseries():
-    return covid_data.load_jhu_data()['LK']['timeseries']
+    """Extract timeseries for Sri Lanka."""
+    lk_jhu_timeseries = covid_data.load_jhu_data()['LK']['timeseries']
+    hpb_data = load_hpb_data_raw()
+    daily_pcr_testing_data = hpb_data['data']['daily_pcr_testing_data']
+
+    t_to_tests = dict(zip(
+        list(map(
+            lambda x: covid_data.parse_time(x['date']),
+            daily_pcr_testing_data,
+        )),
+        list(map(
+            lambda x: (int)(x['count']),
+            daily_pcr_testing_data,
+        )),
+    ))
+
+    def _add_pcr_test_data(item):
+        unixtime = item['unixtime']
+        item['new_pcr_tests'] = t_to_tests.get(unixtime, 0)
+        return item
+
+    lk_timeseries = list(map(
+        _add_pcr_test_data,
+        lk_jhu_timeseries,
+    ))
+
+    return lk_timeseries

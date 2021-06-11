@@ -17,6 +17,7 @@ class TestCOVIDData(unittest.TestCase):
         """Test."""
         data = lk_data.get_timeseries()[0]
         self.assertIn('cum_deaths', data)
+        self.assertIn('new_pcr_tests', data)
         self.assertNotIn('cdeaths', data)
 
 
