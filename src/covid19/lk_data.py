@@ -1,6 +1,6 @@
 """Sri Lanka specific COVID19 data."""
 
-from utils import www
+from utils import www, timex
 from utils.cache import cache
 
 from covid19 import covid_data
@@ -28,7 +28,7 @@ def get_timeseries():
 
     t_to_tests = dict(zip(
         list(map(
-            lambda x: covid_data.parse_time(x['date']),
+            lambda x: timex.parse_time(x['date'], '%Y-%m-%d'),
             daily_pcr_testing_data,
         )),
         list(map(

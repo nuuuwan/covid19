@@ -4,11 +4,13 @@ import time
 import datetime
 import pycountry
 import pypopulation
-from utils import www
+from utils import www, timex
 from utils.cache import cache
 
-CACHE_NAME = 'covid19.covid_data.v1'
+CACHE_NAME = 'covid19.covid_data.v2'
 JHU_URL = 'https://pomber.github.io/covid19/timeseries.json'
+OWID_VAC_URL = 'https://raw.githubusercontent.com/owid/covid-19-data' \
+    + '/master/public/data/vaccinations/vaccinations.json'
 
 COUNTRY_NAME_MAP = {
     'Burma': 'Myanmar',
@@ -21,14 +23,7 @@ COUNTRY_NAME_MAP = {
 }
 
 
-def parse_time(time_str):
-    """Parse time."""
-    return time.mktime(
-        datetime.datetime.strptime(time_str, "%Y-%m-%d").timetuple(),
-    )
-
-
-@cache(CACHE_NAME)
+@cache(CACHE_NAME, 3600)
 def load_jhu_data_raw():
     """Pull data from JHU's CSSE.
 
@@ -41,12 +36,41 @@ def load_jhu_data_raw():
     return www.read_json(JHU_URL)
 
 
-@cache(CACHE_NAME)
-def load_jhu_data():
+@cache(CACHE_NAME, 3600)
+def load_owid_vaccination_data_raw():
+    """Pull Our World in Data Vaccination Data.
+
+    Source: https://github.com/owid/covid-19-data
+    """
+    return www.read_json(OWID_VAC_URL)
+
+
+@cache(CACHE_NAME, 3600)
+def load_jhu_data():  # TODO: Should change this name to reflect OWID
     """Wrap load_jhu_data_raw, to make data more useful."""
 
-    def _cleaned_timeseries_item(item, prev_item):
-        unixtime = parse_time(item['date'])
+    # vaccine data (from owid)
+    vac_data = load_owid_vaccination_data_raw()
+    country_to_date_to_vac_data = {}
+    for country_data in vac_data:
+        country_alpha_3 = country_data['iso_code']
+
+        date_to_vac_data = {}
+        for date_data in country_data['data']:
+            unixtime = timex.parse_time(date_data['date'], '%Y-%m-%d')
+            date_to_vac_data[unixtime] = {
+                'cum_vaccinations':
+                    date_data.get('total_vaccinations', 0),
+                'cum_people_vaccinated':
+                    date_data.get('people_vaccinated', 0),
+                'cum_people_fully_vaccinated':
+                    date_data.get('people_fully_vaccinated', 0),
+            }
+    country_to_date_to_vac_data[country_alpha_3] = date_to_vac_data
+
+    # original jhu data
+    def _cleaned_timeseries_item(item, prev_item, country_alpha_3):
+        unixtime = timex.parse_time(item['date'], '%Y-%m-%d')
         return {
             'date': str(datetime.datetime.fromtimestamp(unixtime)),
             'unixtime': unixtime,
@@ -58,7 +82,8 @@ def load_jhu_data():
             'new_confirmed': item['confirmed'] - prev_item.get('confirmed', 0),
             'new_deaths': item['deaths'] - prev_item.get('deaths', 0),
             'new_recovered': item['recovered'] - prev_item.get('recovered', 0),
-        }
+        } | country_to_date_to_vac_data\
+            .get(country_alpha_3, {}).get(unixtime, {})
 
     raw_data = load_jhu_data_raw()
     data = {}
@@ -73,7 +98,7 @@ def load_jhu_data():
         prev_item = {}
         for item in timeseries:
             cleaned_timeseries.append(
-                _cleaned_timeseries_item(item, prev_item),
+                _cleaned_timeseries_item(item, prev_item, country.alpha_3),
             )
             prev_item = item
 
@@ -84,4 +109,5 @@ def load_jhu_data():
             'population': pypopulation.get_population(country.alpha_2),
             'timeseries': cleaned_timeseries,
         }
+
     return data
