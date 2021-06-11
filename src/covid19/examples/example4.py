@@ -30,7 +30,7 @@ plt.suptitle(
     'Data Source: https://github.com/CSSEGISandData/COVID-19 & https://www.hpb.health.gov.lk/api/get-current-statistical',
     fontsize=6,
 )
-plt.legend(['Tests', '%d-Day Moving Window' % N])
+plt.legend(['Cases per Test', '%d-Day Moving Window' % N])
 
 ax = plt.gca()
 ax.get_yaxis().set_major_formatter(
@@ -40,6 +40,6 @@ ax.get_yaxis().set_major_formatter(
 fig = plt.gcf()
 fig.autofmt_xdate()
 fig.set_size_inches(12, 6.75)
-fig.savefig('/tmp/%s.png' % __name__, dpi=100)
+fig.savefig('/tmp/example4.png', dpi=600)
 
 plt.show()

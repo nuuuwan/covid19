@@ -33,7 +33,6 @@ for country_meta_data in country_meta_datas:
         lambda d: 100_000 * d['cum_deaths'] / pop,
         timeseries,
     ))
-
     plt.plot(x, y, color=country_meta_data['color'])
 
 plt.title('Total Deaths per 100,000 people in South Asia.')
@@ -54,6 +53,6 @@ ax.get_yaxis().set_major_formatter(
 fig = plt.gcf()
 fig.autofmt_xdate()
 fig.set_size_inches(8, 4.5)
-fig.savefig('/tmp/%s.png' % __name__, dpi=100)
+fig.savefig('/tmp/example1.png', dpi=600)
 
 plt.show()

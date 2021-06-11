@@ -14,7 +14,7 @@ country_meta_datas = [
     {'alpha_2': 'NP', 'color': 'blue'},
     {'alpha_2': 'BD', 'color': 'darkgreen'},
     {'alpha_2': 'AF', 'color': 'lightblue'},
-    {'alpha_2': 'MV', 'color': 'red'},
+    # {'alpha_2': 'MV', 'color': 'red'},
     {'alpha_2': 'BT', 'color': 'purple'},
 ]
 
@@ -56,6 +56,6 @@ ax.get_yaxis().set_major_formatter(
 fig = plt.gcf()
 fig.autofmt_xdate()
 fig.set_size_inches(8, 4.5)
-fig.savefig('/tmp/%s.png' % __name__, dpi=100)
+fig.savefig('/tmp/example1a.png', dpi=600)
 
 plt.show()
