@@ -1,45 +1,35 @@
-"""Example 3."""
+"""Example 2."""
 
 import datetime
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 
-from covid19 import covid_data
+from covid19 import lk_data
 
-country_data = covid_data.load_jhu_data()['LK']
-timeseries = country_data['timeseries']
+timeseries = lk_data.get_timeseries()
 
 x = list(map(
     lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
     timeseries,
 ))
-y1 = list(map(
-    lambda d: d['active'],
+y = list(map(
+    lambda d: d['new_confirmed'],
     timeseries,
 ))
+plt.plot(x, y, color='red')
+
 y2 = list(map(
-    lambda d: d['cum_recovered'],
+    lambda d: d['new_pcr_tests'],
     timeseries,
 ))
-y3 = list(map(
-    lambda d: d['cum_deaths'],
-    timeseries,
-))
+plt.plot(x, y2, color='blue')
 
-plt.stackplot(x, y1, y2, y3, colors=['blue', 'green', 'red'])
-
-plt.title(
-    'Daily COVID19 Active Cases, Total Recovered Cases, '
-    + '& Total Deaths in %s.' % (country_data['country_name'])
-)
+plt.title('Daily New COVID19 Cases and PCR Tests in Sri Lanka.')
 plt.suptitle(
-    'Data Source: https://github.com/CSSEGISandData/COVID-19 & https://www.hpb.health.gov.lk/api/get-current-statistical',
+    'Data Source: https://github.com/CSSEGISandData/COVID-19',
     fontsize=6,
 )
-plt.legend(
-    ['Active', 'Total Recovered', 'Total Deaths'],
-    loc='upper left',
-)
+plt.legend(['Daily New Cases', 'Daily PCR Tests'])
 
 ax = plt.gca()
 ax.get_yaxis().set_major_formatter(

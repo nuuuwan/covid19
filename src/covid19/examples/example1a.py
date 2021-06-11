@@ -1,4 +1,4 @@
-"""Example 1."""
+"""Example 1a."""
 
 import datetime
 import matplotlib.pyplot as plt
@@ -30,13 +30,15 @@ for country_meta_data in country_meta_datas:
         timeseries,
     ))
     y = list(map(
-        lambda d: 100_000 * d['cum_deaths'] / pop,
+        lambda d: 100_000 * d['active'] / pop,
         timeseries,
     ))
 
     plt.plot(x, y, color=country_meta_data['color'])
 
-plt.title('Total Deaths per 100,000 people in South Asia.')
+plt.title(
+    'Active COVID19Cases per 100,000 people in South Asia.',
+)
 plt.suptitle(
     'Data Source: https://github.com/CSSEGISandData/COVID-19',
     fontsize=6,
