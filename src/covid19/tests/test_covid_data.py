@@ -9,7 +9,7 @@ class TestCOVIDData(unittest.TestCase):
 
     def test_load_jhu_data(self):
         """Test."""
-        self.assertIn('Sri Lanka', covid_data.load_jhu_data())
+        self.assertIn('LK', covid_data.load_jhu_data())
         self.assertNotIn('Sri Lanka2', covid_data.load_jhu_data())
 
     def test_load_hpb_data(self):
