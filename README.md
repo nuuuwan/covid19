@@ -17,6 +17,10 @@ pip install -i https://test.pypi.org/simple/ covid19-nuuuwan
 
 ## Release History
 
+### 1.0.2 (PRE-RELEASE ONLY)
+
+
+
 ### 1.0.1
 
 * Vaccination Data from (https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations)
