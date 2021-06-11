@@ -1,4 +1,4 @@
-"""Example 2."""
+"""Example 6."""
 
 import datetime
 import matplotlib.pyplot as plt
@@ -14,30 +14,25 @@ x = list(map(
     timeseries,
 ))
 y1 = list(map(
-    lambda d: d['active'],
+    lambda d: d['cum_people_fully_vaccinated'],
     timeseries,
 ))
 y2 = list(map(
-    lambda d: d['cum_recovered'],
-    timeseries,
-))
-y3 = list(map(
-    lambda d: d['cum_deaths'],
+    lambda d: d['cum_people_vaccinated'] - d['cum_people_fully_vaccinated'],
     timeseries,
 ))
 
-plt.stackplot(x, y1, y2, y3, colors=['blue', 'green', 'red'])
+plt.stackplot(x, y1, y2, colors=['green', 'lightgreen'])
 
 plt.title(
-    'Daily COVID19 Active Cases, Total Recovered Cases, '
-    + '& Total Deaths in %s.' % (country_data['country_name'])
+    'People Vaccinated in %s.' % (country_data['country_name'])
 )
 plt.suptitle(
     'Data Source: https://github.com/CSSEGISandData/COVID-19 & https://www.hpb.health.gov.lk/api/get-current-statistical',
     fontsize=6,
 )
 plt.legend(
-    ['Active', 'Total Recovered', 'Total Deaths'],
+    ['Fully', 'Partially'],
     loc='upper left',
 )
 
@@ -49,6 +44,6 @@ ax.get_yaxis().set_major_formatter(
 fig = plt.gcf()
 fig.autofmt_xdate()
 fig.set_size_inches(12, 6.75)
-fig.savefig('/tmp/example2.png', dpi=600)
+fig.savefig('/tmp/example6.png', dpi=600)
 
 plt.show()

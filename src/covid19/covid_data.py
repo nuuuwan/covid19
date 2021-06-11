@@ -7,7 +7,7 @@ import pypopulation
 from utils import www, timex
 from utils.cache import cache
 
-CACHE_NAME = 'covid19.covid_data.v2'
+CACHE_NAME = 'covid19.covid_data'
 JHU_URL = 'https://pomber.github.io/covid19/timeseries.json'
 OWID_VAC_URL = 'https://raw.githubusercontent.com/owid/covid-19-data' \
     + '/master/public/data/vaccinations/vaccinations.json'
@@ -66,11 +66,29 @@ def load_jhu_data():  # TODO: Should change this name to reflect OWID
                 'cum_people_fully_vaccinated':
                     date_data.get('people_fully_vaccinated', 0),
             }
-    country_to_date_to_vac_data[country_alpha_3] = date_to_vac_data
+        country_to_date_to_vac_data[country_alpha_3] = date_to_vac_data
 
     # original jhu data
     def _cleaned_timeseries_item(item, prev_item, country_alpha_3):
         unixtime = timex.parse_time(item['date'], '%Y-%m-%d')
+        vaccination_data = country_to_date_to_vac_data \
+            .get(country_alpha_3, {}) \
+            .get(unixtime, {
+                'cum_vaccinations': 0,
+                'cum_people_vaccinated': 0,
+                'cum_people_fully_vaccinated': 0,
+            })
+
+        for key in [
+            'cum_vaccinations',
+            'cum_people_vaccinated',
+            'cum_people_fully_vaccinated',
+        ]:
+            vaccination_data[key] = max(
+                vaccination_data[key],
+                prev_item.get(key, 0),
+            )
+
         return {
             'date': str(datetime.datetime.fromtimestamp(unixtime)),
             'unixtime': unixtime,
@@ -78,12 +96,16 @@ def load_jhu_data():  # TODO: Should change this name to reflect OWID
             'cum_deaths': item['deaths'],
             'cum_recovered': item['recovered'],
 
-            'active': item['confirmed'] - item['deaths'] - item['recovered'],
-            'new_confirmed': item['confirmed'] - prev_item.get('confirmed', 0),
-            'new_deaths': item['deaths'] - prev_item.get('deaths', 0),
-            'new_recovered': item['recovered'] - prev_item.get('recovered', 0),
-        } | country_to_date_to_vac_data\
-            .get(country_alpha_3, {}).get(unixtime, {})
+            'active':
+                item['confirmed'] - item['deaths'] - item['recovered'],
+
+            'new_confirmed':
+                item['confirmed'] - prev_item.get('cum_confirmed', 0),
+            'new_deaths':
+                item['deaths'] - prev_item.get('cum_deaths', 0),
+            'new_recovered':
+                item['recovered'] - prev_item.get('cum_recovered', 0),
+        } | vaccination_data
 
     raw_data = load_jhu_data_raw()
     data = {}
@@ -95,12 +117,13 @@ def load_jhu_data():  # TODO: Should change this name to reflect OWID
             logging.error('Unknown country: %s', country_name)
             continue
         cleaned_timeseries = []
+
         prev_item = {}
         for item in timeseries:
-            cleaned_timeseries.append(
-                _cleaned_timeseries_item(item, prev_item, country.alpha_3),
-            )
-            prev_item = item
+            cleaned_item = \
+                _cleaned_timeseries_item(item, prev_item, country.alpha_3)
+            cleaned_timeseries.append(cleaned_item)
+            prev_item = cleaned_item
 
         data[country.alpha_2] = {
             'country_name': country.name,
