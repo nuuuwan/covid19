@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 import numpy as np
 
+from utils import timex
+
 from covid19 import lk_data
 
 DAYS_TO_PLOT = 56
@@ -18,6 +20,8 @@ def _plot_with_time_window(
     label,
 ):
     timeseries = lk_data.get_timeseries()
+    date_id = timex.format_time(timeseries[-1]['unixtime'], '%Y%m%d')
+    date = timex.format_time(timeseries[-1]['unixtime'], '%Y-%m-%d')
     x = list(map(
         lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
         timeseries[-DAYS_TO_PLOT:],
@@ -38,18 +42,20 @@ def _plot_with_time_window(
         timeseries[(-DAYS_TO_PLOT - MOVING_AVG_WINDOW):],
     ))
     y2 = np.convolve(y2, np.ones(MOVING_AVG_WINDOW) / MOVING_AVG_WINDOW, 'valid')
-    plt.plot(x2[:-(MOVING_AVG_WINDOW - 1)], y2, color=main_color)
 
+    plt.plot(x2[:-(MOVING_AVG_WINDOW - 1)], y2, color=main_color)
     plt.title(
-        '%s with a %d-day moving average.' % (
+        '%s with a %d-day moving average (as of %s)' % (
             label,
             MOVING_AVG_WINDOW,
+            date,
         ),
     )
     plt.suptitle(
-        'Data Source: https://github.com/CSSEGISandData/COVID-19 '
-        + '& https://www.hpb.health.gov.lk/api/get-current-statistical',
-        fontsize=6,
+        'Data: https://github.com/CSSEGISandData/COVID-19; '
+        + 'https://www.hpb.health.gov.lk/api/get-current-statistical; '
+        + 'https://github.com/owid/covid-19-data',
+        fontsize=8,
     )
 
     ax = plt.gca()
@@ -60,12 +66,13 @@ def _plot_with_time_window(
     fig = plt.gcf()
     fig.autofmt_xdate()
     fig.set_size_inches(12, 6.75)
-    fig.savefig(
-        '/tmp/example_tweet.%s.png' % (field_key),
-        dpi=100,
+    image_file = '/tmp/covid19.plot.%s.%s.window.png' % (
+        date_id,
+        field_key,
     )
-
-    plt.show()
+    fig.savefig(image_file, dpi=100)
+    plt.close()
+    return image_file
 
 
 def _plot_simple(
@@ -74,6 +81,8 @@ def _plot_simple(
     label,
 ):
     timeseries = lk_data.get_timeseries()
+    date_id = timex.format_time(timeseries[-1]['unixtime'], '%Y%m%d')
+    date = timex.format_time(timeseries[-1]['unixtime'], '%Y-%m-%d')
 
     x = list(map(
         lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
@@ -85,11 +94,12 @@ def _plot_simple(
     ))
     plt.plot(x, y, color=main_color)
 
-    plt.title('%s.' % (label))
+    plt.title('%s (as of %s)' % (label, date))
     plt.suptitle(
-        'Data Source: https://github.com/CSSEGISandData/COVID-19 '
-        + '& https://www.hpb.health.gov.lk/api/get-current-statistical',
-        fontsize=6,
+        'Data: https://github.com/CSSEGISandData/COVID-19; '
+        + 'https://www.hpb.health.gov.lk/api/get-current-statistical; '
+        + 'https://github.com/owid/covid-19-data',
+        fontsize=8,
     )
 
     ax = plt.gca()
@@ -100,26 +110,10 @@ def _plot_simple(
     fig = plt.gcf()
     fig.autofmt_xdate()
     fig.set_size_inches(12, 6.75)
-    fig.savefig(
-        '/tmp/example_tweet.simple.%s.png' % (field_key),
-        dpi=100,
+    image_file = '/tmp/covid19.plot.%s.%s.simple.png' % (
+        date_id,
+        field_key,
     )
-
-    plt.show()
-
-
-if __name__ == '__main__':
-    # field_key = 'new_deaths'
-    # main_color = 'red'
-    # sub_color = 'pink'
-    # label = 'Daily COVID19 Deaths'
-
-    # field_key = 'active'
-    # main_color = 'blue'
-    # sub_color = 'lightblue'
-    # label = 'Active COVID19 Cases'
-
-    # _plot_simple('active', 'blue', 'Active COVID19 Cases')
-    # _plot_with_time_window('new_deaths', 'red', 'pink', 'Daily COVID19 Deaths')
-    # _plot_with_time_window('new_pcr_tests', 'orange', (1, 0.9, 0.8), 'Daily COVID19 PCR Tests')
-    _plot_with_time_window('new_vaccinations', 'green', 'lightgreen', 'Daily COVID19 Vaccinations')
+    fig.savefig(image_file, dpi=100)
+    plt.close()
+    return image_file

@@ -18,8 +18,7 @@ pip install -i https://test.pypi.org/simple/ covid19-nuuuwan
 ## Release History
 
 ### 1.0.2 (PRE-RELEASE ONLY)
-
-
+* Added twitter examples
 
 ### 1.0.1
 
