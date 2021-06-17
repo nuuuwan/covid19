@@ -108,6 +108,14 @@ def load_jhu_data():  # TODO: Should change this name to reflect OWID
         }
         for k in vaccination_data:
             cleaned_item[k] = vaccination_data[k]
+
+        cleaned_item['new_vaccinations'] = \
+            cleaned_item['cum_vaccinations'] - prev_item.get('cum_vaccinations', 0)
+        cleaned_item['new_people_vaccinated'] = \
+            cleaned_item['cum_people_vaccinated'] - prev_item.get('cum_people_vaccinated', 0)
+        cleaned_item['new_people_fully_vaccinated'] = \
+            cleaned_item['cum_people_fully_vaccinated'] - prev_item.get('cum_people_fully_vaccinated', 0)
+
         return cleaned_item
 
     raw_data = load_jhu_data_raw()
