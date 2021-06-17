@@ -126,7 +126,8 @@ def _tweet(
         media_ids.append(media_id)
         log.info('Uploaded image %s to twitter as %s', image_file, media_id)
 
-    api.update_status(tweet_text, media_ids=media_ids)
+    result = api.update_status(tweet_text, media_ids=media_ids)
+    log.info(result)
 
 
 if __name__ == '__main__':
