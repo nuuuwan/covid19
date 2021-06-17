@@ -2,3 +2,5 @@ pycountry
 pypopulation
 utils-nuuuwan
 tweepy
+matplotlib
+numpy
