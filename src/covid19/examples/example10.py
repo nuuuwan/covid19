@@ -22,7 +22,7 @@ y = list(map(
 ))
 plt.bar(x, y, color='pink')
 
-N = 14
+N = 7
 x2 = list(map(
     lambda d: datetime.datetime.fromtimestamp(d['unixtime'] + N * 86400),
     timeseries[(-days_window - N):],
@@ -33,8 +33,6 @@ y2 = list(map(
 ))
 y2 = np.convolve(y2, np.ones(N) / N, 'valid')
 plt.plot(x2[:-(N - 1)], y2, color='red')
-
-
 
 plt.title(
     'Daily COVID19 Deaths in %s (during the last %d days) & %d-day moving average.' % (
