@@ -10,7 +10,7 @@ from utils import timex
 from covid19 import lk_data
 
 DAYS_TO_PLOT = 56
-MOVING_AVG_WINDOW = 7
+MOVING_AVG_WINDOW = 14
 
 
 def _plot_with_time_window(
