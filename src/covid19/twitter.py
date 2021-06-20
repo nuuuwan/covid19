@@ -144,12 +144,12 @@ def _tweet(
     log.info(api.update_profile_image(profile_image_file))
     log.info(api.update_status(tweet_text, media_ids=media_ids))
 
-    date = timex.format_time(timex.get_unixtime(), '%B %d, %Y (%H:%M%p)')
+    date = timex.format_time(timex.get_unixtime(), '%B %d, %Y %H:%M%p')
     timezone = timex.get_timezone()
     log.info(api.update_profile(
         description='''Statistics about Sri Lanka.
 
-Last updated at {date} {timezone}
+Automatically updated at {date} {timezone}
         '''.format(date=date, timezone=timezone)
     ))
 
