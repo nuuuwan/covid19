@@ -3,7 +3,7 @@ name: Tweet Cron
 
 on:
   schedule:
-    - cron:  "0 2 * * *"
+    - cron:  "30 8 * * *"
 
 
 jobs:

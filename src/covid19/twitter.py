@@ -130,6 +130,15 @@ def _tweet(
     auth.set_access_token(twtr_access_token, twtr_access_token_secret)
     api = tweepy.API(auth)
 
+    # background_image = _plot_with_time_window(
+    #     'new_vaccinations',
+    #     'green',
+    #     'lightgreen',
+    #     'Daily COVID19 Vaccinations',
+    #     is_background_image=True,
+    # )
+    # api.update_profile_background_image(background_image)
+
     media_ids = []
     for image_file in image_files:
         res = api.media_upload(image_file)
@@ -137,14 +146,6 @@ def _tweet(
         media_ids.append(media_id)
         log.info('Uploaded image %s to twitter as %s', image_file, media_id)
 
-    background_image = _plot_with_time_window(
-        'new_vaccinations',
-        'green',
-        'lightgreen',
-        'Daily COVID19 Vaccinations',
-        is_background_image=True,
-    )
-    api.update_profile_background_image(background_image)
     result = api.update_status(tweet_text, media_ids=media_ids)
     log.info(result)
 
