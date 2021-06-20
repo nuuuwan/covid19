@@ -9,7 +9,10 @@ import numpy as np
 
 from utils import timex
 from covid19 import lk_data
-from covid19.plots import _plot_simple, _plot_with_time_window, MOVING_AVG_WINDOW
+from covid19.plots import \
+    MOVING_AVG_WINDOW, POPULATION, \
+    _plot_simple, _plot_with_time_window, _draw_profile_image_with_stat
+
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')
@@ -48,7 +51,6 @@ def _get_tweet_text():
     delta_new_vacci = new_vacci_rwday - new_vacci_rwday_wa
     new_vacci_rwday_arrow = '🟢' if (delta_new_vacci > 0) else '🔴'
 
-    POPULATION = 21_800_000
     vacci_dose_1 = ts_cum_people_vaccinated[-1]
     vacci_dose_2 = ts_cum_people_fully_vaccinated[-1]
     p_vacci_dose_1 = vacci_dose_1 / POPULATION
@@ -124,20 +126,13 @@ def _tweet(
     log.info('Tweeting: %s', tweet_text)
     log.info('Tweet Length: %d', len(tweet_text))
     image_files = _plot_charts()
-    log.info('Media: %s', ';'.join(image_files))
+    log.info('Status images: %s', ';'.join(image_files))
+    profile_image_file = _draw_profile_image_with_stat()
+    log.info('Profile image: %s', profile_image_file)
 
     auth = tweepy.OAuthHandler(twtr_api_key, twtr_api_secret_key)
     auth.set_access_token(twtr_access_token, twtr_access_token_secret)
     api = tweepy.API(auth)
-
-    # background_image = _plot_with_time_window(
-    #     'new_vaccinations',
-    #     'green',
-    #     'lightgreen',
-    #     'Daily COVID19 Vaccinations',
-    #     is_background_image=True,
-    # )
-    # api.update_profile_background_image(background_image)
 
     media_ids = []
     for image_file in image_files:
@@ -146,8 +141,16 @@ def _tweet(
         media_ids.append(media_id)
         log.info('Uploaded image %s to twitter as %s', image_file, media_id)
 
-    result = api.update_status(tweet_text, media_ids=media_ids)
-    log.info(result)
+    log.info(api.update_profile_image(profile_image_file))
+    log.info(api.update_status(tweet_text, media_ids=media_ids))
+
+    date = timex.format_time(timex.get_unixtime(), '%B %d, %Y (%H:%M%p)')
+    log.info(api.update_profile(
+        description='''Statistics about Sri Lanka.
+
+Last updated at {date}
+        '''.format(date=date)
+    ))
 
 
 if __name__ == '__main__':
