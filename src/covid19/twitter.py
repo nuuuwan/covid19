@@ -144,13 +144,13 @@ def _tweet(
     log.info(api.update_profile_image(profile_image_file))
     log.info(api.update_status(tweet_text, media_ids=media_ids))
 
-    date = timex.format_time(timex.get_unixtime(), '%B %d, %Y (%H:%M%p %z%Z)')
-    log.info(api.update_profile(
-        description='''Statistics about Sri Lanka.
-
-Last updated at {date}
-        '''.format(date=date)
-    ))
+#     date = timex.format_time(timex.get_unixtime(), '%B %d, %Y (%H:%M%p %z%Z)')
+#     log.info(api.update_profile(
+#         description='''Statistics about Sri Lanka.
+#
+# Last updated at {date}
+#         '''.format(date=date)
+#     ))
 
 
 if __name__ == '__main__':
