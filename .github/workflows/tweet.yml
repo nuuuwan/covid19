@@ -4,7 +4,7 @@ name: Tweet
 on: workflow_dispatch
 
 jobs:
-  test-build-and-deploy:
+  tweet:
     runs-on: ubuntu-latest
 
     strategy:
