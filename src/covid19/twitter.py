@@ -129,6 +129,14 @@ def _tweet(
     log.info('Status images: %s', ';'.join(image_files))
     profile_image_file = _draw_profile_image_with_stat()
     log.info('Profile image: %s', profile_image_file)
+    banner_image_file = _plot_with_time_window(
+        'new_deaths',
+        'red',
+        'pink',
+        'Daily COVID19 Deaths',
+        is_background_image=True,
+    )
+    log.info('Banner image: %s', banner_image_file)
 
     auth = tweepy.OAuthHandler(twtr_api_key, twtr_api_secret_key)
     auth.set_access_token(twtr_access_token, twtr_access_token_secret)
@@ -143,6 +151,7 @@ def _tweet(
 
     log.info(api.update_profile_image(profile_image_file))
     log.info(api.update_status(tweet_text, media_ids=media_ids))
+    log.info(api.update_profile_banner(banner_image_file))
 
     date = timex.format_time(timex.get_unixtime(), '%B %d, %Y %H:%M%p')
     timezone = timex.get_timezone()
