@@ -1,12 +1,12 @@
 
-name: Text, Build and Upload to PyPi
+name: Deploy to PyPi
 
 on:
   push:
     paths: README.md
 
 jobs:
-  test-build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     strategy:
