@@ -18,6 +18,7 @@ def _plot_with_time_window(
     main_color,
     sub_color,
     label,
+    is_background_image=False,
 ):
     timeseries = lk_data.get_timeseries()
     date_id = timex.format_time(timeseries[-1]['unixtime'], '%Y%m%d')
@@ -65,10 +66,16 @@ def _plot_with_time_window(
 
     fig = plt.gcf()
     fig.autofmt_xdate()
-    fig.set_size_inches(12, 6.75)
-    image_file = '/tmp/covid19.plot.%s.%s.window.png' % (
+    fig_width = 12
+    aspect_ratio = 3 if is_background_image else 16/9
+    fig_height = round(fig_width / aspect_ratio, 1)
+    fig.set_size_inches(fig_width, fig_height)
+
+    background_label = 'background' if is_background_image else 'feed'
+    image_file = '/tmp/covid19.plot.%s.%s.%s.window.png' % (
         date_id,
         field_key,
+        background_label,
     )
     fig.savefig(image_file, dpi=100)
     plt.close()

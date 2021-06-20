@@ -22,9 +22,7 @@ def _get_tweet_text():
     date = timex.format_time(unixtime, '%Y-%m-%d')
 
     ts_active = list(map(lambda _i: _i['active'], timeseries))
-
     ts_new_deaths = list(map(lambda _i: _i['new_deaths'], timeseries))
-
     ts_new_pcr_tests = list(map(lambda _i: _i['new_pcr_tests'], timeseries))
 
     ts_cum_vaccinations = \
@@ -61,7 +59,6 @@ def _get_tweet_text():
     delta_new_pcr_tests = new_pcr_tests_rwday - new_pcr_tests_rwday_wa
     new_pcr_tests_rwday_arrow = '🟢' if (delta_new_pcr_tests > 0) else '🔴'
 
-
     tweet_text = '''{date} #COVID19SL
 
 {active_arrow} Active: {active:,} ({delta_active:+,} week ago)
@@ -96,9 +93,24 @@ def _get_tweet_text():
 def _plot_charts():
     return [
         _plot_simple('active', 'blue', 'Active COVID19 Cases'),
-        _plot_with_time_window('new_deaths', 'red', 'pink', 'Daily COVID19 Deaths'),
-        _plot_with_time_window('new_pcr_tests', 'orange', (1, 0.9, 0.8), 'Daily COVID19 PCR Tests'),
-        _plot_with_time_window('new_vaccinations', 'green', 'lightgreen', 'Daily COVID19 Vaccinations'),
+        _plot_with_time_window(
+            'new_deaths',
+            'red',
+            'pink',
+            'Daily COVID19 Deaths',
+        ),
+        _plot_with_time_window(
+            'new_pcr_tests',
+            'orange',
+            (1, 0.9, 0.8),
+            'Daily COVID19 PCR Tests',
+        ),
+        _plot_with_time_window(
+            'new_vaccinations',
+            'green',
+            'lightgreen',
+            'Daily COVID19 Vaccinations',
+        ),
     ]
 
 
@@ -125,6 +137,14 @@ def _tweet(
         media_ids.append(media_id)
         log.info('Uploaded image %s to twitter as %s', image_file, media_id)
 
+    background_image = _plot_with_time_window(
+        'new_vaccinations',
+        'green',
+        'lightgreen',
+        'Daily COVID19 Vaccinations',
+        is_background_image=True,
+    )
+    api.update_profile_background_image(background_image)
     result = api.update_status(tweet_text, media_ids=media_ids)
     log.info(result)
 
