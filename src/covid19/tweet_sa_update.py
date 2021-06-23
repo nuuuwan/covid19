@@ -18,21 +18,21 @@ log = logging.getLogger('covid19.twitter')
 
 def _get_country_label(country_id):
     if country_id == 'LK':
-        return '🇱🇰  #SriLanka'
+        return '🇱🇰 #SriLanka'
     if country_id == 'IN':
-        return '🇮🇳  #India'
+        return '🇮🇳 #India'
     if country_id == 'PK':
-        return '🇵🇰  #Pakistan'
+        return '🇵🇰 #Pakistan'
     if country_id == 'NP':
-        return '🇳🇵  #Nepal'
+        return '🇳🇵 #Nepal'
     if country_id == 'BD':
-        return '🇧🇩  #Bangladesh'
+        return '🇧🇩 #Bangladesh'
     if country_id == 'AF':
-        return '🇦🇫  #Afghanistan'
+        return '🇦🇫 #Afghanistan'
     if country_id == 'MV':
-        return '🇲🇻  #Maldives'
+        return '🇲🇻 #Maldives'
     if country_id == 'BT':
-        return '🇧🇹  #Bhutan'
+        return '🇧🇹 #Bhutan'
 
 
 def _get_tweet_text(max_country_ids):
@@ -41,7 +41,7 @@ def _get_tweet_text(max_country_ids):
     print(max_country_ids)
 
     return '''
-#COVID19 #SouthAsia ({_ds})
+#COVID19 #SouthAsia {_ds}
 
 🔴 Active COVID19 Cases - {max0}
 🔴 Daily COVID19 Deaths - {max1}
