@@ -1,5 +1,5 @@
 
-name: Tweet
+name: Tweet LK Update
 
 on: workflow_dispatch
 
@@ -37,4 +37,4 @@ jobs:
     - name: Tweet
       run: |
         export PYTHONPATH="$PYTHONPATH:./src"
-        python src/covid19/twitter.py --twtr_api_key "${{ secrets.TWTR_API_KEY}}" --twtr_api_secret_key "${{ secrets.TWTR_API_SECRET_KEY}}" --twtr_access_token "${{ secrets.TWTR_ACCESS_TOKEN}}" --twtr_access_token_secret "${{ secrets.TWTR_ACCESS_TOKEN_SECRET}}"
+        python src/covid19/tweet_lk_update.py --twtr_api_key "${{ secrets.TWTR_API_KEY}}" --twtr_api_secret_key "${{ secrets.TWTR_API_SECRET_KEY}}" --twtr_access_token "${{ secrets.TWTR_ACCESS_TOKEN}}" --twtr_access_token_secret "${{ secrets.TWTR_ACCESS_TOKEN_SECRET}}"
