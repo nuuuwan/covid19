@@ -13,7 +13,7 @@ country_meta_datas = [
     {'alpha_2': 'PK', 'color': 'lightgreen'},
     {'alpha_2': 'BD', 'color': 'darkgreen'},
     {'alpha_2': 'NP', 'color': 'blue'},
-    # {'alpha_2': 'AF', 'color': 'lightblue'},
+    {'alpha_2': 'AF', 'color': 'lightblue'},
     # {'alpha_2': 'MV', 'color': 'red'},
     # {'alpha_2': 'BT', 'color': 'purple'},
 ]

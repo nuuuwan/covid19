@@ -165,7 +165,7 @@ Automatically updated at {date} {timezone}
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        description='Run pipeline for custom_dgigovlk_covid19.',
+        description='Tweet LK Update.',
     )
     for twtr_arg_name in [
         'twtr_api_key',
