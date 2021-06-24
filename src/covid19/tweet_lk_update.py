@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 import numpy as np
 
-from utils import timex
+from utils import timex, twitter
 from covid19 import lk_data
 from covid19.plots import \
     MOVING_AVG_WINDOW, POPULATION, \
@@ -92,7 +92,7 @@ def _get_tweet_text():
     return tweet_text
 
 
-def _plot_charts():
+def _get_status_image_files():
     return [
         _plot_simple('active', 'blue', 'Active COVID19 Cases'),
         _plot_with_time_window(
@@ -116,19 +116,10 @@ def _plot_charts():
     ]
 
 
-def _tweet(
-    twtr_api_key,
-    twtr_api_secret_key,
-    twtr_access_token,
-    twtr_access_token_secret,
-):
+def _tweet():
     tweet_text = _get_tweet_text()
-    log.info('Tweeting: %s', tweet_text)
-    log.info('Tweet Length: %d', len(tweet_text))
-    image_files = _plot_charts()
-    log.info('Status images: %s', ';'.join(image_files))
+    status_image_files = _get_status_image_files()
     profile_image_file = _draw_profile_image_with_stat()
-    log.info('Profile image: %s', profile_image_file)
     banner_image_file = _plot_with_time_window(
         'new_deaths',
         'red',
@@ -136,53 +127,16 @@ def _tweet(
         'Daily COVID19 Deaths',
         is_background_image=True,
     )
-    log.info('Banner image: %s', banner_image_file)
 
-    auth = tweepy.OAuthHandler(twtr_api_key, twtr_api_secret_key)
-    auth.set_access_token(twtr_access_token, twtr_access_token_secret)
-    api = tweepy.API(auth)
-
-    media_ids = []
-    for image_file in image_files:
-        res = api.media_upload(image_file)
-        media_id = res.media_id
-        media_ids.append(media_id)
-        log.info('Uploaded image %s to twitter as %s', image_file, media_id)
-
-    log.info(api.update_profile_image(profile_image_file))
-    log.info(api.update_status(tweet_text, media_ids=media_ids))
-    log.info(api.update_profile_banner(banner_image_file))
-
-    date = timex.format_time(timex.get_unixtime(), '%B %d, %Y %H:%M%p')
-    timezone = timex.get_timezone()
-    log.info(api.update_profile(
-        description='''Statistics about Sri Lanka.
-
-Automatically updated at {date} {timezone}
-        '''.format(date=date, timezone=timezone)
-    ))
+    twtr = twitter.Twitter.from_args()
+    twtr.tweet(
+        tweet_text=tweet_text,
+        status_image_files=status_image_files,
+        update_user_profile=True,
+        profile_image_file=profile_image_file,
+        banner_image_file=banner_image_file,
+    )
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(
-        description='Tweet LK Update.',
-    )
-    for twtr_arg_name in [
-        'twtr_api_key',
-        'twtr_api_secret_key',
-        'twtr_access_token',
-        'twtr_access_token_secret',
-    ]:
-        parser.add_argument(
-            '--' + twtr_arg_name,
-            type=str,
-            required=False,
-            default=None,
-        )
-    args = parser.parse_args()
-    _tweet(
-        args.twtr_api_key,
-        args.twtr_api_secret_key,
-        args.twtr_access_token,
-        args.twtr_access_token_secret,
-    )
+    _tweet()

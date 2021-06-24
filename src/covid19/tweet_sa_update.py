@@ -1,44 +1,30 @@
 """Example Tweet."""
-import datetime
-import tweepy
-import argparse
 import logging
-import matplotlib.pyplot as plt
-import matplotlib.ticker as tkr
-import numpy as np
 
-from utils import timex
-from covid19 import lk_data, covid_data
+from utils import twitter
+from covid19 import covid_data
 from covid19.plots import _plot_south_asia
-
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')
 
 
 def _get_country_label(country_id):
-    if country_id == 'LK':
-        return '🇱🇰 #SriLanka'
-    if country_id == 'IN':
-        return '🇮🇳 #India'
-    if country_id == 'PK':
-        return '🇵🇰 #Pakistan'
-    if country_id == 'NP':
-        return '🇳🇵 #Nepal'
-    if country_id == 'BD':
-        return '🇧🇩 #Bangladesh'
-    if country_id == 'AF':
-        return '🇦🇫 #Afghanistan'
-    if country_id == 'MV':
-        return '🇲🇻 #Maldives'
-    if country_id == 'BT':
-        return '🇧🇹 #Bhutan'
+    return {
+        'LK': '🇱🇰 #SriLanka',
+        'IN': '🇮🇳 #India',
+        'PK': '🇵🇰 #Pakistan',
+        'NP': '🇳🇵 #Nepal',
+        'BD': '🇧🇩 #Bangladesh',
+        'AF': '🇦🇫 #Afghanistan',
+        'MV': '🇲🇻 #Maldives',
+        'BT': '🇧🇹 #Bhutan',
+    }.get(country_id, '')
 
 
 def _get_tweet_text(max_country_ids):
     jhu_data = covid_data.load_jhu_data()
     _ds = jhu_data['LK']['timeseries'][-1]['date'][:10]
-    print(max_country_ids)
 
     return '''
 #COVID19 #SouthAsia {_ds}
@@ -85,69 +71,20 @@ def _plot_images():
         ),
     ]
     return list(map(lambda x: x[0], plot_info_list)), \
-        list(map(lambda x: x[1], plot_info_list)),
+        list(map(lambda x: x[1], plot_info_list))
 
 
-def _tweet(
-    twtr_api_key,
-    twtr_api_secret_key,
-    twtr_access_token,
-    twtr_access_token_secret,
-):
-    image_files, max_country_ids = _plot_images()
-    log.info('Status images: %s', ';'.join(image_files))
-
+def _tweet():
+    status_image_files, max_country_ids = _plot_images()
     tweet_text = _get_tweet_text(max_country_ids)
-    log.info('Tweeting: %s', tweet_text)
-    log.info('Tweet Length: %d', len(tweet_text))
 
-
-    if not twtr_api_key:
-        return
-
-    auth = tweepy.OAuthHandler(twtr_api_key, twtr_api_secret_key)
-    auth.set_access_token(twtr_access_token, twtr_access_token_secret)
-    api = tweepy.API(auth)
-
-    media_ids = []
-    for image_file in image_files:
-        res = api.media_upload(image_file)
-        media_id = res.media_id
-        media_ids.append(media_id)
-        log.info('Uploaded image %s to twitter as %s', image_file, media_id)
-
-    log.info(api.update_status(tweet_text, media_ids=media_ids))
-
-    date = timex.format_time(timex.get_unixtime(), '%B %d, %Y %H:%M%p')
-    timezone = timex.get_timezone()
-    log.info(api.update_profile(
-        description='''Statistics about Sri Lanka.
-
-Automatically updated at {date} {timezone}
-        '''.format(date=date, timezone=timezone)
-    ))
+    twtr = twitter.Twitter.from_args()
+    twtr.tweet(
+        tweet_text=tweet_text,
+        status_image_files=status_image_files,
+        update_user_profile=True,
+    )
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(
-        description='Tweet South Asia Update.',
-    )
-    for twtr_arg_name in [
-        'twtr_api_key',
-        'twtr_api_secret_key',
-        'twtr_access_token',
-        'twtr_access_token_secret',
-    ]:
-        parser.add_argument(
-            '--' + twtr_arg_name,
-            type=str,
-            required=False,
-            default=None,
-        )
-    args = parser.parse_args()
-    _tweet(
-        args.twtr_api_key,
-        args.twtr_api_secret_key,
-        args.twtr_access_token,
-        args.twtr_access_token_secret,
-    )
+    _tweet()
