@@ -17,7 +17,7 @@ BASE_IMAGE_FILE = 'src/covid19/assets/lk_map.png'
 FONT_FILE = 'src/covid19/assets/Arial.ttf'
 
 DAYS_TO_PLOT = 90
-MOVING_AVG_WINDOW = 14
+DEFAULT_MOVING_AVG_WINDOW = 14
 POPULATION = 21_800_000
 
 
@@ -28,6 +28,7 @@ def _plot_with_time_window(
     label,
     is_background_image=False,
 ):
+    moving_avg_window = DEFAULT_MOVING_AVG_WINDOW
     timeseries = lk_data.get_timeseries()
     date_id = timex.format_time(timeseries[-1]['unixtime'], '%Y%m%d')
     date = timex.format_time(timeseries[-1]['unixtime'], '%Y-%m-%d')
@@ -43,20 +44,20 @@ def _plot_with_time_window(
 
     x2 = list(map(
         lambda d: datetime.datetime.fromtimestamp(d['unixtime'] \
-            + MOVING_AVG_WINDOW * 86400),
-        timeseries[(-DAYS_TO_PLOT - MOVING_AVG_WINDOW):],
+            + moving_avg_window * 86400),
+        timeseries[(-DAYS_TO_PLOT - moving_avg_window):],
     ))
     y2 = list(map(
         lambda d: d[field_key],
-        timeseries[(-DAYS_TO_PLOT - MOVING_AVG_WINDOW):],
+        timeseries[(-DAYS_TO_PLOT - moving_avg_window):],
     ))
-    y2 = np.convolve(y2, np.ones(MOVING_AVG_WINDOW) / MOVING_AVG_WINDOW, 'valid')
+    y2 = np.convolve(y2, np.ones(moving_avg_window) / moving_avg_window, 'valid')
 
-    plt.plot(x2[:-(MOVING_AVG_WINDOW - 1)], y2, color=main_color)
+    plt.plot(x2[:-(moving_avg_window - 1)], y2, color=main_color)
     plt.title(
         '%s with a %d-day moving average (as of %s)' % (
             label,
-            MOVING_AVG_WINDOW,
+            moving_avg_window,
             date,
         ),
     )
@@ -95,6 +96,7 @@ def _plot_simple(
     main_color,
     label,
 ):
+    moving_avg_window = DEFAULT_MOVING_AVG_WINDOW
     timeseries = lk_data.get_timeseries()
     date_id = timex.format_time(timeseries[-1]['unixtime'], '%Y%m%d')
     date = timex.format_time(timeseries[-1]['unixtime'], '%Y-%m-%d')
@@ -181,6 +183,9 @@ def _draw_profile_image_with_stat():
 
 
 def _plot_south_asia(field_key, label, _format):
+    moving_avg_window = DEFAULT_MOVING_AVG_WINDOW \
+        if (field_key != 'cum_people_fully_vaccinated') \
+        else 1
     jhu_data = covid_data.load_jhu_data()
     country_meta_datas = [
         {'alpha_2': 'IN', 'color': 'orange'},
@@ -207,11 +212,11 @@ def _plot_south_asia(field_key, label, _format):
         ))
         y = list(map(
             lambda d: 100_000 * d[field_key] / population,
-            timeseries[(-DAYS_TO_PLOT - MOVING_AVG_WINDOW + 1):],
+            timeseries[(-DAYS_TO_PLOT - moving_avg_window + 1):],
         ))
         y = np.convolve(
             y,
-            np.ones(MOVING_AVG_WINDOW) / MOVING_AVG_WINDOW,
+            np.ones(moving_avg_window) / moving_avg_window,
             'valid',
         )
         last_y = y[-1]
@@ -220,10 +225,13 @@ def _plot_south_asia(field_key, label, _format):
             max_last_y_country = country_id
         plt.plot(x, y, color=country_meta_data['color'])
 
+    moving_avg_label = ' (%d-day Moving Avg.)' % moving_avg_window \
+        if (moving_avg_window > 1) \
+        else ''
     plt.title(
-        '%s (%d-day Moving Avg.) per 100,000 people in South Asia.' % (
+        '%s%s per 100,000 people in South Asia.' % (
             label,
-            MOVING_AVG_WINDOW,
+            moving_avg_label,
         ),
     )
     plt.suptitle(
