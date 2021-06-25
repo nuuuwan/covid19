@@ -10,7 +10,7 @@ import numpy as np
 from utils import timex, twitter
 from covid19 import lk_data
 from covid19.plots import \
-    MOVING_AVG_WINDOW, POPULATION, \
+    DEFAULT_MOVING_AVG_WINDOW, POPULATION, \
     _plot_simple, _plot_with_time_window, _draw_profile_image_with_stat
 
 
@@ -40,14 +40,14 @@ def _get_tweet_text():
     delta_active = active - active_wa
     active_arrow = '🔴' if (delta_active > 0) else '🟢'
 
-    new_deaths_rwday = sum(ts_new_deaths[-MOVING_AVG_WINDOW:]) / MOVING_AVG_WINDOW
+    new_deaths_rwday = sum(ts_new_deaths[-DEFAULT_MOVING_AVG_WINDOW:]) / DEFAULT_MOVING_AVG_WINDOW
     new_deaths_rwday_wa = \
-        sum(ts_new_deaths[-MOVING_AVG_WINDOW-7:-7]) / MOVING_AVG_WINDOW
+        sum(ts_new_deaths[-DEFAULT_MOVING_AVG_WINDOW-7:-7]) / DEFAULT_MOVING_AVG_WINDOW
     delta_new_deaths = new_deaths_rwday - new_deaths_rwday_wa
     new_deaths_rwday_arrow = '🔴' if (delta_new_deaths > 0) else '🟢'
 
-    new_vacci_rwday = (ts_cum_vaccinations[-1] - ts_cum_vaccinations[-MOVING_AVG_WINDOW-1]) / MOVING_AVG_WINDOW
-    new_vacci_rwday_wa = (ts_cum_vaccinations[-1-7] - ts_cum_vaccinations[-MOVING_AVG_WINDOW-1-7]) / MOVING_AVG_WINDOW
+    new_vacci_rwday = (ts_cum_vaccinations[-1] - ts_cum_vaccinations[-DEFAULT_MOVING_AVG_WINDOW-1]) / DEFAULT_MOVING_AVG_WINDOW
+    new_vacci_rwday_wa = (ts_cum_vaccinations[-1-7] - ts_cum_vaccinations[-DEFAULT_MOVING_AVG_WINDOW-1-7]) / DEFAULT_MOVING_AVG_WINDOW
     delta_new_vacci = new_vacci_rwday - new_vacci_rwday_wa
     new_vacci_rwday_arrow = '🟢' if (delta_new_vacci > 0) else '🔴'
 
@@ -56,23 +56,23 @@ def _get_tweet_text():
     p_vacci_dose_1 = vacci_dose_1 / POPULATION
     p_vacci_dose_2 = vacci_dose_2 / POPULATION
 
-    new_pcr_tests_rwday = sum(ts_new_pcr_tests[-MOVING_AVG_WINDOW:]) / MOVING_AVG_WINDOW
-    new_pcr_tests_rwday_wa = sum(ts_new_pcr_tests[-MOVING_AVG_WINDOW-7:-7]) / MOVING_AVG_WINDOW
+    new_pcr_tests_rwday = sum(ts_new_pcr_tests[-DEFAULT_MOVING_AVG_WINDOW:]) / DEFAULT_MOVING_AVG_WINDOW
+    new_pcr_tests_rwday_wa = sum(ts_new_pcr_tests[-DEFAULT_MOVING_AVG_WINDOW-7:-7]) / DEFAULT_MOVING_AVG_WINDOW
     delta_new_pcr_tests = new_pcr_tests_rwday - new_pcr_tests_rwday_wa
     new_pcr_tests_rwday_arrow = '🟢' if (delta_new_pcr_tests > 0) else '🔴'
 
     tweet_text = '''{date} #COVID19SL
 
 {active_arrow} Active: {active:,} ({delta_active:+,} week ago)
-{new_deaths_rwday_arrow} Deaths/day﹘{MOVING_AVG_WINDOW}day avg: {new_deaths_rwday:,.0f} ({delta_new_deaths:+,.0f})
-{new_pcr_tests_rwday_arrow} Tests/day﹘{MOVING_AVG_WINDOW}day avg: {new_pcr_tests_rwday:,.0f} ({delta_new_pcr_tests:+,.0f})
-{new_vacci_rwday_arrow} Vaxs/Day﹘{MOVING_AVG_WINDOW}day avg: {new_vacci_rwday:,.0f} ({delta_new_vacci:+,.0f})
+{new_deaths_rwday_arrow} Deaths/day﹘{DEFAULT_MOVING_AVG_WINDOW}day avg: {new_deaths_rwday:,.0f} ({delta_new_deaths:+,.0f})
+{new_pcr_tests_rwday_arrow} Tests/day﹘{DEFAULT_MOVING_AVG_WINDOW}day avg: {new_pcr_tests_rwday:,.0f} ({delta_new_pcr_tests:+,.0f})
+{new_vacci_rwday_arrow} Vaxs/Day﹘{DEFAULT_MOVING_AVG_WINDOW}day avg: {new_vacci_rwday:,.0f} ({delta_new_vacci:+,.0f})
 - Pop vaxed: {p_vacci_dose_1:.1%}
 - Pop fully vaxed: {p_vacci_dose_2:.1%}
 
 @HPBSriLanka @JHUSystems @OurWorldInData #lka #SriLanka
     '''.format(
-        MOVING_AVG_WINDOW=MOVING_AVG_WINDOW,
+        DEFAULT_MOVING_AVG_WINDOW=DEFAULT_MOVING_AVG_WINDOW,
         active=active,
         active_arrow=active_arrow,
         new_vacci_rwday=new_vacci_rwday,
