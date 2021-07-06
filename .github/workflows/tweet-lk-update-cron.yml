@@ -3,7 +3,7 @@ name: Tweet LK Update Cron
 
 on:
   schedule:
-    - cron:  "10 11 * * *"
+    - cron:  "30 11 * * *"
 
 
 jobs:
