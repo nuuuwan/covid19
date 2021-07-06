@@ -1,8 +1,6 @@
 """Test."""
 import unittest
 
-from utils.cache import cache
-
 from covid19 import covid_data
 
 

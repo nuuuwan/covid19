@@ -30,7 +30,7 @@ plt.plot(x[:-(N - 1)], y2, color='red')
 
 y3 = list(map(
     lambda d: d['new_confirmed'] * mortality_rate,
-    [{'new_confirmed': 0 } for _ in range(0, delay)] + timeseries[:-delay],
+    [{'new_confirmed': 0} for _ in range(0, delay)] + timeseries[:-delay],
 ))
 y4 = np.convolve(y3, np.ones(N) / N, 'valid')
 plt.plot(x[:-(N - 1)], y4, color='blue')
@@ -45,7 +45,10 @@ plt.suptitle(
 )
 plt.legend([
     'New Deaths (%d Data Window)' % N,
-    '"Predicted Deaths" = New Confirmed Cases %d days before *  %4.2f%%' % (delay, mortality_rate * 100.0),
+    '"Predicted Deaths" = New Confirmed Cases %d days before *  %4.2f%%' % (
+        delay,
+        mortality_rate * 100.0,
+    ),
 ])
 
 ax = plt.gca()

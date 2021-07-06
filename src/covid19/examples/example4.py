@@ -15,9 +15,9 @@ x = list(map(
 ))
 
 y = list(map(
-    lambda d: d['new_confirmed'] / d['new_pcr_tests'] \
-        if d['new_pcr_tests'] > 10 \
-        else 0,
+    lambda d: d['new_confirmed'] / d['new_pcr_tests']
+    if d['new_pcr_tests'] > 10
+    else 0,
     timeseries,
 ))
 plt.plot(x, y, color='pink')
@@ -27,7 +27,8 @@ plt.plot(x[:-(N - 1)], y, color='red')
 
 plt.title('Daily New COVID19 Cases per PCR Tests in Sri Lanka.')
 plt.suptitle(
-    'Data Source: https://github.com/CSSEGISandData/COVID-19 & https://www.hpb.health.gov.lk/api/get-current-statistical',
+    'Data Source: https://github.com/CSSEGISandData/COVID-19 '
+    + '& https://www.hpb.health.gov.lk/api/get-current-statistical',
     fontsize=6,
 )
 plt.legend(['Cases per Test', '%d-Day Moving Window' % N])

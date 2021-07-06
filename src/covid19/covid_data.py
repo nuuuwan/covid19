@@ -1,6 +1,5 @@
 """Pull covid data from various online sources."""
 import logging
-import time
 import datetime
 import pycountry
 import pypopulation
@@ -25,32 +24,22 @@ COUNTRY_NAME_MAP = {
 
 @cache(CACHE_NAME, 3600)
 def load_jhu_data_raw():
-    """Pull data from JHU's CSSE.
-
-    COVID-19 Data Repository by the Center for Systems Science and Engineering
-    (CSSE) at Johns Hopkins University.
-
-    Source: https://pomber.github.io/covid19/timeseries.json via
-        https://github.com/CSSEGISandData/COVID-19
-    """
+    """Pull data from JHU's CSSE."""
     return www.read_json(JHU_URL)
 
 
 @cache(CACHE_NAME, 3600)
-def load_owid_vaccination_data_raw():
-    """Pull Our World in Data Vaccination Data.
-
-    Source: https://github.com/owid/covid-19-data
-    """
+def load_owid_vaxs_data_raw():
+    """Pull Our World in Data Vaccination Data."""
     return www.read_json(OWID_VAC_URL)
 
 
 @cache(CACHE_NAME, 3600)
-def load_jhu_data():  # TODO: Should change this name to reflect OWID
+def load_jhu_data():
     """Wrap load_jhu_data_raw, to make data more useful."""
 
     # vaccine data (from owid)
-    vac_data = load_owid_vaccination_data_raw()
+    vac_data = load_owid_vaxs_data_raw()
     country_to_date_to_vac_data = {}
     for country_data in vac_data:
         country_alpha_3 = country_data['iso_code']
@@ -71,7 +60,7 @@ def load_jhu_data():  # TODO: Should change this name to reflect OWID
     # original jhu data
     def _cleaned_timeseries_item(item, prev_item, country_alpha_3):
         unixtime = timex.parse_time(item['date'], '%Y-%m-%d')
-        vaccination_data = country_to_date_to_vac_data \
+        vaxs_data = country_to_date_to_vac_data \
             .get(country_alpha_3, {}) \
             .get(unixtime, {
                 'cum_vaccinations': 0,
@@ -84,8 +73,8 @@ def load_jhu_data():  # TODO: Should change this name to reflect OWID
             'cum_people_vaccinated',
             'cum_people_fully_vaccinated',
         ]:
-            vaccination_data[key] = max(
-                vaccination_data[key],
+            vaxs_data[key] = max(
+                vaxs_data[key],
                 prev_item.get(key, 0),
             )
 
@@ -106,15 +95,18 @@ def load_jhu_data():  # TODO: Should change this name to reflect OWID
             'new_recovered':
                 item['recovered'] - prev_item.get('cum_recovered', 0),
         }
-        for k in vaccination_data:
-            cleaned_item[k] = vaccination_data[k]
+        for k in vaxs_data:
+            cleaned_item[k] = vaxs_data[k]
 
         cleaned_item['new_vaccinations'] = \
-            cleaned_item['cum_vaccinations'] - prev_item.get('cum_vaccinations', 0)
+            cleaned_item['cum_vaccinations'] \
+            - prev_item.get('cum_vaccinations', 0)
         cleaned_item['new_people_vaccinated'] = \
-            cleaned_item['cum_people_vaccinated'] - prev_item.get('cum_people_vaccinated', 0)
+            cleaned_item['cum_people_vaccinated'] \
+            - prev_item.get('cum_people_vaccinated', 0)
         cleaned_item['new_people_fully_vaccinated'] = \
-            cleaned_item['cum_people_fully_vaccinated'] - prev_item.get('cum_people_fully_vaccinated', 0)
+            cleaned_item['cum_people_fully_vaccinated'] \
+            - prev_item.get('cum_people_fully_vaccinated', 0)
 
         return cleaned_item
 

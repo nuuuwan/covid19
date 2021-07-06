@@ -3,7 +3,7 @@ import logging
 
 from utils import twitter
 from covid19 import covid_data
-from covid19.plots import _plot_south_asia, DEFAULT_MOVING_AVG_WINDOW
+from covid19.plots_sa import _plot_south_asia, MW
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')
@@ -40,7 +40,7 @@ Excl. #Maldives & #Bhutan
 @JHUSystems @OurWorldInData #lka
     '''.format(
         _ds=_ds,
-        mw=DEFAULT_MOVING_AVG_WINDOW,
+        mw=MW,
         max0=_get_country_label(max_country_ids[0]),
         max1=_get_country_label(max_country_ids[1]),
         max2=_get_country_label(max_country_ids[2]),

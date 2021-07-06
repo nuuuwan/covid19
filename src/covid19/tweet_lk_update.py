@@ -1,16 +1,10 @@
 """Example Tweet."""
-import datetime
-import tweepy
-import argparse
 import logging
-import matplotlib.pyplot as plt
-import matplotlib.ticker as tkr
-import numpy as np
 
 from utils import timex, twitter
 from covid19 import lk_data
-from covid19.plots import \
-    DEFAULT_MOVING_AVG_WINDOW, POPULATION, \
+from covid19.plots_lk import \
+    MW, POPULATION, \
     _plot_simple, _plot_with_time_window, _draw_profile_image_with_stat
 
 
@@ -28,8 +22,8 @@ def _get_tweet_text():
     ts_new_deaths = list(map(lambda _i: _i['new_deaths'], timeseries))
     ts_new_pcr_tests = list(map(lambda _i: _i['new_pcr_tests'], timeseries))
 
-    ts_cum_vaccinations = \
-        list(map(lambda _i: _i['cum_vaccinations'], timeseries))
+    ts_cum_vaxs = \
+        list(map(lambda _i: _i['cum_vaxs'], timeseries))
     ts_cum_people_vaccinated = \
         list(map(lambda _i: _i['cum_people_vaccinated'], timeseries))
     ts_cum_people_fully_vaccinated = \
@@ -40,14 +34,14 @@ def _get_tweet_text():
     delta_active = active - active_wa
     active_arrow = '🔴' if (delta_active > 0) else '🟢'
 
-    new_deaths_rwday = sum(ts_new_deaths[-DEFAULT_MOVING_AVG_WINDOW:]) / DEFAULT_MOVING_AVG_WINDOW
+    new_deaths_rwday = sum(ts_new_deaths[-MW:]) / MW
     new_deaths_rwday_wa = \
-        sum(ts_new_deaths[-DEFAULT_MOVING_AVG_WINDOW-DEFAULT_MOVING_AVG_WINDOW:-DEFAULT_MOVING_AVG_WINDOW]) / DEFAULT_MOVING_AVG_WINDOW
+        sum(ts_new_deaths[-MW-MW:-MW]) / MW
     delta_new_deaths = new_deaths_rwday - new_deaths_rwday_wa
     new_deaths_rwday_arrow = '🔴' if (delta_new_deaths > 0) else '🟢'
 
-    new_vacci_rwday = (ts_cum_vaccinations[-1] - ts_cum_vaccinations[-DEFAULT_MOVING_AVG_WINDOW-1]) / DEFAULT_MOVING_AVG_WINDOW
-    new_vacci_rwday_wa = (ts_cum_vaccinations[-1-DEFAULT_MOVING_AVG_WINDOW] - ts_cum_vaccinations[-DEFAULT_MOVING_AVG_WINDOW-1-DEFAULT_MOVING_AVG_WINDOW]) / DEFAULT_MOVING_AVG_WINDOW
+    new_vacci_rwday = (ts_cum_vaxs[-1] - ts_cum_vaxs[-MW-1]) / MW
+    new_vacci_rwday_wa = (ts_cum_vaxs[-1-MW] - ts_cum_vaxs[-MW-1-MW]) / MW
     delta_new_vacci = new_vacci_rwday - new_vacci_rwday_wa
     new_vacci_rwday_arrow = '🟢' if (delta_new_vacci > 0) else '🔴'
 
@@ -56,23 +50,28 @@ def _get_tweet_text():
     p_vacci_dose_1 = vacci_dose_1 / POPULATION
     p_vacci_dose_2 = vacci_dose_2 / POPULATION
 
-    new_pcr_tests_rwday = sum(ts_new_pcr_tests[-DEFAULT_MOVING_AVG_WINDOW:]) / DEFAULT_MOVING_AVG_WINDOW
-    new_pcr_tests_rwday_wa = sum(ts_new_pcr_tests[-DEFAULT_MOVING_AVG_WINDOW-DEFAULT_MOVING_AVG_WINDOW:-DEFAULT_MOVING_AVG_WINDOW]) / DEFAULT_MOVING_AVG_WINDOW
+    new_pcr_tests_rwday = sum(ts_new_pcr_tests[-MW:]) / MW
+    new_pcr_tests_rwday_wa = sum(ts_new_pcr_tests[-MW-MW:-MW]) / MW
     delta_new_pcr_tests = new_pcr_tests_rwday - new_pcr_tests_rwday_wa
     new_pcr_tests_rwday_arrow = '🟢' if (delta_new_pcr_tests > 0) else '🔴'
 
     tweet_text = '''{date} #COVID19SL
 
-{active_arrow} Active: {active:,} ({delta_active:+,} {DEFAULT_MOVING_AVG_WINDOW}days ago)
-{new_deaths_rwday_arrow} Deaths/day﹘{DEFAULT_MOVING_AVG_WINDOW}day avg: {new_deaths_rwday:,.0f} ({delta_new_deaths:+,.0f})
-{new_pcr_tests_rwday_arrow} Tests/day﹘{DEFAULT_MOVING_AVG_WINDOW}day avg: {new_pcr_tests_rwday:,.0f} ({delta_new_pcr_tests:+,.0f})
-{new_vacci_rwday_arrow} Vaxs/Day﹘{DEFAULT_MOVING_AVG_WINDOW}day avg: {new_vacci_rwday:,.0f} ({delta_new_vacci:+,.0f})
+{active_arrow} Active:
+    {active:,} ({delta_active:+,} {MW}days ago)
+{new_deaths_rwday_arrow} Deaths/day﹘{MW}day avg:
+    {new_deaths_rwday:,.0f} ({delta_new_deaths:+,.0f})
+{new_pcr_tests_rwday_arrow} Tests/day﹘{MW}day avg:
+    {new_pcr_tests_rwday:,.0f} ({delta_new_pcr_tests:+,.0f})
+{new_vacci_rwday_arrow} Vaxs/Day﹘{MW}day avg:
+    {new_vacci_rwday:,.0f} ({delta_new_vacci:+,.0f})
+
 - Pop vaxed: {p_vacci_dose_1:.1%}
 - Pop fully vaxed: {p_vacci_dose_2:.1%}
 
 @HPBSriLanka @JHUSystems @OurWorldInData #lka #SriLanka
     '''.format(
-        DEFAULT_MOVING_AVG_WINDOW=DEFAULT_MOVING_AVG_WINDOW,
+        MW=MW,
         active=active,
         active_arrow=active_arrow,
         new_vacci_rwday=new_vacci_rwday,
@@ -108,7 +107,7 @@ def _get_status_image_files():
             'Daily COVID19 PCR Tests',
         ),
         _plot_with_time_window(
-            'new_vaccinations',
+            'new_vaxs',
             'green',
             'lightgreen',
             'Daily COVID19 Vaccinations',
@@ -121,7 +120,7 @@ def _tweet():
     status_image_files = _get_status_image_files()
     profile_image_file = _draw_profile_image_with_stat()
     banner_image_file = _plot_with_time_window(
-        'new_vaccinations',
+        'new_vaxs',
         'green',
         'lightgreen',
         'Daily COVID19 Vaccinations',
