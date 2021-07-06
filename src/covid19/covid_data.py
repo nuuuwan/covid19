@@ -29,7 +29,7 @@ def load_jhu_data_raw():
 
 
 @cache(CACHE_NAME, 3600)
-def load_owid_vaxs_data_raw():
+def load_owid_vaccinations_data_raw():
     """Pull Our World in Data Vaccination Data."""
     return www.read_json(OWID_VAC_URL)
 
@@ -39,7 +39,7 @@ def load_jhu_data():
     """Wrap load_jhu_data_raw, to make data more useful."""
 
     # vaccine data (from owid)
-    vac_data = load_owid_vaxs_data_raw()
+    vac_data = load_owid_vaccinations_data_raw()
     country_to_date_to_vac_data = {}
     for country_data in vac_data:
         country_alpha_3 = country_data['iso_code']
@@ -60,7 +60,7 @@ def load_jhu_data():
     # original jhu data
     def _cleaned_timeseries_item(item, prev_item, country_alpha_3):
         unixtime = timex.parse_time(item['date'], '%Y-%m-%d')
-        vaxs_data = country_to_date_to_vac_data \
+        vaccinations_data = country_to_date_to_vac_data \
             .get(country_alpha_3, {}) \
             .get(unixtime, {
                 'cum_vaccinations': 0,
@@ -73,8 +73,8 @@ def load_jhu_data():
             'cum_people_vaccinated',
             'cum_people_fully_vaccinated',
         ]:
-            vaxs_data[key] = max(
-                vaxs_data[key],
+            vaccinations_data[key] = max(
+                vaccinations_data[key],
                 prev_item.get(key, 0),
             )
 
@@ -95,8 +95,8 @@ def load_jhu_data():
             'new_recovered':
                 item['recovered'] - prev_item.get('cum_recovered', 0),
         }
-        for k in vaxs_data:
-            cleaned_item[k] = vaxs_data[k]
+        for k in vaccinations_data:
+            cleaned_item[k] = vaccinations_data[k]
 
         cleaned_item['new_vaccinations'] = \
             cleaned_item['cum_vaccinations'] \

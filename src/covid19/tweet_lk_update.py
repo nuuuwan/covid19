@@ -23,7 +23,7 @@ def _get_tweet_text():
     ts_new_pcr_tests = list(map(lambda _i: _i['new_pcr_tests'], timeseries))
 
     ts_cum_vaxs = \
-        list(map(lambda _i: _i['cum_vaxs'], timeseries))
+        list(map(lambda _i: _i['cum_vaccinations'], timeseries))
     ts_cum_people_vaccinated = \
         list(map(lambda _i: _i['cum_people_vaccinated'], timeseries))
     ts_cum_people_fully_vaccinated = \
@@ -59,12 +59,15 @@ def _get_tweet_text():
 
 {active_arrow} Active:
     {active:,} ({delta_active:+,} {MW}days ago)
-{new_deaths_rwday_arrow} Deaths/day﹘{MW}day avg:
+
+{new_deaths_rwday_arrow} Deaths/day:
     {new_deaths_rwday:,.0f} ({delta_new_deaths:+,.0f})
-{new_pcr_tests_rwday_arrow} Tests/day﹘{MW}day avg:
+{new_pcr_tests_rwday_arrow} Tests/day:
     {new_pcr_tests_rwday:,.0f} ({delta_new_pcr_tests:+,.0f})
-{new_vacci_rwday_arrow} Vaxs/Day﹘{MW}day avg:
+{new_vacci_rwday_arrow} Vaxs/Day:
     {new_vacci_rwday:,.0f} ({delta_new_vacci:+,.0f})
+
+({MW}day avg.)
 
 - Pop vaxed: {p_vacci_dose_1:.1%}
 - Pop fully vaxed: {p_vacci_dose_2:.1%}
@@ -107,7 +110,7 @@ def _get_status_image_files():
             'Daily COVID19 PCR Tests',
         ),
         _plot_with_time_window(
-            'new_vaxs',
+            'new_vaccinations',
             'green',
             'lightgreen',
             'Daily COVID19 Vaccinations',
@@ -120,7 +123,7 @@ def _tweet():
     status_image_files = _get_status_image_files()
     profile_image_file = _draw_profile_image_with_stat()
     banner_image_file = _plot_with_time_window(
-        'new_vaxs',
+        'new_vaccinations',
         'green',
         'lightgreen',
         'Daily COVID19 Vaccinations',
