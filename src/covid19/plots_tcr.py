@@ -12,7 +12,7 @@ from covid19 import lk_data
 BASE_IMAGE_FILE = 'src/covid19/assets/lk_map.png'
 FONT_FILE = 'src/covid19/assets/Arial.ttf'
 
-DAYS_PLOT = 90
+DAYS_PLOT = 180
 MW = 7
 POPULATION = 21_800_000
 
@@ -46,7 +46,7 @@ def _plot_tcr():
         'Data: https://github.com/CSSEGISandData/COVID-19; '
         + 'https://www.hpb.health.gov.lk/api/get-current-statistical; '
         + 'https://github.com/owid/covid-19-data',
-        fontsize=8,
+        fontsize=6,
     )
 
     ax = plt.gca()
@@ -94,7 +94,7 @@ def _plot_ctr():
         'Data: https://github.com/CSSEGISandData/COVID-19; '
         + 'https://www.hpb.health.gov.lk/api/get-current-statistical; '
         + 'https://github.com/owid/covid-19-data',
-        fontsize=8,
+        fontsize=6,
     )
 
     ax = plt.gca()
