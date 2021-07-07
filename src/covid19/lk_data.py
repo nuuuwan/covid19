@@ -32,7 +32,7 @@ def get_timeseries():
             daily_pcr_testing_data,
         )),
         list(map(
-            lambda x: (int)(x['count']),
+            lambda x: (int)(x['pcr_count']),
             daily_pcr_testing_data,
         )),
     ))
