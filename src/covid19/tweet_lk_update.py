@@ -31,65 +31,60 @@ def _get_tweet_text():
 
     active = ts_active[-1]
     active_wa = ts_active[-8]
-    delta_active = active - active_wa
-    active_arrow = '🔴' if (delta_active > 0) else '🟢'
+    d_active = active - active_wa
+    active_arrow = '🔴' if (d_active > 0) else '🟢'
 
-    new_deaths_rwday = sum(ts_new_deaths[-MW:]) / MW
-    new_deaths_rwday_wa = \
+    new_deaths_rw = sum(ts_new_deaths[-MW:]) / MW
+    new_deaths_rw_wa = \
         sum(ts_new_deaths[-MW-MW:-MW]) / MW
-    delta_new_deaths = new_deaths_rwday - new_deaths_rwday_wa
-    new_deaths_rwday_arrow = '🔴' if (delta_new_deaths > 0) else '🟢'
+    d_new_deaths = new_deaths_rw - new_deaths_rw_wa
+    new_deaths_ar = '🔴' if (d_new_deaths > 0) else '🟢'
 
-    new_vacci_rwday = (ts_cum_vaxs[-1] - ts_cum_vaxs[-MW-1]) / MW
-    new_vacci_rwday_wa = (ts_cum_vaxs[-1-MW] - ts_cum_vaxs[-MW-1-MW]) / MW
-    delta_new_vacci = new_vacci_rwday - new_vacci_rwday_wa
-    new_vacci_rwday_arrow = '🟢' if (delta_new_vacci > 0) else '🔴'
+    new_vax_rw = (ts_cum_vaxs[-1] - ts_cum_vaxs[-MW-1]) / MW
+    new_vax_rw_wa = (ts_cum_vaxs[-1-MW] - ts_cum_vaxs[-MW-1-MW]) / MW
+    d_new_vacci = new_vax_rw - new_vax_rw_wa
+    new_vax_ar = '🟢' if (d_new_vacci > 0) else '🔴'
 
-    vacci_dose_1 = ts_cum_people_vaccinated[-1]
-    vacci_dose_2 = ts_cum_people_fully_vaccinated[-1]
-    p_vacci_dose_1 = vacci_dose_1 / POPULATION
-    p_vacci_dose_2 = vacci_dose_2 / POPULATION
+    vax_dose_1 = ts_cum_people_vaccinated[-1]
+    vax_dose_2 = ts_cum_people_fully_vaccinated[-1]
+    p_vax_dose_1 = vax_dose_1 / POPULATION
+    p_vax_dose_2 = vax_dose_2 / POPULATION
 
-    new_pcr_tests_rwday = sum(ts_new_pcr_tests[-MW:]) / MW
-    new_pcr_tests_rwday_wa = sum(ts_new_pcr_tests[-MW-MW:-MW]) / MW
-    delta_new_pcr_tests = new_pcr_tests_rwday - new_pcr_tests_rwday_wa
-    new_pcr_tests_rwday_arrow = '🟢' if (delta_new_pcr_tests > 0) else '🔴'
+    new_pcr_tests_rw = sum(ts_new_pcr_tests[-MW:]) / MW
+    new_pcr_tests_rw_wa = sum(ts_new_pcr_tests[-MW-MW:-MW]) / MW
+    d_new_pcr_tests = new_pcr_tests_rw - new_pcr_tests_rw_wa
+    new_pcr_tests_ar = '🟢' if (d_new_pcr_tests > 0) else '🔴'
 
     tweet_text = '''{date} #COVID19SL
 
-{active_arrow} Active:
-    {active:,} ({delta_active:+,} {MW}days ago)
-
-{new_deaths_rwday_arrow} Deaths/day:
-    {new_deaths_rwday:,.0f} ({delta_new_deaths:+,.0f})
-{new_pcr_tests_rwday_arrow} Tests/day:
-    {new_pcr_tests_rwday:,.0f} ({delta_new_pcr_tests:+,.0f})
-{new_vacci_rwday_arrow} Vaxs/Day:
-    {new_vacci_rwday:,.0f} ({delta_new_vacci:+,.0f})
+{active_arrow} Active: {active:,} ({d_active:+,} {MW}days ago)
+{new_deaths_ar} Deaths/day: {new_deaths_rw:,.0f} ({d_new_deaths:+,.0f})
+{new_pcr_tests_ar} Tests/day: {new_pcr_tests_rw:,.0f} ({d_new_pcr_tests:+,.0f})
+{new_vax_ar} Vaxs/Day: {new_vax_rw:,.0f} ({d_new_vacci:+,.0f})
 
 ({MW}day avg.)
 
-- Pop vaxed: {p_vacci_dose_1:.1%}
-- Pop fully vaxed: {p_vacci_dose_2:.1%}
+- Pop vaxed: {p_vax_dose_1:.1%}
+- Pop fully vaxed: {p_vax_dose_2:.1%}
 
 @HPBSriLanka @JHUSystems @OurWorldInData #lka #SriLanka
     '''.format(
         MW=MW,
         active=active,
         active_arrow=active_arrow,
-        new_vacci_rwday=new_vacci_rwday,
+        new_vax_rw=new_vax_rw,
         date=date,
-        delta_new_vacci=delta_new_vacci,
-        delta_active=delta_active,
-        delta_new_deaths=delta_new_deaths,
-        new_deaths_rwday=new_deaths_rwday,
-        new_deaths_rwday_arrow=new_deaths_rwday_arrow,
-        new_vacci_rwday_arrow=new_vacci_rwday_arrow,
-        p_vacci_dose_1=p_vacci_dose_1,
-        p_vacci_dose_2=p_vacci_dose_2,
-        new_pcr_tests_rwday_arrow=new_pcr_tests_rwday_arrow,
-        new_pcr_tests_rwday=new_pcr_tests_rwday,
-        delta_new_pcr_tests=delta_new_pcr_tests,
+        d_new_vacci=d_new_vacci,
+        d_active=d_active,
+        d_new_deaths=d_new_deaths,
+        new_deaths_rw=new_deaths_rw,
+        new_deaths_ar=new_deaths_ar,
+        new_vax_ar=new_vax_ar,
+        p_vax_dose_1=p_vax_dose_1,
+        p_vax_dose_2=p_vax_dose_2,
+        new_pcr_tests_ar=new_pcr_tests_ar,
+        new_pcr_tests_rw=new_pcr_tests_rw,
+        d_new_pcr_tests=d_new_pcr_tests,
     )
     return tweet_text
 
