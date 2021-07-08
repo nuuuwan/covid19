@@ -1,11 +1,12 @@
 """EPID utils."""
+import json
 import logging
 import os
 import re
 
 import tabula
 from bs4 import BeautifulSoup
-from utils import ds, dt, www
+from utils import ds, dt, jsonx, timex, www
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.epid')
@@ -23,6 +24,8 @@ LIMITED_TEST_MODE = True
 def _parse_int(x):
     if isinstance(x, float):
         return 0
+    if x == '-':
+        return 0
     return dt.parse_int(x.replace(',', ''), 0)
 
 
@@ -38,27 +41,19 @@ def _get_pdf_urls():
     return pdf_urls
 
 
-def _dump():
-    pdf_urls = _get_pdf_urls()
-    if LIMITED_TEST_MODE:
-        log.warn('Running _dump_pdfs in LIMITED_TEST_MODE')
-        pdf_urls = pdf_urls[2:3]
+def _download_parse_and_dump_single(pdf_url):
+    re_data = re.search(REGEX_DATE_ID, pdf_url)
+    if re_data:
+        (y_str, m_str, d_str) = ds.dict_get(
+            re_data.groupdict(),
+            ['y_str', 'm_str', 'd_str'],
+        )
+        date_id = '%s%s%s' % (y_str, m_str, d_str)
+        pdf_file = '/tmp/covid19.epid.vaxs.%s.pdf' % (date_id)
+        if not os.path.exists(pdf_file):
+            www.download_binary(pdf_url, pdf_file)
+        log.info('Downloaded %s to %s', pdf_url, pdf_file)
 
-    pdf_files = []
-    for pdf_url in pdf_urls:
-        re_data = re.search(REGEX_DATE_ID, pdf_url)
-        if re_data:
-            (y_str, m_str, d_str) = ds.dict_get(
-                re_data.groupdict(),
-                ['y_str', 'm_str', 'd_str'],
-            )
-            date_id = '%s%s%s' % (y_str, m_str, d_str)
-            pdf_file = '/tmp/covid19.epid.vaxs.%s.pdf' % (date_id)
-            # www.download_binary(pdf_url, pdf_file)
-            log.info('Downloaded %s to %s', pdf_url, pdf_file)
-            pdf_files.append(pdf_file)
-
-    for pdf_file in pdf_files:
         df = tabula.read_pdf(pdf_file, pages='all', multiple_tables=True)[0]
         row_k_to_items = {}
         for _, cell_map in df.to_dict().items():
@@ -67,11 +62,27 @@ def _dump():
                     row_k_to_items[row_k] = []
                 row_k_to_items[row_k].append(cell_vallue)
         rows = list(row_k_to_items.values())
+        print(rows[-3:])
+        combined_row = []
+        for i in range(0, len(rows[-1])):
+            cell = ''
+            for row in rows[-3:]:
+                if isinstance(row[i], float):
+                    continue
+                cell += str(row[i])
+            cell = cell.replace(',', '')
+            cell = cell.replace('-', '0')
 
-        for row in rows[-3:]:
-            print(row)
+            cell = re.sub(r'[^0-9\s]', '', cell)
+            cell = re.sub(r'\s+', ' ', cell).strip()
 
-        tokens = (' '.join(rows[-3])).split(' ')
+            combined_row.append(cell)
+        print(combined_row)
+
+        tokens = (
+            re.sub(r'\s+', ' ', (' '.join(combined_row))).strip().split(' ')
+        )
+
         covidshield_dose1 = _parse_int(tokens[0])
         covidshield_dose2 = _parse_int(tokens[1])
         sinopharm_dose1 = _parse_int(tokens[2])
@@ -79,9 +90,37 @@ def _dump():
         sputnik_dose1 = _parse_int(tokens[4])
         sputnik_dose2 = _parse_int(tokens[5])
 
-        pfizer_dose2 = _parse_int(rows[-2][-1])
+        if len(tokens) > 6:
+            pfizer_dose2 = _parse_int(tokens[6])
+        else:
+            pfizer_dose2 = 0
 
-        d = {
+        date_id = pdf_file[-12:-4]
+        ut = timex.parse_time(date_id, '%Y%m%d')
+        total_dose1 = sum(
+            [
+                covidshield_dose1,
+                sinopharm_dose1,
+                sputnik_dose1,
+            ]
+        )
+        total_dose2 = sum(
+            [
+                covidshield_dose2,
+                sinopharm_dose2,
+                sputnik_dose2,
+                pfizer_dose2,
+            ]
+        )
+        total = sum(
+            [
+                total_dose1,
+                total_dose2,
+            ]
+        )
+        parsed_data = {
+            'ut': ut,
+            'date': timex.format_time(ut, '%Y-%m-%d'),
             'covidshield_dose1': covidshield_dose1,
             'covidshield_dose2': covidshield_dose2,
             'sinopharm_dose1': sinopharm_dose1,
@@ -89,5 +128,28 @@ def _dump():
             'sputnik_dose1': sputnik_dose1,
             'sputnik_dose2': sputnik_dose2,
             'pfizer_dose2': pfizer_dose2,
+            'total_dose1': total_dose1,
+            'total_dose2': total_dose2,
+            'total': total,
         }
-        print(d)
+        log.info(json.dumps(parsed_data, indent=2))
+
+        json_file = pdf_file.replace('.pdf', '.json')
+        jsonx.write(json_file, parsed_data)
+        log.info('Dumped parsed data to %s', json_file)
+
+
+def _dump():
+    pdf_urls = _get_pdf_urls()
+    if LIMITED_TEST_MODE:
+        log.warn('Running _dump_pdfs in LIMITED_TEST_MODE')
+        # pdf_urls = [
+        #     pdf_urls[0],
+        #     pdf_urls[1],
+        #     # pdf_urls[15],
+        #     # pdf_urls[16],
+        # ]
+        pdf_urls = pdf_urls[30:40]
+
+    for pdf_url in pdf_urls:
+        _download_parse_and_dump_single(pdf_url)
