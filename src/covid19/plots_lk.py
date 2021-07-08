@@ -1,12 +1,13 @@
 """Example 10."""
 
 import datetime
+
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 import numpy as np
-from PIL import Image, ImageFont, ImageDraw
-
+from PIL import Image, ImageDraw, ImageFont
 from utils import timex
+
 from covid19 import lk_data
 
 BASE_IMAGE_FILE = 'src/covid19/assets/lk_map.png'
@@ -26,21 +27,27 @@ def _plot_with_time_window(
     timeseries = lk_data.get_timeseries()
     date_id = timex.format_time(timeseries[-1]['unixtime'], '%Y%m%d')
     date = timex.format_time(timeseries[-1]['unixtime'], '%Y-%m-%d')
-    x = list(map(
-        lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
-        timeseries[-DAYS_PLOT:],
-    ))
+    x = list(
+        map(
+            lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
+            timeseries[-DAYS_PLOT:],
+        )
+    )
     y = list(map(lambda d: d[field_key], timeseries[-DAYS_PLOT:]))
     plt.bar(x, y, color=sub_color)
 
-    x2 = list(map(
-        lambda d: datetime.datetime.fromtimestamp(d['unixtime'] + MW * 86400),
-        timeseries[(-DAYS_PLOT - MW):],
-    ))
-    y2 = list(map(lambda d: d[field_key], timeseries[(-DAYS_PLOT - MW):]))
+    x2 = list(
+        map(
+            lambda d: datetime.datetime.fromtimestamp(
+                d['unixtime'] + MW * 86400
+            ),
+            timeseries[(-DAYS_PLOT - MW) :],
+        )
+    )
+    y2 = list(map(lambda d: d[field_key], timeseries[(-DAYS_PLOT - MW) :]))
     y2 = np.convolve(y2, np.ones(MW) / MW, 'valid')
 
-    plt.plot(x2[:-(MW - 1)], y2, color=main_color)
+    plt.plot(x2[: -(MW - 1)], y2, color=main_color)
     plt.title('%s with a %d-Day Moving Avg. (as of %s)' % (label, MW, date))
     plt.suptitle(
         'Data: https://github.com/CSSEGISandData/COVID-19; '
@@ -57,7 +64,7 @@ def _plot_with_time_window(
     fig = plt.gcf()
     fig.autofmt_xdate()
     fig_width = 12
-    aspect_ratio = 3 if is_background_image else 16/9
+    aspect_ratio = 3 if is_background_image else 16 / 9
     fig_height = round(fig_width / aspect_ratio, 1)
     fig.set_size_inches(fig_width, fig_height)
 
@@ -77,10 +84,12 @@ def _plot_simple(field_key, main_color, label):
     date_id = timex.get_date_id(timeseries[-1]['unixtime'])
     date = timex.format_time(timeseries[-1]['unixtime'], '%Y-%m-%d')
 
-    x = list(map(
-        lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
-        timeseries[-DAYS_PLOT:],
-    ))
+    x = list(
+        map(
+            lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
+            timeseries[-DAYS_PLOT:],
+        )
+    )
     y = list(map(lambda d: d[field_key], timeseries[-DAYS_PLOT:]))
     plt.plot(x, y, color=main_color)
 

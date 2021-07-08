@@ -1,11 +1,11 @@
 """Example Tweet."""
 import logging
+
 import numpy as np
-
 from utils import timex, twitter
-from covid19 import lk_data
-from covid19.plots_tcr import MW, DAYS_PLOT, _plot_tcr, _plot_ctr
 
+from covid19 import lk_data
+from covid19.plots_tcr import DAYS_PLOT, MW, _plot_ctr, _plot_tcr
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')
@@ -17,10 +17,12 @@ def _get_tweet_text():
     unixtime = latest_item['unixtime']
     date = timex.format_time(unixtime, '%Y-%m-%d')
 
-    y = list(map(
-        lambda d: d['new_pcr_tests'] / d['new_confirmed'],
-        timeseries[-DAYS_PLOT-MW + 1:],
-    ))
+    y = list(
+        map(
+            lambda d: d['new_pcr_tests'] / d['new_confirmed'],
+            timeseries[-DAYS_PLOT - MW + 1 :],
+        )
+    )
     y = np.convolve(
         y,
         np.ones(MW) / MW,
@@ -28,7 +30,7 @@ def _get_tweet_text():
     )
 
     tcr_now = y[-1]
-    tcr_mw_ago = y[-1-MW]
+    tcr_mw_ago = y[-1 - MW]
 
     tweet_text = '''Test-to-Case Ratio {date} #COVID19SL
 

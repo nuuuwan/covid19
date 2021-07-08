@@ -1,6 +1,6 @@
 """Sri Lanka specific COVID19 data."""
 
-from utils import www, timex
+from utils import timex, www
 from utils.cache import cache
 
 from covid19 import covid_data
@@ -26,25 +26,33 @@ def get_timeseries():
     hpb_data = load_hpb_data_raw()
     daily_pcr_testing_data = hpb_data['data']['daily_pcr_testing_data']
 
-    t_to_tests = dict(zip(
-        list(map(
-            lambda x: timex.parse_time(x['date'], '%Y-%m-%d'),
-            daily_pcr_testing_data,
-        )),
-        list(map(
-            lambda x: (int)(x['pcr_count']),
-            daily_pcr_testing_data,
-        )),
-    ))
+    t_to_tests = dict(
+        zip(
+            list(
+                map(
+                    lambda x: timex.parse_time(x['date'], '%Y-%m-%d'),
+                    daily_pcr_testing_data,
+                )
+            ),
+            list(
+                map(
+                    lambda x: (int)(x['pcr_count']),
+                    daily_pcr_testing_data,
+                )
+            ),
+        )
+    )
 
     def _add_pcr_test_data(item):
         unixtime = item['unixtime']
         item['new_pcr_tests'] = t_to_tests.get(unixtime, 0)
         return item
 
-    lk_timeseries = list(map(
-        _add_pcr_test_data,
-        lk_jhu_timeseries,
-    ))
+    lk_timeseries = list(
+        map(
+            _add_pcr_test_data,
+            lk_jhu_timeseries,
+        )
+    )
 
     return lk_timeseries

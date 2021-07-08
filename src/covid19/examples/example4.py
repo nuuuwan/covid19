@@ -1,6 +1,7 @@
 """Example 4."""
 
 import datetime
+
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 import numpy as np
@@ -9,21 +10,25 @@ from covid19 import lk_data
 
 timeseries = lk_data.get_timeseries()
 
-x = list(map(
-    lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
-    timeseries,
-))
+x = list(
+    map(
+        lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
+        timeseries,
+    )
+)
 
-y = list(map(
-    lambda d: d['new_confirmed'] / d['new_pcr_tests']
-    if d['new_pcr_tests'] > 10
-    else 0,
-    timeseries,
-))
+y = list(
+    map(
+        lambda d: d['new_confirmed'] / d['new_pcr_tests']
+        if d['new_pcr_tests'] > 10
+        else 0,
+        timeseries,
+    )
+)
 plt.plot(x, y, color='pink')
 N = 14
 y = np.convolve(y, np.ones(N) / N, 'valid')
-plt.plot(x[:-(N - 1)], y, color='red')
+plt.plot(x[: -(N - 1)], y, color='red')
 
 plt.title('Daily New COVID19 Cases per PCR Tests in Sri Lanka.')
 plt.suptitle(

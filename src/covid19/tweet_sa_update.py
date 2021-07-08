@@ -2,8 +2,9 @@
 import logging
 
 from utils import twitter
+
 from covid19 import covid_data
-from covid19.plots_sa import _plot_south_asia, MW
+from covid19.plots_sa import MW, _plot_south_asia
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')
@@ -71,8 +72,9 @@ def _plot_images():
             lambda x, p: format(int(x), ','),
         ),
     ]
-    return list(map(lambda x: x[0], plot_info_list)), \
-        list(map(lambda x: x[1], plot_info_list))
+    return list(map(lambda x: x[0], plot_info_list)), list(
+        map(lambda x: x[1], plot_info_list)
+    )
 
 
 def _tweet():

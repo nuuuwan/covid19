@@ -1,6 +1,7 @@
 """Example 10."""
 
 import datetime
+
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 import numpy as np
@@ -16,9 +17,9 @@ POPULATION = 21_800_000
 
 
 def _plot_south_asia(field_key, label, _format):
-    moving_avg_window = MW \
-        if (field_key != 'cum_people_fully_vaccinated') \
-        else 1
+    moving_avg_window = (
+        MW if (field_key != 'cum_people_fully_vaccinated') else 1
+    )
     jhu_data = covid_data.load_jhu_data()
     country_meta_datas = [
         {'alpha_2': 'IN', 'color': 'orange'},
@@ -39,14 +40,18 @@ def _plot_south_asia(field_key, label, _format):
         timeseries = country_data['timeseries']
         population = country_data['population']
 
-        x = list(map(
-            lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
-            timeseries[-DAYS_PLOT:],
-        ))
-        y = list(map(
-            lambda d: 100_000 * d[field_key] / population,
-            timeseries[(-DAYS_PLOT - moving_avg_window + 1):],
-        ))
+        x = list(
+            map(
+                lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
+                timeseries[-DAYS_PLOT:],
+            )
+        )
+        y = list(
+            map(
+                lambda d: 100_000 * d[field_key] / population,
+                timeseries[(-DAYS_PLOT - moving_avg_window + 1) :],
+            )
+        )
         y = np.convolve(
             y,
             np.ones(moving_avg_window) / moving_avg_window,
@@ -58,11 +63,14 @@ def _plot_south_asia(field_key, label, _format):
             max_last_y_country = country_id
         plt.plot(x, y, color=country_meta_data['color'])
 
-    moving_avg_label = ' (%d-Day Moving Avg.)' % moving_avg_window \
-        if (moving_avg_window > 1) \
+    moving_avg_label = (
+        ' (%d-Day Moving Avg.)' % moving_avg_window
+        if (moving_avg_window > 1)
         else ''
+    )
     plt.title(
-        '%s%s per 100,000 people in South Asia.' % (
+        '%s%s per 100,000 people in South Asia.'
+        % (
             label,
             moving_avg_label,
         ),
@@ -78,9 +86,7 @@ def _plot_south_asia(field_key, label, _format):
     )
 
     ax = plt.gca()
-    ax.get_yaxis().set_major_formatter(
-        tkr.FuncFormatter(_format)
-    )
+    ax.get_yaxis().set_major_formatter(tkr.FuncFormatter(_format))
 
     fig = plt.gcf()
     fig.autofmt_xdate()

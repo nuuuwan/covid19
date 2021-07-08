@@ -1,6 +1,7 @@
 """Example 2."""
 
 import datetime
+
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 
@@ -9,22 +10,30 @@ from covid19 import covid_data
 country_data = covid_data.load_jhu_data()['LK']
 timeseries = country_data['timeseries']
 
-x = list(map(
-    lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
-    timeseries,
-))
-y1 = list(map(
-    lambda d: d['active'],
-    timeseries,
-))
-y2 = list(map(
-    lambda d: d['cum_recovered'],
-    timeseries,
-))
-y3 = list(map(
-    lambda d: d['cum_deaths'],
-    timeseries,
-))
+x = list(
+    map(
+        lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
+        timeseries,
+    )
+)
+y1 = list(
+    map(
+        lambda d: d['active'],
+        timeseries,
+    )
+)
+y2 = list(
+    map(
+        lambda d: d['cum_recovered'],
+        timeseries,
+    )
+)
+y3 = list(
+    map(
+        lambda d: d['cum_deaths'],
+        timeseries,
+    )
+)
 
 plt.stackplot(x, y1, y2, y3, colors=['blue', 'green', 'red'])
 

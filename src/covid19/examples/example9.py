@@ -1,6 +1,7 @@
 """Example 9."""
-import os
 import datetime
+import os
+
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 import numpy as np
@@ -28,20 +29,25 @@ for country_meta_data in country_meta_datas:
     timeseries = country_data['timeseries']
     population = country_data['population']
 
-    x = list(map(
-        lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
-        timeseries,
-    ))
-    y = list(map(
-        lambda d: 100_000 * d[field_key] / population,
-        timeseries,
-    ))
+    x = list(
+        map(
+            lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
+            timeseries,
+        )
+    )
+    y = list(
+        map(
+            lambda d: 100_000 * d[field_key] / population,
+            timeseries,
+        )
+    )
     N = 14
     y = np.convolve(y, np.ones(N) / N, 'valid')
-    plt.plot(x[:-(N - 1)], y, color=country_meta_data['color'])
+    plt.plot(x[: -(N - 1)], y, color=country_meta_data['color'])
 
 plt.title(
-    '%s per 100,000 people in South Asia (%d day average).' % (
+    '%s per 100,000 people in South Asia (%d day average).'
+    % (
         field_label,
         N,
     )

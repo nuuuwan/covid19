@@ -1,6 +1,7 @@
 """Example 1."""
 
 import datetime
+
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 
@@ -25,14 +26,18 @@ for country_meta_data in country_meta_datas:
     timeseries = country_data['timeseries']
     population = country_data['population']
 
-    x = list(map(
-        lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
-        timeseries,
-    ))
-    y = list(map(
-        lambda d: 100_000 * d['cum_deaths'] / population,
-        timeseries,
-    ))
+    x = list(
+        map(
+            lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
+            timeseries,
+        )
+    )
+    y = list(
+        map(
+            lambda d: 100_000 * d['cum_deaths'] / population,
+            timeseries,
+        )
+    )
     plt.plot(x, y, color=country_meta_data['color'])
 
 plt.title('Total Deaths per 100,000 people in South Asia.')

@@ -1,5 +1,5 @@
-
 import time
+
 import setuptools
 
 DIST_NAME = 'covid19'
@@ -34,7 +34,6 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.6",
-
     install_requires=[
         'pycountry',
         'pypopulation',

@@ -2,11 +2,10 @@
 import logging
 
 from utils import timex, twitter
-from covid19 import lk_data
-from covid19.plots_lk import \
-    MW, POPULATION, \
-    _plot_simple, _plot_with_time_window, _draw_profile_image_with_stat
 
+from covid19 import lk_data
+from covid19.plots_lk import (MW, POPULATION, _draw_profile_image_with_stat,
+                              _plot_simple, _plot_with_time_window)
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')
@@ -22,12 +21,13 @@ def _get_tweet_text():
     ts_new_deaths = list(map(lambda _i: _i['new_deaths'], timeseries))
     ts_new_pcr_tests = list(map(lambda _i: _i['new_pcr_tests'], timeseries))
 
-    ts_cum_vaxs = \
-        list(map(lambda _i: _i['cum_vaccinations'], timeseries))
-    ts_cum_people_vaccinated = \
-        list(map(lambda _i: _i['cum_people_vaccinated'], timeseries))
-    ts_cum_people_fully_vaccinated = \
-        list(map(lambda _i: _i['cum_people_fully_vaccinated'], timeseries))
+    ts_cum_vaxs = list(map(lambda _i: _i['cum_vaccinations'], timeseries))
+    ts_cum_people_vaccinated = list(
+        map(lambda _i: _i['cum_people_vaccinated'], timeseries)
+    )
+    ts_cum_people_fully_vaccinated = list(
+        map(lambda _i: _i['cum_people_fully_vaccinated'], timeseries)
+    )
 
     active = ts_active[-1]
     active_wa = ts_active[-8]
@@ -35,13 +35,12 @@ def _get_tweet_text():
     active_arrow = '🔴' if (d_active > 0) else '🟢'
 
     new_deaths_rw = sum(ts_new_deaths[-MW:]) / MW
-    new_deaths_rw_wa = \
-        sum(ts_new_deaths[-MW-MW:-MW]) / MW
+    new_deaths_rw_wa = sum(ts_new_deaths[-MW - MW : -MW]) / MW
     d_new_deaths = new_deaths_rw - new_deaths_rw_wa
     new_deaths_ar = '🔴' if (d_new_deaths > 0) else '🟢'
 
-    new_vax_rw = (ts_cum_vaxs[-1] - ts_cum_vaxs[-MW-1]) / MW
-    new_vax_rw_wa = (ts_cum_vaxs[-1-MW] - ts_cum_vaxs[-MW-1-MW]) / MW
+    new_vax_rw = (ts_cum_vaxs[-1] - ts_cum_vaxs[-MW - 1]) / MW
+    new_vax_rw_wa = (ts_cum_vaxs[-1 - MW] - ts_cum_vaxs[-MW - 1 - MW]) / MW
     d_new_vacci = new_vax_rw - new_vax_rw_wa
     new_vax_ar = '🟢' if (d_new_vacci > 0) else '🔴'
 
@@ -51,7 +50,7 @@ def _get_tweet_text():
     p_vax_dose_2 = vax_dose_2 / POPULATION
 
     new_pcr_tests_rw = sum(ts_new_pcr_tests[-MW:]) / MW
-    new_pcr_tests_rw_wa = sum(ts_new_pcr_tests[-MW-MW:-MW]) / MW
+    new_pcr_tests_rw_wa = sum(ts_new_pcr_tests[-MW - MW : -MW]) / MW
     d_new_pcr_tests = new_pcr_tests_rw - new_pcr_tests_rw_wa
     new_pcr_tests_ar = '🟢' if (d_new_pcr_tests > 0) else '🔴'
 

@@ -1,6 +1,7 @@
 """Example 3."""
 
 import datetime
+
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 
@@ -8,20 +9,26 @@ from covid19 import lk_data
 
 timeseries = lk_data.get_timeseries()
 
-x = list(map(
-    lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
-    timeseries,
-))
-y = list(map(
-    lambda d: d['new_confirmed'],
-    timeseries,
-))
+x = list(
+    map(
+        lambda d: datetime.datetime.fromtimestamp(d['unixtime']),
+        timeseries,
+    )
+)
+y = list(
+    map(
+        lambda d: d['new_confirmed'],
+        timeseries,
+    )
+)
 plt.plot(x, y, color='red')
 
-y2 = list(map(
-    lambda d: d['new_pcr_tests'],
-    timeseries,
-))
+y2 = list(
+    map(
+        lambda d: d['new_pcr_tests'],
+        timeseries,
+    )
+)
 plt.plot(x, y2, color='blue')
 
 plt.title('Daily New COVID19 Cases and PCR Tests in Sri Lanka.')
