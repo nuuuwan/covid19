@@ -3,4 +3,4 @@
 from covid19 import epid
 
 if __name__ == '__main__':
-    epid._dump_pdfs()
+    epid._dump()
