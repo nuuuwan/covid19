@@ -32,7 +32,7 @@ def _get_pdf_urls():
 
 def _dump_pdfs():
     pdf_urls = _get_pdf_urls()
-    for pdf_url in pdf_urls[:5]:
+    for pdf_url in pdf_urls:
         re_data = re.search(REGEX_DATE_ID, pdf_url)
         if re_data:
             (y_str, m_str, d_str) = ds.dict_get(
