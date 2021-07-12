@@ -1,7 +1,11 @@
+import logging
 import re
 
 import tabula
 from utils import dt
+
+log = logging.getLogger('covid19')
+logging.basicConfig(level=logging.INFO)
 
 
 def extract_pdf_tables(pdf_file):

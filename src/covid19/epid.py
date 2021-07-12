@@ -6,6 +6,7 @@ import re
 
 from bs4 import BeautifulSoup
 from utils import ds, dt, jsonx, timex, tsv, www
+from utils.cache import cache
 
 from covid19 import _utils
 
@@ -256,7 +257,6 @@ def _dump_summary():
     for ut in range(start_ut, end_ut, timex.SECONDS_IN.DAY):
         date_id = timex.get_date_id(ut)
         json_file = '/tmp/covid19.epid.vaxs.%s.json' % (date_id)
-        print(json_file)
 
         if os.path.exists(json_file):
             parsed_data = jsonx.read(json_file)
@@ -318,9 +318,22 @@ def _dump_summary():
     log.info('Wrote %d records to %s', len(expanded_data_list), tsv_file)
 
 
+@cache('covid19', timex.SECONDS_IN.HOUR)
 def load_timeseries():
     url = os.path.join(
         'https://raw.githubusercontent.com/nuuuwan/covid19',
         'data/covid19.epid.vaxs.latest.tsv',
     )
-    return www.read_tsv(url)
+
+    def _clean(d):
+        cleaned_d = {}
+        for k, v in d.items():
+            if k != 'date':
+                cleaned_v = (int)(v)
+            else:
+                cleaned_v = v
+            cleaned_d[k] = cleaned_v
+        return cleaned_d
+
+    data_list = www.read_tsv(url)
+    return [_clean(d) for d in data_list]

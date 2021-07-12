@@ -4,8 +4,8 @@ import logging
 from utils import timex, twitter
 
 from covid19 import lk_data
-from covid19.plots_lk import (MW, POPULATION, _draw_profile_image_with_stat,
-                              _plot_simple, _plot_with_time_window)
+from covid19.plots_lk import (MW, POPULATION, _plot_simple,
+                              _plot_with_time_window)
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')
@@ -115,7 +115,6 @@ def _get_status_image_files():
 def _tweet():
     tweet_text = _get_tweet_text()
     status_image_files = _get_status_image_files()
-    profile_image_file = _draw_profile_image_with_stat()
     banner_image_file = _plot_with_time_window(
         'new_vaccinations',
         'green',
@@ -129,7 +128,6 @@ def _tweet():
         tweet_text=tweet_text,
         status_image_files=status_image_files,
         update_user_profile=True,
-        profile_image_file=profile_image_file,
         banner_image_file=banner_image_file,
     )
 
