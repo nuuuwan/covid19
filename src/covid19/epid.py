@@ -30,31 +30,72 @@ def _parse_int(x):
     return dt.parse_int(x.replace(',', ''), 0)
 
 
-def _parse_data_format1(tables):
+def _parse_data_format(date_id, tables):
     rows = tables[-1]
-    combined_row = []
-    for row in rows[-3:]:
-        for cell in row:
-            cell = cell.replace(',', '')
-            cell = cell.replace('-', '0')
 
-            cell = re.sub(r'[^0-9\s]', '', cell)
-            cell = re.sub(r'\s+', ' ', cell).strip()
-            combined_row.append(cell)
-    tokens = re.sub(r'\s+', ' ', (' '.join(combined_row))).strip().split(' ')
+    if date_id > '20210505':
+        row_3 = _utils._row_to_ints(rows[-3])
+        if len(row_3) == 6:
+            row_pfizer = (
+                _utils._row_to_ints(rows[-4])
+                + _utils._row_to_ints(rows[-5])
+                + _utils._row_to_ints(rows[-2])
+            )
+        elif len(row_3) == 7:
+            row_pfizer = [row_3[-1]]
+            row_3 = row_3[:-1]
+        else:
+            row_3 = _utils._row_to_ints(rows[-2])
+            row_pfizer = []
+        pfizer_dose2 = row_pfizer[0] if row_pfizer else 0
 
-    if len(tokens) > 6:
-        pfizer_dose2 = _parse_int(tokens[0])
-        tokens = tokens[1:]
-    else:
+        (
+            covidshield_dose1,
+            covidshield_dose2,
+            sinopharm_dose1,
+            sinopharm_dose2,
+            sputnik_dose1,
+            sputnik_dose2,
+        ) = row_3
+
+        if sinopharm_dose2 == 2435:
+            sinopharm_dose2 = 0
+    elif date_id > '20210129':
+        covidshields = []
+        sinopharms = []
+        for row in rows:
+            valid_cells = list(
+                filter(
+                    lambda cell: '2021' not in cell,
+                    row,
+                )
+            )
+            row_new = (' '.join(valid_cells)).split(' ')
+
+            if len(row_new) >= 2:
+                covidshields.append(dt.parse_int(row_new[1]))
+            if len(row_new) >= 4:
+                sinopharms.append(dt.parse_int(row_new[3]))
+        covidshield_dose1 = max(covidshields)
+        covidshield_dose2 = covidshields[-1]
+        if covidshield_dose2 >= covidshield_dose1:
+            covidshield_dose2 = 0
+        sinopharm_dose1 = max(sinopharms) if sinopharms else 0
+        if sinopharm_dose1 == 246:
+            sinopharm_dose1 = 2469
+
+        sinopharm_dose2 = 0
+        sputnik_dose1 = 0
+        sputnik_dose2 = 0
         pfizer_dose2 = 0
-
-    covidshield_dose1 = _parse_int(tokens[0])
-    covidshield_dose2 = _parse_int(tokens[1])
-    sinopharm_dose1 = _parse_int(tokens[2])
-    sinopharm_dose2 = _parse_int(tokens[3])
-    sputnik_dose1 = _parse_int(tokens[4])
-    sputnik_dose2 = _parse_int(tokens[5])
+    else:
+        covidshield_dose1 = 5286
+        covidshield_dose2 = 0
+        sinopharm_dose1 = 0
+        sinopharm_dose2 = 0
+        sputnik_dose1 = 0
+        sputnik_dose2 = 0
+        pfizer_dose2 = 0
 
     total_dose1 = sum(
         [
@@ -105,22 +146,29 @@ def _get_pdf_urls():
     return pdf_urls
 
 
-def _download_parse_single(pdf_url):
+def _get_date_id(pdf_url):
     re_data = re.search(REGEX_DATE_ID, pdf_url)
     if not re_data:
-        return
+        return None
     (y_str, m_str, d_str) = ds.dict_get(
         re_data.groupdict(),
         ['y_str', 'm_str', 'd_str'],
     )
-    date_id = '%s%s%s' % (y_str, m_str, d_str)
+    return '%s%s%s' % (y_str, m_str, d_str)
+
+
+def _download_parse_single(pdf_url):
+    date_id = _get_date_id(pdf_url)
+    if date_id is None:
+        return
+
     pdf_file = '/tmp/covid19.epid.vaxs.%s.pdf' % (date_id)
     if not os.path.exists(pdf_file):
         www.download_binary(pdf_url, pdf_file)
     log.info('Downloaded %s to %s', pdf_url, pdf_file)
 
     tables = _utils.extract_pdf_tables(pdf_file)
-    parsed_data = _parse_data_format1(tables)
+    parsed_data = _parse_data_format(date_id, tables)
 
     date_id = pdf_file[-12:-4]
     ut = timex.parse_time(date_id, '%Y%m%d')
@@ -133,12 +181,11 @@ def _download_parse_single(pdf_url):
 def _dump_single(pdf_file, parsed_data):
     json_file = pdf_file.replace('.pdf', '.json')
     jsonx.write(json_file, parsed_data)
-    log.info('Dumped parsed data to %s', json_file)
+    log.info('Dumped parsed data to %s\n...', json_file)
     return parsed_data
 
 
 def _validate(parsed_data_list):
-    # latest
     oldest_parsed_data = parsed_data_list[-1]
     (
         covidshield_dose1,
@@ -173,22 +220,28 @@ def _validate(parsed_data_list):
                 raise Exception('total_dose2 < next.total_dose2')
             if parsed_data['total'] > next_parsed_data['total']:
                 raise Exception('total < next.total')
+
         next_parsed_data = parsed_data
 
 
-def _dump():
+def _dump_back_pop():
     pdf_urls = _get_pdf_urls()
-    if LIMITED_TEST_MODE:
-        log.warn('Running _dump_pdfs in LIMITED_TEST_MODE')
-        pdf_urls = [pdf_urls[i] for i in range(0, len(pdf_urls), 10)]
-
     parsed_data_list = []
     for pdf_url in pdf_urls:
         pdf_file, parsed_data = _download_parse_single(pdf_url)
         parsed_data_list.append(parsed_data)
-        try:
-            _validate(parsed_data_list)
-        except Exception:
-            log.error('%s: Format not supported - breaking', pdf_url)
-            break
+        _validate(parsed_data_list)
         _dump_single(pdf_file, parsed_data)
+
+
+def _dump():
+    current_ut = timex.get_unixtime() - timex.SECONDS_IN.DAY
+    current_date_id = timex.get_date_id(current_ut)
+    pdf_urls = _get_pdf_urls()
+    for pdf_url in pdf_urls:
+        date_id = _get_date_id(pdf_url)
+        if date_id == current_date_id:
+            pdf_file, parsed_data = _download_parse_single(pdf_url)
+            _dump_single(pdf_file, parsed_data)
+            return
+    log.warn('Could not find data for %s', current_date_id)
