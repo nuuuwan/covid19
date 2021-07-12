@@ -256,16 +256,19 @@ def _dump_summary():
     for ut in range(start_ut, end_ut, timex.SECONDS_IN.DAY):
         date_id = timex.get_date_id(ut)
         json_file = '/tmp/covid19.epid.vaxs.%s.json' % (date_id)
+        print(json_file)
 
         if os.path.exists(json_file):
             parsed_data = jsonx.read(json_file)
         else:
             url = os.path.join(
-                'https://raw.githubusercontent.com/nuuuwan/weather_lk',
-                'data/weather_lk.%s.json' % (date_id),
+                'https://raw.githubusercontent.com/nuuuwan/covid19',
+                'data/covid19.epid.vaxs.%s.json' % (date_id),
             )
+            log.info('Downloading data from %s', url)
             parsed_data = www.read_json(url)
-            jsonx.write(json_file, parsed_data)
+            if parsed_data is not None:
+                jsonx.write(json_file, parsed_data)
 
         if parsed_data is None:
             log.warn('No/incorrect data for %s', date_id)
