@@ -1,0 +1,14 @@
+{
+  "covidshield_dose1": 925242,
+  "covidshield_dose2": 372899,
+  "sinopharm_dose1": 1565521,
+  "sinopharm_dose2": 513195,
+  "sputnik_dose1": 114795,
+  "sputnik_dose2": 14425,
+  "pfizer_dose2": 0,
+  "total_dose1": 2605558,
+  "total_dose2": 900519,
+  "total": 3506077,
+  "date_id": "20210627",
+  "ut": 1624752000
+}
