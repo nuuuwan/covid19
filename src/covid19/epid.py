@@ -5,7 +5,7 @@ import os
 import re
 
 from bs4 import BeautifulSoup
-from utils import ds, dt, jsonx, timex, www
+from utils import ds, dt, jsonx, timex, tsv, www
 
 from covid19 import _utils
 
@@ -245,3 +245,71 @@ def _dump():
             _dump_single(pdf_file, parsed_data)
             return
     log.warn('Could not find data for %s', current_date_id)
+
+
+def _dump_summary():
+    start_ut = timex.parse_time('2021-01-29', '%Y-%m-%d')
+    end_ut = timex.get_unixtime() - timex.SECONDS_IN.DAY  # current
+
+    data_list = []
+    prev_parsed_data = None
+    for ut in range(start_ut, end_ut, timex.SECONDS_IN.DAY):
+        date_id = timex.get_date_id(ut)
+        json_file = '/tmp/covid19.epid.vaxs.%s.json' % (date_id)
+
+        if os.path.exists(json_file):
+            parsed_data = jsonx.read(json_file)
+        else:
+            url = os.path.join(
+                'https://raw.githubusercontent.com/nuuuwan/weather_lk',
+                'data/weather_lk.%s.json' % (date_id),
+            )
+            parsed_data = www.read_json(url)
+            jsonx.write(json_file, parsed_data)
+
+        if parsed_data is None:
+            log.warn('No/incorrect data for %s', date_id)
+            parsed_data = prev_parsed_data
+
+        log.info(
+            'Loaded data for %s (%d vaccinations)',
+            date_id,
+            parsed_data['total'],
+        )
+        data_list.append(parsed_data)
+        prev_parsed_data = parsed_data
+
+    expanded_data_list = []
+    prev_expanded_d = None
+    for d in data_list:
+        ut = d['ut']
+        date = timex.format_time(ut, '%Y-%m-%d')
+        expanded_d = {
+            'ut': ut,
+            'date': date,
+        }
+
+        for k in [
+            'covidshield_dose1',
+            'covidshield_dose2',
+            'sinopharm_dose1',
+            'sinopharm_dose2',
+            'sputnik_dose1',
+            'sputnik_dose2',
+            'pfizer_dose2',
+            'total_dose1',
+            'total_dose2',
+            'total',
+        ]:
+            expanded_d['cum_%s' % k] = d[k]
+            prev_v = 0
+            if prev_expanded_d:
+                prev_v = prev_expanded_d['cum_%s' % k]
+            expanded_d['new_%s' % k] = d[k] - prev_v
+
+        expanded_data_list.append(expanded_d)
+        prev_expanded_d = expanded_d
+
+    tsv_file = '/tmp/covid19.epid.vaxs.latest.tsv' % (expanded_data_list)
+    tsv.write(tsv_file, expanded_data_list)
+    log.info('Wrote %d records to %s', len(expanded_data_list), tsv_file)
