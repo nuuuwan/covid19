@@ -4,4 +4,4 @@ utils-nuuuwan
 tweepy
 matplotlib
 numpy
-tabula
+tabula-py

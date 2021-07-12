@@ -41,7 +41,7 @@ setuptools.setup(
         'tweepy',
         'matplotlib',
         'numpy',
-        'tabula',
+        'tabula-py',
     ],
     test_suite='nose.collector',
     tests_require=['nose'],
