@@ -316,3 +316,11 @@ def _dump_summary():
     tsv_file = '/tmp/covid19.epid.vaxs.latest.tsv' % (expanded_data_list)
     tsv.write(tsv_file, expanded_data_list)
     log.info('Wrote %d records to %s', len(expanded_data_list), tsv_file)
+
+
+def load_timeseries():
+    url = os.path.join(
+        'https://raw.githubusercontent.com/nuuuwan/covid19',
+        'data/covid19.epid.vaxs.latest.tsv',
+    )
+    return www.read_tsv(url)
