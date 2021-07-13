@@ -51,8 +51,8 @@ def _parse_data_format(date_id, tables):
         pfizer_dose1 = row_pfizer[0] if row_pfizer else 0
 
         (
-            covidshield_dose1,
-            covidshield_dose2,
+            covishield_dose1,
+            covishield_dose2,
             sinopharm_dose1,
             sinopharm_dose2,
             sputnik_dose1,
@@ -62,7 +62,7 @@ def _parse_data_format(date_id, tables):
         if sinopharm_dose2 == 2435:
             sinopharm_dose2 = 0
     elif date_id > '20210129':
-        covidshields = []
+        covishields = []
         sinopharms = []
         for row in rows:
             valid_cells = list(
@@ -74,13 +74,13 @@ def _parse_data_format(date_id, tables):
             row_new = (' '.join(valid_cells)).split(' ')
 
             if len(row_new) >= 2:
-                covidshields.append(dt.parse_int(row_new[1]))
+                covishields.append(dt.parse_int(row_new[1]))
             if len(row_new) >= 4:
                 sinopharms.append(dt.parse_int(row_new[3]))
-        covidshield_dose1 = max(covidshields)
-        covidshield_dose2 = covidshields[-1]
-        if covidshield_dose2 >= covidshield_dose1:
-            covidshield_dose2 = 0
+        covishield_dose1 = max(covishields)
+        covishield_dose2 = covishields[-1]
+        if covishield_dose2 >= covishield_dose1:
+            covishield_dose2 = 0
         sinopharm_dose1 = max(sinopharms) if sinopharms else 0
         if sinopharm_dose1 == 246:
             sinopharm_dose1 = 2469
@@ -90,8 +90,8 @@ def _parse_data_format(date_id, tables):
         sputnik_dose2 = 0
         pfizer_dose1 = 0
     else:
-        covidshield_dose1 = 5286
-        covidshield_dose2 = 0
+        covishield_dose1 = 5286
+        covishield_dose2 = 0
         sinopharm_dose1 = 0
         sinopharm_dose2 = 0
         sputnik_dose1 = 0
@@ -100,7 +100,7 @@ def _parse_data_format(date_id, tables):
 
     total_dose1 = sum(
         [
-            covidshield_dose1,
+            covishield_dose1,
             sinopharm_dose1,
             sputnik_dose1,
             pfizer_dose1,
@@ -108,7 +108,7 @@ def _parse_data_format(date_id, tables):
     )
     total_dose2 = sum(
         [
-            covidshield_dose2,
+            covishield_dose2,
             sinopharm_dose2,
             sputnik_dose2,
         ]
@@ -121,8 +121,8 @@ def _parse_data_format(date_id, tables):
     )
 
     parsed_data = {
-        'covidshield_dose1': covidshield_dose1,
-        'covidshield_dose2': covidshield_dose2,
+        'covishield_dose1': covishield_dose1,
+        'covishield_dose2': covishield_dose2,
         'sinopharm_dose1': sinopharm_dose1,
         'sinopharm_dose2': sinopharm_dose2,
         'sputnik_dose1': sputnik_dose1,
@@ -189,8 +189,8 @@ def _dump_single(pdf_file, parsed_data):
 def _validate(parsed_data_list):
     oldest_parsed_data = parsed_data_list[-1]
     (
-        covidshield_dose1,
-        covidshield_dose2,
+        covishield_dose1,
+        covishield_dose2,
         sinopharm_dose1,
         sinopharm_dose2,
         sputnik_dose1,
@@ -203,8 +203,8 @@ def _validate(parsed_data_list):
         ut,
     ) = oldest_parsed_data.values()
 
-    if covidshield_dose1 < covidshield_dose2:
-        raise Exception('covidshield_dose1 < covidshield_dose2')
+    if covishield_dose1 < covishield_dose2:
+        raise Exception('covishield_dose1 < covishield_dose2')
 
     if sinopharm_dose1 < sinopharm_dose2:
         raise Exception('sinopharm_dose1 < sinopharm_dose2')
@@ -293,8 +293,8 @@ def _dump_summary():
         }
 
         for k in [
-            'covidshield_dose1',
-            'covidshield_dose2',
+            'covishield_dose1',
+            'covishield_dose2',
             'sinopharm_dose1',
             'sinopharm_dose2',
             'sputnik_dose1',

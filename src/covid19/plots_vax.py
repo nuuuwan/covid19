@@ -31,8 +31,8 @@ def _plot_vax_breakdown():
     ys = []
     colors = []
     for (k, color) in [
-        ('cum_covidshield_dose1', 'blue'),
-        ('cum_covidshield_dose2', 'purple'),
+        ('cum_covishield_dose1', 'blue'),
+        ('cum_covishield_dose2', 'purple'),
         ('cum_sinopharm_dose1', 'orange'),
         ('cum_sinopharm_dose2', 'red'),
         ('cum_sputnik_dose1', 'lightgreen'),
@@ -232,7 +232,7 @@ def _plot_vax_proj():
     )
     plt.legend(
         [
-            'Fully vaccinated',
+            'Actual Vaccinations',
             'Projection (at current 14-day avg. rate)',
             'Projection (at current 28-day avg. rate)',
             'Projection (at all time rate)',
