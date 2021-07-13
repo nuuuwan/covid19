@@ -156,72 +156,54 @@ def _plot_vax_proj():
             t,
         )
     )
-    PROJECTION_DAYS = 1000
     y = list(
         map(
             lambda d: d['cum_total'] / (POPULATION * 4 / 3),
             timeseries,
         )
     )
+    plt.plot(x, y, color='green')
+
     last_cum_total_dose2 = y[-1]
     Q = timex.SECONDS_IN.DAY
     rate_14days = (y[-1] - y[-1 - 14]) / (t[-1] - t[-1 - 14]) * Q
     rate_28days = (y[-1] - y[-1 - 28]) / (t[-1] - t[-1 - 28]) * Q
     rate_all = (y[-1] - y[0]) / (t[-1] - t[0]) * Q
-
+    PROJECTION_DAYS = 1000
     x_proj = [
         datetime.datetime.fromtimestamp(last_ut + i * timex.SECONDS_IN.DAY)
         for i in range(0, PROJECTION_DAYS)
     ]
-    y_proj1 = [
-        last_cum_total_dose2 + rate_14days * i
-        for i in range(0, PROJECTION_DAYS)
-    ]
-    y_proj1 = list(
-        filter(
-            lambda y: y < 1,
-            y_proj1,
+    for (rate, color) in [
+        (rate_14days, 'green'),
+        (rate_28days, 'orange'),
+        (rate_all, 'red'),
+    ]:
+        y_proj = [
+            last_cum_total_dose2 + rate * i for i in range(0, PROJECTION_DAYS)
+        ]
+        y_proj_filtered = list(
+            filter(
+                lambda y: y < 1,
+                y_proj,
+            )
         )
-    )
-    y_proj2 = [
-        last_cum_total_dose2 + rate_28days * i
-        for i in range(0, PROJECTION_DAYS)
-    ]
-    y_proj2 = list(
-        filter(
-            lambda y: y < 1,
-            y_proj2,
+        x_proj_filtered = x_proj[: len(y_proj_filtered)]
+        plt.plot(
+            x_proj_filtered,
+            y_proj_filtered,
+            color=color,
+            linestyle='dashed',
         )
-    )
-    y_proj3 = [
-        last_cum_total_dose2 + rate_all * i for i in range(0, PROJECTION_DAYS)
-    ]
-    y_proj3 = list(
-        filter(
-            lambda y: y < 1,
-            y_proj3,
+        days_to_goal = (1 - last_cum_total_dose2) / rate
+        goal_date = timex.format_time(last_ut + days_to_goal * Q, '%b %d,\n%Y')
+        plt.annotate(
+            goal_date,
+            xy=(x_proj_filtered[-1], y_proj_filtered[-1]),
+            xytext=(x_proj_filtered[-1 - 150], y_proj_filtered[-1 - 40]),
+            arrowprops=dict(arrowstyle='->'),
+            color=color,
         )
-    )
-
-    plt.plot(x, y, color='green')
-    plt.plot(
-        x_proj[: len(y_proj1)],
-        y_proj1,
-        color='green',
-        linestyle='dashed',
-    )
-    plt.plot(
-        x_proj[: len(y_proj2)],
-        y_proj2,
-        color='orange',
-        linestyle='dashed',
-    )
-    plt.plot(
-        x_proj[: len(y_proj3)],
-        y_proj3,
-        color='red',
-        linestyle='dashed',
-    )
 
     plt.title(
         'Projected COVID19 Vaccinations in Sri Lanka (as of %s)' % (date,)
