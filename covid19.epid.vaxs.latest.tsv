@@ -1,4 +1,4 @@
-ut	date	cum_covidshield_dose1	new_covidshield_dose1	cum_covidshield_dose2	new_covidshield_dose2	cum_sinopharm_dose1	new_sinopharm_dose1	cum_sinopharm_dose2	new_sinopharm_dose2	cum_sputnik_dose1	new_sputnik_dose1	cum_sputnik_dose2	new_sputnik_dose2	cum_pfizer_dose1	new_pfizer_dose1	cum_total_dose1	new_total_dose1	cum_total_dose2	new_total_dose2	cum_total	new_total
+ut	date	cum_covishield_dose1	new_covishield_dose1	cum_covishield_dose2	new_covishield_dose2	cum_sinopharm_dose1	new_sinopharm_dose1	cum_sinopharm_dose2	new_sinopharm_dose2	cum_sputnik_dose1	new_sputnik_dose1	cum_sputnik_dose2	new_sputnik_dose2	cum_pfizer_dose1	new_pfizer_dose1	cum_total_dose1	new_total_dose1	cum_total_dose2	new_total_dose2	cum_total	new_total
 1611878400	2021-01-29	5286	5286	0	0	0	0	0	0	0	0	0	0	0	0	5286	5286	0	0	5286	5286
 1611964800	2021-01-30	37825	32539	0	0	0	0	0	0	0	0	0	0	0	0	37825	32539	0	0	37825	32539
 1612051200	2021-01-31	59154	21329	0	0	0	0	0	0	0	0	0	0	0	0	59154	21329	0	0	59154	21329
@@ -163,3 +163,4 @@ ut	date	cum_covidshield_dose1	new_covidshield_dose1	cum_covidshield_dose2	new_co
 1625788800	2021-07-09	925242	0	384502	48	2714385	169771	979730	24478	114795	0	14464	0	3455	1284	3757877	171055	1378696	24526	5136573	195581
 1625875200	2021-07-10	925242	0	385647	1145	2856147	141762	1023128	43398	114795	0	14464	0	11069	7614	3907253	149376	1423239	44543	5330492	193919
 1625961600	2021-07-11	925242	0	385669	22	2940706	84559	1046840	23712	125444	10649	14464	0	18348	7279	4009740	102487	1446973	23734	5456713	126221
+1625961600	2021-07-11	925242	0	385669	0	2940706	0	1046840	0	125444	0	14464	0	18348	0	4009740	0	1446973	0	5456713	0
