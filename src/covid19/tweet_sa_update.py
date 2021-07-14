@@ -3,8 +3,7 @@ import logging
 
 from utils import twitter
 
-from covid19 import covid_data
-from covid19.plots_sa import MW, _plot_south_asia
+from covid19 import PlotSouthAsia, covid_data
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')
@@ -41,7 +40,7 @@ Excl. #Maldives & #Bhutan
 @JHUSystems @OurWorldInData #lka
     '''.format(
         _ds=_ds,
-        mw=MW,
+        mw=PlotSouthAsia.MW,
         max0=_get_country_label(max_country_ids[0]),
         max1=_get_country_label(max_country_ids[1]),
         max2=_get_country_label(max_country_ids[2]),
@@ -51,25 +50,21 @@ Excl. #Maldives & #Bhutan
 
 def _plot_images():
     plot_info_list = [
-        _plot_south_asia(
+        PlotSouthAsia._plot(
             'active',
             'Active COVID19 Cases',
-            lambda x, p: format(int(x), ','),
         ),
-        _plot_south_asia(
+        PlotSouthAsia._plot(
             'new_deaths',
             'New Daily COVID19 Deaths',
-            lambda x, p: format(float(x), '.2'),
         ),
-        _plot_south_asia(
+        PlotSouthAsia._plot(
             'new_vaccinations',
             'New Daily Vaccinations',
-            lambda x, p: format(int(x), ','),
         ),
-        _plot_south_asia(
+        PlotSouthAsia._plot(
             'cum_people_fully_vaccinated',
             'People Fully Vaccinated',
-            lambda x, p: format(int(x), ','),
         ),
     ]
     return list(map(lambda x: x[0], plot_info_list)), list(
