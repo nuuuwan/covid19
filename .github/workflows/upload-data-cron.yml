@@ -3,7 +3,7 @@ name: Upload Data on Cron
 
 on:
   schedule:
-    - cron:  "30 6 * * *"
+    - cron:  "30 5 * * *"
 
 jobs:
   upload-data:
