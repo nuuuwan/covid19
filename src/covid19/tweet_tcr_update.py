@@ -4,8 +4,7 @@ import logging
 import numpy as np
 from utils import timex, twitter
 
-from covid19 import lk_data
-from covid19.plots_tcr import DAYS_PLOT, MW, _plot_ctr, _plot_tcr
+from covid19 import PlotTCRAndCTR, lk_data
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')
@@ -20,17 +19,17 @@ def _get_tweet_text():
     y = list(
         map(
             lambda d: d['new_pcr_tests'] / d['new_confirmed'],
-            timeseries[-DAYS_PLOT - MW + 1 :],
+            timeseries[-PlotTCRAndCTR.DAYS_PLOT - PlotTCRAndCTR.MW + 1 :],
         )
     )
     y = np.convolve(
         y,
-        np.ones(MW) / MW,
+        np.ones(PlotTCRAndCTR.MW) / PlotTCRAndCTR.MW,
         'valid',
     )
 
     tcr_now = y[-1]
-    tcr_mw_ago = y[-1 - MW]
+    tcr_mw_ago = y[-1 - PlotTCRAndCTR.MW]
 
     tweet_text = '''Test-to-Case Ratio {date} #COVID19SL
 
@@ -40,7 +39,7 @@ Current: {tcr_now:.1f} Tests/Cases ({mw} Day Average)
 @HPBSriLanka @JHUSystems @OurWorldInData #lka #SriLanka
     '''.format(
         date=date,
-        mw=MW,
+        mw=PlotTCRAndCTR.MW,
         tcr_now=tcr_now,
         tcr_mw_ago=tcr_mw_ago,
     )
@@ -49,8 +48,7 @@ Current: {tcr_now:.1f} Tests/Cases ({mw} Day Average)
 
 def _get_status_image_files():
     return [
-        _plot_tcr(),
-        _plot_ctr(),
+        PlotTCRAndCTR._plot(),
     ]
 
 
