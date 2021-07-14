@@ -29,15 +29,14 @@ def _plot_vax_breakdown():
         )
     )
     ys = []
-    colors = []
-    for (k, color) in [
-        ('cum_covishield_dose1', 'blue'),
-        ('cum_covishield_dose2', 'purple'),
-        ('cum_sinopharm_dose1', 'orange'),
-        ('cum_sinopharm_dose2', 'red'),
-        ('cum_sputnik_dose1', 'lightgreen'),
-        ('cum_sputnik_dose2', 'green'),
-        ('cum_pfizer_dose1', 'yellow'),
+    for k in [
+        'cum_covishield_dose1',
+        'cum_covishield_dose2',
+        'cum_sinopharm_dose1',
+        'cum_sinopharm_dose2',
+        'cum_sputnik_dose1',
+        'cum_sputnik_dose2',
+        'cum_pfizer_dose1',
     ]:
         y = list(
             map(
@@ -46,8 +45,7 @@ def _plot_vax_breakdown():
             )
         )
         ys.append(y)
-        colors.append(color)
-    plt.stackplot(x, ys, colors=colors)
+    plt.stackplot(x, ys)
 
     plt.title('COVID19 Vaccinations in Sri Lanka (as of %s)' % (date,))
     plt.suptitle(
@@ -68,6 +66,7 @@ def _plot_vax_breakdown():
     )
 
     ax = plt.gca()
+    ax.grid()
     ax.get_yaxis().set_major_formatter(
         tkr.FuncFormatter(lambda x, p: format(float(x), ',.0f'))
     )
@@ -123,6 +122,7 @@ def _plot_vax_summary():
     )
 
     ax = plt.gca()
+    ax.grid()
     ax.get_yaxis().set_major_formatter(
         tkr.FuncFormatter(lambda x, p: format(float(x), ',.0f'))
     )
@@ -226,6 +226,7 @@ def _plot_vax_proj():
     plt.ylabel('Progress to Goal (Vaccinate Population > 20years)')
 
     ax = plt.gca()
+    ax.grid()
     ax.get_yaxis().set_major_formatter(
         tkr.FuncFormatter(lambda x, p: format(float(x), ',.1%'))
     )
@@ -292,4 +293,4 @@ def _draw_profile_image_with_stat():
 
 
 if __name__ == '__main__':
-    _plot_vax_proj()
+    _plot_vax_breakdown()
