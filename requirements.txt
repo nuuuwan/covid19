@@ -5,3 +5,4 @@ tweepy
 matplotlib
 numpy
 tabula-py
+infographics-nuuuwan

@@ -42,6 +42,7 @@ setuptools.setup(
         'matplotlib',
         'numpy',
         'tabula-py',
+        'infographics-nuuuwan',
     ],
     test_suite='nose.collector',
     tests_require=['nose'],
