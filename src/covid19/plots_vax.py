@@ -197,12 +197,14 @@ def _plot_vax_proj():
         )
         days_to_goal = (1 - last_cum_total_dose2) / rate
         goal_date = timex.format_time(last_ut + days_to_goal * Q, '%b %d,\n%Y')
-        plt.annotate(
+        plt.text(
+            x_proj_filtered[-1],
+            y_proj_filtered[-1],
             goal_date,
-            xy=(x_proj_filtered[-1], y_proj_filtered[-1]),
-            xytext=(x_proj_filtered[-1 - 150], y_proj_filtered[-1 - 40]),
-            arrowprops=dict(arrowstyle='->'),
             color=color,
+            fontsize=8,
+            ha='center',
+            va='bottom',
         )
 
     plt.title(
