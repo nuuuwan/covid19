@@ -13,7 +13,7 @@ POPULATION = 21_800_000
 PADDING = 0.12
 
 
-class PlotVaxBreakdown(Figure.Figure):
+class PlotVaxSummary(Figure.Figure):
     def __init__(
         self,
         left_bottom=(PADDING, PADDING),
@@ -25,7 +25,7 @@ class PlotVaxBreakdown(Figure.Figure):
             width_height=width_height,
             figure_text=figure_text,
         )
-        self.__data__ = PlotVaxBreakdown.__prep_data__(self)
+        self.__data__ = PlotVaxSummary.__prep_data__(self)
 
     def __prep_data__(self):
         timeseries = epid.load_timeseries()
@@ -39,24 +39,20 @@ class PlotVaxBreakdown(Figure.Figure):
                 timeseries,
             )
         )
-        ys = []
-        for k in [
-            'cum_covishield_dose1',
-            'cum_covishield_dose2',
-            'cum_sinopharm_dose1',
-            'cum_sinopharm_dose2',
-            'cum_sputnik_dose1',
-            'cum_sputnik_dose2',
-            'cum_pfizer_dose1',
-        ]:
-            y = list(
-                map(
-                    lambda d: d[k],
-                    timeseries,
-                )
+        y_partial = list(
+            map(
+                lambda d: (d['cum_total_dose1'] - d['cum_total_dose2'])
+                / POPULATION,
+                timeseries,
             )
-            ys.append(y)
-        return (x, ys, date, date_id)
+        )
+        y_full = list(
+            map(
+                lambda d: d['cum_total_dose2'] / POPULATION,
+                timeseries,
+            )
+        )
+        return (x, [y_full, y_partial], date, date_id)
 
     def draw(self):
         super().draw()
@@ -67,20 +63,15 @@ class PlotVaxBreakdown(Figure.Figure):
         plt.stackplot(x, ys)
         plt.legend(
             [
-                'Covishield (Dose 1)',
-                'Covishield (Dose 2)',
-                'Sinopharm (Dose 1)',
-                'Sinopharm (Dose 2)',
-                'Sputnik (Dose 1)',
-                'Sputnik (Dose 2)',
-                'Pfizer (Dose 1)',
+                'Fully Vaccinated (2 Doses)',
+                'Partially Vaccinated (1 Dose)',
             ],
             loc='upper left',
         )
-
+        plt.ylabel('Proportion of Total Population')
         ax.grid()
         ax.get_yaxis().set_major_formatter(
-            tkr.FuncFormatter(lambda x, p: format(float(x), ',.0f'))
+            tkr.FuncFormatter(lambda x, p: format(float(x), '.1%'))
         )
         fig = plt.gcf()
         fig.autofmt_xdate()
@@ -90,12 +81,12 @@ class PlotVaxBreakdown(Figure.Figure):
 
 
 def _plot():
-    plot = PlotVaxBreakdown()
+    plot = PlotVaxSummary()
     (x, ys, date, date_id) = plot.get_data()
 
-    image_file = '/tmp/covid19.plot.%s.vax_breakdown.png' % (date_id)
+    image_file = '/tmp/covid19.plot.%s.vax_summary.png' % (date_id)
     Infographic.Infographic(
-        title='Vaccine Type and Dose',
+        title='Fully and Partially Vaccinated Population',
         subtitle='COVID19 Vaccinations in Sri Lanka (as of %s)' % date,
         footer_text='\n'.join(
             ['Data from https://www.epid.gov.lk', 'Visualization by @nuuuwan']
