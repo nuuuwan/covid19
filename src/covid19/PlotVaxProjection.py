@@ -157,6 +157,7 @@ def _plot():
             ['Data from https://www.epid.gov.lk', 'Visualization by @nuuuwan']
         ),
         children=[plot],
+        size=(8, 9),
     ).save(image_file)
     return image_file
 
