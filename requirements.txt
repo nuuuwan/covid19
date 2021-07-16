@@ -6,3 +6,4 @@ matplotlib
 numpy
 tabula-py
 infographics-nuuuwan
+pycountry-convert
