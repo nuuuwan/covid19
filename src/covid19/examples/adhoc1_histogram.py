@@ -1,8 +1,13 @@
 import os
+import logging
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 
-from covid19 import lk_data
+from covid19 import lk_data, _utils
+
+
+
+
 
 DAYS_AGO = 60
 FIELD_KEY = 'new_deaths'
@@ -40,4 +45,5 @@ image_file = '/tmp/covid19.adhoc1_histogram.%s.days%d.group%d.png' % (FIELD_KEY,
 fig = plt.gcf()
 fig.savefig(image_file)
 plt.close()
+_utils.log.info('Saved to %s', image_file)
 os.system('open %s' % image_file)
