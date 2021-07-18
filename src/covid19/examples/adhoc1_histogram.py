@@ -1,21 +1,17 @@
 import os
-import logging
+
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
 
-from covid19 import lk_data, _utils
+from covid19 import _utils, lk_data
 
-
-
-
-
-DAYS_AGO = 60
+START_DAYS_AGO = 60
 FIELD_KEY = 'new_deaths'
 label = FIELD_KEY.replace('_', ' ').title()
-GROUP_BY = 10
-timeseries_period = lk_data.get_timeseries()[-DAYS_AGO:]
+GROUP_BY = 5
+timeseries_period = lk_data.get_timeseries()[-START_DAYS_AGO:]
 x = [d[FIELD_KEY] for d in timeseries_period]
-
+print(x)
 n = len(x)
 unique_n = len(list(set(x)))
 print(n, unique_n)
@@ -32,18 +28,25 @@ ax.get_yaxis().set_major_formatter(
 ax.grid()
 
 plt.suptitle(
-    'COVID19 in Sri Lanka (%d days from %s to %s)'
-    % (DAYS_AGO, start_date, end_date),
+    'COVID19 in Sri Lanka (%s to %s)'
+    % (start_date, end_date),
     fontsize=12,
 )
 plt.title('%s Per Day (X) vs. Number of Days (Y) Histogram' % label)
 plt.ylabel('Number of Days')
 plt.xlabel('%s per Day' % label)
 
-image_file = '/tmp/covid19.adhoc1_histogram.%s.days%d.group%d.png' % (FIELD_KEY, DAYS_AGO, GROUP_BY)
+image_file = '/tmp/covid19.adhoc1_histogram.%s.%s.%s.group%d.png' % (
+    FIELD_KEY,
+    start_date,
+    end_date,
+    GROUP_BY,
+)
 
 fig = plt.gcf()
+fig.set_size_inches(8, 4.5)
 fig.savefig(image_file)
+
 plt.close()
 _utils.log.info('Saved to %s', image_file)
 os.system('open %s' % image_file)
