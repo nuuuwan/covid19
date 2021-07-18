@@ -1,9 +1,9 @@
 import datetime
 import random
-import numpy as np
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
+import numpy as np
 import pycountry_convert
 from infographics import Figure, Infographic
 
@@ -66,7 +66,6 @@ class PlotWorld(Figure.Figure):
 
     def __prep_data__(self):
         jhu_data = covid_data.load_jhu_data()
-        print(jhu_data['LK']['timeseries'][-1])
         date = jhu_data['LK']['timeseries'][-1]['date'][:10]
         date_id = date.replace('-', '')
 
@@ -107,7 +106,7 @@ class PlotWorld(Figure.Figure):
             )
         )
         if 'new' in self.field_key:
-            x = x[MW - 1:]
+            x = x[MW - 1 :]
         group_to_y = {}
         for group_id, date_to_stat in group_to_ut_to_stat.items():
             date_to_pop = group_to_date_to_pop[group_id]
@@ -126,7 +125,7 @@ class PlotWorld(Figure.Figure):
                     'valid',
                 )
             group_to_y[group_id] = y
-        group_to_y = dict(sorted(group_to_y.items(), key=lambda x: x[1][-1]))
+        group_to_y = dict(sorted(group_to_y.items(), key=lambda x: -x[1][-1]))
 
         self.__data__ = (
             date,
@@ -150,8 +149,8 @@ class PlotWorld(Figure.Figure):
         for i, (group_id, y) in enumerate(group_to_y.items()):
             color = 'red' if (group_id == 'LK') else 'lightgray'
             plt.plot(x, y, color=color)
-            r = (i * 7 + 1) % 21
-            plt.text(x[-r], y[-r], _place_id_to_name(group_id), fontsize=6)
+            r = (i * 10) % 7 + 1
+            plt.text(x[-r], y[-r], _place_id_to_name(group_id), fontsize=12)
 
         ax.grid()
         ax.get_yaxis().set_major_formatter(
@@ -177,7 +176,7 @@ def _plot(field_key, label):
         title='{label} per {Q_PEOPLE:,} people'.format(
             label=label, Q_PEOPLE=Q_PEOPLE
         ),
-        subtitle='COVID19: Sri Lanka vs. Worldwide (as of %s)' % date,
+        subtitle='COVID19: Sri Lanka (Red) vs. Worldwide (as of %s)' % date,
         footer_text='\n'.join(
             [
                 'Data from https://github.com/CSSEGISandData/COVID-19; ',
@@ -187,17 +186,7 @@ def _plot(field_key, label):
         ),
         children=[plot],
     ).save(image_file)
-    return image_file
-
-
-if __name__ == '__main__':
-    import os
-
-    for (field_key, label) in [
-        ('cum_vaccinations', 'Total Vaccinations'),
-        ('cum_people_fully_vaccinated', 'Fully Vaccinated People'),
-        ('cum_people_vaccinated', 'Vaccinated People (at least 1 dose)'),
-        ('new_vaccinations', 'New Vaccinations (%d-Day Average)' % (MW)),
-    ]:
-        image_file = _plot(field_key, label)
-        os.system('open %s' % image_file)
+    return (
+        image_file,
+        group_to_y,
+    )
