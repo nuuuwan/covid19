@@ -28,8 +28,7 @@ ax.get_yaxis().set_major_formatter(
 ax.grid()
 
 plt.suptitle(
-    'COVID19 in Sri Lanka (%s to %s)'
-    % (start_date, end_date),
+    'COVID19 in Sri Lanka (%s to %s)' % (start_date, end_date),
     fontsize=12,
 )
 plt.title('%s Per Day (X) vs. Number of Days (Y) Histogram' % label)
