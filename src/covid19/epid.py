@@ -33,22 +33,32 @@ def _parse_int(x):
 
 def _parse_data_format(date_id, tables):
     rows = tables[-1]
-
     if date_id > '20210505':
         row_3 = _utils._row_to_ints(rows[-3])
+        if len(row_3) == 0:
+            row_3 = _utils._row_to_ints(rows[-4])
+
         if len(row_3) == 6:
             row_pfizer = (
                 _utils._row_to_ints(rows[-4])
                 + _utils._row_to_ints(rows[-5])
                 + _utils._row_to_ints(rows[-2])
             )
+            row_moderna = []
         elif len(row_3) == 7:
             row_pfizer = [row_3[-1]]
             row_3 = row_3[:-1]
+            row_moderna = []
+        elif len(row_3) == 8:
+            row_pfizer = [row_3[-2]]
+            row_moderna = [row_3[-1]]
+            row_3 = row_3[:-2]
         else:
             row_3 = _utils._row_to_ints(rows[-2])
             row_pfizer = []
+            row_moderna = []
         pfizer_dose1 = row_pfizer[0] if row_pfizer else 0
+        moderna_dose1 = row_moderna[0] if row_moderna else 0
 
         (
             covishield_dose1,
@@ -89,6 +99,7 @@ def _parse_data_format(date_id, tables):
         sputnik_dose1 = 0
         sputnik_dose2 = 0
         pfizer_dose1 = 0
+        moderna_dose1 = 0
     else:
         covishield_dose1 = 5286
         covishield_dose2 = 0
@@ -97,6 +108,7 @@ def _parse_data_format(date_id, tables):
         sputnik_dose1 = 0
         sputnik_dose2 = 0
         pfizer_dose1 = 0
+        moderna_dose1 = 0
 
     total_dose1 = sum(
         [
@@ -104,6 +116,7 @@ def _parse_data_format(date_id, tables):
             sinopharm_dose1,
             sputnik_dose1,
             pfizer_dose1,
+            moderna_dose1,
         ]
     )
     total_dose2 = sum(
@@ -128,6 +141,7 @@ def _parse_data_format(date_id, tables):
         'sputnik_dose1': sputnik_dose1,
         'sputnik_dose2': sputnik_dose2,
         'pfizer_dose1': pfizer_dose1,
+        'moderna_dose1': moderna_dose1,
         'total_dose1': total_dose1,
         'total_dose2': total_dose2,
         'total': total,

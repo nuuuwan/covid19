@@ -48,6 +48,7 @@ class PlotVaxBreakdown(Figure.Figure):
             'cum_sputnik_dose1',
             'cum_sputnik_dose2',
             'cum_pfizer_dose1',
+            'cum_moderna_dose1',
         ]:
             y = list(
                 map(
@@ -74,6 +75,7 @@ class PlotVaxBreakdown(Figure.Figure):
                 'Sputnik (Dose 1)',
                 'Sputnik (Dose 2)',
                 'Pfizer (Dose 1)',
+                'Moderna (Dose 1)',
             ],
             loc='upper left',
         )

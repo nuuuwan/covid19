@@ -34,3 +34,4 @@ pip install -i https://test.pypi.org/simple/ covid19-nuuuwan
 * Load data from the Health Promotion Bureau of Sri Lanka
 * See https://nuwans.medium.com/analyzing-covid19-in-sri-lanka-with-python-caea03296381 for some examples
 * Plot World
+* Fix 2021-07-18 format #bug
