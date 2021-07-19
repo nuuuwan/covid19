@@ -35,3 +35,5 @@ pip install -i https://test.pypi.org/simple/ covid19-nuuuwan
 * See https://nuwans.medium.com/analyzing-covid19-in-sri-lanka-with-python-caea03296381 for some examples
 * Plot World
 * Fix 2021-07-18 format #bug
+* Fix #BUG _validate doesn't take moderna
+* Fix #BUG _validate doesn't take moderna
