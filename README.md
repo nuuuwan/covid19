@@ -24,7 +24,6 @@ pip install covid19-nuuuwan
 * Added twitter examples
 * Added South Asia, and Vax
 * Added Plot World
-* Fix 2021-07-18 format #bug
+* Fix 2021-07-18 #BUG
 * Fix #BUG _validate doesn't take moderna
-* test
-* Fix 2021-06-28 #BUG
+* Fix 2021-06-27 #BUG
