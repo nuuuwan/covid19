@@ -320,6 +320,7 @@ def _dump_summary():
             'sputnik_dose1',
             'sputnik_dose2',
             'pfizer_dose1',
+            'moderna_dose1',
             'total_dose1',
             'total_dose2',
             'total',

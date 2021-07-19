@@ -29,3 +29,4 @@ pip install covid19-nuuuwan
 * Fix 2021-06-27 #BUG
 * remove testing code
 * Fix 2021-06-27 #Bug2
+* Update summary with moderna
