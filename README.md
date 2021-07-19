@@ -27,3 +27,4 @@ pip install covid19-nuuuwan
 * Fix 2021-07-18 format #bug
 * Fix #BUG _validate doesn't take moderna
 * test
+* Fix 2021-06-28 #BUG

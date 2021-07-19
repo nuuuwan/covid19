@@ -36,6 +36,8 @@ def _parse_data_format(date_id, tables):
     if date_id > '20210505':
         row_3 = _utils._row_to_ints(rows[-3])
         if len(row_3) == 0:
+            row_3 = _utils._row_to_ints(rows[-2])
+        if len(row_3) == 0:
             row_3 = _utils._row_to_ints(rows[-4])
 
         if len(row_3) == 6:
@@ -243,6 +245,7 @@ def _validate(parsed_data_list):
 def _dump_back_pop():
     pdf_urls = _get_pdf_urls()
     parsed_data_list = []
+    pdf_urls = [pdf_urls[i] for i in range(0, len(pdf_urls), 10)]
     for pdf_url in pdf_urls:
         pdf_file, parsed_data = _download_parse_single(pdf_url)
         parsed_data_list.append(parsed_data)
