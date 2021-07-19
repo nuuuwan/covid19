@@ -248,7 +248,6 @@ def _validate(parsed_data_list):
 def _dump_back_pop():
     pdf_urls = _get_pdf_urls()
     parsed_data_list = []
-    pdf_urls = pdf_urls[20:22]
     for pdf_url in pdf_urls:
         pdf_file, parsed_data = _download_parse_single(pdf_url)
         parsed_data_list.append(parsed_data)
