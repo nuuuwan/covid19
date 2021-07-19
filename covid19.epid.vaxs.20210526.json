@@ -5,10 +5,11 @@
   "sinopharm_dose2": 0,
   "sputnik_dose1": 14984,
   "sputnik_dose2": 0,
-  "pfizer_dose1": 0,
-  "total_dose1": 1461696,
+  "pfizer_dose1": 26,
+  "moderna_dose1": 0,
+  "total_dose1": 1461722,
   "total_dose2": 341541,
-  "total": 1803237,
+  "total": 1803263,
   "date_id": "20210526",
   "ut": 1621987200
 }

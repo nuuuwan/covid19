@@ -6,6 +6,7 @@
   "sputnik_dose1": 157368,
   "sputnik_dose2": 14464,
   "pfizer_dose1": 39176,
+  "moderna_dose1": 0,
   "total_dose1": 5175605,
   "total_dose2": 1628876,
   "total": 6804481,
