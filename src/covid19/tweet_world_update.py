@@ -11,16 +11,17 @@ log = logging.getLogger('covid19.twitter')
 
 def _place_name_to_label(place_name):
     return {
-        'Sri Lanka': '🇱🇰 #SriLanka',
-        'India': '🇮🇳 #India',
-        'China': '🇨🇳 #China',
-        'USA': '🇺🇸 #USA',
-        'Europe': '🇪🇺 #Europe',
-        'Africa': '🌍 #Africa',
-        'South America': '🌎 #SouthAmerica',
-        'North America (Rest of)': '🌎 #NorthAmerica (Rest)',
-        'Asia (Rest of)': '🌏 #Asia (Rest)',
-        'Oceania': '🌏 #Oceania',
+        'Sri Lanka': '🇱🇰#SriLanka',
+        'India': '🇮🇳#India',
+        'China': '🇨🇳#China',
+        'USA': '🇺🇸#USA',
+        'Europe': '🇪🇺#Europe',
+        'Africa': '🌍#Africa',
+        'South America': '🌎#SouthAmerica',
+        'North America (Rest of)': '🌎#NorthAmerica (Rest)',
+        'Asia (Rest of)': '🌏#Asia (Rest)',
+        'Oceania': '🌏#Oceania',
+        'World': '🌏#World (All)',
     }.get(place_name, place_name)
 
 
@@ -32,21 +33,26 @@ def _get_tweet_text(group_to_y):
         label = _place_name_to_label(place_name)
         stat = y[-1]
         inner_lines.append(
-            '{stat:,.0f} {label}'.format(
+            '{stat:.0f} {label}'.format(
                 stat=stat,
                 label=label,
             )
         )
+        if group_id == 'World':
+            inner_lines.append('')
     inner = '\n'.join(inner_lines)
 
     tweet_text = '''#COVID19SL vs. World
 
-Vax/{Q_PEOPLE:,} people ({MW}-Day Avg.)
+{MW}-Day Avg Vax/{Q_PEOPLE_K:.0f}K people
+
 {inner}
 
-@HPBSriLanka @JHUSystems @OurWorldInData #lka
+@JHUSystems @OurWorldInData#lka
     '''.format(
-        inner=inner, MW=PlotWorld.MW, Q_PEOPLE=PlotWorld.Q_PEOPLE
+        inner=inner,
+        MW=PlotWorld.MW,
+        Q_PEOPLE_K=PlotWorld.Q_PEOPLE / 1_000,
     )
     return tweet_text
 
@@ -71,6 +77,7 @@ def _tweet():
     status_image_files, group_to_y = _get_status_image_files()
     tweet_text = _get_tweet_text(group_to_y)
     twtr = twitter.Twitter.from_args()
+    print(len(tweet_text))
 
     twtr.tweet(
         tweet_text=tweet_text,

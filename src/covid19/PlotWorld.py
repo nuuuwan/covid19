@@ -33,17 +33,18 @@ def _place_id_to_name(continent_id):
     }.get(continent_id, continent_id)
 
 
-def _func_country_to_continent(country_alpha_2):
+def _func_country_to_groups(country_alpha_2):
     if country_alpha_2 in ['LK', 'IN', 'CN', 'US']:
-        return country_alpha_2
+        return [country_alpha_2, 'World']
 
     try:
-        return pycountry_convert.country_alpha2_to_continent_code(
+        continent = pycountry_convert.country_alpha2_to_continent_code(
             country_alpha_2
         )
+        return [continent, 'World']
 
     except KeyError:
-        return None
+        return []
 
 
 class PlotWorld(Figure.Figure):
@@ -53,7 +54,7 @@ class PlotWorld(Figure.Figure):
         width_height=(1 - PADDING * 2, 1 - PADDING * 2),
         figure_text='',
         field_key='',
-        func_country_to_group=_func_country_to_continent,
+        func_country_to_groups=_func_country_to_groups,
     ):
         super().__init__(
             left_bottom=left_bottom,
@@ -61,7 +62,7 @@ class PlotWorld(Figure.Figure):
             figure_text=figure_text,
         )
         self.field_key = field_key
-        self.func_country_to_group = func_country_to_group
+        self.func_country_to_groups = func_country_to_groups
         PlotWorld.__prep_data__(self)
 
     def __prep_data__(self):
@@ -73,30 +74,27 @@ class PlotWorld(Figure.Figure):
         group_to_date_to_pop = {}
         all_uts = set()
         for country_alpha_2, country_data in jhu_data.items():
-            group_id = self.func_country_to_group(country_alpha_2)
-            if group_id is None:
-                continue
-
             pop = country_data['population']
             if country_alpha_2 == 'TW':
                 pop = 23_861_476
-
-            if pop < 1_000_000:
+            if not pop or pop < 1_000_000:
                 continue
 
-            if group_id not in group_to_ut_to_stat:
-                group_to_ut_to_stat[group_id] = {}
-                group_to_date_to_pop[group_id] = {}
-            for item in country_data['timeseries']:
-                ut = item['unixtime']
-                all_uts.add(ut)
-                if ut not in group_to_ut_to_stat[group_id]:
-                    group_to_ut_to_stat[group_id][ut] = 0
-                    group_to_date_to_pop[group_id][ut] = 0
+            group_ids = self.func_country_to_groups(country_alpha_2)
+            for group_id in group_ids:
+                if group_id not in group_to_ut_to_stat:
+                    group_to_ut_to_stat[group_id] = {}
+                    group_to_date_to_pop[group_id] = {}
+                for item in country_data['timeseries']:
+                    ut = item['unixtime']
+                    all_uts.add(ut)
+                    if ut not in group_to_ut_to_stat[group_id]:
+                        group_to_ut_to_stat[group_id][ut] = 0
+                        group_to_date_to_pop[group_id][ut] = 0
 
-                stat = item.get(self.field_key, 0)
-                group_to_ut_to_stat[group_id][ut] += stat
-                group_to_date_to_pop[group_id][ut] += pop
+                    stat = item.get(self.field_key, 0)
+                    group_to_ut_to_stat[group_id][ut] += stat
+                    group_to_date_to_pop[group_id][ut] += pop
 
         all_uts = sorted(list(all_uts))[350:]
         x = list(
@@ -144,13 +142,39 @@ class PlotWorld(Figure.Figure):
             group_to_y,
         ) = self.__data__
 
-        ax = plt.axes(self.left_bottom + self.width_height)
+        arrowprops = dict(arrowstyle="-", color='gray')
 
-        for i, (group_id, y) in enumerate(group_to_y.items()):
-            color = 'red' if (group_id == 'LK') else 'lightgray'
+        ax = plt.axes(self.left_bottom + self.width_height)
+        x_text = x[-1] + datetime.timedelta(days=10)
+        prev_y_text = None
+        max_y = list(group_to_y.values())[0][-1]
+        for group_id, y in group_to_y.items():
+            color = {
+                'LK': 'red',
+                'World': 'blue',
+            }.get(group_id, 'lightgray')
+            font_size = {
+                'LK': 12,
+            }.get(group_id, 8)
+
             plt.plot(x, y, color=color)
-            r = (i * 10) % 7 + 1
-            plt.text(x[-r], y[-r], _place_id_to_name(group_id), fontsize=12)
+            text = _place_id_to_name(group_id)
+            y_text = y[-1]
+            if prev_y_text:
+                delta = (prev_y_text - y_text) / max_y
+                if delta < 0.01:
+                    y_text -= 0.02 * max_y
+            xy = x[-1], y[-1]
+            xy_text = x_text, y_text
+            plt.annotate(
+                text,
+                xy,
+                xy_text,
+                fontsize=font_size,
+                arrowprops=arrowprops,
+                ha='left',
+            )
+            prev_y_text = y_text
 
         ax.grid()
         ax.get_yaxis().set_major_formatter(
@@ -185,6 +209,7 @@ def _plot(field_key, label):
             ]
         ),
         children=[plot],
+        size=(16, 9),
     ).save(image_file)
     return (
         image_file,

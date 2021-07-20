@@ -30,3 +30,4 @@ pip install covid19-nuuuwan
 * remove testing code
 * Fix 2021-06-27 #Bug2
 * Update summary with moderna
+* [2021-07-20] Add world stat to world stats
