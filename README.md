@@ -31,3 +31,4 @@ pip install covid19-nuuuwan
 * Fix 2021-06-27 #Bug2
 * Update summary with moderna
 * [2021-07-20] Add world stat to world stats
+* [2021-07-20] Minor bugs and improvements in PlotWorld

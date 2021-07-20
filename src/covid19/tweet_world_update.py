@@ -32,6 +32,9 @@ def _get_tweet_text(group_to_y):
         place_name = PlotWorld._place_id_to_name(group_id)
         label = _place_name_to_label(place_name)
         stat = y[-1]
+
+        if group_id == 'World':
+            inner_lines.append('')
         inner_lines.append(
             '{stat:.0f} {label}'.format(
                 stat=stat,
@@ -48,7 +51,7 @@ def _get_tweet_text(group_to_y):
 
 {inner}
 
-@JHUSystems @OurWorldInData#lka
+@JHUSystems @OurWorldInData #lka
     '''.format(
         inner=inner,
         MW=PlotWorld.MW,
@@ -77,7 +80,6 @@ def _tweet():
     status_image_files, group_to_y = _get_status_image_files()
     tweet_text = _get_tweet_text(group_to_y)
     twtr = twitter.Twitter.from_args()
-    print(len(tweet_text))
 
     twtr.tweet(
         tweet_text=tweet_text,
