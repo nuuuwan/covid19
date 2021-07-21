@@ -3,8 +3,9 @@ import logging
 
 from utils import timex, twitter
 
-from covid19 import (PlotVaxBreakdown, PlotVaxProfileImage, PlotVaxProjection,
-                     PlotVaxSummary, epid)
+from covid19 import (PlotVaxBreakdown, PlotVaxBreakdownDaily,
+                     PlotVaxProfileImage, PlotVaxProjection, PlotVaxSummary,
+                     epid)
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')
@@ -73,6 +74,7 @@ def _get_status_image_files():
         PlotVaxProjection._plot(),
         PlotVaxSummary._plot(),
         PlotVaxBreakdown._plot(),
+        PlotVaxBreakdownDaily._plot(),
     ]
 
 
