@@ -32,3 +32,4 @@ pip install covid19-nuuuwan
 * Update summary with moderna
 * [2021-07-20] Add world stat to world stats
 * [2021-07-20] Minor bugs and improvements in PlotWorld
+* [2021-07-21 11:51AM] Display most recent stat in Vax Tweet

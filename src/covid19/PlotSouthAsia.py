@@ -138,7 +138,10 @@ def _plot(field_key, label):
         max_last_y_country,
     ) = plot.get_data()
 
-    image_file = '/tmp/covid19.plot.south_asia.%s.%s.png' % (field_key, date_id)
+    image_file = '/tmp/covid19.plot.south_asia.%s.%s.png' % (
+        field_key,
+        date_id,
+    )
     Infographic.Infographic(
         title='{label} per {Q_PEOPLE:,} people'.format(
             label=label, Q_PEOPLE=Q_PEOPLE
