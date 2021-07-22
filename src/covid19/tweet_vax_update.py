@@ -61,7 +61,6 @@ www.epid.gov.lk #lka #SriLanka
         rate_7days=rate_7days / 1000,
         rate_28days=rate_28days / 1000,
         cum_total_m=cum_total_m,
-        goal_m=goal_m,
         p_goal=p_goal,
         days_to_goal_28d=days_to_goal_28d,
         goal_date_28d=goal_date_28d,
