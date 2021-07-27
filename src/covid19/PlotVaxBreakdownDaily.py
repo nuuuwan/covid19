@@ -69,9 +69,7 @@ class PlotVaxBreakdown(Figure.Figure):
         for y in ys:
             if y_prev:
                 plt.bar(x, y, bottom=y_prev)
-                y_prev = list(
-                    map(lambda i: y_prev[i] + y[i], range(0, len(y)))
-                )
+                y_prev = list(map(lambda i: y_prev[i] + y[i], range(0, len(y))))
             else:
                 plt.bar(x, y)
                 y_prev = y

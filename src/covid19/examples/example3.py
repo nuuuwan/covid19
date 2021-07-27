@@ -39,9 +39,7 @@ plt.suptitle(
 plt.legend(['Daily New Cases', 'Daily PCR Tests'])
 
 ax = plt.gca()
-ax.get_yaxis().set_major_formatter(
-    tkr.FuncFormatter(lambda x, p: format(int(x), ','))
-)
+ax.get_yaxis().set_major_formatter(tkr.FuncFormatter(lambda x, p: format(int(x), ',')))
 
 fig = plt.gcf()
 fig.autofmt_xdate()

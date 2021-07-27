@@ -36,4 +36,4 @@ pip install covid19-nuuuwan
 * [2021-07-21 03:33PM] Add daily stats graph
 * [2021-07-21 03:50PM] Test
 * [2021-07-22 10:15AM] Fix lint errors
-* [2021-07-27 12:10PM] Change background image
+* [2021-07-27 12:10PM] Change banner image

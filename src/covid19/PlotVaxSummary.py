@@ -41,8 +41,7 @@ class PlotVaxSummary(Figure.Figure):
         )
         y_partial = list(
             map(
-                lambda d: (d['cum_total_dose1'] - d['cum_total_dose2'])
-                / POPULATION,
+                lambda d: (d['cum_total_dose1'] - d['cum_total_dose2']) / POPULATION,
                 timeseries,
             )
         )

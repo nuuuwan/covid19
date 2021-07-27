@@ -37,9 +37,7 @@ def _plot_with_time_window(
 
     x2 = list(
         map(
-            lambda d: datetime.datetime.fromtimestamp(
-                d['unixtime'] + MW * 86400
-            ),
+            lambda d: datetime.datetime.fromtimestamp(d['unixtime'] + MW * 86400),
             timeseries[(-DAYS_PLOT - MW) :],
         )
     )

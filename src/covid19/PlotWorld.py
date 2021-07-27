@@ -38,9 +38,7 @@ def _func_country_to_groups(country_alpha_2):
         return [country_alpha_2, 'World']
 
     try:
-        continent = pycountry_convert.country_alpha2_to_continent_code(
-            country_alpha_2
-        )
+        continent = pycountry_convert.country_alpha2_to_continent_code(country_alpha_2)
         return [continent, 'World']
 
     except KeyError:
@@ -197,9 +195,7 @@ def _plot(field_key, label):
 
     image_file = '/tmp/covid19.plot.world.%s.%s.png' % (field_key, date_id)
     Infographic.Infographic(
-        title='{label} per {Q_PEOPLE:,} people'.format(
-            label=label, Q_PEOPLE=Q_PEOPLE
-        ),
+        title='{label} per {Q_PEOPLE:,} people'.format(label=label, Q_PEOPLE=Q_PEOPLE),
         subtitle='COVID19: Sri Lanka (Red) vs. Worldwide (as of %s)' % date,
         footer_text='\n'.join(
             [

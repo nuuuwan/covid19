@@ -68,8 +68,7 @@ class PlotVaxProjection(Figure.Figure):
                 * timex.SECONDS_IN.DAY
             )
             y_proj = [
-                last_cum_total_dose2 + rate * i
-                for i in range(0, MAX_PROJECTION_DAYS)
+                last_cum_total_dose2 + rate * i for i in range(0, MAX_PROJECTION_DAYS)
             ]
             y_proj_filtered = list(
                 filter(
@@ -128,9 +127,7 @@ class PlotVaxProjection(Figure.Figure):
                 ha='center',
                 va='bottom',
             )
-            legend_items.append(
-                'Projection (based on %d-day rate)' % window_days
-            )
+            legend_items.append('Projection (based on %d-day rate)' % window_days)
         plt.legend(
             legend_items,
             loc='lower right',
@@ -145,11 +142,17 @@ class PlotVaxProjection(Figure.Figure):
         return self.__data__
 
 
-def _plot():
+def _plot(is_banner_image=False):
     plot = PlotVaxProjection()
     (date, date_id, x, y, window_data) = plot.get_data()
 
-    image_file = '/tmp/covid19.plot.%s.vax_projection.png' % (date_id)
+    size = (16, 9)
+    banner_label = ''
+    if is_banner_image:
+        size = (27, 9)
+        banner_label = '.banner'
+
+    image_file = '/tmp/covid19.plot.%s.vax_projection%s.png' % (date_id, banner_label)
     Infographic.Infographic(
         title='Progress to Goal and Projections',
         subtitle='COVID19 Vaccinations in Sri Lanka (as of %s)' % date,
@@ -157,10 +160,11 @@ def _plot():
             ['Data from https://www.epid.gov.lk', 'Visualization by @nuuuwan']
         ),
         children=[plot],
-        size=(16, 9),
+        size=size,
     ).save(image_file)
     return image_file
 
 
 if __name__ == '__main__':
-    _plot()
+    _plot(is_banner_image=False)
+    _plot(is_banner_image=True)

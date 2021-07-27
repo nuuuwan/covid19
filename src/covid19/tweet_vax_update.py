@@ -85,6 +85,7 @@ def _tweet():
         tweet_text=tweet_text,
         status_image_files=status_image_files,
         profile_image_file=PlotVaxProfileImage._draw(),
+        banner_image_file=PlotVaxProjection._plot(is_banner_image=True),
         update_user_profile=True,
     )
 

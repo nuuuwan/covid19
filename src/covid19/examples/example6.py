@@ -27,9 +27,7 @@ y1 = list(
 )
 y2 = list(
     map(
-        lambda d: (
-            d['cum_people_vaccinated'] - d['cum_people_fully_vaccinated']
-        )
+        lambda d: (d['cum_people_vaccinated'] - d['cum_people_fully_vaccinated'])
         / population,
         timeseries,
     )

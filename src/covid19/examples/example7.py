@@ -14,9 +14,7 @@ country_name = country_data['country_name']
 timeseries = country_data['timeseries']
 
 delay = 7
-mortality_rate = (
-    timeseries[-1]['cum_deaths'] / timeseries[-delay]['cum_confirmed']
-)
+mortality_rate = timeseries[-1]['cum_deaths'] / timeseries[-delay]['cum_confirmed']
 
 x = list(
     map(
@@ -60,9 +58,7 @@ plt.legend(
 )
 
 ax = plt.gca()
-ax.get_yaxis().set_major_formatter(
-    tkr.FuncFormatter(lambda x, p: format(int(x), ','))
-)
+ax.get_yaxis().set_major_formatter(tkr.FuncFormatter(lambda x, p: format(int(x), ',')))
 
 fig = plt.gcf()
 fig.autofmt_xdate()

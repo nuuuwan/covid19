@@ -143,9 +143,7 @@ def _plot(field_key, label):
         date_id,
     )
     Infographic.Infographic(
-        title='{label} per {Q_PEOPLE:,} people'.format(
-            label=label, Q_PEOPLE=Q_PEOPLE
-        ),
+        title='{label} per {Q_PEOPLE:,} people'.format(label=label, Q_PEOPLE=Q_PEOPLE),
         subtitle='COVID19 in South Asia (as of %s)' % date,
         footer_text='\n'.join(
             [
