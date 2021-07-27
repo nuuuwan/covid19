@@ -115,20 +115,11 @@ def _get_status_image_files():
 def _tweet():
     tweet_text = _get_tweet_text()
     status_image_files = _get_status_image_files()
-    banner_image_file = _plot_with_time_window(
-        'new_vaccinations',
-        'green',
-        'lightgreen',
-        'Daily COVID19 Vaccinations',
-        is_background_image=True,
-    )
-
     twtr = twitter.Twitter.from_args()
     twtr.tweet(
         tweet_text=tweet_text,
         status_image_files=status_image_files,
         update_user_profile=True,
-        banner_image_file=banner_image_file,
     )
 
 
