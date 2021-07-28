@@ -5,7 +5,7 @@ from utils import tsv
 
 from covid19 import covid_data
 
-WINDOW_DAYS = 60
+WINDOW_DAYS = 30
 MIN_SUM_DEATHS = 1000
 
 
