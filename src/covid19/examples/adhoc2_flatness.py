@@ -6,8 +6,7 @@ from utils import tsv
 from covid19 import covid_data
 
 WINDOW_DAYS = 60
-MIN_POPULATION = 1_000_000
-MIN_SUM_DEATHS = WINDOW_DAYS * 10
+MIN_SUM_DEATHS = 1000
 
 
 def analyze():
@@ -16,11 +15,6 @@ def analyze():
     analysis_data_list = []
     for country_alpha_2, country_data in jhu_data.items():
         country_name = country_data['country_name']
-        population = (int)(
-            country_data['population'] if country_data['population'] else 0
-        )
-        if population < MIN_POPULATION:
-            continue
         timeseries = country_data['timeseries']
 
         deaths = list(
@@ -38,6 +32,11 @@ def analyze():
         stdev = statistics.stdev(deaths)
         cov = stdev / mean
         iqr = scipy.stats.iqr(deaths)
+        median = statistics.median(deaths)
+
+        if median == 0:
+            continue
+        iqr_to_median = iqr / median
 
         analysis_data = dict(
             country_name=country_name,
@@ -45,7 +44,9 @@ def analyze():
             mean=mean,
             stdev=stdev,
             cov=cov,
+            median=median,
             iqr=iqr,
+            iqr_to_median=iqr_to_median,
         )
         analysis_data_list.append(analysis_data)
 
