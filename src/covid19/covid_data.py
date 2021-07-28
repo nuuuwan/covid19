@@ -62,7 +62,9 @@ def load_jhu_data():
     # original jhu data
     def _cleaned_timeseries_item(item, prev_item, country_alpha_3):
         unixtime = timex.parse_time(item['date'], '%Y-%m-%d')
-        vaccinations_data = country_to_date_to_vac_data.get(country_alpha_3, {}).get(
+        vaccinations_data = country_to_date_to_vac_data.get(
+            country_alpha_3, {}
+        ).get(
             unixtime,
             {
                 'cum_vaccinations': 0,
@@ -88,9 +90,11 @@ def load_jhu_data():
             'cum_deaths': item['deaths'],
             'cum_recovered': item['recovered'],
             'active': item['confirmed'] - item['deaths'] - item['recovered'],
-            'new_confirmed': item['confirmed'] - prev_item.get('cum_confirmed', 0),
+            'new_confirmed': item['confirmed']
+            - prev_item.get('cum_confirmed', 0),
             'new_deaths': item['deaths'] - prev_item.get('cum_deaths', 0),
-            'new_recovered': item['recovered'] - prev_item.get('cum_recovered', 0),
+            'new_recovered': item['recovered']
+            - prev_item.get('cum_recovered', 0),
         }
         for k in vaccinations_data:
             cleaned_item[k] = vaccinations_data[k]
@@ -120,7 +124,9 @@ def load_jhu_data():
 
         prev_item = {}
         for item in timeseries:
-            cleaned_item = _cleaned_timeseries_item(item, prev_item, country.alpha_3)
+            cleaned_item = _cleaned_timeseries_item(
+                item, prev_item, country.alpha_3
+            )
             cleaned_timeseries.append(cleaned_item)
             prev_item = cleaned_item
 

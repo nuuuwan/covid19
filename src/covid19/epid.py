@@ -159,7 +159,9 @@ def _get_pdf_urls():
     soup = BeautifulSoup(html, 'html.parser')
     table = soup.find('table')
 
-    pdf_urls = [os.path.join(URL_EPID, a.get('href')[1:]) for a in table.find_all('a')]
+    pdf_urls = [
+        os.path.join(URL_EPID, a.get('href')[1:]) for a in table.find_all('a')
+    ]
     log.info('Found %d PDFs', len(pdf_urls))
     return pdf_urls
 

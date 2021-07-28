@@ -68,7 +68,8 @@ class PlotVaxProjection(Figure.Figure):
                 * timex.SECONDS_IN.DAY
             )
             y_proj = [
-                last_cum_total_dose2 + rate * i for i in range(0, MAX_PROJECTION_DAYS)
+                last_cum_total_dose2 + rate * i
+                for i in range(0, MAX_PROJECTION_DAYS)
             ]
             y_proj_filtered = list(
                 filter(
@@ -127,7 +128,9 @@ class PlotVaxProjection(Figure.Figure):
                 ha='center',
                 va='bottom',
             )
-            legend_items.append('Projection (based on %d-day rate)' % window_days)
+            legend_items.append(
+                'Projection (based on %d-day rate)' % window_days
+            )
         plt.legend(
             legend_items,
             loc='lower right',
@@ -152,7 +155,10 @@ def _plot(is_banner_image=False):
         size = (27, 9)
         banner_label = '.banner'
 
-    image_file = '/tmp/covid19.plot.%s.vax_projection%s.png' % (date_id, banner_label)
+    image_file = '/tmp/covid19.plot.%s.vax_projection%s.png' % (
+        date_id,
+        banner_label,
+    )
     Infographic.Infographic(
         title='Progress to Goal and Projections',
         subtitle='COVID19 Vaccinations in Sri Lanka (as of %s)' % date,
