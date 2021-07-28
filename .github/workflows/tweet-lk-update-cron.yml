@@ -21,6 +21,11 @@ jobs:
       with:
         python-version: '3.7'
 
+    - uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ hashFiles('setup.py') }}-${{ hashFiles('dev-requirements.txt') }}
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip

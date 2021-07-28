@@ -38,3 +38,4 @@ pip install covid19-nuuuwan
 * [2021-07-22 10:15AM] Fix lint errors
 * [2021-07-27 12:10PM] Change banner image
 * [2021-07-28 01:59PM] Lint
+* [2021-07-28 02:01PM] Analyze deaths flatness

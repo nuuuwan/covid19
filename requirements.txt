@@ -7,3 +7,4 @@ numpy
 tabula-py
 infographics-nuuuwan
 pycountry-convert
+scipy

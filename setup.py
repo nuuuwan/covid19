@@ -44,6 +44,7 @@ setuptools.setup(
         'tabula-py',
         'infographics-nuuuwan',
         'pycountry-convert',
+        'scipy',
     ],
     test_suite='nose.collector',
     tests_require=['nose'],
