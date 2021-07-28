@@ -2,8 +2,8 @@ import datetime
 import math
 import os
 
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 from covid19 import covid_data
 
@@ -32,7 +32,7 @@ def draw_curves():
         deaths_smooth = np.convolve(
             deaths, np.ones(MVN_AVG_WND) / MVN_AVG_WND, 'valid'
         )
-        sum_deaths = sum(deaths_smooth)
+        sum(deaths_smooth)
         deaths_start = deaths_smooth[0]
         if deaths_start < MIN_DEATHS_START:
             continue
@@ -40,12 +40,14 @@ def draw_curves():
         norm_deaths = [deaths / deaths_start for deaths in deaths_smooth]
         norm_deaths_end = norm_deaths[-1]
 
-        country_info_list.append(dict(
-            country_alpha_2=country_alpha_2,
-            country_data=country_data,
-            norm_deaths_end=norm_deaths_end,
-            norm_deaths=norm_deaths,
-        ))
+        country_info_list.append(
+            dict(
+                country_alpha_2=country_alpha_2,
+                country_data=country_data,
+                norm_deaths_end=norm_deaths_end,
+                norm_deaths=norm_deaths,
+            )
+        )
     country_info_list = sorted(
         country_info_list,
         key=lambda x: x['norm_deaths_end'],
@@ -64,7 +66,7 @@ def draw_curves():
         min_norm_deaths_end = None
         max_norm_deaths_end = None
         for j in range(0, countries_per_group):
-            i_info  = i * countries_per_group + j
+            i_info = i * countries_per_group + j
             if i_info >= n_countries:
                 break
             data = country_info_list[i_info]
@@ -84,7 +86,10 @@ def draw_curves():
 
             ax.plot(dates, norm_deaths, color=color)
             ax.get_xaxis().set_visible(False)
-            title = '%s - %4.1fx' % (data['country_data']['country_name'], data['norm_deaths_end'])
+            title = '%s - %4.1fx' % (
+                data['country_data']['country_name'],
+                data['norm_deaths_end'],
+            )
             ax.set_title(title)
 
             i_col += 1
@@ -92,7 +97,15 @@ def draw_curves():
                 i_col = 0
                 i_row += 1
 
-        label = "%4.1fx to %4.1fx of daily deaths (%d-day avg) as of %d days ago" % (min_norm_deaths_end, max_norm_deaths_end, MVN_AVG_WND, TIME_SPAN)
+        label = (
+            "%4.1fx to %4.1fx of daily deaths (%d-day avg) as of %d days ago"
+            % (
+                min_norm_deaths_end,
+                max_norm_deaths_end,
+                MVN_AVG_WND,
+                TIME_SPAN,
+            )
+        )
         plt.suptitle('COVID19 Curves - %s' % label)
         fig = plt.gcf()
         fig.set_size_inches(18.5, 10.5)
@@ -100,7 +113,6 @@ def draw_curves():
         fig.savefig(image_file, dpi=100)
         os.system('open %s' % image_file)
         plt.close()
-
 
 
 if __name__ == '__main__':
