@@ -1,5 +1,5 @@
 
-name: Tweet World Update Cron
+name: Tweet World Top Vax Cron
 
 on:
   schedule:
