@@ -1,4 +1,3 @@
-
 import setuptools
 
 DIST_NAME = 'covid19'
