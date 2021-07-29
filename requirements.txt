@@ -1,10 +1,11 @@
-pycountry
-pypopulation
-utils-nuuuwan
-tweepy
+# Auto Generated
+infographics-nuuuwan
 matplotlib
 numpy
-tabula-py
-infographics-nuuuwan
+pycountry
 pycountry-convert
+pypopulation
 scipy
+tabula-py
+tweepy
+utils-nuuuwan

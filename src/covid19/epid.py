@@ -33,7 +33,25 @@ def _parse_int(x):
 
 def _parse_data_format(date_id, tables):
     rows = tables[-1]
-    if date_id > '20210505':
+    if date_id == '20210728':
+        row_3 = _utils._row_to_ints(rows[-3])
+        row_2 = _utils._row_to_ints(rows[-2])
+
+        (
+            covishield_dose1,
+            covishield_dose2,
+            sputnik_dose1,
+            sputnik_dose2,
+            pfizer_dose1,
+            moderna_dose1,
+        ) = row_3
+
+        (
+            sinopharm_dose1,
+            sinopharm_dose2,
+        ) = row_2
+
+    elif date_id > '20210505':
         row_3 = _utils._row_to_ints(rows[-3])
         if len(row_3) == 0:
             row_3 = _utils._row_to_ints(rows[-2])
@@ -76,6 +94,7 @@ def _parse_data_format(date_id, tables):
 
         if sinopharm_dose2 == 2435:
             sinopharm_dose2 = 0
+
     elif date_id > '20210129':
         covishields = []
         sinopharms = []
@@ -206,39 +225,40 @@ def _dump_single(pdf_file, parsed_data):
 
 
 def _validate(parsed_data_list):
-    oldest_parsed_data = parsed_data_list[-1]
-    (
-        covishield_dose1,
-        covishield_dose2,
-        sinopharm_dose1,
-        sinopharm_dose2,
-        sputnik_dose1,
-        sputnik_dose2,
-        pfizer_dose1,
-        moderna_dose1,
-        total_dose1,
-        total_dose2,
-        total,
-        date_id,
-        ut,
-    ) = oldest_parsed_data.values()
-
-    if covishield_dose1 < covishield_dose2:
-        raise Exception('covishield_dose1 < covishield_dose2')
-
-    if sinopharm_dose1 < sinopharm_dose2:
-        raise Exception('sinopharm_dose1 < sinopharm_dose2')
-
-    if sputnik_dose1 < sputnik_dose2:
-        raise Exception('sputnik_dose1 < sputnik_dose2')
-
     next_parsed_data = None
     for parsed_data in parsed_data_list:
+        (
+            covishield_dose1,
+            covishield_dose2,
+            sinopharm_dose1,
+            sinopharm_dose2,
+            sputnik_dose1,
+            sputnik_dose2,
+            pfizer_dose1,
+            moderna_dose1,
+            total_dose1,
+            total_dose2,
+            total,
+            date_id,
+            ut,
+        ) = parsed_data.values()
+
+        if covishield_dose1 < covishield_dose2:
+            raise Exception('covishield_dose1 < covishield_dose2')
+
+        if sinopharm_dose1 < sinopharm_dose2:
+            raise Exception('sinopharm_dose1 < sinopharm_dose2')
+
+        if sputnik_dose1 < sputnik_dose2:
+            raise Exception('sputnik_dose1 < sputnik_dose2')
+
         if next_parsed_data:
             if parsed_data['total_dose1'] > next_parsed_data['total_dose1']:
                 raise Exception('total_dose1 < next.total_dose1')
+
             if parsed_data['total_dose2'] > next_parsed_data['total_dose2']:
                 raise Exception('total_dose2 < next.total_dose2')
+
             if parsed_data['total'] > next_parsed_data['total']:
                 raise Exception('total < next.total')
 
@@ -301,6 +321,8 @@ def _dump_summary():
         )
         data_list.append(parsed_data)
         prev_parsed_data = parsed_data
+
+    _validate(reversed(data_list))
 
     expanded_data_list = []
     prev_expanded_d = None
