@@ -41,3 +41,5 @@ pip install covid19-nuuuwan
 * [2021-07-28 02:01PM] Analyze deaths flatness
 * [2021-07-28 05:04PM] Flatness with different time windows
 * [2021-07-28 05:20PM] Visualize COVID19 Curves
+* [2021-07-29 03:56PM] Update PyPi Deploy
+* [2021-07-29 06:31PM] Plot for most vaccinations by country

@@ -1,4 +1,5 @@
 # Auto Generated
+emoji-country-flag
 infographics-nuuuwan
 matplotlib
 numpy

@@ -1,18 +1,8 @@
-import time
 
 import setuptools
 
 DIST_NAME = 'covid19'
-with open("README.md", "r") as fh:
-    long_description = fh.read()
-
-IS_PRE_RELEASE = True
-MAJOR, MINOR, PATCH = 1, 0, 2
-if IS_PRE_RELEASE:
-    ts = time.strftime('%Y%m%d%H%M%S0000', time.localtime())
-    version = '%d.%d.%d.%s' % (MAJOR, MINOR, PATCH, ts)
-else:
-    version = '%d.%d.%d' % (MAJOR, MINOR, PATCH)
+version = '1.0.2'
 
 setuptools.setup(
     name="%s-nuuuwan" % DIST_NAME,
@@ -20,7 +10,7 @@ setuptools.setup(
     author="Nuwan I. Senaratna",
     author_email="nuuuwan@gmail.com",
     description="",
-    long_description=long_description,
+    long_description='',
     long_description_content_type="text/markdown",
     url="https://github.com/nuuuwan/%s" % DIST_NAME,
     project_urls={
@@ -45,6 +35,7 @@ setuptools.setup(
         'infographics-nuuuwan',
         'pycountry-convert',
         'scipy',
+        'emoji-country-flag',
     ],
     test_suite='nose.collector',
     tests_require=['nose'],
