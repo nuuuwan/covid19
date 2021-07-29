@@ -30,9 +30,14 @@ def _get_tweet_text():
     for country_alpha_2, country_data in jhu_data.items():
         if not country_data:
             continue
+        country_name = country_data['country_name']
+
         population = country_data.get('population')
         if not population or population < MIN_POPULATION:
-            continue
+            if country_alpha_2 == 'TW':
+                population = 23_570_000
+            else:
+                continue
         vaxs = list(
             map(
                 lambda d: (int)(d.get('new_vaccinations', 0)),
@@ -41,7 +46,6 @@ def _get_tweet_text():
         )
         vaxs_mw = Q_PEOPLE * sum(vaxs) / population
 
-        country_name = country_data['country_name']
         top_vax_info_list.append(
             dict(
                 country_alpha_2=country_alpha_2,
