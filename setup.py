@@ -27,6 +27,7 @@ setuptools.setup(
         'pycountry',
         'pypopulation',
         'utils-nuuuwan',
+        'tablex-nuuuwan',
         'tweepy',
         'matplotlib',
         'numpy',
