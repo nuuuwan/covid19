@@ -7,11 +7,13 @@ import re
 from bs4 import BeautifulSoup
 from utils import ds, dt, jsonx, timex, tsv, www
 from utils.cache import cache
+from tablex import extract
 
 from covid19 import _utils
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.epid')
+logging.getLogger("pdfminer").setLevel(logging.WARNING)
 
 URL_EPID = 'https://www.epid.gov.lk'
 URL_VAX_SUMMARY_LIST = os.path.join(
@@ -196,7 +198,7 @@ def _get_date_id(pdf_url):
     return '%s%s%s' % (y_str, m_str, d_str)
 
 
-def _download_parse_single(pdf_url):
+def _download_parse_single_old(pdf_url):
     date_id = _get_date_id(pdf_url)
     if date_id is None:
         return
@@ -210,6 +212,63 @@ def _download_parse_single(pdf_url):
     parsed_data = _parse_data_format(date_id, tables)
 
     date_id = pdf_file[-12:-4]
+    ut = timex.parse_time(date_id, '%Y%m%d')
+    parsed_data['date_id'] = date_id
+    parsed_data['ut'] = ut
+    log.info(json.dumps(parsed_data, indent=2))
+    return pdf_file, parsed_data
+
+def _download_parse_single(pdf_url):
+    date_id = _get_date_id(pdf_url)
+    if date_id is None:
+        return
+
+    pdf_file = '/tmp/covid19.epid.vaxs.%s.pdf' % (date_id)
+    if not os.path.exists(pdf_file):
+        www.download_binary(pdf_url, pdf_file)
+    log.info('Downloaded %s to %s', pdf_url, pdf_file)
+
+    csv_file = '/tmp/covid19.epid.vaxs.%s.csv' % (date_id)
+    extract.pdf_to_csv(pdf_file, csv_file)
+    json_file = '/tmp/covid19.epid.vaxs.%s.json' % (date_id)
+    extract.csv_to_json(csv_file, json_file)
+
+    data_list = jsonx.read(json_file)
+
+    if date_id > '2021-05-05':
+        last_data = data_list[-1]
+        parsed_data = {
+            'covishield_dose1': last_data.get('Covishield.FirstDose', 0),
+            'covishield_dose2': last_data.get('Covishield.SecondDose', 0),
+            'sinopharm_dose1': last_data.get('Sinopharm.FirstDose', 0),
+            'sinopharm_dose2': last_data.get('Sinopharm.SecondDose', 0),
+            'sputnik_dose1': last_data.get('Sputnik.FirstDose', 0),
+            'sputnik_dose2': last_data.get('Sputnik.SecondDose', 0),
+            'pfizer_dose1': last_data.get('Pfizer.FirstDose', 0),
+            'moderna_dose1': last_data.get('Moderna.FirstDose', 0),
+        }
+    else:
+        parsed_data = {}
+
+    parsed_data['total_dose1'] = sum([
+        parsed_data.get('covishield_dose1', 0),
+        parsed_data.get('sinopharm_dose1', 0),
+        parsed_data.get('sputnik_dose1', 0),
+        parsed_data.get('pfizer_dose1', 0),
+        parsed_data.get('moderna_dose1', 0),
+    ])
+
+    parsed_data['total_dose2'] = sum([
+        parsed_data.get('covishield_dose2', 0),
+        parsed_data.get('sinopharm_dose2', 0),
+        parsed_data.get('sputnik_dose2', 0),
+    ])
+
+    parsed_data['total'] = sum([
+        parsed_data['total_dose1'],
+        parsed_data['total_dose2'],
+    ])
+
     ut = timex.parse_time(date_id, '%Y%m%d')
     parsed_data['date_id'] = date_id
     parsed_data['ut'] = ut
