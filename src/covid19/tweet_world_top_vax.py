@@ -72,7 +72,7 @@ def _get_tweet_text():
             )
         )
         inner = '\n'.join(inner_lines)
-        if len(inner) > 180:
+        if len(inner) > 170:
             break
 
     tweet_text = '''#COVID19 Vaxs/{Q_PEOPLE:.0f} Ppl. — Last {MW} Days
