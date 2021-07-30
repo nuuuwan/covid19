@@ -1,4 +1,3 @@
-
 name: Tweet World Update
 
 on: workflow_dispatch
