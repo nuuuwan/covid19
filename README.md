@@ -45,3 +45,4 @@ pip install covid19-nuuuwan
 * [2021-07-29 06:31PM] Plot for most vaccinations by country
 * [2021-07-29 07:37PM] Check why EC is missing
 * [2021-07-30 02:33PM] Fix workflow names bug
+* [2021-07-30 02:37PM] Update workflows to use Test
