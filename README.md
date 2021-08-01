@@ -47,3 +47,4 @@ pip install covid19-nuuuwan
 * [2021-07-30 02:33PM] Fix workflow names bug
 * [2021-07-30 02:37PM] Update workflows to use Test
 * [2021-07-30 02:57PM] Fix World Top Vax Tweet Too long
+* [2021-08-01 08:17PM] Fix Top Vax Tweet Length Bug
