@@ -5,9 +5,9 @@ import os
 import re
 
 from bs4 import BeautifulSoup
+from tablex import extract
 from utils import ds, dt, jsonx, timex, tsv, www
 from utils.cache import cache
-from tablex import extract
 
 from covid19 import _utils
 
@@ -218,6 +218,7 @@ def _download_parse_single_old(pdf_url):
     log.info(json.dumps(parsed_data, indent=2))
     return pdf_file, parsed_data
 
+
 def _download_parse_single(pdf_url):
     date_id = _get_date_id(pdf_url)
     if date_id is None:
@@ -245,29 +246,39 @@ def _download_parse_single(pdf_url):
             'sputnik_dose1': last_data.get('Sputnik.FirstDose', 0),
             'sputnik_dose2': last_data.get('Sputnik.SecondDose', 0),
             'pfizer_dose1': last_data.get('Pfizer.FirstDose', 0),
+            'pfizer_dose2': last_data.get('Pfizer.SecondDose', 0),
             'moderna_dose1': last_data.get('Moderna.FirstDose', 0),
+            'moderna_dose2': last_data.get('Moderna.SecondDose', 0),
         }
     else:
         parsed_data = {}
 
-    parsed_data['total_dose1'] = sum([
-        parsed_data.get('covishield_dose1', 0),
-        parsed_data.get('sinopharm_dose1', 0),
-        parsed_data.get('sputnik_dose1', 0),
-        parsed_data.get('pfizer_dose1', 0),
-        parsed_data.get('moderna_dose1', 0),
-    ])
+    parsed_data['total_dose1'] = sum(
+        [
+            parsed_data.get('covishield_dose1', 0),
+            parsed_data.get('sinopharm_dose1', 0),
+            parsed_data.get('sputnik_dose1', 0),
+            parsed_data.get('pfizer_dose1', 0),
+            parsed_data.get('moderna_dose1', 0),
+        ]
+    )
 
-    parsed_data['total_dose2'] = sum([
-        parsed_data.get('covishield_dose2', 0),
-        parsed_data.get('sinopharm_dose2', 0),
-        parsed_data.get('sputnik_dose2', 0),
-    ])
+    parsed_data['total_dose2'] = sum(
+        [
+            parsed_data.get('covishield_dose2', 0),
+            parsed_data.get('sinopharm_dose2', 0),
+            parsed_data.get('sputnik_dose2', 0),
+            parsed_data.get('pfizer_dose2', 0),
+            parsed_data.get('moderna_dose2', 0),
+        ]
+    )
 
-    parsed_data['total'] = sum([
-        parsed_data['total_dose1'],
-        parsed_data['total_dose2'],
-    ])
+    parsed_data['total'] = sum(
+        [
+            parsed_data['total_dose1'],
+            parsed_data['total_dose2'],
+        ]
+    )
 
     ut = timex.parse_time(date_id, '%Y%m%d')
     parsed_data['date_id'] = date_id
@@ -294,13 +305,27 @@ def _validate(parsed_data_list):
             sputnik_dose1,
             sputnik_dose2,
             pfizer_dose1,
+            pfizer_dose2,
             moderna_dose1,
+            moderna_dose2,
             total_dose1,
             total_dose2,
             total,
-            date_id,
-            ut,
-        ) = parsed_data.values()
+        ) = (
+            parsed_data.get('covishield_dose1', 0),
+            parsed_data.get('covishield_dose2', 0),
+            parsed_data.get('sinopharm_dose1', 0),
+            parsed_data.get('sinopharm_dose2', 0),
+            parsed_data.get('sputnik_dose1', 0),
+            parsed_data.get('sputnik_dose2', 0),
+            parsed_data.get('pfizer_dose1', 0),
+            parsed_data.get('pfizer_dose2', 0),
+            parsed_data.get('moderna_dose1', 0),
+            parsed_data.get('moderna_dose2', 0),
+            parsed_data.get('total_dose1', 0),
+            parsed_data.get('total_dose2', 0),
+            parsed_data.get('total', 0),
+        )
 
         if covishield_dose1 < covishield_dose2:
             raise Exception('covishield_dose1 < covishield_dose2')
@@ -310,6 +335,18 @@ def _validate(parsed_data_list):
 
         if sputnik_dose1 < sputnik_dose2:
             raise Exception('sputnik_dose1 < sputnik_dose2')
+
+        if pfizer_dose1 < pfizer_dose2:
+            raise Exception('pfizer_dose1 < pfizer_dose2')
+
+        if moderna_dose1 < moderna_dose2:
+            raise Exception('moderna_dose1 < moderna_dose2')
+
+        if total_dose1 < total_dose2:
+            raise Exception('total_dose1 < total_dose2')
+
+        if total < total_dose1:
+            raise Exception('total < total_dose1')
 
         if next_parsed_data:
             if parsed_data['total_dose1'] > next_parsed_data['total_dose1']:
