@@ -26,6 +26,9 @@ jobs:
     - name: Test
       uses: nuuuwan/python-repo-test@v1
 
+    - name: Install GhostScript
+      run: sudo apt install ghostscript python3-tk
+
     - name: Run
       run: |
         export PYTHONPATH="$PYTHONPATH:./src"
