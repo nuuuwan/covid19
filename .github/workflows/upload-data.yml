@@ -20,6 +20,9 @@ jobs:
       with:
         path: ~/.cache/pip
         key: ${{ hashFiles('setup.py') }}-${{ hashFiles('dev-requirements.txt') }}
+        
+    - name: Install GhostScript
+      run: sudo apt install ghostscript python3-tk        
 
     - name: Test
       uses: nuuuwan/python-repo-test@v1
