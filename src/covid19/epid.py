@@ -280,11 +280,11 @@ def _dump_summary():
             'total_dose2',
             'total',
         ]:
-            expanded_d['cum_%s' % k] = d[k]
+            expanded_d['cum_%s' % k] = d.get(k, 0)
             prev_v = 0
             if prev_expanded_d:
-                prev_v = prev_expanded_d['cum_%s' % k]
-            expanded_d['new_%s' % k] = d[k] - prev_v
+                prev_v = prev_expanded_d.get('cum_%s' % k, 0)
+            expanded_d['new_%s' % k] = d.get(k, 0) - prev_v
 
         expanded_data_list.append(expanded_d)
         prev_expanded_d = expanded_d
