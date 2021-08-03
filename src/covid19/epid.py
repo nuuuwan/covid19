@@ -9,8 +9,6 @@ from tablex import extract
 from utils import ds, dt, jsonx, timex, tsv, www
 from utils.cache import cache
 
-from covid19 import _utils
-
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.epid')
 logging.getLogger("pdfminer").setLevel(logging.WARNING)
@@ -31,148 +29,6 @@ def _parse_int(x):
     if x == '-':
         return 0
     return dt.parse_int(x.replace(',', ''), 0)
-
-
-def _parse_data_format(date_id, tables):
-    rows = tables[-1]
-    if date_id == '20210728':
-        row_3 = _utils._row_to_ints(rows[-3])
-        row_2 = _utils._row_to_ints(rows[-2])
-
-        (
-            covishield_dose1,
-            covishield_dose2,
-            sputnik_dose1,
-            sputnik_dose2,
-            pfizer_dose1,
-            moderna_dose1,
-        ) = row_3
-
-        (
-            sinopharm_dose1,
-            sinopharm_dose2,
-        ) = row_2
-
-    elif date_id > '20210505':
-        row_3 = _utils._row_to_ints(rows[-3])
-        if len(row_3) == 0:
-            row_3 = _utils._row_to_ints(rows[-2])
-        if len(row_3) == 0:
-            row_3 = _utils._row_to_ints(rows[-4])
-
-        if len(row_3) == 6:
-            row_pfizer = (
-                _utils._row_to_ints(rows[-4])
-                + _utils._row_to_ints(rows[-5])
-                + _utils._row_to_ints(rows[-2])
-            )
-            row_moderna = []
-        elif len(row_3) == 7:
-            row_pfizer = [row_3[-1]]
-            row_3 = row_3[:-1]
-            row_moderna = []
-        elif len(row_3) == 8:
-            row_pfizer = [row_3[-2]]
-            row_moderna = [row_3[-1]]
-            row_3 = row_3[:-2]
-        else:
-            row_3 = _utils._row_to_ints(rows[-2])
-            row_pfizer = []
-            row_moderna = []
-        pfizer_dose1 = row_pfizer[0] if row_pfizer else 0
-        if pfizer_dose1 > 10_000_000:
-            pfizer_dose1 = 0
-
-        moderna_dose1 = row_moderna[0] if row_moderna else 0
-
-        (
-            covishield_dose1,
-            covishield_dose2,
-            sinopharm_dose1,
-            sinopharm_dose2,
-            sputnik_dose1,
-            sputnik_dose2,
-        ) = row_3
-
-        if sinopharm_dose2 == 2435:
-            sinopharm_dose2 = 0
-
-    elif date_id > '20210129':
-        covishields = []
-        sinopharms = []
-        for row in rows:
-            valid_cells = list(
-                filter(
-                    lambda cell: '2021' not in cell,
-                    row,
-                )
-            )
-            row_new = (' '.join(valid_cells)).split(' ')
-
-            if len(row_new) >= 2:
-                covishields.append(dt.parse_int(row_new[1]))
-            if len(row_new) >= 4:
-                sinopharms.append(dt.parse_int(row_new[3]))
-        covishield_dose1 = max(covishields)
-        covishield_dose2 = covishields[-1]
-        if covishield_dose2 >= covishield_dose1:
-            covishield_dose2 = 0
-        sinopharm_dose1 = max(sinopharms) if sinopharms else 0
-        if sinopharm_dose1 == 246:
-            sinopharm_dose1 = 2469
-
-        sinopharm_dose2 = 0
-        sputnik_dose1 = 0
-        sputnik_dose2 = 0
-        pfizer_dose1 = 0
-        moderna_dose1 = 0
-    else:
-        covishield_dose1 = 5286
-        covishield_dose2 = 0
-        sinopharm_dose1 = 0
-        sinopharm_dose2 = 0
-        sputnik_dose1 = 0
-        sputnik_dose2 = 0
-        pfizer_dose1 = 0
-        moderna_dose1 = 0
-
-    total_dose1 = sum(
-        [
-            covishield_dose1,
-            sinopharm_dose1,
-            sputnik_dose1,
-            pfizer_dose1,
-            moderna_dose1,
-        ]
-    )
-    total_dose2 = sum(
-        [
-            covishield_dose2,
-            sinopharm_dose2,
-            sputnik_dose2,
-        ]
-    )
-    total = sum(
-        [
-            total_dose1,
-            total_dose2,
-        ]
-    )
-
-    parsed_data = {
-        'covishield_dose1': covishield_dose1,
-        'covishield_dose2': covishield_dose2,
-        'sinopharm_dose1': sinopharm_dose1,
-        'sinopharm_dose2': sinopharm_dose2,
-        'sputnik_dose1': sputnik_dose1,
-        'sputnik_dose2': sputnik_dose2,
-        'pfizer_dose1': pfizer_dose1,
-        'moderna_dose1': moderna_dose1,
-        'total_dose1': total_dose1,
-        'total_dose2': total_dose2,
-        'total': total,
-    }
-    return parsed_data
 
 
 def _get_pdf_urls():
@@ -196,27 +52,6 @@ def _get_date_id(pdf_url):
         ['y_str', 'm_str', 'd_str'],
     )
     return '%s%s%s' % (y_str, m_str, d_str)
-
-
-def _download_parse_single_old(pdf_url):
-    date_id = _get_date_id(pdf_url)
-    if date_id is None:
-        return
-
-    pdf_file = '/tmp/covid19.epid.vaxs.%s.pdf' % (date_id)
-    if not os.path.exists(pdf_file):
-        www.download_binary(pdf_url, pdf_file)
-    log.info('Downloaded %s to %s', pdf_url, pdf_file)
-
-    tables = _utils.extract_pdf_tables(pdf_file)
-    parsed_data = _parse_data_format(date_id, tables)
-
-    date_id = pdf_file[-12:-4]
-    ut = timex.parse_time(date_id, '%Y%m%d')
-    parsed_data['date_id'] = date_id
-    parsed_data['ut'] = ut
-    log.info(json.dumps(parsed_data, indent=2))
-    return pdf_file, parsed_data
 
 
 def _download_parse_single(pdf_url):
@@ -438,7 +273,9 @@ def _dump_summary():
             'sputnik_dose1',
             'sputnik_dose2',
             'pfizer_dose1',
+            'pfizer_dose2',
             'moderna_dose1',
+            'moderna_dose2',
             'total_dose1',
             'total_dose2',
             'total',

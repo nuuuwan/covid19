@@ -52,3 +52,4 @@ pip install covid19-nuuuwan
 =======
 * [2021-07-30 05:07PM] Convert to use tablex-nuuuwan for PDF table extraction
 >>>>>>> convert-to-use-tablex-nuuuwan-for-pdf-table-extraction
+* [2021-08-03 02:56PM] Fix Dump Summary missing Pfizer/Moderna 2nd Dose #BUG
