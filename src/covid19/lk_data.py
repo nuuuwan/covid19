@@ -56,3 +56,8 @@ def get_timeseries():
     )
 
     return lk_timeseries
+
+
+if __name__ == '__main__':
+    ts = get_timeseries()
+    print(ts[-1])

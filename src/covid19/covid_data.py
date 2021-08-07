@@ -83,18 +83,22 @@ def load_jhu_data():
                 prev_item.get(key, 0),
             )
 
+        recovered = (
+            item['recovered']
+            if (item['recovered'] > 0)
+            else prev_item.get('cum_recovered', 0)
+        )
         cleaned_item = {
             'date': str(datetime.datetime.fromtimestamp(unixtime)),
             'unixtime': unixtime,
             'cum_confirmed': item['confirmed'],
             'cum_deaths': item['deaths'],
-            'cum_recovered': item['recovered'],
-            'active': item['confirmed'] - item['deaths'] - item['recovered'],
+            'cum_recovered': recovered,
+            'active': item['confirmed'] - item['deaths'] - recovered,
             'new_confirmed': item['confirmed']
             - prev_item.get('cum_confirmed', 0),
             'new_deaths': item['deaths'] - prev_item.get('cum_deaths', 0),
-            'new_recovered': item['recovered']
-            - prev_item.get('cum_recovered', 0),
+            'new_recovered': recovered - prev_item.get('cum_recovered', 0),
         }
         for k in vaccinations_data:
             cleaned_item[k] = vaccinations_data[k]
