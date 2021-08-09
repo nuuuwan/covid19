@@ -61,7 +61,7 @@ class PlotTCRAndCTR(Figure.Figure):
         y = list(
             map(
                 func_y,
-                timeseries[-DAYS_PLOT - moving_avg_window + 1 :],
+                timeseries[-DAYS_PLOT - moving_avg_window + 1:],
             )
         )
         y = np.convolve(

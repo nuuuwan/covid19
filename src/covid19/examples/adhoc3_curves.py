@@ -26,7 +26,7 @@ def draw_curves():
         deaths = list(
             map(
                 lambda item: (int)(item['new_deaths']),
-                timeseries[-TIME_SPAN - MVN_AVG_WND + 1 :],
+                timeseries[-TIME_SPAN - MVN_AVG_WND + 1:],
             )
         )
         deaths_smooth = np.convolve(

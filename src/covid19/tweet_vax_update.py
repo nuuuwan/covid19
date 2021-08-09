@@ -3,14 +3,9 @@ import logging
 
 from utils import timex, twitter
 
-from covid19 import (
-    PlotVaxBreakdown,
-    PlotVaxBreakdownDaily,
-    PlotVaxProfileImage,
-    PlotVaxProjection,
-    PlotVaxSummary,
-    epid,
-)
+from covid19 import (PlotVaxBreakdown, PlotVaxBreakdownDaily,
+                     PlotVaxProfileImage, PlotVaxProjection, PlotVaxSummary,
+                     epid)
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')

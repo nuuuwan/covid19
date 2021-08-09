@@ -104,7 +104,7 @@ class PlotWorld(Figure.Figure):
             )
         )
         if 'new' in self.field_key:
-            x = x[MW - 1 :]
+            x = x[MW - 1:]
         group_to_y = {}
         for group_id, date_to_stat in group_to_ut_to_stat.items():
             date_to_pop = group_to_date_to_pop[group_id]

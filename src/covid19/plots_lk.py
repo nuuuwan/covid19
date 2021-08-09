@@ -40,10 +40,10 @@ def _plot_with_time_window(
             lambda d: datetime.datetime.fromtimestamp(
                 d['unixtime'] + MW * 86400
             ),
-            timeseries[(-DAYS_PLOT - MW) :],
+            timeseries[(-DAYS_PLOT - MW):],
         )
     )
-    y2 = list(map(lambda d: d[field_key], timeseries[(-DAYS_PLOT - MW) :]))
+    y2 = list(map(lambda d: d[field_key], timeseries[(-DAYS_PLOT - MW):]))
     y2 = np.convolve(y2, np.ones(MW) / MW, 'valid')
 
     plt.plot(x2[: -(MW - 1)], y2, color=main_color)

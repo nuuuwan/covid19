@@ -19,7 +19,7 @@ def _get_tweet_text():
     y = list(
         map(
             lambda d: d['new_pcr_tests'] / d['new_confirmed'],
-            timeseries[-PlotTCRAndCTR.DAYS_PLOT - PlotTCRAndCTR.MW + 1 :],
+            timeseries[-PlotTCRAndCTR.DAYS_PLOT - PlotTCRAndCTR.MW + 1:],
         )
     )
     y = np.convolve(
