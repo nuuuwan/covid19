@@ -55,3 +55,4 @@ pip install covid19-nuuuwan
 * [2021-08-09 10:44AM] Vaccination Centers Data
 [0;34m$ echo  * Test[0m
  * Test
+ * Test
