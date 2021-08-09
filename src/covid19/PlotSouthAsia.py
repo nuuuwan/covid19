@@ -67,7 +67,7 @@ class PlotSouthAsia(Figure.Figure):
             y = list(
                 map(
                     lambda d: Q_PEOPLE * d[self.field_key] / population,
-                    timeseries[(-DAYS_PLOT - moving_avg_window + 1):],
+                    timeseries[(-DAYS_PLOT - moving_avg_window + 1) :],
                 )
             )
             y = np.convolve(

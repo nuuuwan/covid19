@@ -4,8 +4,12 @@ import logging
 from utils import timex, twitter
 
 from covid19 import lk_data
-from covid19.plots_lk import (MW, POPULATION, _plot_simple,
-                              _plot_with_time_window)
+from covid19.plots_lk import (
+    MW,
+    POPULATION,
+    _plot_simple,
+    _plot_with_time_window,
+)
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')
@@ -35,7 +39,7 @@ def _get_tweet_text():
     active_arrow = '🔴' if (d_active > 0) else '🟢'
 
     new_deaths_rw = sum(ts_new_deaths[-MW:]) / MW
-    new_deaths_rw_wa = sum(ts_new_deaths[-MW - MW: -MW]) / MW
+    new_deaths_rw_wa = sum(ts_new_deaths[-MW - MW : -MW]) / MW
     d_new_deaths = new_deaths_rw - new_deaths_rw_wa
     new_deaths_ar = '🔴' if (d_new_deaths > 0) else '🟢'
 
@@ -50,7 +54,7 @@ def _get_tweet_text():
     p_vax_dose_2 = vax_dose_2 / POPULATION
 
     new_pcr_tests_rw = sum(ts_new_pcr_tests[-MW:]) / MW
-    new_pcr_tests_rw_wa = sum(ts_new_pcr_tests[-MW - MW: -MW]) / MW
+    new_pcr_tests_rw_wa = sum(ts_new_pcr_tests[-MW - MW : -MW]) / MW
     d_new_pcr_tests = new_pcr_tests_rw - new_pcr_tests_rw_wa
     new_pcr_tests_ar = '🟢' if (d_new_pcr_tests > 0) else '🔴'
 
