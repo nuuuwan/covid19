@@ -47,12 +47,11 @@ pip install covid19-nuuuwan
 * [2021-07-30 02:33PM] Fix workflow names bug
 * [2021-07-30 02:37PM] Update workflows to use Test
 * [2021-07-30 02:57PM] Fix World Top Vax Tweet Too long
-<<<<<<< HEAD
 * [2021-08-01 08:17PM] Fix Top Vax Tweet Length Bug
-=======
 * [2021-07-30 05:07PM] Convert to use tablex-nuuuwan for PDF table extraction
->>>>>>> convert-to-use-tablex-nuuuwan-for-pdf-table-extraction
 * [2021-08-03 02:56PM] Fix Dump Summary missing Pfizer/Moderna 2nd Dose #BUG
 * [2021-08-03 03:02PM] Fix upload data bug
 * [2021-08-07 07:13PM] Fix actives bug
 * [2021-08-09 10:44AM] Vaccination Centers Data
+[0;34m$ echo  * Test[0m
+ * Test
