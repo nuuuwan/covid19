@@ -55,3 +55,4 @@ pip install covid19-nuuuwan
 * [2021-08-03 02:56PM] Fix Dump Summary missing Pfizer/Moderna 2nd Dose #BUG
 * [2021-08-03 03:02PM] Fix upload data bug
 * [2021-08-07 07:13PM] Fix actives bug
+* [2021-08-09 10:44AM] Vaccination Centers Data
