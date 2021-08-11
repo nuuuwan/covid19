@@ -1,10 +1,10 @@
 
 name: Tweet LK Update Cron
 
-on:
-  schedule:
-    - cron:  "00 13 * * *"
-
+# on:
+#   schedule:
+#     - cron:  "00 13 * * *"
+on: workflow_dispatch
 
 jobs:
   tweet:
