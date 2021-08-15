@@ -171,5 +171,6 @@ def parse():
 
 if __name__ == '__main__':
     file_id = get_google_drive_file_id()
-    scrape(file_id)
-    parse()
+    if file_idL
+        scrape(file_id)
+        parse()
