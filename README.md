@@ -75,3 +75,4 @@ pip install covid19-nuuuwan
   * Logging
   * Bug fix
   * Bug fix
+  * Bug fix
