@@ -57,3 +57,4 @@ pip install covid19-nuuuwan
   * get_google_drive_file_id - incomplete
   * Implemented get_google_drive_file_id
   * Implemented get_google_drive_file_id
+  * Download complete

@@ -1,6 +1,5 @@
 import argparse
 import io
-import os
 import time
 
 from googleapiclient.discovery import build
@@ -8,12 +7,13 @@ from googleapiclient.http import MediaIoBaseDownload
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
-
-from utils import filex
 from covid19._utils import log
 
-
-POWER_BI_ID = 'eyJrIjoiODY1MTliZjQtNTMzNi00MmRmLTg4NDMtM2U5YWZkMWMwNjNlIiwidCI6ImExNzJkODM2LWQ0YTUtNDBjZS1hNGFkLWJiY2FhMTAzOGY1NiIsImMiOjEwfQ%3D%3D'
+POWER_BI_ID = (
+    'eyJrIjoiODY1MTliZjQtNTMzNi00MmRmLTg4ND'
+    + 'MtM2U5YWZkMWMwNjNlIiwidCI6ImExNzJkODM2LWQ0Y'
+    + 'TUtNDBjZS1hNGFkLWJiY2FhMTAzOGY1NiIsImMiOjEwfQ%3D%3D'
+)
 VAX_DASH_URL = 'https://app.powerbi.com/view?r=%s' % POWER_BI_ID
 URL_LOAD_TIME = 10
 I_VAX_CENTER = 20
@@ -34,7 +34,7 @@ def get_google_drive_api_key():
 
 def get_google_drive_file_id():
     options = Options()
-    options.headless = False
+    options.headless = True
 
     browser = webdriver.Firefox(options=options)
     browser.get(VAX_DASH_URL)
