@@ -61,3 +61,5 @@ pip install covid19-nuuuwan
   * Download complete
   * Added workkflows
   * Pre-Merge
+* [2021-08-15 09:36PM] Add google-api-python-client
+  * Updated README
