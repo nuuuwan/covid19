@@ -6,6 +6,7 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+from utils import tsv
 
 from covid19._utils import log
 
@@ -17,6 +18,10 @@ POWER_BI_ID = (
 VAX_DASH_URL = 'https://app.powerbi.com/view?r=%s' % POWER_BI_ID
 URL_LOAD_TIME = 10
 I_VAX_CENTER = 20
+
+
+def get_pdf_file():
+    return '/tmp/covid10.lk_vax_centers.pdf'
 
 
 def get_google_drive_api_key():
@@ -67,7 +72,7 @@ def scrape(file_id):
         developerKey=google_drive_api_key,
     )
     request = drive_service.files().get_media(fileId=file_id)
-    pdf_file = '/tmp/covid10.lk_vax_centers.pdf'
+    pdf_file = get_pdf_file()
     fh = io.FileIO(pdf_file, 'wb')
     downloader = MediaIoBaseDownload(fh, request)
     done = False
@@ -82,6 +87,74 @@ def scrape(file_id):
         )
 
 
+def parse():
+    pdf_file = get_pdf_file()
+    from tabula import read_pdf
+
+    dfs = read_pdf(pdf_file, pages="all")
+    data_list = []
+    for df in dfs:
+        rows = df.values.tolist()
+        for row in rows:
+            (
+                district_num,
+                district_name,
+                center_num,
+                police_area,
+                center_name,
+            ) = row[:5]
+            data = dict(
+                district_num=district_num,
+                district_name=district_name,
+                center_num=center_num,
+                police_area=police_area,
+                center_name=center_name,
+            )
+            data_list.append(data)
+
+    # fix blanks
+    data_list2 = []
+    cur_district_name = None
+    for data in data_list:
+        district_name = str(data['district_name'])
+
+        if district_name in ['Sub Total', '9']:
+            cur_district_name = None
+        elif district_name == 'Grand Total':
+            continue
+        elif district_name != 'nan':
+            cur_district_name = district_name
+            data_list2.append(data)
+        else:
+            if cur_district_name:
+                data['district_name'] = cur_district_name
+            data_list2.append(data)
+    data_list = data_list2
+
+    data_list2 = []
+    cur_district_name = None
+    data_list.reverse()
+    for data in data_list:
+        district_name = str(data['district_name'])
+        if district_name != 'nan':
+            cur_district_name = district_name
+            data_list2.append(data)
+        else:
+            if cur_district_name:
+                data['district_name'] = cur_district_name
+            data_list2.append(data)
+
+    data_list2.reverse()
+    data_list = data_list2
+
+    n_centers = len(data_list)
+
+    tsv_file = pdf_file.replace('.pdf', '.tsv')
+    tsv.write(tsv_file, data_list)
+    log.info(f'Wroted {n_centers} center info to {tsv_file}')
+
+
 if __name__ == '__main__':
     file_id = get_google_drive_file_id()
     scrape(file_id)
+    parse()
