@@ -84,3 +84,4 @@ pip install covid19-nuuuwan
   * updated window size
   * Reduced load time
   * added logging
+  * added logging-2
