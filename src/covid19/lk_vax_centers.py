@@ -46,10 +46,13 @@ def get_google_drive_file_id():
     time.sleep(URL_LOAD_TIME)
 
     el_iframe = browser.find_element_by_tag_name('iframe')
+    url_powerbi = el_iframe.get_attribute('src')
+    log.info(f'POWERBI URL = {url_powerbi}')
     browser.switch_to.frame(el_iframe)
     log.info(f'Switched to {browser.current_url}')
 
     el_buttons = browser.find_elements_by_tag_name('button')
+    log.info(f'Found {len(el_buttons)} possible buttons')
     el_button_vax_center = el_buttons[I_VAX_CENTER]
     el_button_vax_center.click()
 
