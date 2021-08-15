@@ -88,3 +88,4 @@ pip install covid19-nuuuwan
   * more logging
   * Done
   * Done
+  * Done
