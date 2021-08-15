@@ -8,12 +8,15 @@ from googleapiclient.http import MediaIoBaseDownload
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
+
+from utils import filex
 from covid19._utils import log
 
-VAX_DASH_URL = os.path.join(
-    'https://www.presidentsoffice.gov.lk', 'index.php/vaccination-dashboard/'
-)
+
+POWER_BI_ID = 'eyJrIjoiODY1MTliZjQtNTMzNi00MmRmLTg4NDMtM2U5YWZkMWMwNjNlIiwidCI6ImExNzJkODM2LWQ0YTUtNDBjZS1hNGFkLWJiY2FhMTAzOGY1NiIsImMiOjEwfQ%3D%3D'
+VAX_DASH_URL = 'https://app.powerbi.com/view?r=%s' % POWER_BI_ID
 URL_LOAD_TIME = 10
+I_VAX_CENTER = 20
 
 
 def get_google_drive_api_key():
@@ -30,34 +33,26 @@ def get_google_drive_api_key():
 
 
 def get_google_drive_file_id():
-
     options = Options()
-    options.headless = True
+    options.headless = False
+
     browser = webdriver.Firefox(options=options)
     browser.get(VAX_DASH_URL)
     browser.set_window_size(2000, 2000)
 
-    browser.save_screenshot("/tmp/sel%d.png" % 1)
-    time.sleep(URL_LOAD_TIME)
-    browser.save_screenshot("/tmp/sel%d.png" % 2)
+    time.sleep(10)
+    els = browser.find_elements_by_tag_name('button')
+    el_vax_center = els[I_VAX_CENTER]
+    el_vax_center.click()
 
-    el = browser.find_element_by_id("content")
-    print(el)
-    print(el.size)
-    print(el.location)
-
-    action = webdriver.common.action_chains.ActionChains(browser)
-    action.move_to_element_with_offset(el, 500, 1200)
-    action.click()
-    action.perform()
-
-    browser.save_screenshot("/tmp/sel%d.png" % 3)
-    time.sleep(URL_LOAD_TIME)
-    browser.save_screenshot("/tmp/sel%d.png" % 4)
-    print(browser.current_url)
-
+    time.sleep(10)
+    browser.switch_to.window(browser.window_handles[1])
+    tokens = browser.current_url.split('/')
     browser.quit()
 
+    google_drive_file_id = tokens[-2]
+    log.info(f'google_drive_file_id = {google_drive_file_id}')
+    return google_drive_file_id
 
 
 def scrape(file_id):
