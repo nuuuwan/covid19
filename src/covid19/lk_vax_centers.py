@@ -35,7 +35,7 @@ def get_google_drive_api_key():
 
 def get_google_drive_file_id():
     options = Options()
-    options.headless = True
+    options.headless = False
     browser = webdriver.Firefox(options=options)
 
     log.info('Crawling "%s"', VAX_DASH_URL)
