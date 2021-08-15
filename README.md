@@ -85,3 +85,4 @@ pip install covid19-nuuuwan
   * Reduced load time
   * added logging
   * added logging-2
+  * more logging
