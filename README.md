@@ -70,3 +70,4 @@ pip install covid19-nuuuwan
 * [2021-08-15 09:42PM] Parse Vax Centers PDF File
   * Updated README
   * Parse complete
+  * Pre-Merge
