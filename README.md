@@ -64,3 +64,5 @@ pip install covid19-nuuuwan
 * [2021-08-15 09:36PM] Add google-api-python-client
   * Updated README
   * Pre-Merge
+* [2021-08-15 09:37PM] Add google-api-python-client-2
+  * Updated README
