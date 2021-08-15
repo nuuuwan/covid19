@@ -13,7 +13,7 @@ from covid19._utils import log
 VAX_DASH_URL = (
     'https://www.presidentsoffice.gov.lk/index.php/vaccination-dashboard/'
 )
-URL_LOAD_TIME = 10
+URL_LOAD_TIME = 20
 I_VAX_CENTER = 20
 
 
