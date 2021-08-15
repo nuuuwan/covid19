@@ -36,6 +36,7 @@ setuptools.setup(
         'pycountry-convert',
         'scipy',
         'emoji-country-flag',
+        'google-api-python-client',
     ],
     test_suite='nose.collector',
     tests_require=['nose'],
