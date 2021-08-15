@@ -13,7 +13,7 @@ from covid19._utils import log
 POWER_BI_ID = (
     'eyJrIjoiODY1MTliZjQtNTMzNi00MmRmLTg4ND'
     + 'MtM2U5YWZkMWMwNjNlIiwidCI6ImExNzJkODM2LWQ0Y'
-    + 'TUtNDBjZS1hNGFkLWJiY2FhMTAzOGY1NiIsImMiOjEwfQ%3D%3D'
+    + 'TUtNDBjZS1hNGFkLWJiY2FhMTAzOGY1NiIsImMiOjEwfQ=='
 )
 VAX_DASH_URL = 'https://app.powerbi.com/view?r=%s' % POWER_BI_ID
 URL_LOAD_TIME = 10
