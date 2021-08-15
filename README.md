@@ -80,3 +80,4 @@ pip install covid19-nuuuwan
   * Fixed
   * More logging
   * Longer load time
+  * Updated I_VAX_CENTER

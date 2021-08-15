@@ -14,7 +14,7 @@ VAX_DASH_URL = (
     'https://www.presidentsoffice.gov.lk/index.php/vaccination-dashboard/'
 )
 URL_LOAD_TIME = 40
-I_VAX_CENTER = 20
+I_VAX_CENTER = -3
 
 
 def get_pdf_file():
