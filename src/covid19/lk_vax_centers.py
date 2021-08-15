@@ -42,6 +42,7 @@ def get_google_drive_file_id():
     options.headless = True
 
     browser = webdriver.Firefox(options=options)
+    log.info('Crawling "%s"', VAX_DASH_URL)
     browser.get(VAX_DASH_URL)
     browser.set_window_size(2000, 2000)
 
