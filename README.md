@@ -60,3 +60,4 @@ pip install covid19-nuuuwan
   * Download complete
   * Download complete
   * Added workkflows
+  * Pre-Merge
