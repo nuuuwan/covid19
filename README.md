@@ -73,3 +73,4 @@ pip install covid19-nuuuwan
   * Pre-Merge
   * Updated POWER_BI_ID
   * Logging
+  * Bug fix

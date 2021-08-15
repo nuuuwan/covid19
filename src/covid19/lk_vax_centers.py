@@ -10,12 +10,8 @@ from utils import tsv
 
 from covid19._utils import log
 
-POWER_BI_ID = (
-    'eyJrIjoiODY1MTliZjQtNTMzNi00MmRmLTg4ND'
-    + 'MtM2U5YWZkMWMwNjNlIiwidCI6ImExNzJkODM2LWQ0Y'
-    + 'TUtNDBjZS1hNGFkLWJiY2FhMTAzOGY1NiIsImMiOjEwfQ=='
-)
-VAX_DASH_URL = 'https://app.powerbi.com/view?r=%s' % POWER_BI_ID
+VAX_DASH_URL = 'https://app.powerbi.com/view?r=eyJrIjoiODY1MTliZjQtNTMzNi00MmRmLTg4NDMtM2U5YWZkMWMwNjNlIiwidCI6ImExNzJkODM2LWQ0YTUtNDBjZS1hNGFkLWJiY2FhMTAzOGY1NiIsImMiOjEwfQ=='
+
 URL_LOAD_TIME = 10
 I_VAX_CENTER = 20
 
@@ -40,18 +36,18 @@ def get_google_drive_api_key():
 def get_google_drive_file_id():
     options = Options()
     options.headless = True
-
     browser = webdriver.Firefox(options=options)
+
     log.info('Crawling "%s"', VAX_DASH_URL)
     browser.get(VAX_DASH_URL)
     browser.set_window_size(2000, 2000)
 
-    time.sleep(10)
+    time.sleep(URL_LOAD_TIME)
     els = browser.find_elements_by_tag_name('button')
     el_vax_center = els[I_VAX_CENTER]
     el_vax_center.click()
 
-    time.sleep(10)
+    time.sleep(URL_LOAD_TIME)
     browser.switch_to.window(browser.window_handles[1])
     tokens = browser.current_url.split('/')
     browser.quit()
