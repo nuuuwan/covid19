@@ -10,8 +10,9 @@ from utils import tsv
 
 from covid19._utils import log
 
-VAX_DASH_URL = 'https://app.powerbi.com/view?r=eyJrIjoiODY1MTliZjQtNTMzNi00MmRmLTg4NDMtM2U5YWZkMWMwNjNlIiwidCI6ImExNzJkODM2LWQ0YTUtNDBjZS1hNGFkLWJiY2FhMTAzOGY1NiIsImMiOjEwfQ=='
-
+VAX_DASH_URL = (
+    'https://www.presidentsoffice.gov.lk/index.php/vaccination-dashboard/'
+)
 URL_LOAD_TIME = 10
 I_VAX_CENTER = 20
 
@@ -43,12 +44,18 @@ def get_google_drive_file_id():
     browser.set_window_size(2000, 2000)
 
     time.sleep(URL_LOAD_TIME)
-    els = browser.find_elements_by_tag_name('button')
-    el_vax_center = els[I_VAX_CENTER]
-    el_vax_center.click()
+
+    el_iframe = browser.find_element_by_tag_name('iframe')
+    browser.switch_to.frame(el_iframe)
+    log.info(f'Switched to {browser.current_url}')
+
+    el_buttons = browser.find_elements_by_tag_name('button')
+    el_button_vax_center = el_buttons[I_VAX_CENTER]
+    el_button_vax_center.click()
 
     time.sleep(URL_LOAD_TIME)
     browser.switch_to.window(browser.window_handles[1])
+    log.info(f'Switched to {browser.current_url}')
     tokens = browser.current_url.split('/')
     browser.quit()
 
