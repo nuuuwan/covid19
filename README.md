@@ -59,3 +59,4 @@ pip install covid19-nuuuwan
   * Implemented get_google_drive_file_id
   * Download complete
   * Download complete
+  * Added workkflows
