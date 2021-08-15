@@ -82,3 +82,4 @@ pip install covid19-nuuuwan
   * Longer load time
   * Updated I_VAX_CENTER
   * updated window size
+  * Reduced load time
