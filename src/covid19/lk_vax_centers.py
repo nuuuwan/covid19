@@ -52,6 +52,8 @@ def get_google_drive_file_id():
     log.info(f'Switched to {browser.current_url}')
 
     el_buttons = browser.find_elements_by_tag_name('button')
+    for el_button in el_buttons:
+        log.info(el_buttons)
     log.info(f'Found {len(el_buttons)} possible buttons')
     el_button_vax_center = el_buttons[I_VAX_CENTER]
     el_button_vax_center.click()
