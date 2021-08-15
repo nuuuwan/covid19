@@ -13,7 +13,7 @@ from covid19._utils import log
 VAX_DASH_URL = (
     'https://www.presidentsoffice.gov.lk/index.php/vaccination-dashboard/'
 )
-URL_LOAD_TIME = 15
+URL_LOAD_TIME = 10
 I_VAX_CENTER = -3
 
 
@@ -52,21 +52,25 @@ def get_google_drive_file_id():
     log.info(f'Switched to {browser.current_url}')
 
     el_buttons = browser.find_elements_by_tag_name('button')
+    log.info(f'Found {len(el_buttons)} possible buttons')
+
+    google_drive_file_id = None
     for el_button in el_buttons:
         log.info(el_button)
         log.info(el_button.text)
         log.info('...')
-    log.info(f'Found {len(el_buttons)} possible buttons')
-    el_button_vax_center = el_buttons[I_VAX_CENTER]
-    el_button_vax_center.click()
 
-    time.sleep(URL_LOAD_TIME)
-    browser.switch_to.window(browser.window_handles[1])
-    log.info(f'Switched to {browser.current_url}')
-    tokens = browser.current_url.split('/')
+        if el_button.text == 'VACCINATION CENTERS OPEN TODAY':
+            el_button.click()
+
+            time.sleep(URL_LOAD_TIME)
+            browser.switch_to.window(browser.window_handles[1])
+            log.info(f'Switched to {browser.current_url}')
+            tokens = browser.current_url.split('/')
+            google_drive_file_id = tokens[-2]
+            break
+
     browser.quit()
-
-    google_drive_file_id = tokens[-2]
     log.info(f'google_drive_file_id = {google_drive_file_id}')
     return google_drive_file_id
 
