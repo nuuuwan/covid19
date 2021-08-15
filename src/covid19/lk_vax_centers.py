@@ -83,6 +83,5 @@ def scrape(file_id):
 
 
 if __name__ == '__main__':
-    # TEST_FILE_ID = '1qro8z-veN1Kd-rv00b4haZPaAHIGuwDs'
-    # scrape(TEST_FILE_ID)
-    get_google_drive_file_id()
+    file_id = get_google_drive_file_id()
+    scrape(file_id)
