@@ -112,3 +112,4 @@ pip install covid19-nuuuwan
   * Done
   * Various
   * only basic CSV
+  * 
