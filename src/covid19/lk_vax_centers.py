@@ -2,6 +2,7 @@ import argparse
 import io
 import time
 
+from tabula import read_pdf
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 from selenium import webdriver
@@ -104,7 +105,9 @@ def scrape(file_id):
 
 def parse():
     pdf_file = get_pdf_file()
-    from tabula import read_pdf
+    if not os.fileexists(pdf_file):
+        log.error(f'{pdf_file} does not exist!')
+        return None
 
     dfs = read_pdf(pdf_file, pages="all")
     data_list = []
@@ -167,6 +170,8 @@ def parse():
     tsv_file = pdf_file.replace('.pdf', '.tsv')
     tsv.write(tsv_file, data_list)
     log.info(f'Wroted {n_centers} center info to {tsv_file}')
+
+    return data_list
 
 
 if __name__ == '__main__':

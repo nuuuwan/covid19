@@ -101,3 +101,4 @@ pip install covid19-nuuuwan
   * Removed upload-lk-vax-centers-cron.yml
   * Added local_workflows/download-lk-vax-center.sh
   * Clean
+  * Graceful fail
