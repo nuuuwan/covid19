@@ -92,3 +92,4 @@ pip install covid19-nuuuwan
   * Added screenshot
   * covid10 -> 19
   * Firefox -> Chrome
+  * URL_LOAD_TIME = 20
