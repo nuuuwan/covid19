@@ -108,3 +108,4 @@ pip install covid19-nuuuwan
   * Added API KEY
   * lk_vax_center: Added date_id
   * typo
+  * Added dump_summary

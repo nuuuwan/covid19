@@ -1,14 +1,14 @@
 import argparse
 import io
-import time
 import os
+import time
 
-from tabula import read_pdf
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-from utils import tsv, timex
+from tabula import read_pdf
+from utils import filex, tsv
 
 from covid19._utils import log
 
@@ -19,9 +19,8 @@ URL_LOAD_TIME = 10
 I_VAX_CENTER = -3
 
 
-def get_pdf_file():
-    date_id = timex.get_date_id()
-    return f'/tmp/covid19.lk_vax_centers.{date_id}.pdf'
+def get_file(tag, ext):
+    return f'/tmp/covid19.lk_vax_centers.{tag}.{ext}'
 
 
 def get_google_drive_api_key():
@@ -58,7 +57,7 @@ def get_google_drive_file_id():
     el_buttons = browser.find_elements_by_tag_name('button')
     log.info(f'Found {len(el_buttons)} possible buttons')
 
-    screenshot_file = get_pdf_file().replace('.pdf', '.png')
+    screenshot_file = get_file('latest', 'png')
     browser.save_screenshot(screenshot_file)
 
     google_drive_file_id = None
@@ -90,7 +89,7 @@ def scrape(file_id):
         developerKey=google_drive_api_key,
     )
     request = drive_service.files().get_media(fileId=file_id)
-    pdf_file = get_pdf_file()
+    pdf_file = get_file('latest', 'pdf')
     fh = io.FileIO(pdf_file, 'wb')
     downloader = MediaIoBaseDownload(fh, request)
     done = False
@@ -106,7 +105,7 @@ def scrape(file_id):
 
 
 def parse():
-    pdf_file = get_pdf_file()
+    pdf_file = get_file('latest', 'pdf')
     if not os.path.exists(pdf_file):
         log.error(f'{pdf_file} does not exist!')
         return None
@@ -169,15 +168,32 @@ def parse():
 
     n_centers = len(data_list)
 
-    tsv_file = pdf_file.replace('.pdf', '.tsv')
+    tsv_file = get_file('latest', 'tsv')
     tsv.write(tsv_file, data_list)
     log.info(f'Wrote {n_centers} center info to {tsv_file}')
 
     return data_list
 
 
+def dump_summary(data_list):
+    md_lines = ['# Open Vaccinations Centers', '']
+    prev_district_name = None
+    for data in data_list:
+        district_name = data['district_name']
+        center_name = data['center_name']
+
+        if district_name != prev_district_name:
+            md_lines.append(f'* {district_name}')
+        md_lines.append(f'  * {center_name}')
+    md_file = get_file('latest', 'md')
+    filex.write(
+        md_file,
+    )
+
+
 if __name__ == '__main__':
     file_id = get_google_drive_file_id()
     if file_id:
         scrape(file_id)
-        parse()
+        data_list = parse()
+        dump_summary(data_list)
