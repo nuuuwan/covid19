@@ -107,3 +107,4 @@ pip install covid19-nuuuwan
   * Added open https://github.com/nuuuwan/covid19/tree/data
   * Added API KEY
   * lk_vax_center: Added date_id
+  * typo

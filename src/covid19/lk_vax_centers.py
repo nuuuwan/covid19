@@ -8,7 +8,7 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-from utils import tsv
+from utils import tsv, timex
 
 from covid19._utils import log
 
@@ -20,7 +20,8 @@ I_VAX_CENTER = -3
 
 
 def get_pdf_file():
-    return '/tmp/covid19.lk_vax_centers.pdf'
+    date_id = timex.get_date_id()
+    return f'/tmp/covid19.lk_vax_centers.{date_id}.pdf'
 
 
 def get_google_drive_api_key():
@@ -170,7 +171,7 @@ def parse():
 
     tsv_file = pdf_file.replace('.pdf', '.tsv')
     tsv.write(tsv_file, data_list)
-    log.info(f'Wroted {n_centers} center info to {tsv_file}')
+    log.info(f'Wrote {n_centers} center info to {tsv_file}')
 
     return data_list
 
