@@ -103,3 +103,4 @@ pip install covid19-nuuuwan
   * Clean
   * Graceful fail
   * Done
+  * Final local_workflows/download-lk-vax-center.sh
