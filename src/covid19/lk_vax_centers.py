@@ -18,7 +18,7 @@ I_VAX_CENTER = -3
 
 
 def get_pdf_file():
-    return '/tmp/covid10.lk_vax_centers.pdf'
+    return '/tmp/covid19.lk_vax_centers.pdf'
 
 
 def get_google_drive_api_key():
