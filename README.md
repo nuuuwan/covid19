@@ -98,3 +98,4 @@ pip install covid19-nuuuwan
   * browser.set_window_size(2000, 2000)
   * profile.set_preference(network.proxy.socks_remote_dns, True) + 
   * removed firefox_profile
+  * Removed upload-lk-vax-centers-cron.yml
