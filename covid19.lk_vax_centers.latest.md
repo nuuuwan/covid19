@@ -1,343 +1,371 @@
 # Open Vaccinations Centers
 
-  * Army Hospital Narahenpita (1st Dose & 2nd Dose)
-  * Viharamahadevi Park (1st Dose & 2nd Dose )
-  * Diyatha Uyana (1st Dose & 2nd Dose)
-  * Mobile Medical Team (Colombo  (1st Dose & 2nd Dose)
-  * None
-  * Colombo National Hospital
-  * Sugathadasa Outdoor Stadium (2nd Dose)
-  * P.D. Sirisena Ground (2 nd Dose)
-  * MOH Office - Jinthupitiya
-  * Navy Headquarters
-* Colombo
-  * MOH Office - Werahera
-* None
-  * MOH Office - Dehiwala
-  * Park Road Maternity Clinic
-  * Roman Catholic College - Welikanna
-  * MOH Office - Moratuwa
-  * Lunawa Hospital
-  * Municipal Council Car Park
-  * MOH Office - Egodauyana
-  * MOH Office - Bokundara
-  * MOH Office - Kesbewa
-  * Sub Total
-  * BOI - Katunayaka (2nd Dose)
-  * None
-  * Adiambalama Veluwanarama Viharaya
-  * None
-  * MOH Office - Dompe
-  * Putupagala Clinic
-  * eellawatta Viharaya
-  * OH Office - Minuwangoda
-  * hibbotugoda Church
-  * adawadunna Viharaya
-  * ande Viharaya
-  * algammulla Viharaya
-  * okalagama Central Pharmacy
-  * adagamuwa Viharaya
-  * eeragula Primary School
-  * osowita Community Hall
-  * athnawali Sama Viharaya
-  * nanodaya Maha Vidyalaya
-  * avihena Viharaya
-  * urana Methodist Church
-  * OH Office - Mahara
-  * imbarama Viharaya
-  * ahara Nuhegoda Isipathanaramaya
-  * unupitiya Clinic
-  * alugama Clinic
-  * radeshiya Shabha - Kelaniya
-  * ellawagedra Maha Vidyalaya
-  * akshapana Nandaraja Viharaya
-  * karangaha Viharaya
-  * own Hall - Negomobo
-  * alupatha Velakkanni Maternity Clinic
-  * ankuliya St. Anthony's Church
-  * ur Lady of Snows' Church
-  * amunugaa Hospital
-  * t.Nicholas Church - Bopitiya
-  * Horana Hospital
-  * Handapangoda Vidyalaya
-  * None
-  * Ingiriya Hospital
-  * Arakagoda Viharaya
-  * Karagastota Viharaya
-  * Delkada Viharaya
-  * Dibbedda Gunawardhana Primary School
-  * Nugagoda Viharaya
-  * MOH Office – Dodangoda
-  * None
-  * Dodangoda Hospital
-  * DH – Nebada
-  * NIHS
-  * Kalutara South
-  * General Hospital Nagoda – Kalutara
-* Kalutara
-  * Walagedra  Maha Vidyalaya
-* None
-  * Ananda Sastralaya National College - Matugama
-  * Weththewa Hospita
-  * None
-  * Katugahahena Hospital
-  * Ambethenna State Permises
-  * Gulawita Community Hall
-  * Mihindu Maha Vidyalaya
-  * Pimbura Hospital
-  * Kudaligama Maha Vidyalaya
-  * Kamburawala Maha Vidyalaya
-  * None
-  * Delkit Estate Tamil Vidyalayainati
-  * Amaragedra Maha Vidyalaya
-  * None
-  * Govinna Maha Vidyalaya
-  * MOH Office - Madurawala
-  * Sub Total
-* Kurunegala
-  * Nikaweratiya Mahasen National College
-* None
-  * attapitiya Viharaya
-  * alambagala Vidyalaya
-  * alpanawa Church
-  * grauda Viharaya
-  * dunowa Viharaya
-  * hala Ambale Viharaya
-  * own Hall - Kurunegala
-  * ewa Ravuma Army Camp
-  * heliyagonna Hisbulla Vidyalaya
-  * OH Office - Bamunakotuwa
-  * epathanga Vidyalaya
-  * ewdeniya Subodharama Viharaya
-  * ungamwa Dhamsen Vidyalaya
-  * andurugaha Madiththa Vidyalaya
-  * Sub Total
-* Nuwara Eliya
-  * istrict Hospital - Rikillagaskada
-* None
-  * atagolla Pussadewa Maha Vidyalaya
-  * iduhal Vidyalaya
-  * OH Office - Kotmale
-  * TM Factory
-  * amil Maha Vidyalaya
-  * araswati Maha Vidyalaya
-  * Sub Total
-* Badulla
-  * rmy Base Hospital - Badulla (2nd Dose)
-* None
-  * eegahawela Primary School
-  * ampaha Vidyalaya
-  * eewenkanda Vidyalaya
-  * unugala Hospital
-  * optan Hopital
-  * Kahataruppa Hospital
-  * Mahawattegama Vidyalaya
-  * MOH Office - Ella
-  * None
-  * Divisional Secretariat - Ella
-  * Sub Total
-  * Sanghamitta Balika Vidyalaya
-  * None
-  * Ukwatta Primary School
-  * Unawatuna Maha Vidyalaya
-  * MOH Office - Yakkalamulla
-  * Yakkalamulla
-  * Kottawa Garment
-  * Karawwa Sri Nandana Viharaya
-  * Omaththa Primary School
-  * Meepawala Amarasuriya Vidyalaya
-  * Sub Total
-  * Weliwa Buddhist College
-  * Weherahena Rajamaha Viharaya
-  * Hakmana Udupillagoda Purana Viharaya
-  * Thanahalagama Viharaya
-  * Derangala Maha Vidyalaya
-  * None
-  * Dudley Senanayake Maha Vidyalaya - Pitabeddara
-  * Midigama Loadstar Factory
-  * Kamburupitiya Ulla Maha Vidyalaya
-  * None
-  * Narandeniya Maha Vidyalaya
-  * Deiyandara National College
-  * Pattigala Primary School
-  * Sub Total
-  * MOH Office - Okewita
-* Hambantota
-  * MOH Office - Sooriyawewa
-* None
-  * MOH Office - Ambalantota
-  * Godawela Viharaya
-  * Nihiluwa Maha Vidyalaya
-  * Watarakgoda Viharaya
-  * Beligalla Maha Vidyalaya
-  * Pallaththara Maha Vidyalaya
-  * Labuhengoda Maha Vidyalaya
-  * Kudagalara Viharaya
-  * Middeniya Primary School
-  * Sub Total
-  * MOH Office - Weligepola
-  * Vidyaloka Vidyalaya
-  * Budda Jayanthi Vidyalaya
-  * Mas Garment Factory - Balangoda
-  * Rathmalavinna Vidyalaya
-  * Ayagama Dhammananda  Vidyalaya
-  * None
-  * Nivithigala Sumana National College
-  * Kalawana Maha Vidyalaya
-  * None
-  * Pothupitiya Vidyalaya
-  * Kahawatta Central College
-  * Kumara Vidyalaya
-  * Sub Total
-  * MOH Office - Rambukkana
-  * Puwakdeniya Primary School
-  * Hettimulla Bandaranayaka Maha Vidyalaya
-  * Alapalawala Maha Vidyalaya
-  * Kegalle
-  * Bulugahadeniya Sri Vithanarama Viharaya
-  * Atugoda Vidyalaya
-  * MOH Office - Galigamuwa
-  * Muruthawela Community Hall
-  * Godawela Viharaya
-  * Nihiluwa Maha Vidyalaya
-  * Watarakgoda Viharaya
-  * Beligalla Maha Vidyalaya
-  * Pallaththara Maha Vidyalaya
-  * Labuhengoda Maha Vidyalaya
-  * Kudagalara Viharaya
-  * Middeniya Primary School
-  * Sub Total
-  * MOH Office - Weligepola
-  * Vidyaloka Vidyalaya
-  * Budda Jayanthi Vidyalaya
-  * Mas Garment Factory - Balangoda
-  * Rathmalavinna Vidyalaya
-  * Ayagama Dhammananda  Vidyalaya
-  * None
-  * Nivithigala Sumana National College
-  * Kalawana Maha Vidyalaya
-  * None
-  * Pothupitiya Vidyalaya
-  * Kahawatta Central College
-  * Kumara Vidyalaya
-  * Sub Total
-  * MOH Office - Rambukkana
-  * Puwakdeniya Primary School
-  * Hettimulla Bandaranayaka Maha Vidyalaya
-  * Alapalawala Maha Vidyalaya
-  * Kegalle
-  * Bulugahadeniya Sri Vithanarama Viharaya
-  * Atugoda Vidyalaya
-  * MOH Office - Galigamuwa
-  * Muruthawela Community Hall
-  * ongamuwa Primary School
-  * eligalla Community Hall
-  * aduriya Maha Vidyalaya
-  * daththawa Primary School
-  * andiwela Maha Vidyalaya
-  * Sub Total
-* Anuradhapura
-  * rmy Hospitala - Anuradhapura (2nd Dose)
-* None
-  * nuradhapura Teaching Hospital
-  * alisinghe Harischandra Ground
-  * olibeddewa Vidyalaya
-  * OH Office - Mihintale
-  * Sub Total
-* Jaffna
-  * OH Office - Karainagar
-* None
-  * OH Office – Kayts
-  * ayts Base Hospital
-  * OH Office - Chavakachcheri
-  * OH Office - Karaveddy
-  * alvettithurai Balika Vidyalaya
-  * erumal Kovil Hall
-  * OH Office - Chavakachcheri
-  * OH Office - Thelippalai
-  * Sub Total
-* Kilinochchi
-  * rmy Base Hospital - Kilinochchi (2nd Dose)
-* None
-  * OH Office - Pooneryn
-  * Sub Total
-* Mullaitivu
-  * rmy Base Hospital - Mullaitivu (2nd Dose)
-* None
-  * Sub Total
-* Mannar
-  * andivirichchan Vidyalaya (2nd Dose)
-* None
-  * OH Office - Adampan (2nd Dose)
-  * None
-  * St. Xaviers Girls College - Mannar (2nd Dose)
-  * Veppamkulam GMM School - Mannar (2nd Dose)
-  * Sub Total
-  * MOH Office – Muttur
-  * MOH Office - Kuruggankeni
-  * None
-  * MOH Office – Kinniya
-  * MOH Office – Sripura
-  * MOH Office – Kantale
-  * MOH Office - Kuchchaveli
-  * Divisional Hospital - Kuchchaveli
-  * None
-  * Divisional Hospital - Nilaveli
-  * MOH Office - Trincomalee
-  * MOH Office - Uppuveli
-  * MOH Office - Thambalagamuwa
-  * MOH Office - Gomarankadawala
-  * MOH Office - Serunuwara
-  * MOH Office - Ichchalampattu
-  * Sub Total
-  * Mahaladithivu Hospital
-  * MOH Office - Vellawali
-  * MOH Office - Kaluwanchikudy
-  * MOH Office - Kattankudy
-  * Batticaloa Central College
-  * MOH Office - Valachchenai
-  * MOH Office - Oddamavadi
-  * MOH Office - Meeravodai
-  * Annur National College
-  * Valachchenai Base Hospital
-  * MOH Office - Vakarai
-  * None
-  * St. Xaviers Girls College - Mannar
-  * Veppamkulam GMM School - Ma
-  * Sub Total
-  * MOH Office – Muttur
-  * MOH Office - Kuruggankeni
-  * None
-  * MOH Office – Kinniya
-  * MOH Office – Sripura
-  * MOH Office – Kantale
-  * MOH Office - Kuchchaveli
-  * Divisional Hospital - Kuchchaveli
-  * None
-  * Divisional Hospital - Nilaveli
-  * MOH Office - Trincomalee
-  * MOH Office - Uppuveli
-  * MOH Office - Thambalagamuwa
-  * MOH Office - Gomarankadawala
-  * MOH Office - Serunuwara
-  * MOH Office - Ichchalampattu
-  * Sub Total
-  * Mahaladithivu Hospital
-  * MOH Office - Vellawali
-  * MOH Office - Kaluwanchikudy
-  * MOH Office - Kattankudy
-  * Batticaloa Central College
-  * MOH Office - Valachchenai
-  * MOH Office - Oddamavadi
-  * MOH Office - Meeravodai
-  * Annur National College
-  * Valachchenai Base Hospital
-  * MOH Office - Vakarai
-  * Eravur Hospital
-  * Karadiyanaru Hospital
-  * MOH Office – Eravur
-  * MOH Ofice - Chenkaladi
-  * Chenkaladi Hospital
-  * Sandiveli Hospital
-  * Sub Total
-  * Grand Total
+* **Colombo** District
+  * **Narahenpita** Police Area
+    * Army Hospital Narahenpita
+  * **Cinnamon Gardens** Police Area
+    * Viharamahadevi Park
+  * **Thalangama** Police Area
+    * Diyatha Uyana
+  * **Maradana** Police Area
+    * Mobile Medical Team
+    * Colombo National Hospital
+  * **Grandpass** Police Area
+    * Sugathadasa Outdoor Stadium
+  * **Maligawatta** Police Area
+    * P.D. Sirisena Ground
+  * **Fore shore** Police Area
+    * MOH Office - Jinthupitiya
+  * **Fort** Police Area
+    * Navy Headquarters
+  * **Boralesgamuwa** Police Area
+    * MOH Office - Werahera
+  * **Dehiwala** Police Area
+    * MOH Office - Dehiwala
+  * **Mt Lavinia** Police Area
+    * Park Road Maternity Clinic
+  * **Hanwella** Police Area
+    * Roman Catholic College - Welikanna
+  * **Moratuwa** Police Area
+    * MOH Office - Moratuwa
+    * Lunawa Hospital
+    * Municipal Council Car Park
+  * **Egodauyana** Police Area
+    * MOH Office - Egodauyana
+  * **Piliyandala** Police Area
+    * MOH Office - Bokundara
+  * **Kesbewa** Police Area
+    * MOH Office - Kesbewa
+* **Gampaha** District
+  * **Katunayaka** Police Area
+    * BOI - Katunayaka
+    * Adiambalama Veluwanarama Viharaya
+  * **Pugoda** Police Area
+    * MOH Office - Dompe
+  * **Dompe** Police Area
+    * Putupagala Clinic
+    * Peellawatta Viharaya
+    * MOH Office - Minuwangoda
+  * **Ganemulla** Police Area
+    * Thibbotugoda Church
+  * **Nittambuwa** Police Area
+    * Radawadunna Viharaya
+    * Kande Viharaya
+    * Walgammulla Viharaya
+  * **Pallewela** Police Area
+    * Bokalagama Central Pharmacy
+  * **Veyangoda** Police Area
+    * Dadagamuwa Viharaya
+  * **Weeragula** Police Area
+    * Weeragula Primary School
+  * **Gampaha** Police Area
+    * Kosowita Community Hall
+    * Rathnawali Sama Viharaya
+  * **Divulapitiya** Police Area
+    * Gnanodaya Maha Vidyalaya
+  * **Mirigama** Police Area
+    * Mavihena Viharaya
+  * **Seeduwa** Police Area
+    * Kurana Methodist Church
+  * **Kadawata** Police Area
+    * MOH Office - Mahara
+    * Bimbarama Viharaya
+    * Mahara Nuhegoda Isipathanaramaya
+  * **Kiribathgoda** Police Area
+    * Hunupitiya Clinic
+    * Dalugama Clinic
+  * **Peliyagoda** Police Area
+    * Pradeshiya Shabha - Kelaniya
+  * **Kotadeniyawa** Police Area
+    * Mellawagedra Maha Vidyalaya
+    * Rakshapana Nandaraja Viharaya
+    * Akarangaha Viharaya
+  * **Negomobo** Police Area
+    * Town Hall - Negomobo
+    * Dalupatha Velakkanni Maternity Clinic
+    * Mankuliya St. Anthony's Church
+    * Our Lady of Snows' Church
+  * **Pamunugama** Police Area
+    * Pamunugaa Hospital
+    * St.Nicholas Church - Bopitiya
+* **Kalutara** District
+  * **Horana** Police Area
+    * Horana Hospital
+  * **Ingiriya** Police Area
+    * Handapangoda Vidyalaya
+    * Ingiriya Hospital
+  * **Millaniya** Police Area
+    * Arakagoda Viharaya
+    * Karagastota Viharaya
+    * Delkada Viharaya
+  * **Wadduwa** Police Area
+    * Dibbedda Gunawardhana Primary School
+  * **Kalutara North** Police Area
+    * Nugagoda Viharaya
+  * **Dodangoda** Police Area
+    * MOH Office – Dodangoda
+    * Dodangoda Hospital
+  * **Thebuwana** Police Area
+    * DH – Nebada
+  * **Kalutara South** Police Area
+    * NIHS
+    * General Hospital Nagoda – Kalutara
+  * **Welipenna** Police Area
+    * Walagedra  Maha Vidyalaya
+  * **Matugama** Police Area
+    * Ananda Sastralaya National College - Matugama
+    * Weththewa Hospita
+    * Katugahahena Hospital
+    * Ambethenna State Permises
+  * **Meegahathenna** Police Area
+    * Gulawita Community Hall
+  * **Agalawatta** Police Area
+    * Mihindu Maha Vidyalaya
+    * Pimbura Hospital
+    * Kudaligama Maha Vidyalaya
+  * **Baduraliya** Police Area
+    * Kamburawala Maha Vidyalaya
+    * Delkit Estate Tamil Vidyalayainati
+  * **Bulathsinhala** Police Area
+    * Amaragedra Maha Vidyalaya
+    * Govinna Maha Vidyalaya
+  * **Anguruwatota** Police Area
+    * MOH Office - Madurawala
+  * **Nikaweratiya** Police Area
+    * Nikaweratiya Mahasen National College
+    * Kattapitiya Viharaya
+  * **Giriulla** Police Area
+    * Halambagala Vidyalaya
+  * **Rasnayakapura** Police Area
+    * Galpanawa Church
+    * Agrauda Viharaya
+    * Udunowa Viharaya
+    * Ihala Ambale Viharaya
+  * **Kurunegala** Police Area
+    * Town Hall - Kurunegala
+    * Wewa Ravuma Army Camp
+  * **Mallawapitiya** Police Area
+    * Theliyagonna Hisbulla Vidyalaya
+  * **Bamunukotuwa** Police Area
+    * MOH Office - Bamunakotuwa
+  * **Wariyapola** Police Area
+    * Wepathanga Vidyalaya
+  * **Alawwa** Police Area
+    * Lewdeniya Subodharama Viharaya
+    * Nungamwa Dhamsen Vidyalaya
+  * **Weerambugedara** Police Area
+    * Kandurugaha Madiththa Vidyalaya
+* **Nuwara Eliya** District
+  * **Hanguranketa** Police Area
+    * District Hospital - Rikillagaskada
+  * **Walapane** Police Area
+    * Batagolla Pussadewa Maha Vidyalaya
+  * **Theripehe** Police Area
+    * Siduhal Vidyalaya
+  * **Kotmale** Police Area
+    * MOH Office - Kotmale
+  * **Pundaluoya** Police Area
+    * VTM Factory
+  * **Agrapatana** Police Area
+    * Tamil Maha Vidyalaya
+  * **Lindula** Police Area
+    * Saraswati Maha Vidyalaya
+* **Badulla** District
+  * **Badulla** Police Area
+    * Army Base Hospital - Badulla
+    * Meegahawela Primary School
+  * **Haldummulla** Police Area
+    * Gampaha Vidyalaya
+    * Heewenkanda Vidyalaya
+  * **Lunugala** Police Area
+    * Lunugala Hospital
+    * Hoptan Hopital
+  * **Kahataruppa** Police Area
+    * Kahataruppa Hospital
+  * **Hali Ela** Police Area
+    * Mahawattegama Vidyalaya
+  * **Ella** Police Area
+    * MOH Office - Ella
+    * Divisional Secretariat - Ella
+* **Galle** District
+  * **Galle** Police Area
+    * Sanghamitta Balika Vidyalaya
+    * Ukwatta Primary School
+  * **Habaraduwa** Police Area
+    * Unawatuna Maha Vidyalaya
+  * **Yakkalamulla** Police Area
+    * MOH Office - Yakkalamulla
+    * Kottawa Garment
+  * **Pitigala** Police Area
+    * Karawwa Sri Nandana Viharaya
+  * **Elpitiya** Police Area
+    * Omaththa Primary School
+  * **Poddala** Police Area
+    * Meepawala Amarasuriya Vidyalaya
+* **Matara** District
+  * **Morawaka** Police Area
+    * Weliwa Buddhist College
+  * **Matara** Police Area
+    * Weherahena Rajamaha Viharaya
+  * **Hakmana** Police Area
+    * Hakmana Udupillagoda Purana Viharaya
+  * **Akuressa** Police Area
+    * Thanahalagama Viharaya
+  * **Pitabeddara** Police Area
+    * Derangala Maha Vidyalaya
+    * Dudley Senanayake Maha Vidyalaya - Pitabeddara
+  * **Weligama** Police Area
+    * Midigama Loadstar Factory
+  * **Kamburupitiya** Police Area
+    * Kamburupitiya Ulla Maha Vidyalaya
+    * Narandeniya Maha Vidyalaya
+  * **Deiyandara** Police Area
+    * Deiyandara National College
+  * **Urubokka** Police Area
+    * Pattigala Primary School
+* **Hambantota** District
+  * **Walasmulla** Police Area
+    * MOH Office - Okewita
+  * **Sooriyawewa** Police Area
+    * MOH Office - Sooriyawewa
+  * **Ambalantota** Police Area
+    * MOH Office - Ambalantota
+  * **Beliatta** Police Area
+    * Godawela Viharaya
+    * Nihiluwa Maha Vidyalaya
+    * Watarakgoda Viharaya
+    * Beligalla Maha Vidyalaya
+    * Pallaththara Maha Vidyalaya
+  * **Middeniya** Police Area
+    * Labuhengoda Maha Vidyalaya
+    * Kudagalara Viharaya
+    * Middeniya Primary School
+* **Rathnapura** District
+  * **Weligepola** Police Area
+    * MOH Office - Weligepola
+  * **Balangoda** Police Area
+    * Vidyaloka Vidyalaya
+    * Budda Jayanthi Vidyalaya
+    * Mas Garment Factory - Balangoda
+  * **Pinnawala** Police Area
+    * Rathmalavinna Vidyalaya
+  * **Ayagama** Police Area
+    * Ayagama Dhammananda  Vidyalaya
+    * Nivithigala Sumana National College
+  * **Kalawana** Police Area
+    * Kalawana Maha Vidyalaya
+    * Pothupitiya Vidyalaya
+  * **Kahawatta** Police Area
+    * Kahawatta Central College
+  * **Rathnapura** Police Area
+    * Kumara Vidyalaya
+* **Kegalle** District
+  * **Rambukkana** Police Area
+    * MOH Office - Rambukkana
+  * **Kegalle** Police Area
+    * Puwakdeniya Primary School
+    * Hettimulla Bandaranayaka Maha Vidyalaya
+    * Alapalawala Maha Vidyalaya
+    * Bulugahadeniya Sri Vithanarama Viharaya
+    * Atugoda Vidyalaya
+    * MOH Office - Galigamuwa
+  * **Mawanella** Police Area
+    * Muruthawela Community Hall
+    * Kongamuwa Primary School
+    * Weligalla Community Hall
+    * Baduriya Maha Vidyalaya
+    * Udaththawa Primary School
+    * Randiwela Maha Vidyalaya
+* **Anuradhapura** District
+  * **Anuradhapura** Police Area
+    * Army Hospitala - Anuradhapura
+    * Anuradhapura Teaching Hospital
+    * Walisinghe Harischandra Ground
+  * **Parasangaswewa** Police Area
+    * Kolibeddewa Vidyalaya
+  * **Mihintale** Police Area
+    * MOH Office - Mihintale
+* **Jaffna** District
+  * **Wadukkotte** Police Area
+    * MOH Office - Karainagar
+  * **Kayts** Police Area
+    * MOH Office – Kayts
+    * Kayts Base Hospital
+  * **Chavakachcheri** Police Area
+    * MOH Office - Chavakachcheri
+  * **Nelliadi** Police Area
+    * MOH Office - Karaveddy
+  * **Valvettithurai** Police Area
+    * Valvettithurai Balika Vidyalaya
+  * **Jaffna** Police Area
+    * Perumal Kovil Hall
+  * **Chavakachcheri** Police Area
+    * MOH Office - Chavakachcheri
+  * **Thelippalai** Police Area
+    * MOH Office - Thelippalai
+  * **Kilinochchi** Police Area
+    * Army Base Hospital - Kilinochchi
+* **Kilinochchi** District
+  * **Pooneryn** Police Area
+    * MOH Office - Pooneryn
+  * **Mullaitivu** Police Area
+    * Army Base Hospital - Mullaitivu
+  * **Madu** Police Area
+    * Pandivirichchan Vidyalaya
+* **Mannar** District
+  * **Adampan** Police Area
+    * MOH Office - Adampan
+    * St. Xaviers Girls College - Mannar
+  * **Silawathura** Police Area
+    * Veppamkulam GMM School - Mannar
+* **Trincomalee** District
+  * **Muttur** Police Area
+    * MOH Office – Muttur
+  * **Kinniya** Police Area
+    * MOH Office - Kuruggankeni
+    * MOH Office – Kinniya
+  * **Sripura** Police Area
+    * MOH Office – Sripura
+  * **Kantale** Police Area
+    * MOH Office – Kantale
+  * **Kuchchaveli** Police Area
+    * MOH Office - Kuchchaveli
+    * Divisional Hospital - Kuchchaveli
+    * Divisional Hospital - Nilaveli
+  * **Harbour Police** Police Area
+    * MOH Office - Trincomalee
+  * **Uppuveli** Police Area
+    * MOH Office - Uppuveli
+  * **Thambalagamuwa** Police Area
+    * MOH Office - Thambalagamuwa
+  * **Gomarankadawala** Police Area
+    * MOH Office - Gomarankadawala
+  * **Serunuwara** Police Area
+    * MOH Office - Serunuwara
+  * **Ichchalampattu** Police Area
+    * MOH Office - Ichchalampattu
+* **Batticaloa** District
+  * **Kokkadichcholai** Police Area
+    * Mahaladithivu Hospital
+  * **Vellawali** Police Area
+    * MOH Office - Vellawali
+  * **Kaluwanchikudy** Police Area
+    * MOH Office - Kaluwanchikudy
+  * **Kattankudy** Police Area
+    * MOH Office - Kattankudy
+  * **Batticaloa** Police Area
+    * Batticaloa Central College
+  * **Valachchenai** Police Area
+    * MOH Office - Valachchenai
+    * MOH Office - Oddamavadi
+    * MOH Office - Meeravodai
+    * Annur National College
+    * Valachchenai Base Hospital
+  * **Vakarai** Police Area
+    * MOH Office - Vakarai
+    * Eravur Hospital
+    * Karadiyanaru Hospital
+    * MOH Office – Eravur
+    * MOH Ofice - Chenkaladi
+    * Chenkaladi Hospital
+    * Sandiveli Hospital
