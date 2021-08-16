@@ -60,10 +60,6 @@ def get_google_drive_file_id():
 
     google_drive_file_id = None
     for el_button in el_buttons:
-        log.info(el_button)
-        log.info(el_button.text)
-        log.info('...')
-
         if el_button.text == 'VACCINATION CENTERS OPEN TODAY':
             el_button.click()
 

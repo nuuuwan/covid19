@@ -99,3 +99,4 @@ pip install covid19-nuuuwan
   * profile.set_preference(network.proxy.socks_remote_dns, True) + 
   * removed firefox_profile
   * Removed upload-lk-vax-centers-cron.yml
+  * Added local_workflows/download-lk-vax-center.sh
