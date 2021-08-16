@@ -54,6 +54,9 @@ def get_google_drive_file_id():
     el_buttons = browser.find_elements_by_tag_name('button')
     log.info(f'Found {len(el_buttons)} possible buttons')
 
+    screenshot_file = get_pdf_file().replace('.pdf', '.png')
+    browser.save_screenshot(screenshot_file)
+
     google_drive_file_id = None
     for el_button in el_buttons:
         log.info(el_button)

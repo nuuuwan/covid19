@@ -89,3 +89,4 @@ pip install covid19-nuuuwan
   * Done
   * Done
   * Done
+  * Added screenshot
