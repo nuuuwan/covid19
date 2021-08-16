@@ -95,3 +95,4 @@ pip install covid19-nuuuwan
   * URL_LOAD_TIME = 20
   * chrome -> firefox
   * Added network.cookie.cookieBehavior
+  * browser.set_window_size(2000, 2000)

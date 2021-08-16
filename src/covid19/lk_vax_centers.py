@@ -45,7 +45,7 @@ def get_google_drive_file_id():
 
     log.info('Crawling "%s"', VAX_DASH_URL)
     browser.get(VAX_DASH_URL)
-    browser.set_window_size(4000, 4000)
+    browser.set_window_size(2000, 2000)
 
     time.sleep(URL_LOAD_TIME)
 
