@@ -105,3 +105,4 @@ pip install covid19-nuuuwan
   * Done
   * Final local_workflows/download-lk-vax-center.sh
   * Added open https://github.com/nuuuwan/covid19/tree/data
+  * Added API KEY
