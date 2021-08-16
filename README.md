@@ -110,3 +110,4 @@ pip install covid19-nuuuwan
   * typo
   * Added dump_summary
   * Done
+  * Various

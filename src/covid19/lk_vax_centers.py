@@ -160,11 +160,6 @@ def parse():
             print('-' * 32)
 
             data_list.append(data)
-        #     if len(data_list) > 10:
-        #         break
-        #
-        # if len(data_list) > 10:
-        #     break
 
     n_centers = len(data_list)
 
@@ -193,6 +188,6 @@ def dump_summary(data_list):
 
 
 if __name__ == '__main__':
-    # scrape()
+    scrape()
     data_list = parse()
-    # dump_summary(data_list)
+    dump_summary(data_list)
