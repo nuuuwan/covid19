@@ -111,3 +111,4 @@ pip install covid19-nuuuwan
   * Added dump_summary
   * Done
   * Various
+  * only basic CSV

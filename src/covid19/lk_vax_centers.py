@@ -4,7 +4,7 @@ import time
 import os
 import json
 
-from tabula import read_pdf
+from tabula import read_pdf, convert_into
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 from selenium import webdriver
@@ -117,56 +117,18 @@ def is_number(s):
         return False
     return True
 
+def is_text(s):
+    return str(s) != 'nan' and not is_number(s) and 'total' not in s.lower()
+
 def parse():
     pdf_file = get_file('latest', 'pdf')
     if not os.path.exists(pdf_file):
         log.error(f'{pdf_file} does not exist!')
         return []
 
-    dfs = read_pdf(pdf_file, pages="all")
-    data_list = []
-    for df in dfs:
-        rows = df.values.tolist()
-        for row in rows:
-            row = list(filter(
-                lambda cell: str(cell) != 'nan' and not is_number(cell),
-                row,
-            ))
-            print(row)
-
-            district_name, police_area, center_name = None, None, None
-            if len(row) == 3:
-                [district_name, police_area, center_name] = row
-
-            elif len(row) == 1:
-                [cell_value] = row
-                n_words = len(cell_value.split(' '))
-                if n_words > 1 or cell_value == cell_value.upper():
-                    center_name = cell_value
-                else:
-                    police_area = cell_value
-
-            elif len(row) == 2:
-                [police_area, center_name] = row
-
-
-
-            data = dict(
-                district_name=district_name,
-                police_area=police_area,
-                center_name=center_name,
-            )
-            print(json.dumps(data, indent=2))
-            print('-' * 32)
-
-            data_list.append(data)
-
-    n_centers = len(data_list)
-
-    tsv_file = get_file('latest', 'tsv')
-    tsv.write(tsv_file, data_list)
-    log.info(f'Wrote {n_centers} center info to {tsv_file}')
-
+    csv_file = get_file('latest', 'csv')
+    convert_into(pdf_file, pdf_file.replace('pdf', 'csv'), output_format="csv", pages='all')
+    
     return data_list
 
 def dump_summary(data_list):
