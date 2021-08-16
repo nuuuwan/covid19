@@ -91,3 +91,4 @@ pip install covid19-nuuuwan
   * Done
   * Added screenshot
   * covid10 -> 19
+  * Firefox -> Chrome
