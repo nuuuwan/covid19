@@ -1,6 +1,7 @@
 import argparse
 import io
 import time
+import os
 
 from tabula import read_pdf
 from googleapiclient.discovery import build
@@ -105,7 +106,7 @@ def scrape(file_id):
 
 def parse():
     pdf_file = get_pdf_file()
-    if not os.fileexists(pdf_file):
+    if not os.path.exists(pdf_file):
         log.error(f'{pdf_file} does not exist!')
         return None
 
