@@ -39,7 +39,9 @@ def get_google_drive_file_id():
     options.headless = True
 
     profile = webdriver.FirefoxProfile()
-    profile.set_preference("network.cookie.cookieBehavior", 2)
+    # profile.set_preference("network.cookie.cookieBehavior", 2)
+    profile.set_preference("network.proxy.socks_remote_dns", True)
+
 
     browser = webdriver.Firefox(options=options, firefox_profile=profile)
 
