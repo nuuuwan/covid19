@@ -1,14 +1,15 @@
 import argparse
 import io
-import os
 import time
+import os
+import json
 
+from tabula import read_pdf
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-from tabula import read_pdf
-from utils import filex, tsv
+from utils import tsv, timex, filex
 
 from covid19._utils import log
 
@@ -77,11 +78,17 @@ def get_google_drive_file_id():
     return google_drive_file_id
 
 
-def scrape(file_id):
+def scrape():
+    pdf_file = get_file('latest', 'pdf')
+    if os.path.exists(pdf_file):
+        log.warning(f'{pdf_file} already exists. Not scraping!')
+        return
+
+    file_id = get_google_drive_file_id()
     google_drive_api_key = get_google_drive_api_key()
     if google_drive_api_key is None:
         log.error('No google_drive_api_key. Aborting.')
-        return False
+        return
 
     drive_service = build(
         'drive',
@@ -89,7 +96,6 @@ def scrape(file_id):
         developerKey=google_drive_api_key,
     )
     request = drive_service.files().get_media(fileId=file_id)
-    pdf_file = get_file('latest', 'pdf')
     fh = io.FileIO(pdf_file, 'wb')
     downloader = MediaIoBaseDownload(fh, request)
     done = False
@@ -104,67 +110,61 @@ def scrape(file_id):
         )
 
 
+def is_number(s):
+    try:
+        x = float(s)
+    except:
+        return False
+    return True
+
 def parse():
     pdf_file = get_file('latest', 'pdf')
     if not os.path.exists(pdf_file):
         log.error(f'{pdf_file} does not exist!')
-        return None
+        return []
 
     dfs = read_pdf(pdf_file, pages="all")
     data_list = []
     for df in dfs:
         rows = df.values.tolist()
         for row in rows:
-            (
-                district_num,
-                district_name,
-                center_num,
-                police_area,
-                center_name,
-            ) = row[:5]
+            row = list(filter(
+                lambda cell: str(cell) != 'nan' and not is_number(cell),
+                row,
+            ))
+            print(row)
+
+            district_name, police_area, center_name = None, None, None
+            if len(row) == 3:
+                [district_name, police_area, center_name] = row
+
+            elif len(row) == 1:
+                [cell_value] = row
+                n_words = len(cell_value.split(' '))
+                if n_words > 1 or cell_value == cell_value.upper():
+                    center_name = cell_value
+                else:
+                    police_area = cell_value
+
+            elif len(row) == 2:
+                [police_area, center_name] = row
+
+
+
             data = dict(
-                district_num=district_num,
                 district_name=district_name,
-                center_num=center_num,
                 police_area=police_area,
                 center_name=center_name,
             )
+            print(json.dumps(data, indent=2))
+            print('-' * 32)
+
             data_list.append(data)
-
-    # fix blanks
-    data_list2 = []
-    cur_district_name = None
-    for data in data_list:
-        district_name = str(data['district_name'])
-
-        if district_name in ['Sub Total', '9']:
-            cur_district_name = None
-        elif district_name == 'Grand Total':
-            continue
-        elif district_name != 'nan':
-            cur_district_name = district_name
-            data_list2.append(data)
-        else:
-            if cur_district_name:
-                data['district_name'] = cur_district_name
-            data_list2.append(data)
-    data_list = data_list2
-
-    data_list2 = []
-    cur_district_name = None
-    data_list.reverse()
-    for data in data_list:
-        district_name = str(data['district_name'])
-        if district_name != 'nan':
-            cur_district_name = district_name
-            data_list2.append(data)
-        else:
-            if cur_district_name:
-                data['district_name'] = cur_district_name
-            data_list2.append(data)
-
-    data_list2.reverse()
-    data_list = data_list2
+        #     if len(data_list) > 10:
+        #         break
+        #
+        # if len(data_list) > 10:
+        #     break
 
     n_centers = len(data_list)
 
@@ -173,7 +173,6 @@ def parse():
     log.info(f'Wrote {n_centers} center info to {tsv_file}')
 
     return data_list
-
 
 def dump_summary(data_list):
     md_lines = ['# Open Vaccinations Centers', '']
@@ -185,15 +184,15 @@ def dump_summary(data_list):
         if district_name != prev_district_name:
             md_lines.append(f'* {district_name}')
         md_lines.append(f'  * {center_name}')
+
+        prev_district_name = district_name
     md_file = get_file('latest', 'md')
-    filex.write(
-        md_file,
-    )
+    md = '\n'.join(md_lines)
+    filex.write(md_file, md)
+    log.info(f'Wrote summary to {md_file}')
 
 
 if __name__ == '__main__':
-    file_id = get_google_drive_file_id()
-    if file_id:
-        scrape(file_id)
-        data_list = parse()
-        dump_summary(data_list)
+    # scrape()
+    data_list = parse()
+    # dump_summary(data_list)
