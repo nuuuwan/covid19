@@ -100,3 +100,4 @@ pip install covid19-nuuuwan
   * removed firefox_profile
   * Removed upload-lk-vax-centers-cron.yml
   * Added local_workflows/download-lk-vax-center.sh
+  * Clean
