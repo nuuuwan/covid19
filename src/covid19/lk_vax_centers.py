@@ -37,7 +37,11 @@ def get_google_drive_api_key():
 def get_google_drive_file_id():
     options = Options()
     options.headless = True
-    browser = webdriver.Firefox(options=options)
+
+    profile = webdriver.FirefoxProfile()
+    profile.set_preference("network.cookie.cookieBehavior", 2)
+
+    browser = webdriver.Firefox(options=options, firefox_profile=profile)
 
     log.info('Crawling "%s"', VAX_DASH_URL)
     browser.get(VAX_DASH_URL)

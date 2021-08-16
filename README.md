@@ -94,3 +94,4 @@ pip install covid19-nuuuwan
   * Firefox -> Chrome
   * URL_LOAD_TIME = 20
   * chrome -> firefox
+  * Added network.cookie.cookieBehavior
