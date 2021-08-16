@@ -5,7 +5,7 @@ import time
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 from utils import tsv
 
 from covid19._utils import log
@@ -13,7 +13,7 @@ from covid19._utils import log
 VAX_DASH_URL = (
     'https://www.presidentsoffice.gov.lk/index.php/vaccination-dashboard/'
 )
-URL_LOAD_TIME = 20
+URL_LOAD_TIME = 10
 I_VAX_CENTER = -3
 
 
@@ -37,7 +37,7 @@ def get_google_drive_api_key():
 def get_google_drive_file_id():
     options = Options()
     options.headless = True
-    browser = webdriver.Chrome(options=options)
+    browser = webdriver.Firefox(options=options)
 
     log.info('Crawling "%s"', VAX_DASH_URL)
     browser.get(VAX_DASH_URL)
