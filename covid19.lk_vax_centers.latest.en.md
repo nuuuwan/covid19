@@ -44,6 +44,8 @@
 * **Katunayaka** Police Area
   *  (Dose-2) BOI - Katunayaka - [Katunayake Export Processing Zone, Katunayake, Sri Lanka](https://www.google.lk/maps/@7.170921000000001,79.8898816,15z) 
   * Kovinna Viharaya - [4X6Q+2X2, Gampaha, Sri Lanka](https://www.google.lk/maps/@7.110015499999999,79.98990239999999,15z) 
+* **Pugoda** Police Area
+  * MOH Office - Dompe - [Katunayake-Veyangoda Rd, Minuwangoda, Sri Lanka](https://www.google.lk/maps/@7.1722698,79.9568225,15z) 
 * **Dompe** Police Area
   * Narampola Viharaya - [4X6Q+2X2, Gampaha, Sri Lanka](https://www.google.lk/maps/@7.110015499999999,79.98990239999999,15z) 
   * Welgama Maternity Clinic - [34V7+85C, Kahatowita, Sri Lanka](https://www.google.lk/maps/@7.093316499999999,80.1128918,15z) 
@@ -90,6 +92,8 @@
   * Kithulwala Kumarthunga Vidyalaya - [11/1 Negombo - Mirigama Rd, Gurullagama, Sri Lanka](https://www.google.lk/maps/@7.2389825,80.0982482,15z) 
   * Badalgama Fair Premises - [B322, Badalgama, Sri Lanka](https://www.google.lk/maps/@7.286823299999999,79.9857044,15z) 
   * Dorowwa Maha Vidyalaya - [833R+5M7, Kurunegala, Sri Lanka](https://www.google.lk/maps/@7.302902,80.0916855,15z) 
+* **Seeduwa** Police Area
+  * Kuswala Maha Vidyalaya - [Kalyani Rd, Gampaha, Sri Lanka](https://www.google.lk/maps/@7.091932799999999,80.0060262,15z) 
 * **Katana** Police Area
   * Kimbulapitiya Polgalawatta Community Hall - [Molawatta Rd, Kimbulapitiya, Sri Lanka](https://www.google.lk/maps/@7.201169500000001,79.8923756,15z) 
 * **Negomobo** Police Area
@@ -137,6 +141,7 @@
   * Kuliyapitiya Hospital - [Kuliyapitiya, Sri Lanka](https://www.google.lk/maps/@7.472123000000001,80.0446221,15z) 
 * **Rideegama** Police Area
   * MOH Office - Rideegama - [GFXR+3PF, Ridigama, Sri Lanka](https://www.google.lk/maps/@7.547681099999999,80.49179579999999,15z) 
+  * Welikanda Viharaya - [Ridee Vihara Rd, Ridigama, Sri Lanka](https://www.google.lk/maps/@7.5371047,80.4909145,15z) 
 * **Rasnayakapura** Police Area
   * Unagolla Community Hall - [F9J3+HCP, Kurunegala, Sri Lanka](https://www.google.lk/maps/@7.481465099999999,80.3535704,15z) 
   * Rambewa Community Hall - [Kurunegala Rd, Nikaweratiya 60470, Sri Lanka](https://www.google.lk/maps/@7.771553900000001,80.1099484,15z) 
@@ -182,6 +187,7 @@
   * MOH Office - Lunugala - [Peradeniya-Badulla-Chenkaladi Hwy, Lunugala, Sri Lanka](https://www.google.lk/maps/@7.0307289,81.1988075,15z) 
 * **Hali Ela** Police Area
   * Alubogolla Vidyalaya - [Alubogolla Road, Sri Lanka](https://www.google.lk/maps/@6.9585814,81.0464152,15z) 
+  * Neluwa Tamil College - [Badulupitiya Road, Badulla, Sri Lanka](https://www.google.lk/maps/@6.9918062,81.06061679999999,15z) 
   * Uduwara Maha Vidyalaya - [Beragala-Hali Ela Highway, Sri Lanka](https://www.google.lk/maps/@6.927199,81.04094979999999,15z) 
   * Nunugalla Vidyalaya - [Badulupitiya Road, Badulla, Sri Lanka](https://www.google.lk/maps/@6.9918062,81.06061679999999,15z) 
 * **Ella** Police Area
@@ -223,6 +229,8 @@
   * Kebiliyapola Purana Viharaya - [XH78+99P, Matara, Sri Lanka](https://www.google.lk/maps/@5.963463099999999,80.5659429,15z) 
 * **Rotumba** Police Area
   * Dampaha Primary School - [Sri Dharmarathna Mawatha, Matara, Sri Lanka](https://www.google.lk/maps/@5.9516068,80.55651069999999,15z) 
+* **Pitabeddara** Police Area
+  * Siyambalagoda Nithyamaluwa Viharaya - [Weherahena Rd, Matara, Sri Lanka](https://www.google.lk/maps/@5.953037999999999,80.57528599999999,15z) 
 * **Weligama** Police Area
   * Mirissa Hospital - [A2, Weligama, Sri Lanka](https://www.google.lk/maps/@5.9530954,80.4539466,15z) 
   * Mirissa Harbour - [81740 Harbour Road, Weligama 81740, Sri Lanka](https://www.google.lk/maps/@5.948156,80.4502143,15z) 
@@ -271,6 +279,8 @@
 * **Warakapola** Police Area
   * Town Hall - Warakapola - [Warakapola By Pass Road, Warakapola, Sri Lanka](https://www.google.lk/maps/@7.223636200000001,80.1956034,15z) 
   * Aknawala Maha Vidyalaya - [Vidyalaya Rd, Kegalle, Sri Lanka](https://www.google.lk/maps/@7.2515078,80.3495799,15z) 
+* **Rambukkana** Police Area
+  * Gangoda Viharaya - [Rambukkana-Mawanella Rd, Sri Lanka](https://www.google.lk/maps/@7.3024284,80.4424073,15z) 
   * Kadigamuwa Viharaya - [Kadigamuwa Temple Road, Sri Lanka](https://www.google.lk/maps/@7.315157199999999,80.4240203,15z) 
 * **Deraniyagala** Police Area
   * Udapola Vidyalaya - [Vidyalaya Rd, Kegalle, Sri Lanka](https://www.google.lk/maps/@7.2515078,80.3495799,15z) 
@@ -315,6 +325,8 @@
   * MOH Office - Pallai - [Office of the Medical Officer for Health, Pallai Pradwshasaba, A9, Pachchilapalli, Sri Lanka](https://www.google.lk/maps/@9.6106114,80.328165,15z) 
 * **Pooneryn** Police Area
   * MOH Office - Pooneryn - [G655+58P, Pooneryn, Sri Lanka](https://www.google.lk/maps/@9.507967899999999,80.208317,15z) 
+* **Mullaitivu** Police Area
+  *  (Dose-2) Army Base Hospital - Mullaitivu - [7Q58+VH2, Mullaitivu, Sri Lanka](https://www.google.lk/maps/@9.2596388,80.7664006,15z) 
 ## Mannar District
 * **Madu** Police Area
   *  (Dose-2) Iruppukulam Hindu College - [Pallimunai Rd, Mannar, Sri Lanka](https://www.google.lk/maps/@8.9796804,79.9197949,15z) 
@@ -364,6 +376,7 @@
   * Hindu Vidyalaya - Batticaloa - [PMCX+93V, Batticaloa, Sri Lanka](https://www.google.lk/maps/@7.720986799999999,81.69767329999999,15z) 
 * **Valachchenai** Police Area
   * MOH Office - Valachchenai - [WG6M+W46, Batticaloa, Sri Lanka](https://www.google.lk/maps/@7.9122811,81.5327751,15z) 
+  * MOH Office - Oddamavadi - [WG6M+W46, Batticaloa, Sri Lanka](https://www.google.lk/maps/@7.9122811,81.5327751,15z) 
   * Birandachchenai Saduliya Vidyalaya - [PPC2+362, Batticaloa, Sri Lanka](https://www.google.lk/maps/@7.720142999999999,81.7005161,15z) 
   * Valachchenai Base Hospital - [Valaichchenai-Nasuvantivu-Navaladi Road, Sri Lanka](https://www.google.lk/maps/@7.911314999999998,81.53304639999999,15z) 
 * **Vakarai** Police Area
