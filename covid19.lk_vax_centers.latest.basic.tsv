@@ -1,0 +1,225 @@
+district	police	center	dose1	dose2
+Colombo	Narahenpita	Army Hospital Narahenpita	True	True
+Colombo	Cinnamon Gardens	Viharamahadevi Park	True	True
+Colombo	Thalangama	Diyatha Uyana	True	True
+Colombo	Grandpass	Sugathadasa Outdoor Stadium	False	True
+Colombo	Maradana	MIS Conference Hall	False	False
+Colombo	Maradana	Colombo National Hospital	False	False
+Colombo	Borella	Campbell Park	False	False
+Colombo	Maligawatta	P.D. Sirisena Ground	False	False
+Colombo	Fore shore	MOH Office - Jinthupitiya	False	False
+Colombo	Fort	Navy Headquarters	False	False
+Colombo	Modara	Al Nasser College	False	False
+Colombo	Boralesgamuwa	MOH Office - Werahera	False	False
+Colombo	Moratuwa	Municipal Council Car Park	False	False
+Colombo	Kahathuduwa	Wethara Hospital	False	False
+Colombo	Piliyandala	MOH Office - Bokundara	False	False
+Colombo	Piliyandala	Piliyandala Hospital	False	False
+Colombo	Padukka	GH - Padukka	False	False
+Colombo	Kaduwela	MOH Office - Kaduwela	False	False
+Colombo	Wellampitiya	MOH Office - Kolonnawa	False	False
+Gampaha	Gampaha	Mobile Medical Team	True	True
+Gampaha	Gampaha	MOH Office - Gampaha	False	False
+Gampaha	Katunayaka	BOI - Katunayaka	False	True
+Gampaha	Katunayaka	Kovinna Viharaya	False	False
+Gampaha	Pugoda	MOH Office - Dompe	False	False
+Gampaha	Dompe	Narampola Viharaya	False	False
+Gampaha	Dompe	Welgama Maternity Clinic	False	False
+Gampaha	Minuwangoda	Madelgamuwa Pothgul Viharaya	False	False
+Gampaha	Minuwangoda	Naiwala Dharmarathanaramaya	False	False
+Gampaha	Minuwangoda	Doranagoda Pirivena	False	False
+Gampaha	Minuwangoda	Katuwellegama Maha Vidyalaya	False	False
+Gampaha	Minuwangoda	MOH Office - Minuwangoda	False	False
+Gampaha	Weliweriya	Sudarshanarama Viharaya - Ambaraluwa North	False	False
+Gampaha	Yakkala	Mahena Community Hall	False	False
+Gampaha	Ganemulla	Kossinna Rajamaha Viharaya	False	False
+Gampaha	Nittambuwa	Karasnagala Viharaya	False	False
+Gampaha	Pallewela	Balaliya Bubula Viharaya	False	False
+Gampaha	Veyangoda	Kumbaloluwa Viharaya	False	False
+Gampaha	Bemmulla	Hindeniya Santha Ramaya	False	False
+Gampaha	Weeragula	Ogodapola Primary School	False	False
+Gampaha	Divulapitiya	Lihiniyagammana Viharaya	False	False
+Gampaha	Mirigama	Ambepussa Clinic	False	False
+Gampaha	Mirigama	Idiparape Viharaya	False	False
+Gampaha	Kirindiwela	Rathambale Primary School	False	False
+Gampaha	Kadawata	Galwala Viharaya	False	False
+Gampaha	Kadawata	Buthpitiya Vidyalaya	False	False
+Gampaha	Kadawata	Neelammahara Vidyalaya	False	False
+Gampaha	Kiribathgoda	Hunupitiya Clinic	False	False
+Gampaha	Kiribathgoda	Sudarmaramaya	False	False
+Gampaha	Peliyagoda	Peliyagoda Watta	False	False
+Gampaha	Peliyagoda	Peliyagoda Library	False	False
+Gampaha	Kotadeniyawa	Kithulwala Kumarthunga Vidyalaya	False	False
+Gampaha	Kotadeniyawa	Badalgama Fair Premises	False	False
+Gampaha	Kotadeniyawa	Dorowwa Maha Vidyalaya	False	False
+Gampaha	Seeduwa	Kuswala Maha Vidyalaya	False	False
+Gampaha	Katana	Kimbulapitiya Polgalawatta Community Hall	False	False
+Gampaha	Negomobo	Town Hall - Negomobo	False	False
+Gampaha	Negomobo	Kadolkele Maternity Clinic	False	False
+Gampaha	Pamunugama	Pamunugama Hospital	False	False
+Gampaha	Pamunugama	Parana Ambalama Community Hall	False	False
+Kalutara	Horana	Horana Hospital	False	False
+Kalutara	Ingiriya	BOI - Boralugoda	False	False
+Kalutara	Millaniya	Gangamuwa Vidyalaya	False	False
+Kalutara	Wadduwa	Panapitiya Primary School	False	False
+Kalutara	Wadduwa	Habaragahalanda Viharaya	False	False
+Kalutara	Kalutara North	Pelpola Viharaya	False	False
+Kalutara	Kalutara North	General Hospital Nagoda - Kalutara	False	False
+Kalutara	Kalutara North	Kalutara North Maternity Clinic	False	False
+Kalutara	Kalutara North	Prime Minister's College - Panapitiya	False	False
+Kalutara	Dodangoda	MOH Office – Dodangoda	False	False
+Kalutara	Dodangoda	Miriswatta Vidyalaya	False	False
+Kalutara	Beruwala	DS Senanayake Vidyalaya	False	False
+Kalutara	Thebuwana	DH – Nebada	False	False
+Kalutara	Kalutara South	NIHS	False	False
+Kalutara	Kalutara South	Gamagoda Viharaya	False	False
+Kalutara	Matugama	Weththewa Hospita	False	False
+Kalutara	Baduraliya	Baduraliya Hospital	False	False
+Kalutara	Thiniyawala	Thiniyawala Hospital	False	False
+Kalutara	Anguruwatota	Dombagoda Viharaya	False	False
+Kalutara	Anguruwatota	MOH Office - Madurawala	False	False
+Kurunegala	Kuliyapitiya	Kuliyapitiya Hospital	False	False
+Kurunegala	Rideegama	MOH Office - Rideegama	False	False
+Kurunegala	Rideegama	Welikanda Viharaya	False	False
+Kurunegala	Rasnayakapura	Unagolla Community Hall	False	False
+Kurunegala	Rasnayakapura	Rambewa Community Hall	False	False
+Kurunegala	Narammala	Dambadeniya Viharaya	False	False
+Kurunegala	Narammala	Narammala Hospital	False	False
+Kurunegala	Kurunegala	Athkadawala Rajamaha Viharaya	False	False
+Kurunegala	Kurunegala	Aswedduma Viharaya	False	False
+Kurunegala	Kurunegala	President Girls' College - Kurunegala	False	False
+Kurunegala	Kurunegala	BOI - Heraliyawa	False	False
+Kurunegala	Wariyapola	MOH Office - Bamunakotuwa	False	False
+Kurunegala	Wariyapola	Aboni Garment	False	False
+Kurunegala	Wariyapola	A.J. Industries	False	False
+Kurunegala	Wariyapola	Govindi Factory	False	False
+Kurunegala	Alawwa	Bodhiwalana Bodhirukkarama Viharaya	False	False
+Kurunegala	Alawwa	Galgamuwa Maha Viharaya	False	False
+Kurunegala	Galgamuwa	Sirimavo Bandaranayaka Primary School - Galgamuwa	False	False
+Nuwara Eliya	Kotmale	MOH Office - Kotmale	False	False
+Nuwara Eliya	Pundaluoya	Jayahela National College	False	False
+Nuwara Eliya	Agrapatana	Manrasi Sports Club	False	False
+Nuwara Eliya	Nuwara Eliya	MOH Office - Nuwara Eliya	False	False
+Nuwara Eliya	Mathurata	Mathurata Vidyalaya	False	False
+Nuwara Eliya	Mathurata	MOH Office - Manakola	False	False
+Badulla	Badulla	Army Base Hospital - Badulla	False	True
+Badulla	Badulla	Vinithagama Viharaya	False	False
+Badulla	Passara	District Hospital - Passara	False	False
+Badulla	Haldummulla	Weerakongama Vidyalaya	False	False
+Badulla	Lunugala	MOH Office - Lunugala	False	False
+Badulla	Hali Ela	Alubogolla Vidyalaya	False	False
+Badulla	Hali Ela	Neluwa Tamil College	False	False
+Badulla	Hali Ela	Uduwara Maha Vidyalaya	False	False
+Badulla	Hali Ela	Nunugalla Vidyalaya	False	False
+Badulla	Ella	MOH Office - Ella	False	False
+Badulla	Ella	Demodara Tea Factory	False	False
+Badulla	Haputale	MOH Office - Haputale	False	False
+Badulla	Haputale	Diyatalawa Hospital	False	False
+Badulla	Uva Paranagama	Thuppitiya Makumbura Vidyalaya	False	False
+Badulla	Uva Paranagama	Panagoda Medipokuna Clinic	False	False
+Badulla	Uva Paranagama	Ihala Kotawehera Subadraramaya	False	False
+Badulla	Uva Paranagama	Haliella Vidyalaya	False	False
+Badulla	Uva Paranagama	Udaporuwa Vidyalaya	False	False
+Badulla	Uva Paranagama	Weliulla Udaporuwa Vidyalaya	False	False
+Badulla	Uva Paranagama	Yalagamuwa Vidyalaya	False	False
+Badulla	Uva Paranagama	GN  - Wethalawa	False	False
+Badulla	Uva Paranagama	Uva Paranagama Hospital	False	False
+Badulla	Mahiyanganaya	Mahiyanganaya Base Hospital	False	False
+Badulla	Kandaketiya	MOH Office - Kandaketiya	False	False
+Badulla	Kandaketiya	MOH Office - Meegahakivula	False	False
+Badulla	Girandurukotte	MOH Office - Girandurukotte	False	False
+Badulla	Rideemaliyadda	Uraniya Hospital	False	False
+Galle	Elpitiya	Atakohota Subadrarama Viharaya	False	False
+Galle	Elpitiya	Divithura Dispensary	False	False
+Galle	Poddala	Dr. Richard Pathirana College	False	False
+Matara	Matara	Wanigasekara Vidyalaya	False	False
+Matara	Matara	Bodhirukkaramaya	False	False
+Matara	Hakmana	Kebiliyapola Purana Viharaya	False	False
+Matara	Rotumba	Dampaha Primary School	False	False
+Matara	Pitabeddara	Siyambalagoda Nithyamaluwa Viharaya	False	False
+Matara	Weligama	Mirissa Hospital	False	False
+Matara	Weligama	Mirissa Harbour	False	False
+Matara	Deiyandara	Divisional Secretariat - Deiyandara	False	False
+Matara	Morawaka	Idudukitha Primary School	False	False
+Matara	Morawaka	Alapaladeniya National College	False	False
+Hambantota	Walasmulla	MOH Office - Okewita	False	False
+Hambantota	Sooriyawewa	Mahapelessa Viharaya	False	False
+Hambantota	Sooriyawewa	Bedigastota Vidyalaya	False	False
+Hambantota	Ambalantota	MOH Office - Ambalantota	False	False
+Hambantota	Hambantota	MOH Office - Hambantota	False	False
+Hambantota	Tangalla	Kudawella Valukarama Viharaya	False	False
+Hambantota	Katuwana	Labuhengoda Primary School	False	False
+Hambantota	Agunukolapelessa	Abeysekaragama Medical Centre	False	False
+Hambantota	Beliatta	Getamanna Saranapala Vidyalaya	False	False
+Hambantota	Beliatta	Galagama Maha Vidyalaya	False	False
+Hambantota	Beliatta	MOH Office - Beliatta	False	False
+Hambantota	Tissamaharama	Debarawewa President's Primary School	False	False
+Rathnapura	Balangoda	Kalthota Vidayalaya	False	False
+Rathnapura	Opanayaka	Vidyakara Vidyalaya	False	False
+Rathnapura	Kiriella	MOH Office - Kiriella	False	False
+Rathnapura	Udawalawa	Udawalawa Maha Vidyalaya	False	False
+Kegalle	Aranayaka	Dippitiya Rajagiriya Viharaya	False	False
+Kegalle	Kegalle	Adurapatha Viharaya	False	False
+Kegalle	Kegalle	Atala Maha Vidyalaya	False	False
+Kegalle	Warakapola	Town Hall - Warakapola	False	False
+Kegalle	Warakapola	Aknawala Maha Vidyalaya	False	False
+Kegalle	Rambukkana	Gangoda Viharaya	False	False
+Kegalle	Rambukkana	Kadigamuwa Viharaya	False	False
+Kegalle	Deraniyagala	Udapola Vidyalaya	False	False
+Kegalle	Deraniyagala	Miyanawita Tamil College	False	False
+Kegalle	Yatiyantota	Garagoda Pahala Muslim Vidyalaya	False	False
+Kegalle	Yatiyantota	Mahawila Vidyalaya	False	False
+Anuradhapura	Anuradhapura	Army Hospital - Anuradhapura	False	True
+Anuradhapura	Anuradhapura	Anuradhapura Teaching Hospital	False	False
+Anuradhapura	Anuradhapura	MOH Office - Nuwaragam Palatha - Central	False	False
+Anuradhapura	Anuradhapura	MOH Office - Nuwaragam Palatha - East	False	False
+Anuradhapura	Anuradhapura	Walisinghe Harischandra Ground	False	False
+Anuradhapura	Mihintale	MOH Office - Mihintale	False	False
+Jaffna	Wadukkotte	MOH Office - Karainagar	False	False
+Jaffna	Kayts	MOH Office – Kayts	False	False
+Jaffna	Kayts	MOH Office - Velanai	False	False
+Jaffna	Chavakachcheri	Town Hall - Chavakachcheri	False	False
+Jaffna	Nelliadi	MOH Office - Karaveddy	False	False
+Jaffna	Point Pedro	MOH Office - Point Pedro	False	False
+Jaffna	Jaffna	Perumal Kovil Hall	False	False
+Jaffna	Thelippalai	MOH Office - Thelippalai	False	False
+Jaffna	Maruthankerny	MOH Office - Maruthankerny	False	False
+Kilinochchi	Kilinochchi	Army Base Hospital - Kilinochchi	False	True
+Kilinochchi	Kilinochchi	MOH Office - Kilinochchi	False	False
+Kilinochchi	Dharmapuram	MOH Office - Kanadawalai	False	False
+Kilinochchi	Pallai	MOH Office - Pallai	False	False
+Kilinochchi	Pooneryn	MOH Office - Pooneryn	False	False
+Kilinochchi	Mullaitivu	Army Base Hospital - Mullaitivu	False	True
+Mannar	Madu	Iruppukulam Hindu College	False	True
+Mannar	Adampan	MOH Office - Adampan	False	True
+Mannar	Mannar	Siththivinayakar Hindu College - Mannar	False	True
+Mannar	Pesalai	St. Mary's School - Pesalai	False	True
+Trincomalee	Muttur	MOH Office – Muttur	False	False
+Trincomalee	Kinniya	MOH Office - Kuruggankeni	False	False
+Trincomalee	Kinniya	MOH Office – Kinniya	False	False
+Trincomalee	Sripura	MOH Office – Sripura	False	False
+Trincomalee	Kantale	MOH Office – Kantale	False	False
+Trincomalee	Kuchchaveli	MOH Office - Kuchchaveli	False	False
+Trincomalee	Kuchchaveli	Divisional Hospital - Kuchchaveli	False	False
+Trincomalee	Kuchchaveli	Divisional Hospital - Nilaveli	False	False
+Trincomalee	Pulmoddai	Pulmoddai Base Hospital	False	False
+Trincomalee	Harbour Police	MOH Office - Trincomalee	False	False
+Trincomalee	Uppuveli	MOH Office - Uppuveli	False	False
+Trincomalee	Gomarankadawala	MOH Office - Gomarankadawala	False	False
+Trincomalee	Serunuwara	MOH Office - Serunuwara	False	False
+Trincomalee	Ichchalampattu	MOH Office - Ichchalampattu	False	False
+Batticaloa	Kokkadichcholai	MOH Office - Mahaladithivu	False	False
+Batticaloa	Vellawali	Vellawali Kalemagal Vidyalaya	False	False
+Batticaloa	Kaluwanchikudy	MOH Office - Kaluwanchikudy	False	False
+Batticaloa	Kaluwanchikudy	Kaluwanchikudy Hospital	False	False
+Batticaloa	Batticaloa	Sahayamada Church - Batticaloa	False	False
+Batticaloa	Batticaloa	MOH Office - Batticaloa	False	False
+Batticaloa	Batticaloa	Hindu Vidyalaya - Batticaloa	False	False
+Batticaloa	Valachchenai	MOH Office - Valachchenai	False	False
+Batticaloa	Valachchenai	MOH Office - Oddamavadi	False	False
+Batticaloa	Valachchenai	Birandachchenai Saduliya Vidyalaya	False	False
+Batticaloa	Valachchenai	Valachchenai Base Hospital	False	False
+Batticaloa	Vakarai	MOH Office - Vakarai	False	False
+Ampara	Kalmunai	MOH Office - Kalmunai North	False	False
+Ampara	Karaitivu	MOH Office – Karaitivu	False	False
+Ampara	Sammanthurai	MOH Office - Sammanthurai	False	False
