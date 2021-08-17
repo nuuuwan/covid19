@@ -191,7 +191,7 @@ def parse():
 
     data_list = []
     prev_district, prev_police = None, None
-    for table in tables:
+    for table in tables[1:2]:
         rows = table.df.values.tolist()[1:]
         for row in rows:
             [serial, district, police1, police2, center] = row
@@ -272,7 +272,7 @@ def parse():
 
             )
             data_list.append(data)
-            log.info(center)
+            log.info(f'{district.upper()}/{police}/{center}')
 
     tsv_file = get_file('latest', 'tsv')
     tsv.write(tsv_file, data_list)
