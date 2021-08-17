@@ -1,7 +1,9 @@
 GOOGLE_DRIVE_API_KEY=$1
 python3 src/covid19/lk_vax_centers.py --google_drive_api_key $GOOGLE_DRIVE_API_KEY
 
-git reset --hard HEAD
+git add .
+git commit -c "Pre Data Load"
+
 git checkout data
 git pull origin data
 git clean -f -d
