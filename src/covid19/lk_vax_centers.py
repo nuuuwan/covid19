@@ -171,23 +171,13 @@ def scrape():
             )
         )
 
-
-def is_number(s):
-    try:
-        x = float(s)
-    except:
-        return False
-    return True
-
 def clean_non_alpha(s):
     s = re.sub(r'[^A-Za-z\s]', '', s)
     s = re.sub(r'\s+', ' ', s)
     s = s.strip()
     return s
 
-
-
-def parse():
+def parse_basic():
     pdf_file = get_file('latest', 'pdf')
     tables = camelot.read_pdf(pdf_file, pages='all')
 
@@ -232,24 +222,6 @@ def parse():
                 dose2 = True
             center = center.partition('(')[0].strip()
 
-            district_si = translate_si(district)
-            police_si = translate_si(police)
-            center_si = translate_si(center)
-
-            district_ta = translate_ta(district)
-            police_ta = translate_ta(police)
-            center_ta = translate_ta(center)
-
-            lat, lng, formatted_address = get_location_info(
-                district,
-                police,
-                center,
-            )
-
-            formatted_address_si, formatted_address_ta = None, None
-            if formatted_address:
-                formatted_address_si = translate_si(formatted_address)
-                formatted_address_ta = translate_ta(formatted_address)
 
             data = dict(
                 district=district,
@@ -259,31 +231,84 @@ def parse():
                 dose1=dose1,
                 dose2=dose2,
 
-                lat=lat,
-                lng=lng,
-                formatted_address=formatted_address,
-
-                district_si=district_si,
-                police_si=police_si,
-                center_si=center_si,
-                formatted_address_si=formatted_address_si,
-
-                district_ta=district_ta,
-                police_ta=police_ta,
-                center_ta=center_ta,
-                formatted_address_ta=formatted_address_ta,
-
-
             )
             data_list.append(data)
-            log.info(f'{district.upper()}/{police}/{center}')
+            log.info(f'Basic: {district.upper()}/{police}/{center}')
 
-    tsv_file = get_file('latest', 'tsv')
-    tsv.write(tsv_file, data_list)
+    tsv_basic_file = get_file('latest', 'basic.tsv')
+    tsv.write(tsv_basic_file, data_list)
     n_data_list = len(data_list)
-    log.info(f'Wrote {n_data_list} rows to {tsv_file}')
+    log.info(f'Wrote {n_data_list} rows to {tsv_basic_file}')
 
     return data_list
+
+def expand_with_translation_and_location_for_data(data):
+    district = data['district']
+    police = data['police']
+    center = data['center']
+    dose1 = data['dose1']
+    dose2 = data['dose2']
+
+    district_si = translate_si(district)
+    police_si = translate_si(police)
+    center_si = translate_si(center)
+
+    district_ta = translate_ta(district)
+    police_ta = translate_ta(police)
+    center_ta = translate_ta(center)
+
+    lat, lng, formatted_address = get_location_info(
+        district,
+        police,
+        center,
+    )
+
+    formatted_address_si, formatted_address_ta = None, None
+    if formatted_address:
+        formatted_address_si = translate_si(formatted_address)
+        formatted_address_ta = translate_ta(formatted_address)
+
+    log.info(f'Expanded: {district.upper()}/{police}/{center}')
+
+    return dict(
+        district=district,
+        police=police,
+        center=center,
+
+        dose1=dose1,
+        dose2=dose2,
+
+        lat=lat,
+        lng=lng,
+        formatted_address=formatted_address,
+
+        district_si=district_si,
+        police_si=police_si,
+        center_si=center_si,
+        formatted_address_si=formatted_address_si,
+
+        district_ta=district_ta,
+        police_ta=police_ta,
+        center_ta=center_ta,
+        formatted_address_ta=formatted_address_ta,
+    )
+
+
+
+def expand_with_translation_and_location():
+    tsv_basic_file = get_file('latest', 'basic.tsv')
+    data_list = tsv.read(tsv_basic_file)
+
+    expanded_data_list = list(map(
+        expand_with_translation_and_location_for_data,
+        data_list,
+    ))
+
+    tsv_file = get_file('latest', 'tsv')
+    tsv.write(tsv_file, expanded_data_list)
+    n_data_list = len(expanded_data_list)
+    log.info(f'Wrote {n_data_list} rows to {tsv_file}')
+    return expanded_data_list
 
 def dump_summary(lang):
     date = timex.format_time(timex.get_unixtime(), '%Y-%m-%d')
@@ -292,13 +317,13 @@ def dump_summary(lang):
 
     if lang == 'si':
         title = 'කොවිඩ්19 එන්නත් මධ්‍යස්ථාන'
-        warning = 'ස්ථාන පදනම් වී ඇත්තේ ස්වයංක්‍රීය ගූගල් සිතියම් (Google Maps) සෙවීම මත වන අතර ඒවා නිවැරදි නොවිය හැකිය.'
+        warning = 'ස්ථාන පදනම් වී ඇත්තේ ස්වයංක්‍රීය ගූගල් සිතියම් (Google Maps) ' + 'සෙවීම මත වන අතර ඒවා නිවැරදි නොවිය හැකිය.'
     elif lang == 'ta':
         title = 'கோவிட்19 தடுப்பூசி மையங்கள்'
-        warning = 'இருப்பிடங்கள் தானியங்கி கூகுள் (Google Maps) மேப்ஸ் தேடலை அடிப்படையாகக் கொண்டவை மற்றும் துல்லியமாக இருக்காது.'
+        warning = 'இருப்பிடங்கள் தானியங்கி கூகுள் மேப்ஸ் தேடலை (Google Maps) ' + 'அடிப்படையாகக் கொண்டவை மற்றும் துல்லியமாக இருக்காது.'
     else:
         title = 'COVID19 Vaccinations Centers'
-        warning = 'Locations are based on Automated GoogleMaps Search, and might be inaccurate.'
+        warning = 'Locations are based on Automated GoogleMaps Search, ' + 'and might be inaccurate.'
 
     md_lines = [
         f'# {title} ({date})',
@@ -374,7 +399,8 @@ def copy_latest():
 
 if __name__ == '__main__':
     scrape()
-    parse()
+    parse_basic()
+    expand_with_translation_and_location()
     dump_summary('en')
     dump_summary('si')
     dump_summary('ta')
