@@ -13,3 +13,4 @@ pip install covid19-nuuuwan
   * updated logging
   * Fixed first line bug; Kuliyapitiya bug
   * 
+  * 
