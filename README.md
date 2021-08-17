@@ -11,3 +11,4 @@ pip install covid19-nuuuwan
   * lk-vax-centers.md
   * lk-vax-centers.md
   * updated logging
+  * Fixed first line bug; Kuliyapitiya bug

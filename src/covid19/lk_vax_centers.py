@@ -9,6 +9,8 @@ import pandas
 import re
 import googlemaps
 
+import matplotlib.pyplot as plt
+
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 from selenium import webdriver
@@ -191,10 +193,12 @@ def parse():
 
     data_list = []
     prev_district, prev_police = None, None
-    for table in tables[1:2]:
-        rows = table.df.values.tolist()[1:]
+    for table in tables:
+        rows = table.df.values.tolist()
         for row in rows:
             [serial, district, police1, police2, center] = row
+            if serial.lower().strip() == 'serial':
+                continue
 
             police1 = clean_non_alpha(police1)
             police2 = clean_non_alpha(police2)
@@ -204,7 +208,7 @@ def parse():
             elif police2:
                 police = police2
 
-            if police in ['Nikaweratiya', 'Kurunegala']:
+            if police in ['Kuliyapitiya', 'Nikaweratiya', 'Kurunegala']:
                 district = 'Kurunegala'
 
             if not district and prev_district:
