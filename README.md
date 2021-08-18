@@ -16,3 +16,5 @@ pip install covid19-nuuuwan
 * [2021-08-18 09:36AM] Update GoogleMaps Link
   * Updated README
   * Pre-Merge
+* [2021-08-18 04:11PM] Optimize lk-vax-center
+  * Updated README
