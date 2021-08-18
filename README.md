@@ -19,3 +19,4 @@ pip install covid19-nuuuwan
 * [2021-08-18 04:11PM] Optimize lk-vax-center
   * Updated README
   * Added get_vax_centers
+  * Added get_vax_center_index (untested); lang improvements
