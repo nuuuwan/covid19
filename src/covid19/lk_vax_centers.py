@@ -199,6 +199,11 @@ def parse_basic():
 
             if police in ['Kuliyapitiya', 'Nikaweratiya', 'Kurunegala']:
                 district = 'Kurunegala'
+            if police in ['Mullaitivu']:
+                district = 'Mullaitivu'
+            if police in ['Adampan']:
+                district = 'Mannar'        
+
 
             if not district and prev_district:
                 district = prev_district

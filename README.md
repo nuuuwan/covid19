@@ -11,3 +11,4 @@ pip install covid19-nuuuwan
 
 * [2021-08-18 09:05AM] run-2021-08-18
   * Updated README
+  * Added checks for Mullaitivu and Mannar
