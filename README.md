@@ -13,3 +13,5 @@ pip install covid19-nuuuwan
   * Updated README
   * Added checks for Mullaitivu and Mannar
   * Pre-Merge
+* [2021-08-18 09:36AM] Update GoogleMaps Link
+  * Updated README
