@@ -1,16 +1,17 @@
 # COVID19 Vaccinations Centers (2021-08-18)
 *Locations are based on Automated GoogleMaps Search, and might be inaccurate.*
+Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashboard/](https://www.presidentsoffice.gov.lk/index.php/vaccination-dashboard/)
 ## Colombo District
 * **Cinnamon Gardens** Police Area
-  *  (Dose-1, Dose-2) Viharamahadevi Park - [Viharamahadevi Park, Colombo 07, Sri Lanka](https://www.google.lk/maps/place/6.9133907N,79.86174009999999E) 
+  *  (1st Dose, 2nd Dose) Viharamahadevi Park - [Viharamahadevi Park, Colombo 07, Sri Lanka](https://www.google.lk/maps/place/6.9133907N,79.86174009999999E) 
 * **Boralesgamuwa** Police Area
-  *  (Dose-1, Dose-2) Kotelawala Defence Hospital - [RWG4+3VF, Boralesgamuwa, Sri Lanka](https://www.google.lk/maps/place/6.82518N,79.907167E) 
+  *  (1st Dose, 2nd Dose) Kotelawala Defence Hospital - [RWG4+3VF, Boralesgamuwa, Sri Lanka](https://www.google.lk/maps/place/6.82518N,79.907167E) 
 * **Thalangama** Police Area
-  *  (Dose-1, Dose-2) Diyatha Uyana - [Diyatha Uyana, B240, Sri Jayawardenepura Kotte, Sri Lanka](https://www.google.lk/maps/place/6.904574999999999N,79.9098313E) 
+  *  (1st Dose, 2nd Dose) Diyatha Uyana - [Diyatha Uyana, B240, Sri Jayawardenepura Kotte, Sri Lanka](https://www.google.lk/maps/place/6.904574999999999N,79.9098313E) 
 * **Narahenpita** Police Area
-  *  (Dose-1, Dose-2) Army Hospital Narahenpita - [Army Hospital, Colombo 00500, Sri Lanka](https://www.google.lk/maps/place/6.8975934N,79.881483E) 
+  *  (1st Dose, 2nd Dose) Army Hospital Narahenpita - [Army Hospital, Colombo 00500, Sri Lanka](https://www.google.lk/maps/place/6.8975934N,79.881483E) 
 * **Dam Street** Police Area
-  *  (Dose-2) Grand Mosque - Rifai Thangala - [160 New Moor St, Colombo 01200, Sri Lanka](https://www.google.lk/maps/place/6.940437699999999N,79.8588843E) 
+  *  (2nd Dose) Grand Mosque - Rifai Thangala - [160 New Moor St, Colombo 01200, Sri Lanka](https://www.google.lk/maps/place/6.940437699999999N,79.8588843E) 
 * **Grandpass** Police Area
   * Sugathadasa Outdoor Stadium - [Prince of Wales Ave, Colombo 01400, Sri Lanka](https://www.google.lk/maps/place/6.9480599N,79.8688423E) 
 * **Maradana** Police Area
@@ -33,9 +34,9 @@
   * Piliyandala Hospital - [Piliyandala, Sri Lanka](https://www.google.lk/maps/place/6.804083899999999N,79.9225933E) 
 ## Gampaha District
 * **Gampaha** Police Area
-  *  (Dose-1, Dose-2) Mobile Medical Team - [Gampaha, Sri Lanka](https://www.google.lk/maps/place/7.071261900000001N,80.0087746E) 
+  *  (1st Dose, 2nd Dose) Mobile Medical Team - [Gampaha, Sri Lanka](https://www.google.lk/maps/place/7.071261900000001N,80.0087746E) 
 * **Katunayaka** Police Area
-  *  (Dose-2) BOI - Katunayaka - [Katunayake Export Processing Zone, Katunayake, Sri Lanka](https://www.google.lk/maps/place/7.170921000000001N,79.8898816E) 
+  *  (2nd Dose) BOI - Katunayaka - [Katunayake Export Processing Zone, Katunayake, Sri Lanka](https://www.google.lk/maps/place/7.170921000000001N,79.8898816E) 
   * Ewariwatta Sumithrarama Viharaya - [4X6Q+2X2, Gampaha, Sri Lanka](https://www.google.lk/maps/place/7.110015499999999N,79.98990239999999E) 
 * **Pugoda** Police Area
   * Malwana Viharaya - [Hanwella Malwana Rd, Seethawakapura, Sri Lanka](https://www.google.lk/maps/place/6.913561499999999N,80.05972129999999E) 
@@ -95,7 +96,7 @@
   * Wadduwa Chamith Chathuranga Elders Home - [No 410/11A, Parakum Mawatha, Galle Road, Wadduwa, Sri Lanka](https://www.google.lk/maps/place/6.671641399999999N,79.92646400000001E) 
   * Wadduwa St. Anne's Elders Home - [No 410/11A, Parakum Mawatha, Galle Road, Wadduwa, Sri Lanka](https://www.google.lk/maps/place/6.671641399999999N,79.92646400000001E) 
 * **Kalutara North** Police Area
-  *  (Dose-2) Sahira College - Darga Town - [Zahira College Road, Dharga Town 12090, Sri Lanka](https://www.google.lk/maps/place/6.442796899999999N,80.004723E) 
+  *  (2nd Dose) Sahira College - Darga Town - [Zahira College Road, Dharga Town 12090, Sri Lanka](https://www.google.lk/maps/place/6.442796899999999N,80.004723E) 
   * Waskaduwa Jayasiri Elders Home - [283 Colombo - Galle Main Rd, Waskaduwa, Sri Lanka](https://www.google.lk/maps/place/6.6214135N,79.9459232E) 
   * Mobile Vaccination - [Kalutara, Sri Lanka](https://www.google.lk/maps/place/6.6084686N,80.1428584E) 
 * **Kalutara South** Police Area
@@ -150,7 +151,7 @@
   * Pannala Vidyalaya - [Kumbalgamuwa, Keerthibandara pura - Walapane road, Walapane, Sri Lanka](https://www.google.lk/maps/place/7.133169199999999N,80.85001679999999E) 
 ## Badulla District
 * **Badulla** Police Area
-  *  (Dose-2) Army Base Hospital - Badulla - [Daya Gunasekara Mawatha, Badulla, Sri Lanka](https://www.google.lk/maps/place/6.9918084N,81.05235019999999E) 
+  *  (2nd Dose) Army Base Hospital - Badulla - [Daya Gunasekara Mawatha, Badulla, Sri Lanka](https://www.google.lk/maps/place/6.9918084N,81.05235019999999E) 
   * Town Hall - Badulla - [X3P6+WCH, Badulla, Sri Lanka](https://www.google.lk/maps/place/6.987322N,81.0611143E) 
 * **Passara** Police Area
   * District Hospital - Passara - [Peradeniya-Badulla-Chenkaladi Hwy, Passara 90500, Sri Lanka](https://www.google.lk/maps/place/6.9332422N,81.15235299999999E) 
@@ -236,7 +237,7 @@
   * Dabarana Viharaya - [Colombo - Kandy Rd, Mawanella, Sri Lanka](https://www.google.lk/maps/place/7.250057399999999N,80.45430379999999E) 
 ## Anuradhapura District
 * **Anuradhapura** Police Area
-  *  (Dose-2) Army Hospital - Anuradhapura - [AB02, Anuradhapura, Sri Lanka](https://www.google.lk/maps/place/8.338302300000002N,80.4076455E) 
+  *  (2nd Dose) Army Hospital - Anuradhapura - [AB02, Anuradhapura, Sri Lanka](https://www.google.lk/maps/place/8.338302300000002N,80.4076455E) 
   * Anuradhapura Teaching Hospital - [Harischandra Mawatha, Anuradhapura, Sri Lanka](https://www.google.lk/maps/place/8.3247652N,80.4139682E) 
 * **Mihinthale** Police Area
   * Mihinthale Hospital - [Kandy Rd, Mihintale, Sri Lanka](https://www.google.lk/maps/place/8.3550504N,80.50928689999999E) 
@@ -275,7 +276,7 @@
   * MOH Office - Maruthankerny - [Sri Lanka, Manipay, Sri Lanka](https://www.google.lk/maps/place/9.725096899999999N,79.99772039999999E) 
 ## Kilinochchi District
 * **Kilinochchi** Police Area
-  *  (Dose-2) Army Base Hospital - Kilinochchi - [Ananthapuram, A9, Kilinochchi, Sri Lanka](https://www.google.lk/maps/place/9.3727285N,80.4117857E) 
+  *  (2nd Dose) Army Base Hospital - Kilinochchi - [Ananthapuram, A9, Kilinochchi, Sri Lanka](https://www.google.lk/maps/place/9.3727285N,80.4117857E) 
   * MOH Office - Kilinochchi - [Kandy - Jaffna Hwy, Kilinochchi, Sri Lanka](https://www.google.lk/maps/place/9.3969654N,80.4077819E) 
 * **Dharmapuram** Police Area
   * MOH Office - Kanadawalai - [Kandy - Jaffna Hwy, Kilinochchi, Sri Lanka](https://www.google.lk/maps/place/9.3969654N,80.4077819E) 
@@ -283,16 +284,16 @@
   * MOH Office - Pooneryn - [G655+58P, Pooneryn, Sri Lanka](https://www.google.lk/maps/place/9.507967899999999N,80.208317E) 
 ## Mullaitivu District
 * **Mullaitivu** Police Area
-  *  (Dose-2) Army Base Hospital - Mullaitivu - [7Q58+VH2, Mullaitivu, Sri Lanka](https://www.google.lk/maps/place/9.2596388N,80.7664006E) 
+  *  (2nd Dose) Army Base Hospital - Mullaitivu - [7Q58+VH2, Mullaitivu, Sri Lanka](https://www.google.lk/maps/place/9.2596388N,80.7664006E) 
 * **Mankulam** Police Area
   * MOH Office - Mankulam - [48P5+J58, Mallavi, Sri Lanka](https://www.google.lk/maps/place/9.1365261N,80.307948E) 
 * **Mallavi** Police Area
   * MOH Office - Mallavi - [48P5+J58, Mallavi, Sri Lanka](https://www.google.lk/maps/place/9.1365261N,80.307948E) 
 ## Mannar District
 * **Adampan** Police Area
-  *  (Dose-2) MOH Office - Adampan - [WXVW+WPQ, Adampan, Sri Lanka](https://www.google.lk/maps/place/8.9448424N,79.9968624E) 
+  *  (2nd Dose) MOH Office - Adampan - [WXVW+WPQ, Adampan, Sri Lanka](https://www.google.lk/maps/place/8.9448424N,79.9968624E) 
 * **Mannar** Police Area
-  *  (Dose-2) RDHS Office - Mannar - [Thalvupadu - Mannar Rd, Mannar 41000, Sri Lanka](https://www.google.lk/maps/place/8.9833816N,79.9025654E) 
+  *  (2nd Dose) RDHS Office - Mannar - [Thalvupadu - Mannar Rd, Mannar 41000, Sri Lanka](https://www.google.lk/maps/place/8.9833816N,79.9025654E) 
 ## Trincomalee District
 * **Muttur** Police Area
   * MOH Office – Muttur - [1 Old Batticaloa Rd, Mutur, Sri Lanka](https://www.google.lk/maps/place/8.453916N,81.26449439999999E) 
