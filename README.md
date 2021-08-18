@@ -24,3 +24,4 @@ pip install covid19-nuuuwan
 * [2021-08-18 04:52PM] remove accidential files
   * Updated README
   * Done
+  * Pre-Merge
