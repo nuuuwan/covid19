@@ -145,7 +145,6 @@ def scrape():
     if os.path.exists(pdf_file):
         log.warning(f'{pdf_file} already exists. Not scraping!')
         return
-
     file_id = get_google_drive_file_id()
     google_drive_api_key = get_google_drive_api_key()
     if google_drive_api_key is None:

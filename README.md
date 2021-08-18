@@ -9,3 +9,5 @@ pip install covid19-nuuuwan
 
 ## Release History
 
+* [2021-08-18 09:05AM] run-2021-08-18
+  * Updated README
