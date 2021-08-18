@@ -25,3 +25,5 @@ pip install covid19-nuuuwan
   * Updated README
   * Done
   * Pre-Merge
+* [2021-08-18 04:55PM] lk-vax-center fixes
+  * Updated README
