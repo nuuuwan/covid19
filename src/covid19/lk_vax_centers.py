@@ -52,6 +52,7 @@ def get_vax_center_index():
 
         ut -= timex.SECONDS_IN.DAY
 
+    all_data_list.reverse()
     vax_center_index = dict(
         zip(
             list(
@@ -91,6 +92,9 @@ def get_location_info_inner(gmaps, search_text):
 
 
 def get_location_info(gmaps, district, police, center):
+    if 'car park' in center.lower() or 'mobile' in center.lower():
+        center = f'{police} {center}'
+
     search_text = f'{center}, {district} District, Sri Lanka'
     geocode_results = get_location_info_inner(gmaps, search_text)
 
@@ -409,8 +413,13 @@ def dump_summary(lang):
 
     md_lines = [
         f'# {title} ({date})',
-        f'*{warning}*',
+        '',
         f'{source_str}: [{VAX_DASH_URL}]({VAX_DASH_URL})',
+        '',
+        f'*{warning}*',
+        '',
+        '-----',
+
     ]
     prev_district, prev_police = None, None
     for data in data_list:
