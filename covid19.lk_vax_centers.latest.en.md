@@ -1,6 +1,10 @@
 # COVID19 Vaccinations Centers (2021-08-18)
-*Locations are based on Automated GoogleMaps Search, and might be inaccurate.*
+
 Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashboard/](https://www.presidentsoffice.gov.lk/index.php/vaccination-dashboard/)
+
+*Locations are based on Automated GoogleMaps Search, and might be inaccurate.*
+
+-----
 ## Colombo District
 * **Cinnamon Gardens** Police Area
   *  (1st Dose, 2nd Dose) Viharamahadevi Park - [Viharamahadevi Park, Colombo 07, Sri Lanka](https://www.google.lk/maps/place/6.9133907N,79.86174009999999E) 
