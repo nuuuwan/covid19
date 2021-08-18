@@ -202,7 +202,7 @@ def parse_basic():
             if police in ['Mullaitivu']:
                 district = 'Mullaitivu'
             if police in ['Adampan']:
-                district = 'Mannar'        
+                district = 'Mannar'
 
 
             if not district and prev_district:
@@ -373,7 +373,7 @@ def dump_summary(lang):
         if formatted_address:
             lat = data['lat']
             lng = data['lng']
-            link = f'https://www.google.lk/maps/@{lat},{lng},{DEFAULT_ZOOM}z'
+            link = f'https://www.google.lk/maps/place/{lat}N,{lng}E'
             md_link = f'[{formatted_address}]({link})'
         else:
             md_link = '(Location Unknown)'

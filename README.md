@@ -15,3 +15,4 @@ pip install covid19-nuuuwan
   * Pre-Merge
 * [2021-08-18 09:36AM] Update GoogleMaps Link
   * Updated README
+  * Pre-Merge
