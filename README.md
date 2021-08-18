@@ -21,3 +21,5 @@ pip install covid19-nuuuwan
   * Added get_vax_centers
   * Added get_vax_center_index (untested); lang improvements
   * Pre-Merge
+* [2021-08-18 04:52PM] remove accidential files
+  * Updated README
