@@ -33,8 +33,18 @@ VAX_DASH_URL = (
     'https://www.presidentsoffice.gov.lk/index.php/vaccination-dashboard/'
 )
 URL_LOAD_TIME = 10
-I_VAX_CENTER = -3
-DEFAULT_ZOOM = 15
+CACHE_NAME = 'covid19.lk_vax_centers'
+
+@cache(CACHE_NAME, timex.SECONDS_IN.HOUR)
+def get_vax_centers():
+    remote_dir = 'https://github.com/nuuuwan/covid19/tree/data'
+    ut = timex.get_unixtime()
+    while True:
+        ut -= timex.SECONDS_IN.DAY
+        date_id = timex.get_date_id(ut)
+        print(date_id)
+        break
+
 
 
 def get_google_drive_api_key():
@@ -52,11 +62,11 @@ def get_google_drive_api_key():
 gmaps = googlemaps.Client(key=get_google_drive_api_key())
 
 
-@cache('covid19.lk_vax_centers', timex.SECONDS_IN.YEAR)
+@cache('CACHE_NAME', timex.SECONDS_IN.YEAR)
 def get_location_info_inner(search_text):
     return gmaps.geocode(search_text)
 
-@cache('covid19.lk_vax_centers.v3', timex.SECONDS_IN.YEAR)
+@cache('CACHE_NAME.v3', timex.SECONDS_IN.YEAR)
 def get_location_info(district, police, center):
     search_text = f'{center}, {district} District, Sri Lanka'
     geocode_results = get_location_info_inner(search_text)
@@ -77,7 +87,7 @@ def get_location_info(district, police, center):
 
 
 translator_si = GoogleTranslator(source='english', target='sinhala')
-@cache('covid19.lk_vax_centers', timex.SECONDS_IN.YEAR)
+@cache('CACHE_NAME', timex.SECONDS_IN.YEAR)
 def translate_si(text):
     """Translate text."""
     if len(text) <= 3:
@@ -86,7 +96,7 @@ def translate_si(text):
 
 
 translator_ta = GoogleTranslator(source='english', target='tamil')
-@cache('covid19.lk_vax_centers', timex.SECONDS_IN.YEAR)
+@cache('CACHE_NAME', timex.SECONDS_IN.YEAR)
 def translate_ta(text):
     """Translate text."""
     if len(text) <= 3:
@@ -95,7 +105,7 @@ def translate_ta(text):
 
 
 def get_file(tag, ext):
-    return f'/tmp/covid19.lk_vax_centers.{tag}.{ext}'
+    return f'/tmp/CACHE_NAME.{tag}.{ext}'
 
 
 
@@ -402,10 +412,11 @@ def copy_latest():
 
 
 if __name__ == '__main__':
-    scrape()
-    parse_basic()
-    expand_with_translation_and_location()
-    dump_summary('en')
-    dump_summary('si')
-    dump_summary('ta')
-    copy_latest()
+    # scrape()
+    # parse_basic()
+    # expand_with_translation_and_location()
+    # dump_summary('en')
+    # dump_summary('si')
+    # dump_summary('ta')
+    # copy_latest()
+    get_vax_centers()
