@@ -57,7 +57,7 @@ def get_vax_center_index():
             list(
                 map(
                     lambda data: get_vax_center_key(
-                        data['distrct'],
+                        data['district'],
                         data['police'],
                         data['center'],
                     ),
@@ -138,7 +138,7 @@ def translate_ta(text):
 
 
 def get_file(tag, ext):
-    return f'/tmp/CACHE_NAME.{tag}.{ext}'
+    return f'/tmp/covid19.lk_vax_centers.{tag}.{ext}'
 
 
 def get_google_drive_file_id():
@@ -434,7 +434,7 @@ def dump_summary(lang):
             district_str = 'மாவட்டம்'
             dose_str = 'டோஸ்'
             str_1st = '1வது'
-            str_1st = '2வது'
+            str_2nd = '2வது'
 
         else:
             district = data['district']
@@ -488,11 +488,10 @@ def copy_latest():
 
 
 if __name__ == '__main__':
-    # scrape()
-    # parse_basic()
-    # expand()
-    # dump_summary('en')
-    # dump_summary('si')
-    # dump_summary('ta')
-    # copy_latest()
-    get_vax_center_index()
+    scrape()
+    parse_basic()
+    expand()
+    dump_summary('en')
+    dump_summary('si')
+    dump_summary('ta')
+    copy_latest()
