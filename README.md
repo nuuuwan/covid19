@@ -48,3 +48,5 @@ pip install covid19-nuuuwan
   * Done
   * Pre-Merge
   * Updated TODO
+* [2021-08-19 10:07AM] Add District IDs
+  * Updated README
