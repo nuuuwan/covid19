@@ -32,3 +32,4 @@ pip install covid19-nuuuwan
   * Added TODO.md
 * [2021-08-19 08:31AM] Save PDF with Data ID
   * Updated README
+  * Pre-Merge
