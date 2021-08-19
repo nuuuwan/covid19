@@ -42,3 +42,4 @@ pip install covid19-nuuuwan
   * scrape_google_id.py complete
   * scrape_pdf Done
   * parse_pdf.py Done
+  * expand.py done
