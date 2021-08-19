@@ -35,3 +35,4 @@ pip install covid19-nuuuwan
   * Pre-Merge
 * [2021-08-19 08:44AM] Update Folder Structure
   * Updated README
+  * Pre-Merge
