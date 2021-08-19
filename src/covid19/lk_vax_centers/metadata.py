@@ -41,6 +41,8 @@ def backpopulate(date_id):
             if cur_date_id != date_id:
                 break
         ut -= timex.SECONDS_IN.DAY
+        
+
 
     metadata_list = []
     add_set = set()
@@ -119,6 +121,8 @@ def populate(date_id):
         if fuzzy_key in metadata_index:
             continue
 
+        log.info(f'Finding metadata for {fuzzy_key}')
+
         district_si = translate_utils.translate_si(district)
         police_si = translate_utils.translate_si(police)
         center_si = translate_utils.translate_si(center)
@@ -160,6 +164,7 @@ def populate(date_id):
             center_ta=center_ta,
             formatted_address_ta=formatted_address_ta,
         )
+        log.info(meta_d)
         metadata_list.append(meta_d)
 
     metadata_file = lk_vax_center_utils.get_file(date_id, 'metadata.tsv')
@@ -173,4 +178,6 @@ if __name__ == '__main__':
     backpopulate(date_id)
     get_metadata_index(date_id)
     populate(date_id)
+    print(123)
     get_metadata_index(date_id)
+    print(456)

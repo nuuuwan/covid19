@@ -58,7 +58,7 @@ def scrape_pdf(date_id, google_drive_file_id):
     pdf_file = lk_vax_center_utils.get_file(date_id, 'pdf')
     if os.path.exists(pdf_file):
         log.warn(f'{pdf_file} already exists. Not downloading.')
-        return False
+        return pdf_file
 
     fh = io.FileIO(pdf_file, 'wb')
     downloader = MediaIoBaseDownload(fh, request)

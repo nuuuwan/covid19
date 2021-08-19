@@ -10,12 +10,11 @@ from covid19.lk_vax_centers.summarise import summarise
 
 if __name__ == '__main__':
     date_id = timex.get_date_id()
-    date_id = '20210820'
     google_drive_file_id = scrape_google_id()
 
     if scrape_pdf(date_id, google_drive_file_id):
         parse_pdf(date_id)
-        metadata.backpupulate(date_id)
+        metadata.backpopulate(date_id)
         metadata.populate(date_id)
         expand(date_id)
         summarise(date_id)
