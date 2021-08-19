@@ -27,10 +27,6 @@ URL_LOAD_TIME = 10
 CACHE_NAME = 'covid19.lk_vax_centers'
 
 
-def get_vax_center_key(district, police, center):
-    return f'{district.upper()}/{police}/{center}'
-
-
 @cache(CACHE_NAME, timex.SECONDS_IN.HOUR)
 def get_vax_center_index():
     remote_dir = 'https://raw.githubusercontent.com/nuuuwan/covid19/data'
@@ -141,8 +137,19 @@ def translate_ta(text):
     return translator_ta.translate(text)
 
 
+def clean_non_alpha(s):
+    s = re.sub(r'[^A-Za-z\s]', '', s)
+    s = re.sub(r'\s+', ' ', s)
+    s = s.strip()
+    return s
+
+
 def get_file(tag, ext):
     return f'/tmp/covid19.lk_vax_centers.{tag}.{ext}'
+
+
+def get_vax_center_key(district, police, center):
+    return f'{district.upper()}/{police}/{center}'
 
 
 def get_google_drive_file_id():
@@ -215,13 +222,6 @@ def scrape():
                 progress=(float)(status.progress()),
             )
         )
-
-
-def clean_non_alpha(s):
-    s = re.sub(r'[^A-Za-z\s]', '', s)
-    s = re.sub(r'\s+', ' ', s)
-    s = s.strip()
-    return s
 
 
 def parse_basic():
