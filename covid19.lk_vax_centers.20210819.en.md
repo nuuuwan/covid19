@@ -239,7 +239,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * Gurunnehegeara Community Hall - [Hambantota-Gonnoruwa-Meegahajandura Rd, භම්ඛන්තොට, Sri Lanka](https://www.google.lk/maps/place/6.1565N,81.1217E) 
 * **Beliatta** Police Area
   * MOH Office – Beliatta - [3P2R+PMQ, Hambantota, Sri Lanka](https://www.google.lk/maps/place/6.0518N,80.7417E) 
-## Rathnapura District
+## Ratnapura District
 * **Balangoda** Police Area
   * Hopewell Vidyalaya - [JPFF+4XW, Balangoda, Sri Lanka](https://www.google.lk/maps/place/6.6229N,80.725E) 
 * **Opanayaka** Police Area
