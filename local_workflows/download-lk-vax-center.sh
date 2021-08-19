@@ -1,5 +1,5 @@
 GOOGLE_DRIVE_API_KEY=$1
-python3 src/covid19/lk_vax_centers/lk_vax_centers.py --google_drive_api_key $GOOGLE_DRIVE_API_KEY
+python3 src/covid19/lk_vax_centers/lk_vax_centers_pipe.py --google_drive_api_key $GOOGLE_DRIVE_API_KEY
 
 git add .
 git commit -c "Pre Data Load"

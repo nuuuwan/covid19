@@ -61,3 +61,4 @@ pip install covid19-nuuuwan
   * Done
   * Pre-Merge
   * Removed logging
+  * Bug in workflow
