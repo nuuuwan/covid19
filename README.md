@@ -47,3 +47,4 @@ pip install covid19-nuuuwan
   * finalize.py done
   * Done
   * Pre-Merge
+  * Updated TODO
