@@ -419,7 +419,6 @@ def dump_summary(lang):
         f'*{warning}*',
         '',
         '-----',
-
     ]
     prev_district, prev_police = None, None
     for data in data_list:
