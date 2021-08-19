@@ -1,4 +1,3 @@
-import logging
 import time
 
 from selenium import webdriver
@@ -6,14 +5,10 @@ from selenium.webdriver.firefox.options import Options
 
 from covid19._utils import log
 
-logging.getLogger('pdfminer').setLevel(logging.ERROR)
-logging.getLogger('camelot').setLevel(logging.ERROR)
-
 VAX_DASH_URL = (
     'https://www.presidentsoffice.gov.lk/index.php/vaccination-dashboard/'
 )
 URL_LOAD_TIME = 10
-CACHE_NAME = 'covid19.lk_vax_centers'
 
 
 def scrape_google_id():
@@ -52,6 +47,7 @@ def scrape_google_id():
     browser.quit()
     log.info(f'google_drive_file_id = {google_drive_file_id}')
     return google_drive_file_id
+
 
 if __name__ == '__main__':
     scrape_google_id()

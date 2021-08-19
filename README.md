@@ -40,3 +40,4 @@ pip install covid19-nuuuwan
   * Updated README
   * Added files
   * scrape_google_id.py complete
+  * scrape_pdf Done
