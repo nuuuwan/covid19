@@ -55,3 +55,4 @@ pip install covid19-nuuuwan
   * Updated README
   * Added metadata to pipe
   * Added get_metadata_index
+  * expand uses metadata

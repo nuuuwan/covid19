@@ -3,11 +3,11 @@ import os
 
 import googlemaps
 from deep_translator import GoogleTranslator
-from utils import timex, tsv, www
+from utils import timex, tsv
 from utils.cache import cache
 
 from covid19._utils import log
-from covid19.lk_vax_centers import lk_vax_center_utils
+from covid19.lk_vax_centers import lk_vax_center_utils, metadata
 
 CACHE_NAME = 'covid19.lk_vax_centers'
 
@@ -80,77 +80,33 @@ def translate_ta(text):
     return translator_ta.translate(text)
 
 
-@cache(CACHE_NAME, timex.SECONDS_IN.HOUR)
-def get_vax_center_index():
-    remote_dir = 'https://raw.githubusercontent.com/nuuuwan/covid19/data'
-    ut = timex.get_unixtime()
-    all_data_list = []
-    while True:
-        date_id = timex.get_date_id(ut)
-        remote_data_url = os.path.join(
-            remote_dir,
-            f'covid19.lk_vax_centers.{date_id}.tsv',
-        )
-        if not www.exists(remote_data_url):
-            break
-        data_list = www.read_tsv(remote_data_url)
-        n_centers = len(data_list)
-        log.info(f'Read {n_centers} Vax Centers from {remote_data_url}')
-
-        all_data_list += data_list
-
-        ut -= timex.SECONDS_IN.DAY
-
-    all_data_list.reverse()
-    vax_center_index = dict(
-        zip(
-            list(
-                map(
-                    lambda data: lk_vax_center_utils.get_fuzzy_key(
-                        data['district'],
-                        data['police'],
-                        data['center'],
-                    ),
-                    all_data_list,
-                )
-            ),
-            all_data_list,
-        )
-    )
-    n_index = len(vax_center_index.keys())
-    log.info(f'Built vax center index with {n_index} entries')
-    return vax_center_index
-
-
-def expand_for_data(vax_center_index, gmaps, data):
+def expand_for_data(metadata_index, gmaps, data):
     district = data['district']
     police = data['police']
     center = data['center']
     dose1 = data['dose1']
     dose2 = data['dose2']
 
-    vax_center_key = lk_vax_center_utils.get_fuzzy_key(
-        district, police, center
-    )
-    if vax_center_key in vax_center_index:
-        data_clone = vax_center_index[vax_center_key]
+    fuzzy_key = lk_vax_center_utils.get_fuzzy_key(district, police, center)
+    if fuzzy_key in metadata_index:
+        metadata = metadata_index[fuzzy_key]
 
-        district_si = data_clone['district_si']
-        police_si = data_clone['police_si']
-        center_si = data_clone['center_si']
+        district_si = metadata['district_si']
+        police_si = metadata['police_si']
+        center_si = metadata['center_si']
 
-        district_ta = data_clone['district_ta']
-        police_ta = data_clone['police_ta']
-        center_ta = data_clone['center_ta']
+        district_ta = metadata['district_ta']
+        police_ta = metadata['police_ta']
+        center_ta = metadata['center_ta']
 
-        lat = data_clone['lat']
-        lng = data_clone['lng']
-        formatted_address = data_clone['formatted_address']
+        lat = metadata['lat']
+        lng = metadata['lng']
+        formatted_address = metadata['formatted_address']
 
-        formatted_address_si = data_clone['formatted_address_si']
-        formatted_address_ta = data_clone['formatted_address_ta']
+        formatted_address_si = metadata['formatted_address_si']
+        formatted_address_ta = metadata['formatted_address_ta']
 
-        log.info(f'Expanded: {vax_center_key} (from history)')
+        log.info(f'Expanded: {fuzzy_key} (from history)')
 
     else:
 
@@ -174,7 +130,7 @@ def expand_for_data(vax_center_index, gmaps, data):
             formatted_address_si = translate_si(formatted_address)
             formatted_address_ta = translate_ta(formatted_address)
 
-        log.info(f'Expanded: {vax_center_key}')
+        log.info(f'Expanded: {fuzzy_key}')
 
     return dict(
         district=district,
@@ -203,7 +159,7 @@ def expand(date_id):
         return False
     data_list = tsv.read(tsv_basic_file)
 
-    vax_center_index = get_vax_center_index()
+    metadata_index = metadata.get_metadata_index(date_id)
     google_drive_api_key = get_google_drive_api_key()
     if not google_drive_api_key:
         log.error('Missing google_drive_api_key')
@@ -212,7 +168,7 @@ def expand(date_id):
 
     expanded_data_list = list(
         map(
-            lambda data: expand_for_data(vax_center_index, gmaps, data),
+            lambda data: expand_for_data(metadata_index, gmaps, data),
             data_list,
         )
     )
