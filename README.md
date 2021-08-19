@@ -44,3 +44,4 @@ pip install covid19-nuuuwan
   * parse_pdf.py Done
   * expand.py done
   * summarise.py done
+  * finalize.py done

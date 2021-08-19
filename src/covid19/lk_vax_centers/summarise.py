@@ -1,6 +1,5 @@
-from utils import filex, timex, tsv
 import os
-
+from utils import filex, timex, tsv
 from covid19._utils import log
 from covid19.lk_vax_centers import lk_vax_center_utils
 from covid19.lk_vax_centers.lk_vax_center_constants import VAX_DASH_URL
