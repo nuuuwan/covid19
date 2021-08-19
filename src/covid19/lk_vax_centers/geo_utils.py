@@ -7,9 +7,7 @@ CACHE_NAME = 'covid19.lk_vax_centers'
 translator_si = GoogleTranslator(source='english', target='sinhala')
 
 
-
 def get_location_info_inner(gmaps, search_text):
-
     @cache('CACHE_NAME', timex.SECONDS_IN.YEAR)
     def get_location_info_inner_inner(search_text=search_text):
         return gmaps.geocode(search_text)

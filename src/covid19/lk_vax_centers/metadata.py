@@ -2,6 +2,7 @@ import argparse
 import os
 
 import googlemaps
+from gig import ents
 from utils import ds, timex, tsv, www
 
 from covid19._utils import log
@@ -41,8 +42,6 @@ def backpopulate(date_id):
             if cur_date_id != date_id:
                 break
         ut -= timex.SECONDS_IN.DAY
-
-
 
     metadata_list = []
     add_set = set()
@@ -111,62 +110,65 @@ def populate(date_id):
 
     gmaps = googlemaps.Client(key=google_drive_api_key)
 
-    metadata_list = list(metadata_index.values())
     for data in data_list:
         district = data['district']
         police = data['police']
         center = data['center']
         fuzzy_key = lk_vax_center_utils.get_fuzzy_key(district, police, center)
 
-        if fuzzy_key in metadata_index:
-            continue
+        if fuzzy_key not in metadata_index:
+            log.info(f'Finding metadata for {fuzzy_key}')
 
-        log.info(f'Finding metadata for {fuzzy_key}')
+            district_si = translate_utils.translate_si(district)
+            police_si = translate_utils.translate_si(police)
+            center_si = translate_utils.translate_si(center)
 
-        district_si = translate_utils.translate_si(district)
-        police_si = translate_utils.translate_si(police)
-        center_si = translate_utils.translate_si(center)
+            district_ta = translate_utils.translate_ta(district)
+            police_ta = translate_utils.translate_ta(police)
+            center_ta = translate_utils.translate_ta(center)
 
-        district_ta = translate_utils.translate_ta(district)
-        police_ta = translate_utils.translate_ta(police)
-        center_ta = translate_utils.translate_ta(center)
-
-        lat, lng, formatted_address = geo_utils.get_location_info(
-            gmaps,
-            district,
-            police,
-            center,
-        )
-
-        formatted_address_si, formatted_address_ta = None, None
-        if formatted_address:
-            formatted_address_si = translate_utils.translate_si(
-                formatted_address
-            )
-            formatted_address_ta = translate_utils.translate_ta(
-                formatted_address
+            lat, lng, formatted_address = geo_utils.get_location_info(
+                gmaps,
+                district,
+                police,
+                center,
             )
 
-        meta_d = dict(
-            fuzzy_key=fuzzy_key,
-            district=district,
-            police=police,
-            center=center,
-            lat=lat,
-            lng=lng,
-            formatted_address=formatted_address,
-            district_si=district_si,
-            police_si=police_si,
-            center_si=center_si,
-            formatted_address_si=formatted_address_si,
-            district_ta=district_ta,
-            police_ta=police_ta,
-            center_ta=center_ta,
-            formatted_address_ta=formatted_address_ta,
-        )
-        log.info(meta_d)
-        metadata_list.append(meta_d)
+            formatted_address_si, formatted_address_ta = None, None
+            if formatted_address:
+                formatted_address_si = translate_utils.translate_si(
+                    formatted_address
+                )
+                formatted_address_ta = translate_utils.translate_ta(
+                    formatted_address
+                )
 
+            meta_d = dict(
+                fuzzy_key=fuzzy_key,
+                district=district,
+                police=police,
+                center=center,
+                lat=lat,
+                lng=lng,
+                formatted_address=formatted_address,
+                district_si=district_si,
+                police_si=police_si,
+                center_si=center_si,
+                formatted_address_si=formatted_address_si,
+                district_ta=district_ta,
+                police_ta=police_ta,
+                center_ta=center_ta,
+                formatted_address_ta=formatted_address_ta,
+            )
+            metadata_index[fuzzy_key] = meta_d
+
+        # Add District ID
+        district_data = ents.get_entities_by_name_fuzzy(district, 'district')[
+            0
+        ]
+        metadata_index[fuzzy_key]['district_id'] = district_data['district_id']
+
+    metadata_list = list(metadata_index.values())
     metadata_file = lk_vax_center_utils.get_file(date_id, 'metadata.tsv')
     tsv.write(metadata_file, metadata_list)
     n_data_list = len(metadata_list)

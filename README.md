@@ -63,3 +63,4 @@ pip install covid19-nuuuwan
   * Removed logging
   * Bug in workflow
   * Add new metadata
+  * Added district data
