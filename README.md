@@ -66,3 +66,4 @@ pip install covid19-nuuuwan
   * Added district data
 * [2021-08-19 11:26AM] lk-vax-centers Expand Data
   * Updated README
+  * Pre-Merge

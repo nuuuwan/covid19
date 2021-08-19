@@ -162,22 +162,38 @@ def populate(date_id):
             )
             metadata_index[fuzzy_key] = meta_d
 
-        # Add District ID
-        district_data = ents.get_entities_by_name_fuzzy(district, 'district')[
-            0
-        ]
-        metadata_index[fuzzy_key]['district_id'] = district_data['district_id']
-
     metadata_list = list(metadata_index.values())
+
+    expanded_metadata_list = []
+    for meta_d in metadata_list:
+        # Add District ID
+        district = meta_d['district']
+        district_data_list = ents.get_entities_by_name_fuzzy(
+            district, 'district'
+        )
+        if district_data_list:
+            district_data = district_data_list[0]
+            meta_d['district_id'] = district_data['district_id']
+            meta_d['district'] = district_data['name']
+
+        else:
+            log.warn(f'Could not find district data for {district}')
+            meta_d['district_id'] = None
+
+        expanded_metadata_list.append(meta_d)
+
+    expanded_metadata_list = sorted(
+        expanded_metadata_list,
+        key=lambda meta_d: meta_d['district_id'] + meta_d['fuzzy_key'],
+    )
+
     metadata_file = lk_vax_center_utils.get_file(date_id, 'metadata.tsv')
-    tsv.write(metadata_file, metadata_list)
-    n_data_list = len(metadata_list)
+    tsv.write(metadata_file, expanded_metadata_list)
+    n_data_list = len(expanded_metadata_list)
     log.info(f'Wrote {n_data_list} metadata rows to {metadata_file}')
 
 
 if __name__ == '__main__':
     date_id = timex.get_date_id()
-    backpopulate(date_id)
-    get_metadata_index(date_id)
+    # backpopulate(date_id)
     populate(date_id)
-    get_metadata_index(date_id)
