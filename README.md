@@ -36,3 +36,5 @@ pip install covid19-nuuuwan
 * [2021-08-19 08:44AM] Update Folder Structure
   * Updated README
   * Pre-Merge
+* [2021-08-19 08:45AM] Split lk-vax-center pipeline
+  * Updated README
