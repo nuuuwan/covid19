@@ -1,5 +1,6 @@
 from utils import timex
 
+from covid19.lk_vax_centers import metadata
 from covid19.lk_vax_centers.expand import expand
 from covid19.lk_vax_centers.finalize import finalize
 from covid19.lk_vax_centers.parse_pdf import parse_pdf
@@ -14,6 +15,7 @@ if __name__ == '__main__':
 
     if scrape_pdf(date_id, google_drive_file_id):
         parse_pdf(date_id)
+        metadata.backpupulate(date_id)
         expand(date_id)
         summarise(date_id)
         finalize(date_id)

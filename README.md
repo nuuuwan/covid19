@@ -53,3 +53,4 @@ pip install covid19-nuuuwan
   * Pre-Merge
 * [2021-08-19 10:08AM] lk-vax-centers: Add Meta Data
   * Updated README
+  * Added metadata to pipe

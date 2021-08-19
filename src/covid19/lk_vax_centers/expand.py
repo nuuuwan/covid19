@@ -106,7 +106,7 @@ def get_vax_center_index():
         zip(
             list(
                 map(
-                    lambda data: lk_vax_center_utils.get_vax_center_key(
+                    lambda data: lk_vax_center_utils.get_fuzzy_key(
                         data['district'],
                         data['police'],
                         data['center'],
@@ -129,7 +129,7 @@ def expand_for_data(vax_center_index, gmaps, data):
     dose1 = data['dose1']
     dose2 = data['dose2']
 
-    vax_center_key = lk_vax_center_utils.get_vax_center_key(
+    vax_center_key = lk_vax_center_utils.get_fuzzy_key(
         district, police, center
     )
     if vax_center_key in vax_center_index:
