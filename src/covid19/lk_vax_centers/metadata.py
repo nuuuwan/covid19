@@ -41,7 +41,7 @@ def backpopulate(date_id):
             if cur_date_id != date_id:
                 break
         ut -= timex.SECONDS_IN.DAY
-        
+
 
 
     metadata_list = []
@@ -178,6 +178,4 @@ if __name__ == '__main__':
     backpopulate(date_id)
     get_metadata_index(date_id)
     populate(date_id)
-    print(123)
     get_metadata_index(date_id)
-    print(456)

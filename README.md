@@ -60,3 +60,4 @@ pip install covid19-nuuuwan
   * expand complete
   * Done
   * Pre-Merge
+  * Removed logging
