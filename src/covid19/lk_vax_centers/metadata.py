@@ -77,6 +77,7 @@ def get_metadata_index(date_id):
     )
 
 
+
 if __name__ == '__main__':
     date_id = timex.get_date_id()
     backpopulate(date_id)

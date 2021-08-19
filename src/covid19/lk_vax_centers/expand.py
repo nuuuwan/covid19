@@ -88,68 +88,69 @@ def expand_for_data(metadata_index, gmaps, data):
     dose2 = data['dose2']
 
     fuzzy_key = lk_vax_center_utils.get_fuzzy_key(district, police, center)
-    if fuzzy_key in metadata_index:
-        metadata = metadata_index[fuzzy_key]
+    metadata = metadata_index[fuzzy_key]
+    return {**dict(fuzzy_key=fuzzy_key, dose1=dose1, dose2=dose2), **metadata}
 
-        district_si = metadata['district_si']
-        police_si = metadata['police_si']
-        center_si = metadata['center_si']
 
-        district_ta = metadata['district_ta']
-        police_ta = metadata['police_ta']
-        center_ta = metadata['center_ta']
-
-        lat = metadata['lat']
-        lng = metadata['lng']
-        formatted_address = metadata['formatted_address']
-
-        formatted_address_si = metadata['formatted_address_si']
-        formatted_address_ta = metadata['formatted_address_ta']
-
-        log.info(f'Expanded: {fuzzy_key} (from history)')
-
-    else:
-
-        district_si = translate_si(district)
-        police_si = translate_si(police)
-        center_si = translate_si(center)
-
-        district_ta = translate_ta(district)
-        police_ta = translate_ta(police)
-        center_ta = translate_ta(center)
-
-        lat, lng, formatted_address = get_location_info(
-            gmaps,
-            district,
-            police,
-            center,
-        )
-
-        formatted_address_si, formatted_address_ta = None, None
-        if formatted_address:
-            formatted_address_si = translate_si(formatted_address)
-            formatted_address_ta = translate_ta(formatted_address)
-
-        log.info(f'Expanded: {fuzzy_key}')
-
-    return dict(
-        district=district,
-        police=police,
-        center=center,
-        dose1=dose1,
-        dose2=dose2,
-        lat=lat,
-        lng=lng,
-        formatted_address=formatted_address,
-        district_si=district_si,
-        police_si=police_si,
-        center_si=center_si,
-        formatted_address_si=formatted_address_si,
-        district_ta=district_ta,
-        police_ta=police_ta,
-        center_ta=center_ta,
-        formatted_address_ta=formatted_address_ta,
-    )
+    #     district_si = metadata['district_si']
+    #     police_si = metadata['police_si']
+    #     center_si = metadata['center_si']
+    #
+    #     district_ta = metadata['district_ta']
+    #     police_ta = metadata['police_ta']
+    #     center_ta = metadata['center_ta']
+    #
+    #     lat = metadata['lat']
+    #     lng = metadata['lng']
+    #     formatted_address = metadata['formatted_address']
+    #
+    #     formatted_address_si = metadata['formatted_address_si']
+    #     formatted_address_ta = metadata['formatted_address_ta']
+    #
+    #     log.info(f'Expanded: {fuzzy_key} (from history)')
+    #
+    # else:
+    #
+    #     district_si = translate_si(district)
+    #     police_si = translate_si(police)
+    #     center_si = translate_si(center)
+    #
+    #     district_ta = translate_ta(district)
+    #     police_ta = translate_ta(police)
+    #     center_ta = translate_ta(center)
+    #
+    #     lat, lng, formatted_address = get_location_info(
+    #         gmaps,
+    #         district,
+    #         police,
+    #         center,
+    #     )
+    #
+    #     formatted_address_si, formatted_address_ta = None, None
+    #     if formatted_address:
+    #         formatted_address_si = translate_si(formatted_address)
+    #         formatted_address_ta = translate_ta(formatted_address)
+    #
+    #     log.info(f'Expanded: {fuzzy_key}')
+    #
+    # return dict(
+    #     district=district,
+    #     police=police,
+    #     center=center,
+    #     dose1=dose1,
+    #     dose2=dose2,
+    #     lat=lat,
+    #     lng=lng,
+    #     formatted_address=formatted_address,
+    #     district_si=district_si,
+    #     police_si=police_si,
+    #     center_si=center_si,
+    #     formatted_address_si=formatted_address_si,
+    #     district_ta=district_ta,
+    #     police_ta=police_ta,
+    #     center_ta=center_ta,
+    #     formatted_address_ta=formatted_address_ta,
+    # )
 
 
 def expand(date_id):
