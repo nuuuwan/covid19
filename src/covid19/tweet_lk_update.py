@@ -4,12 +4,8 @@ import logging
 from utils import timex, twitter
 
 from covid19 import lk_data
-from covid19.plots_lk import (
-    MW,
-    POPULATION,
-    _plot_simple,
-    _plot_with_time_window,
-)
+from covid19.plots_lk import (MW, POPULATION, _plot_simple,
+                              _plot_with_time_window)
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('covid19.twitter')

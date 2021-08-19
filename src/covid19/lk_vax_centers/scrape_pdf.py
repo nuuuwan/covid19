@@ -24,7 +24,7 @@ def get_google_drive_api_key():
     return args.google_drive_api_key
 
 
-def scrape_pdf(google_drive_file_id):
+def scrape_pdf(date_id, google_drive_file_id):
     google_drive_api_key = get_google_drive_api_key()
     if google_drive_api_key is None:
         log.error('No google_drive_api_key. Aborting.')
@@ -43,10 +43,17 @@ def scrape_pdf(google_drive_file_id):
     if not re_result:
         log.error(f'Invalid file "{file_title}"')
         return False
+
     date_str = re_result.groupdict().get('date_str')
     ut = timex.parse_time(date_str, '%d.%m.%Y')
-    date_id = timex.get_date_id(ut)
-    log.info(f'date_id = {date_id}')
+    doc_date_id = timex.get_date_id(ut)
+    log.info(f'doc_date_id = {doc_date_id}')
+
+    if doc_date_id != date_id:
+        log.error(
+            f'Invalid doc_date_id {doc_date_id} (!= {date_id}). Aborting!'
+        )
+        return False
 
     pdf_file = lk_vax_center_utils.get_file(date_id, 'pdf')
     if os.path.exists(pdf_file):

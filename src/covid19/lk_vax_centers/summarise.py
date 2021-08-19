@@ -1,11 +1,13 @@
 import os
+
 from utils import filex, timex, tsv
+
 from covid19._utils import log
 from covid19.lk_vax_centers import lk_vax_center_utils
 from covid19.lk_vax_centers.lk_vax_center_constants import VAX_DASH_URL
 
 
-def dump_summary(date_id, lang):
+def summarise_lang(date_id, lang):
     date = timex.format_time(timex.get_unixtime(), '%Y-%m-%d')
     tsv_file = lk_vax_center_utils.get_file(date_id, 'tsv')
     if not os.path.exists(tsv_file):
@@ -111,8 +113,11 @@ def dump_summary(date_id, lang):
     log.info(f'Wrote summary to {md_file}')
 
 
+def summarise(date_id):
+    for lang in ['en', 'si', 'ta']:
+        summarise_lang(date_id, lang)
+
+
 if __name__ == '__main__':
     date_id = timex.get_date_id()
-    dump_summary(date_id, 'en')
-    dump_summary(date_id, 'si')
-    dump_summary(date_id, 'ta')
+    summarise(date_id)

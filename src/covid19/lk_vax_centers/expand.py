@@ -1,9 +1,8 @@
 import argparse
 import os
 
-from deep_translator import GoogleTranslator
 import googlemaps
-
+from deep_translator import GoogleTranslator
 from utils import timex, tsv, www
 from utils.cache import cache
 

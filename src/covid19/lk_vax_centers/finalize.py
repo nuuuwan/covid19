@@ -1,5 +1,7 @@
 import os
+
 from utils import timex
+
 from covid19._utils import log
 from covid19.lk_vax_centers import lk_vax_center_utils
 

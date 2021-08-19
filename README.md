@@ -45,3 +45,4 @@ pip install covid19-nuuuwan
   * expand.py done
   * summarise.py done
   * finalize.py done
+  * Done
