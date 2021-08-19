@@ -64,3 +64,5 @@ pip install covid19-nuuuwan
   * Bug in workflow
   * Add new metadata
   * Added district data
+* [2021-08-19 11:26AM] lk-vax-centers Expand Data
+  * Updated README
