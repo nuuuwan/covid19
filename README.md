@@ -51,3 +51,5 @@ pip install covid19-nuuuwan
 * [2021-08-19 10:07AM] Add District IDs
   * Updated README
   * Pre-Merge
+* [2021-08-19 10:08AM] lk-vax-centers: Add Meta Data
+  * Updated README
