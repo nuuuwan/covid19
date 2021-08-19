@@ -54,3 +54,4 @@ pip install covid19-nuuuwan
 * [2021-08-19 10:08AM] lk-vax-centers: Add Meta Data
   * Updated README
   * Added metadata to pipe
+  * Added get_metadata_index

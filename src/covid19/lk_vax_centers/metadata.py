@@ -1,6 +1,6 @@
 import os
 
-from utils import timex, tsv, www
+from utils import timex, tsv, www, ds
 
 from covid19._utils import log
 from covid19.lk_vax_centers import lk_vax_center_utils
@@ -67,7 +67,15 @@ def backpopulate(date_id):
     n_data_list = len(metadata_list)
     log.info(f'Wrote {n_data_list} metadata rows to {metadata_file}')
 
+def get_metadata_index(date_id):
+    metadata_file = lk_vax_center_utils.get_file(date_id, 'metadata.tsv')
+    metadata_list = tsv.read(metadata_file)
+    return ds.dict_list_to_index(
+        metadata_list,
+        'fuzzy_key',
+    )
 
 if __name__ == '__main__':
     date_id = timex.get_date_id()
     backpopulate(date_id)
+    get_metadata_index(date_id)
