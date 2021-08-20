@@ -225,9 +225,9 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * MOH Office - Elpitiya - [75W7+4RC, Elpitiya, Sri Lanka](https://www.google.lk/maps/place/6.295308299999999N,80.16452129999999E) 
 * **Ambalangoda** Police Area
   * Manana Community Hall - [26M7+74H, Galle 80000, Sri Lanka](https://www.google.lk/maps/place/6.0331999N,80.2128657E) 
+## Matara District
 * **Weligama** Police Area
   * Weligama Marriott Hotel - [700 Matara Rd, Weligama 81700, Sri Lanka](https://www.google.lk/maps/place/5.972906N,80.4389922E) 
-## Matara District
 * **Deniyaya** Police Area
   * MOH Office - Kotapola - [Kotapola North, Sri Lanka](https://www.google.lk/maps/place/6.326980199999999N,80.5563109E) 
 ## Hambantota District
@@ -407,11 +407,11 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * MOH Office - Thambalagamuwa - [MOH Office, Farm Rd, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.5989738N,81.2169632E) 
 * **Serunuwara** Police Area
   * MOH Office – Serunuwara - [H6X8+JV2, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.599N,81.2172E) 
-* **Kokkadichcholai** Police Area
-  * MOH Office - Mahaladithivu - [Hospital Ln, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.5636028N,81.239584E) 
-* **Kaluwanchikudy** Police Area
-  * Kaluwanchikudy Hospital - [C27X+3GF, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.412687499999999N,81.04879799999999E) 
 ## Batticaloa District
+* **Kokkadichcholai** Police Area
+  * MOH Office - Mahaladithivu - [MPMJ+C8J, Kattankudy, Sri Lanka](https://www.google.lk/maps/place/7.6836N,81.7308E) 
+* **Kaluwanchikudy** Police Area
+  * Kaluwanchikudy Hospital - [GQ8P+V3V, Kaluwanchikudy, Sri Lanka](https://www.google.lk/maps/place/7.5172N,81.7852E) 
 * **Valachchenai** Police Area
   * MOH Office - Valachchenai - [WG6M+W46, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.9123N,81.5328E) 
   * MOH Office – Oddamavadi - [WG6M+W46, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.9123N,81.5328E) 
