@@ -30,4 +30,4 @@ def get_correct_district(district, police):
     if police in ['Bibila']:
         district = 'Moneragala'
 
-    return district    
+    return district

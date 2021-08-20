@@ -88,3 +88,4 @@ pip install covid19-nuuuwan
   * Done
 * [2021-08-20 08:58AM] Normalize Meta Data First
   * Updated README
+  * Added find_metadata

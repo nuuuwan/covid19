@@ -12,5 +12,6 @@ def get_fuzzy_key(district, police, center):
     s = re.sub(r'[AEIOU]', '', s)
     return s
 
+
 def get_fuzzy_fuzzy_key(police, center):
     return get_fuzzy_key('', police, center)

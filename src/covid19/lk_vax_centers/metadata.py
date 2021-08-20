@@ -11,6 +11,49 @@ from covid19.lk_vax_centers import (geo_utils, lk_vax_center_utils,
 from covid19.lk_vax_centers.lk_vax_center_constants import REMOTE_DATA_DIR
 
 
+def find_metadata(district, police, center, gmaps):
+    log.info(f'Finding metadata for {district.upper()}/{police}/{center}')
+    fuzzy_key = lk_vax_center_utils.get_fuzzy_key(district, police, center)
+
+    district_si = translate_utils.translate_si(district)
+    police_si = translate_utils.translate_si(police)
+    center_si = translate_utils.translate_si(center)
+
+    district_ta = translate_utils.translate_ta(district)
+    police_ta = translate_utils.translate_ta(police)
+    center_ta = translate_utils.translate_ta(center)
+
+    lat, lng, formatted_address = geo_utils.get_location_info(
+        gmaps,
+        district,
+        police,
+        center,
+    )
+
+    formatted_address_si, formatted_address_ta = None, None
+    if formatted_address:
+        formatted_address_si = translate_utils.translate_si(formatted_address)
+        formatted_address_ta = translate_utils.translate_ta(formatted_address)
+
+    return dict(
+        fuzzy_key=fuzzy_key,
+        district=district,
+        police=police,
+        center=center,
+        lat=lat,
+        lng=lng,
+        formatted_address=formatted_address,
+        district_si=district_si,
+        police_si=police_si,
+        center_si=center_si,
+        formatted_address_si=formatted_address_si,
+        district_ta=district_ta,
+        police_ta=police_ta,
+        center_ta=center_ta,
+        formatted_address_ta=formatted_address_ta,
+    )
+
+
 def get_google_drive_api_key():
     """Construct Twitter from Args."""
     parser = argparse.ArgumentParser(description='lk_vax_centers')
@@ -119,52 +162,13 @@ def populate(date_id):
         police = data['police']
         center = data['center']
         fuzzy_key = lk_vax_center_utils.get_fuzzy_key(district, police, center)
-
         if fuzzy_key not in metadata_index:
-            log.info(f'Finding metadata for {district.upper()}/{police}/{center}')
-
-            district_si = translate_utils.translate_si(district)
-            police_si = translate_utils.translate_si(police)
-            center_si = translate_utils.translate_si(center)
-
-            district_ta = translate_utils.translate_ta(district)
-            police_ta = translate_utils.translate_ta(police)
-            center_ta = translate_utils.translate_ta(center)
-
-            lat, lng, formatted_address = geo_utils.get_location_info(
-                gmaps,
+            metadata_index[fuzzy_key] = find_metadata(
                 district,
                 police,
                 center,
+                gmaps,
             )
-
-            formatted_address_si, formatted_address_ta = None, None
-            if formatted_address:
-                formatted_address_si = translate_utils.translate_si(
-                    formatted_address
-                )
-                formatted_address_ta = translate_utils.translate_ta(
-                    formatted_address
-                )
-
-            meta_d = dict(
-                fuzzy_key=fuzzy_key,
-                district=district,
-                police=police,
-                center=center,
-                lat=lat,
-                lng=lng,
-                formatted_address=formatted_address,
-                district_si=district_si,
-                police_si=police_si,
-                center_si=center_si,
-                formatted_address_si=formatted_address_si,
-                district_ta=district_ta,
-                police_ta=police_ta,
-                center_ta=center_ta,
-                formatted_address_ta=formatted_address_ta,
-            )
-            metadata_index[fuzzy_key] = meta_d
 
     metadata_list = list(metadata_index.values())
 
