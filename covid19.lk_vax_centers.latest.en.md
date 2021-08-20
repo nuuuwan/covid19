@@ -170,9 +170,9 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * Mahanama Vidyalaya - [396, 17 Peradeniya Rd, Kandy 20000, Sri Lanka](https://www.google.lk/maps/place/7.2722N,80.6073E) 
   * Gurudeniya Central College - [Talatuoya-Gurudeniya, Thalathuoya, Sri Lanka](https://www.google.lk/maps/place/7.2525063N,80.69064259999999E) 
   * Mahamaya Balika Vidyalaya - [Sangaraja Mawatha, Kandy, Sri Lanka](https://www.google.lk/maps/place/7.2866382N,80.6456597E) 
-* **Kotmale** Police Area
-  * Kotmale Hospital - [William Gopallawa Mawatha, Kandy 20000, Sri Lanka](https://www.google.lk/maps/place/7.2876155N,80.6322636E) 
 ## Nuwara Eliya District
+* **Kotmale** Police Area
+  * Kotmale Hospital - [Nuwara Eliya-Uda Pussellawa Rd, Nuwara Eliya 22200, Sri Lanka](https://www.google.lk/maps/place/6.974102999999999N,80.7801506E) 
 * **Nanuoya** Police Area
   * Pradeshiya Shabha - Nanuoya - [Nanuoya Rd, Nanuoya, Sri Lanka](https://www.google.lk/maps/place/6.941999999999999N,80.74539450000002E) 
 ## Matale District
@@ -216,8 +216,9 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * Ella Halpe Tea Factory - [Uva Halpewatte Tea Factory, Badulla Road, Hela Halpe, Ella, Sri Lanka 90090, Sri Lanka](https://www.google.lk/maps/place/6.8892883N,81.0345068E) 
 * **Haputale** Police Area
   * MOH Office – Haputale - [Haputalegama Rd, Diyatalawa, Sri Lanka](https://www.google.lk/maps/place/6.8043N,80.954E) 
+## Moneragala District
 * **Bibila** Police Area
-  * Bibila Cultural Centre - [Badulla, Sri Lanka](https://www.google.lk/maps/place/6.993400899999999N,81.0549815E) 
+  * Bibila Cultural Centre - [Bibile, Sri Lanka](https://www.google.lk/maps/place/7.162408999999999N,81.22158999999999E) 
 ## Galle District
 * **Elpitiya** Police Area
   * Elpitiya Base Hospital - [Elpitiya 80400, Sri Lanka](https://www.google.lk/maps/place/6.293299600000001N,80.1640656E) 
