@@ -81,3 +81,4 @@ pip install covid19-nuuuwan
   * #AddrBugs Elpitiya, Bibila
   * #AddrBug Kalutara South
   * 
+  * #AddrBug Weligama
