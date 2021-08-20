@@ -97,3 +97,5 @@ pip install covid19-nuuuwan
   * Re-added police station
   * Readded police stations
   * Update README
+* [2021-08-20 01:24PM] lk-vax-centers Split Translation and Geo
+  * Updated README
