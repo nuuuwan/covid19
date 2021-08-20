@@ -98,3 +98,4 @@ pip install covid19-nuuuwan
   * Updated README
   * Added examples stdev=2
   * 
+  * Done
