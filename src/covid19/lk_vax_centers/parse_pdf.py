@@ -6,7 +6,7 @@ import camelot
 from utils import timex, tsv
 
 from covid19._utils import log
-from covid19.lk_vax_centers import lk_vax_center_utils
+from covid19.lk_vax_centers import lk_vax_center_utils, metadata_fix
 
 logging.getLogger('pdfminer').setLevel(logging.ERROR)
 logging.getLogger('camelot').setLevel(logging.ERROR)
@@ -44,37 +44,7 @@ def parse_pdf(date_id):
             elif police2:
                 police = police2
 
-            if police in ['Kalutara South']:
-                district = 'Kalutara'
-
-            if police in ['Elpitiya']:
-                district = 'Galle'
-            if police in ['Weligama']:
-                district = 'Matara'
-
-            if police in ['Kotmale']:
-                district = 'Nuwara Eliya'
-
-            if police in ['Kotmale']:
-                district = 'Nuwara Eliya'
-            if police in ['Mullaitivu']:
-                district = 'Mullaitivu'
-            if police in ['Kilinochchi']:
-                district = 'Kilinochchi'
-            if police in ['Adampan']:
-                district = 'Mannar'
-
-            if police in ['Valachchenai', 'Kokkadichcholai', 'Kaluwanchikudy']:
-                district = 'Batticaloa'
-
-            if police in ['Kuliyapitiya', 'Nikaweratiya', 'Kurunegala']:
-                district = 'Kurunegala'
-            if police in ['Chilaw']:
-                district = 'Puttalam'
-
-            if police in ['Bibila']:
-                district = 'Moneragala'
-
+            district = metadata_fix.get_correct_district(district, police)
 
             if not district and prev_district:
                 district = prev_district

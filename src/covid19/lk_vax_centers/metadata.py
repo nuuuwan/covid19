@@ -27,6 +27,7 @@ def get_google_drive_api_key():
 def backpopulate(date_id):
     ut = timex.parse_time(date_id, '%Y%m%d')
     metadata_index = {}
+
     while True:
         cur_date_id = timex.get_date_id(ut)
         remote_data_url = os.path.join(
@@ -39,8 +40,6 @@ def backpopulate(date_id):
             log.info(f'Read {n_centers} Vax Centers from {remote_data_url}')
 
             for data in data_list:
-                if data['center'] == 'Elpitiya Base Hospital':
-                    print(cur_date_id, data)
                 fuzzy_key = lk_vax_center_utils.get_fuzzy_key(
                     data['district'],
                     data['police'],

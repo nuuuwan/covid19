@@ -84,3 +84,4 @@ pip install covid19-nuuuwan
   * #AddrBug Weligama
   * #AddrBug Kaluwanchikudy Kokkadichcholai 
   * metadata fixes
+  * 
