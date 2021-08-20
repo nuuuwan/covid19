@@ -91,3 +91,4 @@ pip install covid19-nuuuwan
   * Added find_metadata
   * Done
   * Removed accidental files
+  * Pre-Merge
