@@ -109,3 +109,4 @@ pip install covid19-nuuuwan
   * Updated README
   * Added district/police
   * Test i18n
+  * Pre-Merge
