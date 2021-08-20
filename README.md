@@ -75,3 +75,4 @@ pip install covid19-nuuuwan
   * Updated README
   * Pre-Merge
   * #AddressBugs Kothmale
+  * #AddressBugs Kothmale

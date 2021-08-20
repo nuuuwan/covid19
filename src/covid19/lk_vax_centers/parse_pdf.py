@@ -44,20 +44,23 @@ def parse_pdf(date_id):
             elif police2:
                 police = police2
 
-            if police in ['Kuliyapitiya', 'Nikaweratiya', 'Kurunegala']:
-                district = 'Kurunegala'
+            if police in ['Kothmale']:
+                district = 'Nuwara Eliya'
             if police in ['Mullaitivu']:
                 district = 'Mullaitivu'
             if police in ['Kilinochchi']:
                 district = 'Kilinochchi'
             if police in ['Adampan']:
                 district = 'Mannar'
+
+            if police in ['Valachchenai']:
+                district = 'Batticaloa'      
+
+            if police in ['Kuliyapitiya', 'Nikaweratiya', 'Kurunegala']:
+                district = 'Kurunegala'
             if police in ['Chilaw']:
                 district = 'Puttalam'
-            if police in ['Valachchenai']:
-                district = 'Batticaloa'
-            if police in ['Kothmale']:
-                district = 'Nuwara Eliya'
+
 
             if not district and prev_district:
                 district = prev_district
