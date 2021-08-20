@@ -120,7 +120,7 @@ def populate(date_id):
         fuzzy_key = lk_vax_center_utils.get_fuzzy_key(district, police, center)
 
         if fuzzy_key not in metadata_index:
-            log.info(f'Finding metadata for {fuzzy_key}')
+            log.info(f'Finding metadata for {district.upper()}/{police}/{center}')
 
             district_si = translate_utils.translate_si(district)
             police_si = translate_utils.translate_si(police)
