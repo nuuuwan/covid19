@@ -1,5 +1,5 @@
 import os
-
+import json
 from utils import timex, tsv
 
 from covid19._utils import log
@@ -32,7 +32,7 @@ def expand_for_data(gmap, data):
     data['formatted_address'] = formatted_address
     data['location_type'] = location_type
 
-    log.info(data)
+    print(json.dumps(data, indent=2))
     return data
 
 
