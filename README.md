@@ -80,3 +80,4 @@ pip install covid19-nuuuwan
   * Minor
   * #AddrBugs Elpitiya, Bibila
   * #AddrBug Kalutara South
+  * 
