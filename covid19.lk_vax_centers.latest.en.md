@@ -111,7 +111,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * Thilladi Muslim Maha Vidyalaya - [2R3V+QQ9, Puttalam, Sri Lanka](https://www.google.lk/maps/place/8.004413099999999N,79.844478E) 
   * Ananda National College - [Puttalam - Colombo Rd, Chilaw, Sri Lanka](https://www.google.lk/maps/place/7.571297299999999N,79.79912259999999E) 
   * Fathima National School - [37 Poles Rd, Puttalam 61300, Sri Lanka](https://www.google.lk/maps/place/8.0327565N,79.83285710000001E) 
-  * Visadarrama Viharaya - [Unnamed Road, Paramakanda, Sri Lanka](https://www.google.lk/maps/place/7.907084299999999N,80.002377E) 
+  * Visadarrama Viharaya - (Location Unknown) 
   * Manalgundu Muslim Vidyalaya - [Mannar Rd, Puttalam 61300, Sri Lanka](https://www.google.lk/maps/place/8.0745794N,79.83771089999999E) 
   * Palavi Sinhala Vidyalaya - [Palavi-Kalpitiya Rd, Sri Lanka](https://www.google.lk/maps/place/8.2026846N,79.7371931E) 
   * Divisional Secretariat Office - Puttalam - [2RJP+65G, Puttalam, Sri Lanka](https://www.google.lk/maps/place/8.0305622N,79.8354518E) 
@@ -133,7 +133,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * District Hospital - Kalpitiya - [6QM8+JJQ, Kalpitiya, Sri Lanka](https://www.google.lk/maps/place/8.234086900000001N,79.7666209E) 
   * Al Aksha National School - Kalpitiya - [Al Aqsa School Rd, Kalpitiya, Sri Lanka](https://www.google.lk/maps/place/8.231092199999999N,79.76204039999999E) 
   * Kandakkuliya Sinhala Vidyalaya - [7V49+C5M, Eluwankulama, Sri Lanka](https://www.google.lk/maps/place/8.256083N,79.8679346E) 
-  * St. Peter's College - Palakudawa - [Kalpitiya Rd, Kalpitiya 058610, Sri Lanka](https://www.google.lk/maps/place/8.2351449N,79.7645665E) 
+  * St. Peter's College - Palakudawa - (Location Unknown) 
   * Musalpitiya Muslim Maha Vidyalaya - [Etalai, Sri Lanka](https://www.google.lk/maps/place/8.1023671N,79.73026019999999E) 
 * **Norochcholai** Police Area
   * Daluwa St. Anthony's College - [XQH4+M6F, Puttalam, Sri Lanka](https://www.google.lk/maps/place/7.9791757N,79.7555364E) 
@@ -164,8 +164,8 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Gampola** Police Area
   * Doluwa Maha Vidyalaya - [5JP5+G82, Doluwa, Sri Lanka](https://www.google.lk/maps/place/7.1863N,80.6083E) 
 * **Udadumbara** Police Area
-  * Udadumbara Secondary College - [Udadumbara - Madiwaka Rd, Udadumbara, Sri Lanka](https://www.google.lk/maps/place/7.3166N,80.8785E) 
-  * Mahinda Primary School - [8W43+GCV, Udadumbara, Sri Lanka](https://www.google.lk/maps/place/7.3063719N,80.9035577E) 
+  * Udadumbara Secondary College - (Location Unknown) 
+  * Mahinda Primary School - (Location Unknown) 
 * **Kandy** Police Area
   * Mahanama Vidyalaya - [396, 17 Peradeniya Rd, Kandy 20000, Sri Lanka](https://www.google.lk/maps/place/7.2722N,80.6073E) 
   * Gurudeniya Central College - [Talatuoya-Gurudeniya, Thalathuoya, Sri Lanka](https://www.google.lk/maps/place/7.2525063N,80.69064259999999E) 
@@ -190,7 +190,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Matale** Police Area
   * Aluvihara Aloka Rajamaha Viharaya - [Aluvihare, Sri Lanka](https://www.google.lk/maps/place/7.497534600000001N,80.62436629999999E) 
   * St. Thomas College - [Kings St, Matale, Sri Lanka](https://www.google.lk/maps/place/7.4705N,80.6212E) 
-  * Katudeniya Primary School - [Kandy - Jaffna Hwy, Matale 21000, Sri Lanka](https://www.google.lk/maps/place/7.4627889N,80.6262106E) 
+  * Katudeniya Primary School - (Location Unknown) 
   * Leliabe Vidyalaya - [GJ5X+R3M, Matale, Sri Lanka](https://www.google.lk/maps/place/7.5095994N,80.64767859999999E) 
   * Thenna Maha Vidyalaya - [GH5X+522, Matale, Sri Lanka](https://www.google.lk/maps/place/7.5078985N,80.59751229999999E) 
 * **Mahawela** Police Area
@@ -212,7 +212,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Uva Paranagama** Police Area
   * Uva Paranagama Hospital - [Rendapola-Galahagama-Ambagasdowa Rd, Himbiliyagahamadiththa, Sri Lanka](https://www.google.lk/maps/place/6.9380755N,80.8905252E) 
 * **Haldummulla** Police Area
-  * Ohio Udaweriya College - [Colombo - Batticaloa Hwy, Sri Lanka](https://www.google.lk/maps/place/6.7621785N,80.8858571E) 
+  * Ohio Udaweriya College - (Location Unknown) 
   * Ella Halpe Tea Factory - [Uva Halpewatte Tea Factory, Badulla Road, Hela Halpe, Ella, Sri Lanka 90090, Sri Lanka](https://www.google.lk/maps/place/6.8892883N,81.0345068E) 
 * **Haputale** Police Area
   * MOH Office – Haputale - [Haputalegama Rd, Diyatalawa, Sri Lanka](https://www.google.lk/maps/place/6.8043N,80.954E) 
@@ -238,11 +238,11 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Tangalle** Police Area
   * MOH Office – Tangalle - [2QFW+F75, Tangalle, Sri Lanka](https://www.google.lk/maps/place/6.0236N,80.7957E) 
 * **Katuwana** Police Area
-  * Katuwana Primary School - [Urubokka Rd, Katuwana, Sri Lanka](https://www.google.lk/maps/place/6.2697218N,80.6909635E) 
+  * Katuwana Primary School - (Location Unknown) 
 * **Agunukolapelessa** Police Area
   * MOH Office - Agunukolapelessa - [Unnamed Road, Agunukolapelessa, Sri Lanka](https://www.google.lk/maps/place/6.164690999999999N,80.8989627E) 
 * **Sooriyawewa** Police Area
-  * Andawewa Viharaya - [Bodagama-Hambegamuwa-Kaltota Rd, Sri Lanka](https://www.google.lk/maps/place/6.4391492N,81.0675479E) 
+  * Andawewa Viharaya - (Location Unknown) 
   * Thelawilla Sri Pushparamaya - [62GR+VVH, Hambantota, Sri Lanka](https://www.google.lk/maps/place/6.227190999999999N,81.0422282E) 
 * **Beliatta** Police Area
   * MOH Office – Beliatta - [3P2R+PMQ, Hambantota, Sri Lanka](https://www.google.lk/maps/place/6.0518N,80.7417E) 
@@ -297,7 +297,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Warakapola** Police Area
   * MOH Office - Warakapola - [65GX+J44, Warakapola, Sri Lanka](https://www.google.lk/maps/place/7.2265012N,80.1978177E) 
 * **Yatiyantota** Police Area
-  * Ganepalla Primary School - [Garagoda, යටියන්තොට, Sri Lanka](https://www.google.lk/maps/place/7.0272068N,80.2907529E) 
+  * Ganepalla Primary School - (Location Unknown) 
   * Gonagamuwa Viharaya - [3CMH+7V5, Kegalle, Sri Lanka](https://www.google.lk/maps/place/7.083129899999999N,80.42974079999999E) 
   * Paramalathenna Viharaya - [Colombo - Kandy Rd, Mawanella, Sri Lanka](https://www.google.lk/maps/place/7.250057399999999N,80.45430379999999E) 
   * Kirikohuthenna Community Hall - [89FQ+CP8, Rambukkana, Sri Lanka](https://www.google.lk/maps/place/7.323532900000001N,80.3893176E) 
@@ -396,7 +396,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * Divisional Hospital - Kuchchaveli - [R472+WW9, Kuchchaveli, Sri Lanka](https://www.google.lk/maps/place/8.8148N,81.1024E) 
   * Divisional Hospital – Nilaveli - [M5JV+CF6, Nilaveli, Sri Lanka](https://www.google.lk/maps/place/8.681N,81.1936E) 
 * **Pulmoddai** Police Area
-  * Pulmoddai Base Hospital - [WXRM+F7J, Pulmoddai, Sri Lanka](https://www.google.lk/maps/place/8.9412N,80.9831E) 
+  * Pulmoddai Base Hospital - [WXRM+F7J, Pulmoddai, Sri Lanka](https://www.google.lk/maps/place/8.9412038N,80.98313920000001E) 
 * **Harbour Police** Police Area
   * MOH Office – Trincomalee - [MOH Office, Farm Rd, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.599N,81.217E) 
 * **Uppuveli** Police Area
@@ -411,7 +411,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Kokkadichcholai** Police Area
   * MOH Office - Mahaladithivu - [MPMJ+C8J, Kattankudy, Sri Lanka](https://www.google.lk/maps/place/7.6836N,81.7308E) 
 * **Kaluwanchikudy** Police Area
-  * Kaluwanchikudy Hospital - [GQ8P+V3V, Kaluwanchikudy, Sri Lanka](https://www.google.lk/maps/place/7.5172N,81.7852E) 
+  * Kaluwanchikudy Hospital - [GQ8P+V3V, Kaluwanchikudy, Sri Lanka](https://www.google.lk/maps/place/7.5172402N,81.7851837E) 
 * **Valachchenai** Police Area
   * MOH Office - Valachchenai - [WG6M+W46, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.9123N,81.5328E) 
   * MOH Office – Oddamavadi - [WG6M+W46, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.9123N,81.5328E) 
