@@ -107,3 +107,4 @@ pip install covid19-nuuuwan
   * Pre-Merge
 * [2021-08-20 02:35PM] Rationalize Data
   * Updated README
+  * Added district/police

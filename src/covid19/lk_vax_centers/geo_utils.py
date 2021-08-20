@@ -40,7 +40,6 @@ def get_location_info_inner(gmaps, search_text):
     geocode_results = get_location_info_inner_inner(search_text)
     if is_valid_geocode_results(geocode_results):
         geocode_result = geocode_results[0]
-        print(geocode_result)
         lat = geocode_result['geometry']['location']['lat']
         lng = geocode_result['geometry']['location']['lng']
         formatted_address = geocode_result['formatted_address']
@@ -54,29 +53,28 @@ def get_location_info(gmaps, district, police, center):
         center = f'{police} {center}'
 
     if 'mobile' not in center.lower():
-        search_text = f'{center}'
-        geocode_results = get_location_info_inner(gmaps, search_text)
-        if geocode_results:
-            return geocode_results + ['center']
 
-        search_text = f'{center}, Sri Lanka'
+        if 'moh' in center.lower() or 'hospital' in center.lower():
+            search_text = f'{center}'
+            geocode_results = get_location_info_inner(gmaps, search_text)
+            if geocode_results:
+                return geocode_results
+
+        search_text = f'{center}, {police}, {district} District, Sri Lanka'
         geocode_results = get_location_info_inner(gmaps, search_text)
         if geocode_results:
-            return geocode_results + ['center']
+            return geocode_results
 
         search_text = f'{center}, {district} District, Sri Lanka'
         geocode_results = get_location_info_inner(gmaps, search_text)
         if geocode_results:
-            return geocode_results + ['center']
+            return geocode_results
 
-    search_text = f'{police} Police Station, {district} District, Sri Lanka'
-    geocode_results = get_location_info_inner(gmaps, search_text)
-    if geocode_results:
-        return geocode_results + ['police']
+        search_text = f'{center}, Sri Lanka'
+        geocode_results = get_location_info_inner(gmaps, search_text)
+        if geocode_results:
+            return geocode_results
 
-    search_text = f'{district} District, Sri Lanka'
-    geocode_results = get_location_info_inner(gmaps, search_text)
-    if geocode_results:
-        return geocode_results + ['district']
 
-    return None, None, None, 'unknown'
+
+    return None, None, None
