@@ -133,7 +133,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * District Hospital - Kalpitiya - [6QM8+JJQ, Kalpitiya, Sri Lanka](https://www.google.lk/maps/place/8.234086900000001N,79.7666209E) 
   * Al Aksha National School - Kalpitiya - [Al Aqsa School Rd, Kalpitiya, Sri Lanka](https://www.google.lk/maps/place/8.231092199999999N,79.76204039999999E) 
   * Kandakkuliya Sinhala Vidyalaya - [7V49+C5M, Eluwankulama, Sri Lanka](https://www.google.lk/maps/place/8.256083N,79.8679346E) 
-  * St. Peter's College - Palakudawa - (Location Unknown) 
+  * St. Peter's College - Palakudawa - [Kalpitiya Rd, Kalpitiya 058610, Sri Lanka](https://www.google.lk/maps/place/8.2351449N,79.7645665E) 
   * Musalpitiya Muslim Maha Vidyalaya - [Etalai, Sri Lanka](https://www.google.lk/maps/place/8.1023671N,79.73026019999999E) 
 * **Norochcholai** Police Area
   * Daluwa St. Anthony's College - [XQH4+M6F, Puttalam, Sri Lanka](https://www.google.lk/maps/place/7.9791757N,79.7555364E) 
@@ -164,7 +164,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Gampola** Police Area
   * Doluwa Maha Vidyalaya - [5JP5+G82, Doluwa, Sri Lanka](https://www.google.lk/maps/place/7.1863N,80.6083E) 
 * **Udadumbara** Police Area
-  * Udadumbara Secondary College - (Location Unknown) 
+  * Udadumbara Secondary College - [Udadumbara - Madiwaka Rd, Udadumbara, Sri Lanka](https://www.google.lk/maps/place/7.3166N,80.8785E) 
   * Mahinda Primary School - (Location Unknown) 
 * **Kandy** Police Area
   * Mahanama Vidyalaya - [396, 17 Peradeniya Rd, Kandy 20000, Sri Lanka](https://www.google.lk/maps/place/7.2722N,80.6073E) 
@@ -190,7 +190,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Matale** Police Area
   * Aluvihara Aloka Rajamaha Viharaya - [Aluvihare, Sri Lanka](https://www.google.lk/maps/place/7.497534600000001N,80.62436629999999E) 
   * St. Thomas College - [Kings St, Matale, Sri Lanka](https://www.google.lk/maps/place/7.4705N,80.6212E) 
-  * Katudeniya Primary School - (Location Unknown) 
+  * Katudeniya Primary School - [Kandy - Jaffna Hwy, Matale 21000, Sri Lanka](https://www.google.lk/maps/place/7.4627889N,80.6262106E) 
   * Leliabe Vidyalaya - [GJ5X+R3M, Matale, Sri Lanka](https://www.google.lk/maps/place/7.5095994N,80.64767859999999E) 
   * Thenna Maha Vidyalaya - [GH5X+522, Matale, Sri Lanka](https://www.google.lk/maps/place/7.5078985N,80.59751229999999E) 
 * **Mahawela** Police Area
@@ -238,7 +238,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Tangalle** Police Area
   * MOH Office – Tangalle - [2QFW+F75, Tangalle, Sri Lanka](https://www.google.lk/maps/place/6.0236N,80.7957E) 
 * **Katuwana** Police Area
-  * Katuwana Primary School - (Location Unknown) 
+  * Katuwana Primary School - [Urubokka Rd, Katuwana, Sri Lanka](https://www.google.lk/maps/place/6.2697218N,80.6909635E) 
 * **Agunukolapelessa** Police Area
   * MOH Office - Agunukolapelessa - [Unnamed Road, Agunukolapelessa, Sri Lanka](https://www.google.lk/maps/place/6.164690999999999N,80.8989627E) 
 * **Sooriyawewa** Police Area
@@ -297,7 +297,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Warakapola** Police Area
   * MOH Office - Warakapola - [65GX+J44, Warakapola, Sri Lanka](https://www.google.lk/maps/place/7.2265012N,80.1978177E) 
 * **Yatiyantota** Police Area
-  * Ganepalla Primary School - (Location Unknown) 
+  * Ganepalla Primary School - [Garagoda, යටියන්තොට, Sri Lanka](https://www.google.lk/maps/place/7.0272068N,80.2907529E) 
   * Gonagamuwa Viharaya - [3CMH+7V5, Kegalle, Sri Lanka](https://www.google.lk/maps/place/7.083129899999999N,80.42974079999999E) 
   * Paramalathenna Viharaya - [Colombo - Kandy Rd, Mawanella, Sri Lanka](https://www.google.lk/maps/place/7.250057399999999N,80.45430379999999E) 
   * Kirikohuthenna Community Hall - [89FQ+CP8, Rambukkana, Sri Lanka](https://www.google.lk/maps/place/7.323532900000001N,80.3893176E) 
