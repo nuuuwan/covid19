@@ -93,3 +93,4 @@ pip install covid19-nuuuwan
   * Removed accidental files
   * Pre-Merge
   * Merged
+  * Minor: metadata_validate.py
