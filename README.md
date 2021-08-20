@@ -108,3 +108,4 @@ pip install covid19-nuuuwan
 * [2021-08-20 02:35PM] Rationalize Data
   * Updated README
   * Added district/police
+  * Test i18n

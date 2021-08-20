@@ -33,8 +33,6 @@ def expand_i18n_for_data(data):
     data['formatted_address_si'] = formatted_address_si
     data['formatted_address_ta'] = formatted_address_ta
 
-    print(json.dumps(data, indent=2))
-
     return data
 
 
