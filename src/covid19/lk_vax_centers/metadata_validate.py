@@ -37,29 +37,31 @@ def metadata_validate(date_id):
             )
         )
 
-        mean_lat = statistics.mean(lat_list)
-        stdev_lat = statistics.stdev(lat_list)
-        mean_lng = statistics.mean(lng_list)
-        stdev_lng = statistics.stdev(lng_list)
+        n = len(lat_list)
+        if n > 1:
+            mean_lat = statistics.mean(lat_list)
+            stdev_lat = statistics.stdev(lat_list)
+            mean_lng = statistics.mean(lng_list)
+            stdev_lng = statistics.stdev(lng_list)
 
-        for meta_d in d_metadata_list:
-            lat = (float)(meta_d['lat'])
-            lng = (float)(meta_d['lng'])
-            z_lat = (lat - mean_lat) / stdev_lat
-            z_lng = (lng - mean_lng) / stdev_lng
-            if abs(z_lat) > 3 or abs(z_lng) > 3:
-                center = meta_d['center']
-                police = meta_d['police']
-                district = meta_d['district']
+            for meta_d in d_metadata_list:
+                lat = (float)(meta_d['lat'])
+                lng = (float)(meta_d['lng'])
+                z_lat = (lat - mean_lat) / stdev_lat
+                z_lng = (lng - mean_lng) / stdev_lng
+                if abs(z_lat) > 3 or abs(z_lng) > 3:
+                    center = meta_d['center']
+                    police = meta_d['police']
+                    district = meta_d['district']
 
-                print(f'\t{z_lat}\t{z_lng}\t{center}\t{police}')
-                inaccurate_centers_list.append(
-                    dict(
-                        district=district,
-                        police=police,
-                        center=center,
+                    print(f'\t{z_lat}\t{z_lng}\t{center}\t{police}')
+                    inaccurate_centers_list.append(
+                        dict(
+                            district=district,
+                            police=police,
+                            center=center,
+                        )
                     )
-                )
     inaccurate_centers_file = lk_vax_center_utils.get_file(
         date_id, 'inaccurate_centers.tsv'
     )
@@ -70,5 +72,5 @@ def metadata_validate(date_id):
 
 if __name__ == '__main__':
     date_id = '20210820'
-    # metadata.backpopulate(date_id)
-    metadata_validate(date_id)
+    metadata.backpopulate(date_id)
+    # metadata_validate(date_id)

@@ -6,7 +6,7 @@ def get_file(date_id, ext):
 
 
 def get_fuzzy_key(district, police, center):
-    s = f'{district.upper()}/{police}/{center}'
+    s = f'{district}{police}{center}'
     s = s.upper()
     s = re.sub(r'[^A-Z]', '', s)
     s = re.sub(r'[AEIOU]', '', s)

@@ -25,8 +25,8 @@ def get_google_drive_api_key():
 
 
 def backpopulate(date_id):
-    all_data_list = []
     ut = timex.parse_time(date_id, '%Y%m%d')
+    metadata_index = {}
     while True:
         cur_date_id = timex.get_date_id(ut)
         remote_data_url = os.path.join(
@@ -37,23 +37,26 @@ def backpopulate(date_id):
             data_list = www.read_tsv(remote_data_url)
             n_centers = len(data_list)
             log.info(f'Read {n_centers} Vax Centers from {remote_data_url}')
-            all_data_list += data_list
+
+            for data in data_list:
+                if data['center'] == 'Elpitiya Base Hospital':
+                    print(cur_date_id, data)
+                fuzzy_key = lk_vax_center_utils.get_fuzzy_key(
+                    data['district'],
+                    data['police'],
+                    data['center'],
+                )
+                if fuzzy_key in metadata_index:
+                    continue
+                metadata_index[fuzzy_key] = data
+
         else:
             if cur_date_id != date_id:
                 break
         ut -= timex.SECONDS_IN.DAY
 
     metadata_list = []
-    add_set = set()
-    for data in all_data_list:
-        fuzzy_key = lk_vax_center_utils.get_fuzzy_key(
-            data['district'],
-            data['police'],
-            data['center'],
-        )
-        if fuzzy_key in add_set:
-            continue
-
+    for fuzzy_key, data in metadata_index.items():
         meta_d = dict(
             fuzzy_key=fuzzy_key,
             district=data['district'],
@@ -72,7 +75,6 @@ def backpopulate(date_id):
             formatted_address_ta=data['formatted_address_ta'],
         )
         metadata_list.append(meta_d)
-        add_set.add(fuzzy_key)
 
     metadata_list = sorted(
         metadata_list,
