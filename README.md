@@ -101,3 +101,4 @@ pip install covid19-nuuuwan
   * Updated README
   * Parse1
   * Parse1
+  * Added CACHE_DIR

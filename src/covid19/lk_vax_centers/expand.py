@@ -1,5 +1,5 @@
 import os
-import json
+
 from utils import timex, tsv
 
 from covid19._utils import log
@@ -32,7 +32,6 @@ def expand_for_data(gmap, data):
     data['formatted_address'] = formatted_address
     data['location_type'] = location_type
 
-    print(json.dumps(data, indent=2))
     return data
 
 
@@ -42,7 +41,7 @@ def expand(date_id):
     if not os.path.exists(tsv_basic_file):
         log.error(f'{tsv_basic_file} does not exist. Aborting.')
         return False
-    data_list = tsv.read(tsv_basic_file)[:10]
+    data_list = tsv.read(tsv_basic_file)
 
     gmaps = metadata.get_gmaps()
     expanded_data_list = list(
