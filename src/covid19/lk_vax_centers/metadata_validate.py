@@ -69,6 +69,6 @@ def metadata_validate(date_id):
 
 
 if __name__ == '__main__':
-    date_id = '20210819'
-    metadata.backpopulate(date_id)
+    date_id = '20210820'
+    # metadata.backpopulate(date_id)
     metadata_validate(date_id)
