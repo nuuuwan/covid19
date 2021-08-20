@@ -118,3 +118,4 @@ pip install covid19-nuuuwan
   * Updated README
   * expand_i18n test
   * expand_i18n tested
+  * Done

@@ -39,7 +39,7 @@ def summarise_lang(date_id, lang):
         source_str = 'Source Website'
 
     md_lines = [
-        f'# {title} ({date})',
+        f'# 🦠 {title} ({date})',
         '',
         f'{source_str}: [{VAX_DASH_URL}]({VAX_DASH_URL})',
         '',
@@ -59,6 +59,8 @@ def summarise_lang(date_id, lang):
             dose_str = 'මාත්‍රාව'
             str_1st = '1වන'
             str_2nd = '2වන'
+            location_unknown_str = 'ලිපිනය නොදනී'
+            location_inaccurate_str= 'ලිපිනය වැරදි විය හැකිය'
 
         elif lang == 'ta':
             district = data['district_ta']
@@ -70,6 +72,8 @@ def summarise_lang(date_id, lang):
             dose_str = 'டோஸ்'
             str_1st = '1வது'
             str_2nd = '2வது'
+            location_unknown_str = 'முகவரி தெரியவில்லை'
+            location_inaccurate_str= 'முகவரி தவறாக இருக்கலாம்'
 
         else:
             district = data['district']
@@ -81,6 +85,8 @@ def summarise_lang(date_id, lang):
             dose_str = 'Dose'
             str_1st = '1st'
             str_2nd = '2nd'
+            location_unknown_str = 'Address not known'
+            location_inaccurate_str= 'Address is likely inaccurate'
 
         dose_tokens = []
         if data['dose1'] == 'True':
@@ -89,15 +95,17 @@ def summarise_lang(date_id, lang):
             dose_tokens.append(f'{str_2nd} {dose_str}')
         dose = ', '.join(dose_tokens)
         if dose:
-            dose = f' ({dose}) '
+            dose = f' (💉 {dose}) '
 
-        if formatted_address:
+        if not formatted_address:
+            md_link = f'(❓ {location_unknown_str})'
+        else:
             lat = data['lat']
             lng = data['lng']
             link = lk_vax_center_utils.get_gmaps_link(lat, lng)
             md_link = f'[{formatted_address}]({link})'
-        else:
-            md_link = '(Location Unknown)'
+            if '#CenterFarFromPolice' in data['tags']:
+                md_link += f' (❌ {location_inaccurate_str})'
 
         if district != prev_district:
             md_lines.append(f'## {district} {district_str}')
