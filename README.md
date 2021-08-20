@@ -45,7 +45,6 @@ pip install covid19-nuuuwan
   * expand.py done
   * summarise.py done
   * finalize.py done
-  * Done
   * Pre-Merge
   * Updated TODO
 * [2021-08-19 10:07AM] Add District IDs
@@ -80,16 +79,13 @@ pip install covid19-nuuuwan
   * Minor
   * #AddrBugs Elpitiya, Bibila
   * #AddrBug Kalutara South
-  * 
   * #AddrBug Weligama
   * #AddrBug Kaluwanchikudy Kokkadichcholai
   * metadata fixes
-  *
   * Done
 * [2021-08-20 08:58AM] Normalize Meta Data First
   * Updated README
   * Added find_metadata
-  * Done
   * Removed accidental files
   * Pre-Merge
   * Merged
@@ -97,8 +93,7 @@ pip install covid19-nuuuwan
 * [2021-08-20 10:16AM] metadata_validate.py updates
   * Updated README
   * Added examples stdev=2
-  * 
-  * Done
   * Pre-Merge
   * Re-added police station
   * Readded police stations
+  * Update README
