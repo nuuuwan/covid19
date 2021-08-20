@@ -60,7 +60,7 @@ def summarise_lang(date_id, lang):
             str_1st = '1වන'
             str_2nd = '2වන'
             location_unknown_str = 'ලිපිනය නොදනී'
-            location_inaccurate_str= 'ලිපිනය වැරදි විය හැකිය'
+            location_inaccurate_str = 'ලිපිනය වැරදි විය හැකිය'
 
         elif lang == 'ta':
             district = data['district_ta']
@@ -73,7 +73,7 @@ def summarise_lang(date_id, lang):
             str_1st = '1வது'
             str_2nd = '2வது'
             location_unknown_str = 'முகவரி தெரியவில்லை'
-            location_inaccurate_str= 'முகவரி தவறாக இருக்கலாம்'
+            location_inaccurate_str = 'முகவரி தவறாக இருக்கலாம்'
 
         else:
             district = data['district']
@@ -86,7 +86,7 @@ def summarise_lang(date_id, lang):
             str_1st = '1st'
             str_2nd = '2nd'
             location_unknown_str = 'Address not known'
-            location_inaccurate_str= 'Address is likely inaccurate'
+            location_inaccurate_str = 'Address is likely inaccurate'
 
         dose_tokens = []
         if data['dose1'] == 'True':

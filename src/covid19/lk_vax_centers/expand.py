@@ -1,20 +1,15 @@
-import os
 import json
-from utils import timex, tsv, geo
-
+import os
 
 from gig import ents
+from utils import geo, timex, tsv
+
 from covid19._utils import log
-from covid19.lk_vax_centers import (
-    google_utils,
-    lk_vax_center_utils,
-    metadata_fix,
-)
+from covid19.lk_vax_centers import (google_utils, lk_vax_center_utils,
+                                    metadata_fix)
 from covid19.lk_vax_centers.lk_vax_center_utils import round_x
 
 MAX_DIS_CENTER_TO_POLICE = 20
-
-
 
 
 def build_police_index(data_list):

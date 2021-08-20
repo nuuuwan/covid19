@@ -7,7 +7,7 @@ from covid19.lk_vax_centers import lk_vax_center_utils, translate_utils
 
 
 def expand_i18n_for_data(data):
-    fuzzy_key = data['fuzzy_key']
+    data['fuzzy_key']
 
     district = data['district']
     police = data['police']

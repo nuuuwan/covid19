@@ -3,10 +3,8 @@ import argparse
 import googlemaps
 from utils.cache import cache
 
-from covid19.lk_vax_centers.lk_vax_center_constants import (
-    CACHE_DIR,
-    CACHE_TIMEOUT,
-)
+from covid19.lk_vax_centers.lk_vax_center_constants import (CACHE_DIR,
+                                                            CACHE_TIMEOUT)
 
 
 def get_google_api_key():

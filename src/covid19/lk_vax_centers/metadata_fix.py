@@ -15,7 +15,8 @@ FUZZY_KEY_TO_ALT_NAME = {
     'CLMBPDKKGHPDKK': 'Padukka Divisional Hospital',
     'HMBNTTTSSMHRMDBRWWPRSDNTSPRMRYSCHL': 'Debarawewa President\'s College',
     'KGLLMWNLLRNDWLMHVDYLY': 'Randiwala Maha Vidyalaya',
-    'KLTRLTHGMLPTHTLNSRBLKMHVDYLY': 'Al Fasiyathul Nasriya Muslim Balika Navodaya School',
+    'KLTRLTHGMLPTHTLNSRBLKMHVDYLY': 'Al Fasiyathul Nasriya'
+    + ' Muslim Balika Navodaya School',
     'KLTRDDNGDMHFFCDDNGD': '6.540366199937832,80.03661033076219',
     'KLTRPNDRPNDRHSPTL': 'Base Hospital Panadura',
 }
@@ -70,7 +71,6 @@ POLICE_INDEX = {
         'ps_lng': round_x(80.88585605425267),
     },
 }
-
 
 
 def get_correct_district(district, police):
