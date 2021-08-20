@@ -105,3 +105,5 @@ pip install covid19-nuuuwan
   * Done
   * removed metadata
   * Pre-Merge
+* [2021-08-20 02:35PM] Rationalize Data
+  * Updated README
