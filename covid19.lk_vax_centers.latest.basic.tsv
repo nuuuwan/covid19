@@ -48,7 +48,7 @@ Kurunegala	Nikaweratiya	MOH Office - Nikaweratiya	False	False
 Kurunegala	Girilla	Girilla Vidyalaya	False	False
 Kurunegala	Kotawehera	Unale Viharaya	False	False
 Kurunegala	Kotawehera	Digannea Vidyalaya	False	False
-Kurunegala	Chilaw	Ambakadawila Vidyalaya	False	False
+Puttalam	Chilaw	Ambakadawila Vidyalaya	False	False
 Puttalam	Chilaw	Aluthwatta Church	False	False
 Puttalam	Chilaw	Medawatta Churach	False	False
 Puttalam	Chilaw	Weralabada South College	False	False
@@ -216,10 +216,10 @@ Jaffna	Kopay	MOH Office - Kopay	False	False
 Jaffna	Kopay	MOH Office- Nallur	False	False
 Jaffna	Chunnakam	MOH Office - Uduvil	False	False
 Jaffna	Point Pedro	MOH Office - Point Pedro	False	False
-Jaffna	Kilinochchi	Army Base Hospital - Kilinochchi	False	True
-Jaffna	Kilinochchi	MOH Office - Kilinochchi	False	False
-Jaffna	Pooneryn	MOH Office - Pooneryn	False	False
-Jaffna	Dharmapuram	MOH Office - Dharmapuram	False	False
+Kilinochchi	Kilinochchi	Army Base Hospital - Kilinochchi	False	True
+Kilinochchi	Kilinochchi	MOH Office - Kilinochchi	False	False
+Kilinochchi	Pooneryn	MOH Office - Pooneryn	False	False
+Kilinochchi	Dharmapuram	MOH Office - Dharmapuram	False	False
 Mullaitivu	Mullaitivu	Army Base Hospital - Mullaitivu	False	True
 Mullaitivu	Mallavi	Nattakandal Hospital	False	False
 Mullaitivu	Pudukudiruppu	MOH Office - Pudukudiruppu	False	False
@@ -244,12 +244,12 @@ Trincomalee	Thambalagamuwa	MOH Office - Thambalagamuwa	False	False
 Trincomalee	Serunuwara	MOH Office - Serunuwara	False	False
 Trincomalee	Kokkadichcholai	MOH Office - Mahaladithivu	False	False
 Trincomalee	Kaluwanchikudy	Kaluwanchikudy Hospital	False	False
-Trincomalee	Valachchenai	MOH Office - Valachchenai	False	False
-Trincomalee	Valachchenai	MOH Office - Oddamavadi	False	False
-Trincomalee	Valachchenai	MOH Office - Nawaladi	False	False
-Trincomalee	Valachchenai	Mobile Vaccination	False	False
-Trincomalee	Valachchenai	Valachchenai Base Hospital	False	False
-Trincomalee	Vavunathivu	MOH Office - Vavunathivu	False	False
+Batticaloa	Valachchenai	MOH Office - Valachchenai	False	False
+Batticaloa	Valachchenai	MOH Office - Oddamavadi	False	False
+Batticaloa	Valachchenai	MOH Office - Nawaladi	False	False
+Batticaloa	Valachchenai	Mobile Vaccination	False	False
+Batticaloa	Valachchenai	Valachchenai Base Hospital	False	False
+Batticaloa	Vavunathivu	MOH Office - Vavunathivu	False	False
 Ampara	Kalmunai	MOH Office - Kalmunai North	False	False
 Ampara	Karaitivu	MOH Office – Karaitivu	False	False
 Ampara	Sammanthurai	MOH Office - Sammanthurai	False	False

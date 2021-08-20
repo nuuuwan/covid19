@@ -96,9 +96,9 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Kotawehera** Police Area
   * Unale Viharaya - [Ridee Vihara Rd, Ridigama, Sri Lanka](https://www.google.lk/maps/place/7.5371047N,80.4909145E) 
   * Digannea Vidyalaya - [Katugastota-Kurunegala-Puttalam Hwy, Sri Lanka](https://www.google.lk/maps/place/7.5481688N,80.30896159999999E) 
+## Puttalam District
 * **Chilaw** Police Area
   * Ambakadawila Vidyalaya - [Ambakandawila, Sri Lanka](https://www.google.lk/maps/place/7.527562700000001N,79.79363219999999E) 
-## Puttalam District
   * Aluthwatta Church - [Chilaw-Munneswarama-Tissogama, Sri Lanka](https://www.google.lk/maps/place/7.5913991N,79.82787689999999E) 
   * Medawatta Churach - [Ambakandawila Rd, Chilaw, Sri Lanka](https://www.google.lk/maps/place/7.55716N,79.789132E) 
   * Weralabada South College - [Puttalam - Colombo Rd, Chilaw, Sri Lanka](https://www.google.lk/maps/place/7.571297299999999N,79.79912259999999E) 
@@ -356,13 +356,14 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * MOH Office - Uduvil - [Sri Lanka, Manipay, Sri Lanka](https://www.google.lk/maps/place/9.725096899999999N,79.99772039999999E) 
 * **Point Pedro** Police Area
   * MOH Office - Point Pedro - [R64F+854, Point Pedro, Sri Lanka](https://www.google.lk/maps/place/9.8058N,80.223E) 
+## Kilinochchi District
 * **Kilinochchi** Police Area
-  *  (2nd Dose) Army Base Hospital - Kilinochchi - [யாழ்ப்பாணம் பன்னாட்டு வானூர்தி நிலையம், Unnamed Road, Sri Lanka](https://www.google.lk/maps/place/9.79541N,80.0788807E) 
-  * MOH Office - Kilinochchi - [Kandy - Jaffna Hwy, Kilinochchi, Sri Lanka](https://www.google.lk/maps/place/9.3969654N,80.4077819E) 
+  *  (2nd Dose) Army Base Hospital - Kilinochchi - [Ananthapuram, A9, Kilinochchi, Sri Lanka](https://www.google.lk/maps/place/9.3727N,80.4118E) 
+  * MOH Office – Kilinochchi - [Kandy - Jaffna Hwy, Kilinochchi, Sri Lanka](https://www.google.lk/maps/place/9.397N,80.4078E) 
 * **Pooneryn** Police Area
-  * MOH Office - Pooneryn - [Sri Lanka, Manipay, Sri Lanka](https://www.google.lk/maps/place/9.725096899999999N,79.99772039999999E) 
+  * MOH Office - Pooneryn - [G655+58P, Pooneryn, Sri Lanka](https://www.google.lk/maps/place/9.508N,80.2083E) 
 * **Dharmapuram** Police Area
-  * MOH Office - Dharmapuram - [Sri Lanka, Manipay, Sri Lanka](https://www.google.lk/maps/place/9.725096899999999N,79.99772039999999E) 
+  * MOH Office - Dharmapuram - [Sri Lanka, Manipay, Sri Lanka](https://www.google.lk/maps/place/9.7251N,79.9977E) 
 ## Mullaitivu District
 * **Mullaitivu** Police Area
   *  (2nd Dose) Army Base Hospital - Mullaitivu - [7Q58+VH2, Mullaitivu, Sri Lanka](https://www.google.lk/maps/place/9.2596N,80.7664E) 
@@ -409,14 +410,15 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * MOH Office - Mahaladithivu - [Hospital Ln, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.5636028N,81.239584E) 
 * **Kaluwanchikudy** Police Area
   * Kaluwanchikudy Hospital - [C27X+3GF, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.412687499999999N,81.04879799999999E) 
+## Batticaloa District
 * **Valachchenai** Police Area
-  * MOH Office - Valachchenai - [Hospital Ln, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.5636028N,81.239584E) 
-  * MOH Office - Oddamavadi - [Hospital Ln, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.5636028N,81.239584E) 
-  * MOH Office - Nawaladi - [H6X8+JV2, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.5990185N,81.2171505E) 
+  * MOH Office - Valachchenai - [WG6M+W46, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.9123N,81.5328E) 
+  * MOH Office – Oddamavadi - [WG6M+W46, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.9123N,81.5328E) 
+  * MOH Office – Nawaladi - [Hospital Rd, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.7083N,81.6914E) 
   * Mobile Vaccination - [Valaichchenai, Sri Lanka](https://www.google.lk/maps/place/7.921327599999999N,81.5246705E) 
-  * Valachchenai Base Hospital - [Hospital Ln, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.5648599N,81.2394451E) 
+  * Valachchenai Base Hospital - [Valaichchenai-Nasuvantivu-Navaladi Road, Sri Lanka](https://www.google.lk/maps/place/7.9113N,81.533E) 
 * **Vavunathivu** Police Area
-  * MOH Office - Vavunathivu - [H6X8+JV2, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.5990185N,81.2171505E) 
+  * MOH Office – Vavunathivu - [Hospital Rd, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.7083N,81.6914E) 
 ## Ampara District
 * **Kalmunai** Police Area
   * MOH Office - Kalmunai North - [CR9C+MF3, Kalmunai 32300, Sri Lanka](https://www.google.lk/maps/place/7.4191N,81.8212E) 
