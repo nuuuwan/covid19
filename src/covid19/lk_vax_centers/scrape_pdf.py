@@ -8,32 +8,19 @@ from googleapiclient.http import MediaIoBaseDownload
 from utils import timex
 
 from covid19._utils import log
-from covid19.lk_vax_centers import lk_vax_center_utils
-
-
-def get_google_drive_api_key():
-    """Construct Twitter from Args."""
-    parser = argparse.ArgumentParser(description='lk_vax_centers')
-    parser.add_argument(
-        '--google_drive_api_key',
-        type=str,
-        required=False,
-        default=None,
-    )
-    args = parser.parse_args()
-    return args.google_drive_api_key
+from covid19.lk_vax_centers import lk_vax_center_utils, google_utils
 
 
 def scrape_pdf(date_id, google_drive_file_id):
-    google_drive_api_key = get_google_drive_api_key()
-    if google_drive_api_key is None:
-        log.error('No google_drive_api_key. Aborting.')
+    google_api_key = google_utils.get_google_api_key()
+    if google_api_key is None:
+        log.error('No google_api_key. Aborting.')
         return
 
     drive_service = build(
         'drive',
         'v3',
-        developerKey=google_drive_api_key,
+        developerKey=google_api_key,
     )
 
     request = drive_service.files().get_media(fileId=google_drive_file_id)

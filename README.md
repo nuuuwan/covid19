@@ -110,3 +110,4 @@ pip install covid19-nuuuwan
   * Added district/police
   * Test i18n
   * Pre-Merge
+  * Tested new pipeline

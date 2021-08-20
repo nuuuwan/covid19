@@ -5,7 +5,7 @@ from utils import timex, tsv, geo
 
 from gig import ents
 from covid19._utils import log
-from covid19.lk_vax_centers import (geo_utils, lk_vax_center_utils,
+from covid19.lk_vax_centers import (google_utils, lk_vax_center_utils,
                                     metadata_fix)
 
 MAX_DIS_CENTER_TO_POLICE = 20
@@ -58,7 +58,7 @@ def expand_for_data(gmap, data):
 
     # Add location info
     location_search_center = center if (alt_name == '') else alt_name
-    lat, lng, formatted_address = geo_utils.get_location_info(
+    lat, lng, formatted_address = google_utils.get_location_info(
         gmap,
         district,
         police,
@@ -102,7 +102,7 @@ def expand(date_id):
         return False
     data_list = tsv.read(tsv_basic_file)
 
-    gmaps = geo_utils.get_gmaps()
+    gmaps = google_utils.get_gmaps()
     expanded_data_list = list(
         map(
             lambda data: expand_for_data(gmaps, data),
