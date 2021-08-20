@@ -71,3 +71,5 @@ pip install covid19-nuuuwan
   * Updated README
   * metadata_validate complete
   * Pre-Merge
+* [2021-08-20 08:02AM] VaxCenters Clean Addresses 2
+  * Updated README
