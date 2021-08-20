@@ -30,7 +30,7 @@ jobs:
     - name: Run
       run: |
         export PYTHONPATH="$PYTHONPATH:./src"
-        python src/covid19/lk_vax_centers.py --google_drive_api_key "${{ secrets.GOOGLE_DRIVE_API_KEY}}"
+        python src/covid19/lk_vax_centers.py --google_api_key "${{ secrets.google_api_key}}"
 
     - name: Checkout repo branch data
       uses: actions/checkout@v2

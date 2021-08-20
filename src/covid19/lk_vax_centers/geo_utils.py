@@ -1,10 +1,29 @@
-from deep_translator import GoogleTranslator
+import argparse
+
+import googlemaps
 from utils.cache import cache
 
 from covid19.lk_vax_centers.lk_vax_center_constants import (CACHE_DIR,
                                                             CACHE_TIMEOUT)
 
-translator_si = GoogleTranslator(source='english', target='sinhala')
+
+def get_google_api_key():
+    """Construct Twitter from Args."""
+    parser = argparse.ArgumentParser(description='lk_vax_centers')
+    parser.add_argument(
+        '--google_api_key',
+        type=str,
+        required=False,
+        default=None,
+    )
+    args = parser.parse_args()
+    return args.google_api_key
+
+
+def get_gmaps():
+    google_api_key = get_google_api_key()
+    gmaps = googlemaps.Client(key=google_api_key)
+    return gmaps
 
 
 def is_valid_geocode_results(geocode_results):

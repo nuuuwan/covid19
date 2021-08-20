@@ -103,3 +103,4 @@ pip install covid19-nuuuwan
   * Parse1
   * Added CACHE_DIR
   * Done
+  * removed metadata
