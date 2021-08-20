@@ -96,3 +96,4 @@ pip install covid19-nuuuwan
   * Minor: metadata_validate.py
 * [2021-08-20 10:16AM] metadata_validate.py updates
   * Updated README
+  * Added examples stdev=2
