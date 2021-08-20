@@ -86,3 +86,4 @@ pip install covid19-nuuuwan
   * metadata fixes
   * 
   * Done
+  * Removed redundent files
