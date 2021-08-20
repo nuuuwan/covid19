@@ -82,3 +82,4 @@ pip install covid19-nuuuwan
   * #AddrBug Kalutara South
   * 
   * #AddrBug Weligama
+  * #AddrBug Kaluwanchikudy Kokkadichcholai 
