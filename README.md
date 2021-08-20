@@ -74,3 +74,4 @@ pip install covid19-nuuuwan
 * [2021-08-20 08:02AM] VaxCenters Clean Addresses 2
   * Updated README
   * Pre-Merge
+  * #AddressBugs Kothmale

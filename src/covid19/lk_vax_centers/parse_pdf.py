@@ -56,6 +56,8 @@ def parse_pdf(date_id):
                 district = 'Puttalam'
             if police in ['Valachchenai']:
                 district = 'Batticaloa'
+            if police in ['Kothmale']:
+                district = 'Nuwara Eliya'
 
             if not district and prev_district:
                 district = prev_district
