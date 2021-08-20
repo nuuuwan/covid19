@@ -44,6 +44,9 @@ def parse_pdf(date_id):
             elif police2:
                 police = police2
 
+            if police in ['Kalutara South']:
+                district = 'Kalutara'    
+
             if police in ['Elpitiya']:
                 district = 'Galle'
 
