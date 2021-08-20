@@ -21,7 +21,6 @@ def find_metadata(district, police, center, gmaps):
     else:
         center_search = center
 
-
     district_si = translate_utils.translate_si(district)
     police_si = translate_utils.translate_si(police)
     center_si = translate_utils.translate_si(center_search)
@@ -144,8 +143,7 @@ def backpopulate_oneoff(date_id):
         corrected_district = metadata_fix.get_correct_district(
             district, police
         )
-        if fuzzy_key in metadata_fix.FUZZY_KEY_TO_ALT_NAME \
-            or fuzzy_key in metadata_fix.INCORRECT_FUZZY_KEYS:
+        if fuzzy_key in metadata_fix.FUZZY_KEY_TO_ALT_NAME:
             if gmaps is None:
                 google_drive_api_key = get_google_drive_api_key()
                 gmaps = googlemaps.Client(key=google_drive_api_key)

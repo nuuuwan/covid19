@@ -101,3 +101,4 @@ pip install covid19-nuuuwan
   * Done
   * Pre-Merge
   * Re-added police station
+  * Readded police stations
