@@ -1,7 +1,7 @@
 from utils import timex
 
-from covid19.lk_vax_centers import metadata
 from covid19.lk_vax_centers.expand import expand
+from covid19.lk_vax_centers.expand_i18n import expand_i18n
 from covid19.lk_vax_centers.finalize import finalize
 from covid19.lk_vax_centers.parse_pdf import parse_pdf
 from covid19.lk_vax_centers.scrape_google_id import scrape_google_id
