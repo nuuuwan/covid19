@@ -99,3 +99,4 @@ pip install covid19-nuuuwan
   * Update README
 * [2021-08-20 01:24PM] lk-vax-centers Split Translation and Geo
   * Updated README
+  * Parse1

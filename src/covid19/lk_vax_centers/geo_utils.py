@@ -7,37 +7,47 @@ CACHE_NAME = 'covid19.lk_vax_centers'
 translator_si = GoogleTranslator(source='english', target='sinhala')
 
 
+def is_valid_geocode_results(geocode_results):
+    return (
+        len(geocode_results) > 0
+        and 'Sri Lanka' in geocode_results[0]['formatted_address']
+    )
+
+
 def get_location_info_inner(gmaps, search_text):
     @cache('CACHE_NAME', timex.SECONDS_IN.YEAR)
     def get_location_info_inner_inner(search_text=search_text):
         return gmaps.geocode(search_text)
 
-    return get_location_info_inner_inner(search_text)
+    geocode_results = get_location_info_inner_inner(search_text)
+    if is_valid_geocode_results(geocode_results):
+        geocode_result = geocode_results[0]
+        lat = geocode_result['geometry']['location']['lat']
+        lng = geocode_result['geometry']['location']['lng']
+        formatted_address = geocode_result['formatted_address']
+        return [lat, lng, formatted_address]
+
+    return None
 
 
 def get_location_info(gmaps, district, police, center):
-    if 'car park' in center.lower() or 'mobile' in center.lower():
+    if 'car park' in center.lower():
         center = f'{police} {center}'
 
-    search_text = f'{center}, {district} District, Sri Lanka'
-    geocode_results = get_location_info_inner(gmaps, search_text)
-
-    if (
-        len(geocode_results) == 0
-        or 'Sri Lanka' not in geocode_results[0]['formatted_address']
-    ):
-        search_text = f'{police} Police Station, {district} District, Sri Lanka'
+    if 'mobile' not in center.lower():
+        search_text = f'{center}, {district} District, Sri Lanka'
         geocode_results = get_location_info_inner(gmaps, search_text)
+        if geocode_results:
+            return geocode_results + ['center']
 
-    if (
-        len(geocode_results) == 0
-        or 'Sri Lanka' not in geocode_results[0]['formatted_address']
-    ):
-        return None, None, None
+    search_text = f'{police} Police Station, {district} District, Sri Lanka'
+    geocode_results = get_location_info_inner(gmaps, search_text)
+    if geocode_results:
+        return geocode_results + ['police']
 
-    geocode_result = geocode_results[0]
+    search_text = f'{district} District, Sri Lanka'
+    geocode_results = get_location_info_inner(gmaps, search_text)
+    if geocode_results:
+        return geocode_results + ['district']
 
-    lat = geocode_result['geometry']['location']['lat']
-    lng = geocode_result['geometry']['location']['lng']
-    formatted_address = geocode_result['formatted_address']
-    return lat, lng, formatted_address
+    return None, None, None, 'unknown'

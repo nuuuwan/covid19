@@ -1,6 +1,6 @@
-import statistics
-import os
 import json
+import os
+import statistics
 
 from utils import tsv
 
@@ -24,7 +24,7 @@ def metadata_validate(date_id):
         district_to_metadata_list.items(),
         key=lambda x: x[0],
     ):
-        n_d_metadata_list = len(d_metadata_list)
+        len(d_metadata_list)
         lat_list = list(
             map(
                 lambda meta_d: (float)(meta_d['lat']),
@@ -57,7 +57,7 @@ def metadata_validate(date_id):
                     district = meta_d['district']
                     fuzzy_key = meta_d['fuzzy_key']
 
-                    gmaps_link = lk_vax_center_utils.get_gmaps_link(lat,lng)
+                    gmaps_link = lk_vax_center_utils.get_gmaps_link(lat, lng)
                     inaccurate_centers_list.append(
                         dict(
                             fuzzy_key=fuzzy_key,
@@ -93,7 +93,9 @@ def metadata_validate(date_id):
 
         print(json.dumps(inaccurate_center, indent=2))
 
-        center = inaccurate_center['center'] + ' ' + inaccurate_center['police']
+        center = (
+            inaccurate_center['center'] + ' ' + inaccurate_center['police']
+        )
         center_str = center.replace('–', ' ').replace(' ', '+')
         google_search_link = f'https://www.google.com/search?q={center_str}'
         print(google_search_link)
@@ -101,8 +103,6 @@ def metadata_validate(date_id):
 
         gmaps_link = inaccurate_center['gmaps_link']
         os.system(f'open -a firefox "{gmaps_link}"')
-
-
 
 
 if __name__ == '__main__':

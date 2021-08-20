@@ -94,7 +94,7 @@ def summarise_lang(date_id, lang):
         if formatted_address:
             lat = data['lat']
             lng = data['lng']
-            link = lk_vax_center_utils.get_gmaps_link(lat,lng)
+            link = lk_vax_center_utils.get_gmaps_link(lat, lng)
             md_link = f'[{formatted_address}]({link})'
         else:
             md_link = '(Location Unknown)'

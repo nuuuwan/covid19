@@ -77,6 +77,12 @@ def get_google_drive_api_key():
     return args.google_drive_api_key
 
 
+def get_gmaps():
+    google_drive_api_key = get_google_drive_api_key()
+    gmaps = googlemaps.Client(key=google_drive_api_key)
+    return gmaps
+
+
 def backpopulate_oneoff(date_id):
     log.info(f'Running backpopulate_oneoff for {date_id}')
     ut = timex.parse_time(date_id, '%Y%m%d')
@@ -137,16 +143,13 @@ def backpopulate_oneoff(date_id):
         district = meta_d['district']
         police = meta_d['police']
         center = meta_d['center']
-        fuzzy_key = lk_vax_center_utils.get_fuzzy_key(
-            district, police, center
-        )
+        fuzzy_key = lk_vax_center_utils.get_fuzzy_key(district, police, center)
         corrected_district = metadata_fix.get_correct_district(
             district, police
         )
         if fuzzy_key in metadata_fix.FUZZY_KEY_TO_ALT_NAME:
             if gmaps is None:
-                google_drive_api_key = get_google_drive_api_key()
-                gmaps = googlemaps.Client(key=google_drive_api_key)
+                gmaps = get_gmaps()
 
             corrected_meta_d = find_metadata(
                 corrected_district, police, center, gmaps
@@ -159,8 +162,7 @@ def backpopulate_oneoff(date_id):
             )
             if corrected_fuzzy_key not in metadata_index:
                 if gmaps is None:
-                    google_drive_api_key = get_google_drive_api_key()
-                    gmaps = googlemaps.Client(key=google_drive_api_key)
+                    gmaps = get_gmaps()
                 corrected_meta_d = find_metadata(
                     corrected_district, police, center, gmaps
                 )
