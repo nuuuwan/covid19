@@ -14,8 +14,8 @@ if __name__ == '__main__':
 
     if scrape_pdf(date_id, google_drive_file_id):
         parse_pdf(date_id)
-        metadata.backpopulate(date_id)
-        metadata.populate(date_id)
+        # metadata.backpopulate_oneoff(date_id)
+        metadata.populate_new(date_id)
         expand(date_id)
         summarise(date_id)
         finalize(date_id)
