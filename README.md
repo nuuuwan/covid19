@@ -119,3 +119,4 @@ pip install covid19-nuuuwan
   * expand_i18n test
   * expand_i18n tested
   * Done
+  * Pre-Merge
