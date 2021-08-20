@@ -90,3 +90,4 @@ pip install covid19-nuuuwan
   * Updated README
   * Added find_metadata
   * Done
+  * Removed accidental files
