@@ -77,3 +77,4 @@ pip install covid19-nuuuwan
   * #AddressBugs Kothmale
   * #AddressBugs Kothmale
   * #AddressBugs Kothmale-2
+  * Minor
