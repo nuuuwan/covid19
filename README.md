@@ -121,3 +121,5 @@ pip install covid19-nuuuwan
   * Done
   * Pre-Merge
   * Removed accid
+* [2021-08-20 08:13PM] scrape_vax_schedule.py
+  * Updated README
