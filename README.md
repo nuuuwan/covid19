@@ -94,3 +94,5 @@ pip install covid19-nuuuwan
   * Pre-Merge
   * Merged
   * Minor: metadata_validate.py
+* [2021-08-20 10:16AM] metadata_validate.py updates
+  * Updated README
