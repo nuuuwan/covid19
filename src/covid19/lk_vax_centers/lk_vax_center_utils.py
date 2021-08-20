@@ -27,3 +27,7 @@ def get_prev_date_id(date_id):
 
 def get_gmaps_link(lat, lng):
     return f'https://www.google.lk/maps/place/{lat}N,{lng}E'
+
+def round_x(x):
+    return round((float)(x), 6)
+    

@@ -3,8 +3,10 @@ import argparse
 import googlemaps
 from utils.cache import cache
 
-from covid19.lk_vax_centers.lk_vax_center_constants import (CACHE_DIR,
-                                                            CACHE_TIMEOUT)
+from covid19.lk_vax_centers.lk_vax_center_constants import (
+    CACHE_DIR,
+    CACHE_TIMEOUT,
+)
 
 
 def get_google_api_key():
@@ -74,7 +76,5 @@ def get_location_info(gmaps, district, police, center):
         geocode_results = get_location_info_inner(gmaps, search_text)
         if geocode_results:
             return geocode_results
-
-
 
     return None, None, None

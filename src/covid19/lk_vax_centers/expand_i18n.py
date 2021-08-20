@@ -1,4 +1,3 @@
-import json
 import os
 
 from utils import timex, tsv
@@ -9,10 +8,13 @@ from covid19.lk_vax_centers import lk_vax_center_utils, translate_utils
 
 def expand_i18n_for_data(data):
     fuzzy_key = data['fuzzy_key']
-    log.info(f'Expanding i18n {fuzzy_key}')
+
     district = data['district']
     police = data['police']
     center = data['center']
+
+    log.info(f'Expanding (i18n) {district.upper()}/{police}/{center}')
+
     alt_name = data['alt_name']
     center_search = center if alt_name == '' else alt_name
 
