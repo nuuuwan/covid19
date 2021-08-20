@@ -67,3 +67,5 @@ pip install covid19-nuuuwan
 * [2021-08-19 11:26AM] lk-vax-centers Expand Data
   * Updated README
   * Pre-Merge
+* [2021-08-20 06:58AM] Clean Addresses
+  * Updated README
