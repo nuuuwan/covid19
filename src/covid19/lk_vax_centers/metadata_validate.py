@@ -5,7 +5,7 @@ import json
 from utils import tsv
 
 from covid19._utils import log
-from covid19.lk_vax_centers import lk_vax_center_utils, metadata
+from covid19.lk_vax_centers import lk_vax_center_utils, metadata, metadata_fix
 
 
 def metadata_validate(date_id):
@@ -76,63 +76,15 @@ def metadata_validate(date_id):
     n_inaccurate_centers = len(inaccurate_centers_list)
     log.info(f'Wrote {n_inaccurate_centers} to {inaccurate_centers_file}')
 
-    validated_fuzzy_keys_and_correct = set([
-        'BDLLGRNDRKTTMHFFCGRNDRKTT',
-        'BTTCLVKRMHFFCVKR',
-        'NRDHPRKKRWDSTRCTHSPTLKKRW',
-        'NRDHPRNCHCHYGMHRVLVDYLY',
-        'BDLLLNGLMHFFCLNGL',
-        'GLLKTWLKMBRGMWMHVDYLY',
-        'GMPHNGMBMNKLYSTNTHNYSCHRCH',
-        'GMPHNTTMBWKNDVHRY',
-        'KNDYNWLPTYHLGRKYSRSMNVDYLY',
-    ])
-    validated_fuzzy_keys_and_prob_incorrect = set([
-        'NRDHPRNCHCHYGMMBGSWWVDYLY',
-        'BDLLMHYNGNYMHFFCMHYNGNY',
-        'CLMBHNWLLRMNCTHLCCLLGWLKNN',
-        'GLLLPTYKTLVTGLSTTFFC',
-        'KLTRMLLNYPTHGMWVHRY',
-        'KLTRMTGMMBTHNNSTTPRMSS',
-        'KGLLMWNLLMRTHWLCMMNTYHLL',
-        'KRNGLWRMBGDRKNDRGHMDTHTHVDYLY',
-        'PTTLMPTTLMVSDRRMVHRY',
-        'BDLLHLDMMLLHDWRYCLLG',
-        'BDLLVPRNGMHLKTWHRSBDRRMY',
-        'GMPHKDWTNLMMHRVDYLY',
-        'HMBNTTSRYWWNDWWVHRY',
-        'KLTRWDDWGMXPRTCNTR',
-        'KNDYDDMBRDDMBRSCNDRYCLLG',
-        'KNDYDDMBRMHNDPRMRYSCHL',
-        'KNDYKNDYPRDNYYTHSRVCSCNCL',
-    ])
-
-    alternative_name = {
-        'GMPHNTTMBWDHTHKNDRJMHVHRY': 'Dhathukanda Purana Rajamaha Viharaya',
-        'GMPHNTTMBWNDGDVHRY': 'Bodhimalu Viharaya - Undugoda',
-        'GMPHPLYGDGGBDCMMNTYHLL': 'PCAG Community Center',
-        'TRNCMLPLMDDPLMDDBSHSPTL': 'Base Hospital - Pulmoddai',
-        'NRDHPRTHNTHRMLTHNTHRMLRJMHVHRY': 'Tantirimale Rajamaha Viharaya',
-        'BDLLLNGLLNGLHSPTL': 'District Hospital - Lunugala',
-        'BDLLMHYNGNYMHYNGNYBSHSPTL': 'Base Hospital - Mahiyanganaya',
-        'BDLLVPRNGMVPRNGMHSPTL': 'Divisional Hospital - Uva Paranagama',
-        'BTTCLKLWNCHKDYKLWNCHKDYHSPTL': 'Base Hospital - Kaluwanchikudy',
-        'BTTCLKLWNCHKDYMHFFCKLWNCHKDY': 'Medical Officer of Health, Kaluwanchikudy',
-        'CLMBGDYNMHFFCGDYN': 'MOH Egodauyana',
-        'CLMBPDKKGHPDKK': 'Padukka Divisional Hospital',
-        'HMBNTTTSSMHRMDBRWWPRSDNTSPRMRYSCHL': 'Debarawewa President\'s College',
-        'KGLLMWNLLRNDWLMHVDYLY': 'Randiwala Maha Vidyalaya', 
-    }
-
     max_centers_to_validate = 5
     n_centers_validated = 0
     for inaccurate_center in inaccurate_centers_list:
         fuzzy_key = inaccurate_center['fuzzy_key']
-        if fuzzy_key in validated_fuzzy_keys_and_correct:
+        if fuzzy_key in metadata_fix.CORRECT_FUZZY_KEYS:
             continue
-        if fuzzy_key in validated_fuzzy_keys_and_prob_incorrect:
+        if fuzzy_key in metadata_fix.INCORRECT_FUZZY_KEYS:
             continue
-        if fuzzy_key in alternative_name:
+        if fuzzy_key in metadata_fix.FUZZY_KEY_TO_ALT_NAME:
             continue
 
         n_centers_validated += 1

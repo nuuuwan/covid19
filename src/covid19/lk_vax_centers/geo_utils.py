@@ -26,13 +26,6 @@ def get_location_info(gmaps, district, police, center):
         len(geocode_results) == 0
         or 'Sri Lanka' not in geocode_results[0]['formatted_address']
     ):
-        search_text = f'{police} Police Station, Sri Lanka'
-        geocode_results = get_location_info_inner(gmaps, search_text)
-
-    if (
-        len(geocode_results) == 0
-        or 'Sri Lanka' not in geocode_results[0]['formatted_address']
-    ):
         return None, None, None
 
     geocode_result = geocode_results[0]

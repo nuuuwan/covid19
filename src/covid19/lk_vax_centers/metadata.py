@@ -15,20 +15,30 @@ def find_metadata(district, police, center, gmaps):
     log.info(f'Finding metadata for {district.upper()}/{police}/{center}')
     fuzzy_key = lk_vax_center_utils.get_fuzzy_key(district, police, center)
 
+    alternative_name = metadata_fix.FUZZY_KEY_TO_ALT_NAME.get(fuzzy_key, None)
+    if alternative_name:
+        center_search = alternative_name
+    else:
+        center_search = center
+
+
     district_si = translate_utils.translate_si(district)
     police_si = translate_utils.translate_si(police)
-    center_si = translate_utils.translate_si(center)
+    center_si = translate_utils.translate_si(center_search)
 
     district_ta = translate_utils.translate_ta(district)
     police_ta = translate_utils.translate_ta(police)
-    center_ta = translate_utils.translate_ta(center)
+    center_ta = translate_utils.translate_ta(center_search)
 
-    lat, lng, formatted_address = geo_utils.get_location_info(
-        gmaps,
-        district,
-        police,
-        center,
-    )
+    if fuzzy_key in metadata_fix.INCORRECT_FUZZY_KEYS:
+        lat, lng, formatted_address = None, None, None
+    else:
+        lat, lng, formatted_address = geo_utils.get_location_info(
+            gmaps,
+            district,
+            police,
+            center_search,
+        )
 
     formatted_address_si, formatted_address_ta = None, None
     if formatted_address:
@@ -40,6 +50,7 @@ def find_metadata(district, police, center, gmaps):
         district=district,
         police=police,
         center=center,
+        alternative_name=alternative_name,
         lat=lat,
         lng=lng,
         formatted_address=formatted_address,
@@ -127,10 +138,24 @@ def backpopulate_oneoff(date_id):
         district = meta_d['district']
         police = meta_d['police']
         center = meta_d['center']
+        fuzzy_key = lk_vax_center_utils.get_fuzzy_key(
+            district, police, center
+        )
         corrected_district = metadata_fix.get_correct_district(
             district, police
         )
-        if district != corrected_district:
+        if fuzzy_key in metadata_fix.FUZZY_KEY_TO_ALT_NAME \
+            or fuzzy_key in metadata_fix.INCORRECT_FUZZY_KEYS:
+            if gmaps is None:
+                google_drive_api_key = get_google_drive_api_key()
+                gmaps = googlemaps.Client(key=google_drive_api_key)
+
+            corrected_meta_d = find_metadata(
+                corrected_district, police, center, gmaps
+            )
+            corrected_metadata_list.append(corrected_meta_d)
+            metadata_index[fuzzy_key] = meta_d
+        elif district != corrected_district:
             corrected_fuzzy_key = lk_vax_center_utils.get_fuzzy_key(
                 corrected_district, police, center
             )
@@ -260,5 +285,5 @@ def populate_new(date_id):
 
 
 if __name__ == '__main__':
-    # backpopulate_oneoff('20210819')
+    backpopulate_oneoff('20210819')
     populate_new('20210820')
