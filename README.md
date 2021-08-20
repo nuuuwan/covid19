@@ -69,3 +69,4 @@ pip install covid19-nuuuwan
   * Pre-Merge
 * [2021-08-20 06:58AM] Clean Addresses
   * Updated README
+  * metadata_validate complete

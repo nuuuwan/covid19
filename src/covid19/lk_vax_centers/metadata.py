@@ -85,11 +85,14 @@ def backpopulate(date_id):
     log.info(f'Wrote {n_data_list} metadata rows to {metadata_file}')
 
 
-def get_metadata_index(date_id):
+def get_metadata_list(date_id):
     metadata_file = lk_vax_center_utils.get_file(date_id, 'metadata.tsv')
-    metadata_list = tsv.read(metadata_file)
+    return tsv.read(metadata_file)
+
+
+def get_metadata_index(date_id):
     return ds.dict_list_to_index(
-        metadata_list,
+        get_metadata_list(date_id),
         'fuzzy_key',
     )
 
