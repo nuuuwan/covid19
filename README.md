@@ -99,3 +99,4 @@ pip install covid19-nuuuwan
   * Added examples stdev=2
   * 
   * Done
+  * Pre-Merge
