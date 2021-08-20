@@ -82,8 +82,14 @@ pip install covid19-nuuuwan
   * #AddrBug Kalutara South
   * 
   * #AddrBug Weligama
-  * #AddrBug Kaluwanchikudy Kokkadichcholai 
+  * #AddrBug Kaluwanchikudy Kokkadichcholai
   * metadata fixes
-  * 
+  *
   * Done
-  * Removed redundent files
+* [2021-08-20 08:58AM] Normalize Meta Data First
+  * Updated README
+  * Added find_metadata
+  * Done
+  * Removed accidental files
+  * Pre-Merge
+  * Merged
