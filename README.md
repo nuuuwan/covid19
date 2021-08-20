@@ -114,3 +114,5 @@ pip install covid19-nuuuwan
 * [2021-08-20 06:11PM] lk-vax-centers Opt.
   * Updated README
   * Pre-Merge
+* [2021-08-20 06:11PM] lk-vax-centers Opt
+  * Updated README
