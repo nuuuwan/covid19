@@ -11,8 +11,11 @@ I remember
  having one, but can't seem to find it.
 """
 import os
+import pandas
 
-from utils import www
+from gig import ents
+
+from utils import www, tsv
 
 from covid19._utils import log
 from covid19.lk_vax_centers import lk_vax_center_utils
@@ -25,10 +28,111 @@ TENTATIVE_VAX_SCH_URL = os.path.join(
 
 
 def scrape_tentative_vax_schedule():
-    schedule_file = lk_vax_center_utils.get_file('latest', 'schedule.xlsx')
-    www.download_binary(TENTATIVE_VAX_SCH_URL, schedule_file)
-    log.info(f'Downloaded {TENTATIVE_VAX_SCH_URL} to {schedule_file}')
+    schedule_xlsx_file = lk_vax_center_utils.get_file('latest', 'schedule.xlsx')
+    www.download_binary(TENTATIVE_VAX_SCH_URL, schedule_xlsx_file)
+    log.info(f'Downloaded {TENTATIVE_VAX_SCH_URL} to {schedule_xlsx_file}')
+
+    data_frame = pandas.read_excel(
+        schedule_xlsx_file,
+    )
+    data_frame = data_frame.fillna(method='ffill', axis=0)
+
+    data_list = []
+    prev_row = None
+    prev_gnd = None
+    for row in data_frame.values.tolist():
+        if str(row[1]) == 'nan' or str(row[1]) == 'Province':
+            continue
+        if str(row) == str(prev_row):
+            continue
+        __, province, district, moh, gnd, center, vaccine = row
+        if gnd == 'GN area':
+            gnd = ''
+
+        district = district.strip()
+
+        province_ents = ents.get_entities_by_name_fuzzy(province, 'province')
+        province_id = None
+        if province_ents:
+            province_ent = province_ents[0]
+            province_id = province_ent['id']
+            province  = province_ent['name']
+
+        if district in ['Colombo RDHS', 'CMC']:
+            district_id = 'LK-11'
+        elif district in ['Kalutara NIHS']:
+            district_id = 'LK-13'
+        else:
+            district_ents = ents.get_entities_by_name_fuzzy(district, filter_entity_type='district', filter_parent_id=province_id)
+            district_id = None
+            if district_ents:
+                district_ent = district_ents[0]
+                district_id = district_ent['id']
+                district  = district_ent['name']
+
+        moh_ents = ents.get_entities_by_name_fuzzy(moh,  filter_entity_type='moh')
+        moh_id = None
+        if moh_ents:
+            moh_ent = moh_ents[0]
+            moh_id = moh_ent['id']
+            moh = moh_ent['name']
+
+        gnd_ents = ents.get_entities_by_name_fuzzy(gnd, filter_entity_type='gnd', filter_parent_id=district_id)
+        gnd_id = None
+        if gnd_ents:
+            gnd_ent = gnd_ents[0]
+            gnd_id = gnd_ent['id']
+            gnd = gnd_ent['name']
+
+        if gnd == prev_gnd:
+            gnd = ''
+            gnd_id = None
+        else:
+            prev_gnd = gnd
+
+        data = dict(
+            province=province,
+            province_id=province_id,
+            district=district,
+            district_id=district_id,
+            moh=moh,
+            moh_id=moh_id,
+            gnd=gnd,
+            gnd_id=gnd_id,
+            center=center,
+            vaccine=vaccine,
+        )
+        data_list.append(data)
+        prev_row = row
+
+
+    schedule_tsv_file = lk_vax_center_utils.get_file('latest', 'schedule.tsv')
+    tsv.write(schedule_tsv_file, data_list)
+    log.info(f'Wrote {len(data_list)} to {schedule_tsv_file}')
+
+def analyze():
+    schedule_tsv_file = lk_vax_center_utils.get_file('latest', 'schedule.tsv')
+    data_list = tsv.read(schedule_tsv_file)
+    district_to_vaccine_to_count = {}
+    for data in data_list:
+        district = data['district']
+        vaccine = data['vaccine']
+
+        if district not in district_to_vaccine_to_count:
+            district_to_vaccine_to_count[district] = {}
+        if vaccine not in district_to_vaccine_to_count[district]:
+            district_to_vaccine_to_count[district][vaccine] = 0
+        district_to_vaccine_to_count[district][vaccine] += 1
+
+    for district, vaccine_to_count in district_to_vaccine_to_count.items():
+        print(district)
+        for vaccine, count in vaccine_to_count.items():
+            print('\t', vaccine, ' (', count, 'centers)'),
+
+
+
 
 
 if __name__ == '__main__':
-    scrape_tentative_vax_schedule()
+    # scrape_tentative_vax_schedule()
+    analyze()

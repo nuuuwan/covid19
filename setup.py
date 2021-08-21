@@ -37,6 +37,8 @@ setuptools.setup(
         'scipy',
         'emoji-country-flag',
         'google-api-python-client',
+        'pandas',
+        'xlrd',
     ],
     test_suite='nose.collector',
     tests_require=['nose'],
