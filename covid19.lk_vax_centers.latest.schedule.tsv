@@ -1,0 +1,365 @@
+province	province_id	district	district_id	moh	moh_id	gnd	gnd_id	center	vaccine
+Western	LK-1	Colombo RDHS	LK-11	Maharagama	MOH-11211			Factory workers	Sinopharm 
+Western	LK-1	Colombo RDHS	LK-11	Hanwella	MOH-11150			Puwakpitiya South KV	Sinopharm 
+Western	LK-1	CMC	LK-11	D1				Sugathadasa out door stadium 	Sinopharm 
+Western	LK-1	CMC	LK-11	D1				mobile vaccination	Sinopharm 
+Western	LK-1	CMC	LK-11	D2A				MOH/MCH complex	Sinopharm 
+Western	LK-1	CMC	LK-11	D2A				mobile vaccination	Sinopharm 
+Western	LK-1	CMC	LK-11	D2B				One Galle face	Sinopharm 
+Western	LK-1	CMC	LK-11	D2B				mobile vaccination	Sinopharm 
+Western	LK-1	CMC	LK-11	D3				Campbel park	Sinopharm 
+Western	LK-1	CMC	LK-11	D5				MOH/MCH complex	Sinopharm 
+Western	LK-1	CMC	LK-11	D5				mobile vaccination	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Kelaniya	MOH-12360			DALUGAMA CLINIC	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Kelaniya	MOH-12360			PELIYAGODA PANNANANDA TEMPLE	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Divulapitiya	MOH-12090			MOH Office	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Divulapitiya	MOH-12090			Miriswatta GN Office	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Attanagalla	MOH-12270			Thiththammahara Vidyalaya	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Attanagalla	MOH-12270			Ranpokunagama school	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Attanagalla	MOH-12270			Al Baduya School - Kahataowita	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Attanagalla	MOH-12270			Ellakkala M.V.	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Mirigama	MOH-12120			Pallewela CD	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Mirigama	MOH-12120			Loluwagoda K.V.	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Mirigama	MOH-12120			Maladeniya temple	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Mirigama	MOH-12120			Debarahera temple	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Mirigama	MOH-12120			Bogahawatta temple	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Mahara	MOH-12330			Dalupitiya Clinic	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Mahara	MOH-12330			Pradeshiya Sabhawa	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Mahara	MOH-12330			Scout center	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Gampaha	MOH-12240			Oruthota P.S.	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Gampaha	MOH-12240			Nadungamuwa Sri Siwali Vidyalaya	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Gampaha	MOH-12240			Ganemulla S/ Dharma sri Vardhanaaramaya	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Biyagama	MOH-12390			MOH	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Biyagama	MOH-12390			Makola P.S.	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Biyagama	MOH-12390			Yoshida damma school	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Ragama	MOH-12181			MOH Office Ragama	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Ja-Ela	MOH-12211			Batagama clinic	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Ja-Ela	MOH-12211			UC Central clinic Jaela	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Ja-Ela	MOH-12211			Demanhandiya MOH office	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				CNTH Ragama	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				DGH Gampaha	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				DGH Negombo	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				BH Wathupitiwala	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				BH Kiribathgoda	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				BH Minuwangoda	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				BH Mirigama	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				DH Udupila	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				DH Pamunugama	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				DH Biyagama 	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				DH Dompe	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				DH Divulapitiya	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				DH Jaela	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				DH Malwathuhiripitiya	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				DH Radawana	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				DH Akaragama	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				DH Kandana	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				CH Welisara	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				Wijayakumarathunga Hospital	Sinopharm 
+Western	LK-1	Gampaha	LK-12	Hospitals/ Institutions				Faculty of Medicine Ragama	Sinopharm 
+Western	LK-1	Kalutara NIHS	LK-13	Beruwala	MOH-13240			MOH Office Beruwala	Sinopharm
+Western	LK-1	Kalutara NIHS	LK-13	Kalutara	MOH-13211			Alwiswaththa (Eluk Waththa temple)	Sinopharm
+Western	LK-1	Kalutara NIHS	LK-13	Kalutara	MOH-13211			DGH Kalutara	Sinopharm
+Western	LK-1	Kalutara	LK-13	Madurawala	MOH-13151			Geekiyanakanda State 	Sinopharm
+Western	LK-1	Kalutara	LK-13	Horana	MOH-13090			MOH Central Clinic 	Sinopharm
+Western	LK-1	Kalutara	LK-13	Dodangoda				MOH Central Clinic 	Sinopharm
+Western	LK-1	Kalutara	LK-13	Panadura	MOH-13031			MOH Central Clinic 	Sinopharm
+Western	LK-1	Kalutara	LK-13	Mathugama	MOH-13272			MOH Central Clinic 	Sinopharm
+Western	LK-1	Kalutara	LK-13	Agalawatta	MOH-13330			Yatiyana MOH Central Clinic 	Sinopharm
+Western	LK-1	Kalutara	LK-13	Palindanuwara	MOH-13360			Hadigalla Vipulasara KV 	Sinopharm
+Western	LK-1	Kalutara	LK-13	Palindanuwara	MOH-13360			Magura KV 	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				DH Bandaragama	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				DH Naboda	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				BH Pimbura	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				DH Baduraliya	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				DH Ingiriya	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				DH Mathugama	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				DH Bulathsinhala	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				DH Gonaduwa	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				BH Panadura	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				DH Meegahathenna	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				DH Dodangoda	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				DH Galpatha	Sinopharm
+Western	LK-1	Kalutara	LK-13	Hospitals				DH Katugahahena	Sinopharm
+Southern	LK-3	Galle	LK-31	Ambalangoda	MOH-31330			Manana Community Hall Manimulla	Sinopharm 
+Southern	LK-3	Galle	LK-31	Baddegama	MOH-31270			CCBC+ VTA+ Baddegama Hospital	Sinopharm 
+Southern	LK-3	Galle	LK-31	Balapitiya	MOH-31060			Sripathi Vidyalya	Sinopharm 
+Southern	LK-3	Galle	LK-31	Elpitiya	MOH-31120			MOH Elpitiya	Sinopharm 
+Southern	LK-3	Galle	LK-31	Gonapinuwala	MOH-31340			Aluthwala Temple	Sinopharm 
+Southern	LK-3	Galle	LK-31	Tissamaharama	MOH-33090			lkapallama school	Sinopharm 
+Southern	LK-3	Galle	LK-31	Imaduwa	MOH-31510			DSI Bogahagoda (welikonda)	Sinopharm 
+Southern	LK-3	Galle	LK-31	Induruwa				"Temple Mullegoda , Athuruwalla Kanitu Viduhala"	Sinopharm 
+Southern	LK-3	Hambantota	LK-33	Beliatta	MOH-33300			"MOH Office, Beliatta"	Sinopharm 
+Southern	LK-3	Hambantota	LK-33	Katuwana	MOH-33240			"Primary school, Katuwana"	Sinopharm 
+Southern	LK-3	Hambantota	LK-33	Sooriyawewa	MOH-33030			Andarawewa temple	Sinopharm 
+Southern	LK-3	Hambantota	LK-33	Sooriyawewa	MOH-33030			Thalawilla temple	Sinopharm 
+Uva	LK-8	Badulla	LK-81	Ella	MOH-81360			Halpe Tea Factory	Sinopharm 
+Uva	LK-8	Badulla	LK-81	Ella	MOH-81360			Bora Hotel	Sinopharm 
+Uva	LK-8	Badulla	LK-81	Ella	MOH-81360			MOH office	Sinopharm 
+Uva	LK-8	Badulla	LK-81	Haldummulla	MOH-81420			Udaweriya Vidyalaya	Sinopharm 
+North Western	LK-6	Kurunegala	LK-61	Alawwa	MOH-61840	Boyawalana	LK-6184150	Boyawalana School	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Bamunukotuwa	MOH-61491	Kadiharaya	LK-6149040	MOH Office Bamunakotuwa	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Bingiriya	MOH-61420	Benji Garment		Benji Garment	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Bingiriya	MOH-61420	2nd Dose		MOH Office Bingiriya	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Galgamuwa	MOH-61061			MOH Office Galgamuwa	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Ganewatta	MOH-61330	Elders Home 2nd Dose		Elders Home	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Giribawa	MOH-61030	Pregnet Mothers 		MOH Office Giribawa	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Giribawa	MOH-61030	Grameeya Committee & Front Line Workers		MOH Office Giribawa	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Kobeigane	MOH-61390	Pregnet Mothers		MOH Office Kobeigane	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Kuliyapitiya	MOH-61691	Ihala Kalugamuwa	LK-6172245	Diyakadamulla Sreepathi Viharaya	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Kuliyapitiya	MOH-61691	Weralugama	LK-6172240	Diyakadamulla Sreepathi Viharaya	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Kuliyapitiya	MOH-61691	Thabbomulla	LK-6172090	Diyakadamulla Sreepathi Viharaya	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Kuliyapitiya	MOH-61691	Thalahitimulla	LK-6172235	Diyakadamulla Sreepathi Viharaya	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Kuliyapitiya	MOH-61691	Sandagala North	LK-6166060	Diyakadamulla Sreepathi Viharaya	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Mallawapitiya	MOH-61570	2nd Dose		Mehiella Sayana Madyasthanaya	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Mawathagama	MOH-61600	Pregnet Mothers		MOH Office Mawathagama	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Mawathagama	MOH-61600	Front Line Workers		MOH Office Mawathagama	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Kurunegala	MOH-61540	Wegolla	LK-6133180	Sanasa	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Kurunegala	MOH-61540	Wellawa Hospital Pregnet Mothers		Wellawa Hospital	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Kurunegala	MOH-61540	MOH Pregnet Mothers		MOH Office Kurunegala	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Narammala	MOH-61810	Welanda Sangamaya		MOH Office Narammala	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Panduwasnuwara	MOH-61451	School Teachers		MOH Office Panduwasnuwara	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Panduwasnuwara	MOH-61451	Pregnet Mothers		MOH Office Panduwasnuwara	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Pannala	MOH-61780			MOH Office Pannala	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Polpithigama	MOH-61270	2nd Dose		MOH Ofice Polpithigama	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Udubaddawa	MOH-61750	Ethungahakotuwa		Ethungahakotuwa Maha Vidyalaya	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Wariyapola	MOH-61360	Pregnet Mothers		MOH Office Wariyapola	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Weerambugedara	MOH-61660	Koswatta	LK-6163045	D.S.Senanayake Vidiyala	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Weerambugedara	MOH-61660	Galabadagama	LK-6166150	D.S.Senanayake Vidiyala	Sinopharm
+North Western	LK-6	Kurunegala	LK-61	Weerambugedara	MOH-61660	Bulupitiya	LK-6166115	D.S.Senanayake Vidiyala	Sinopharm
+North Western	LK-6	Puttalam	LK-62	Puttalam	MOH-62061	Manalthivu	LK-6215005	Veppamadu Muslim School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Puttalam	MOH-62061	Central Attavilluwa		Attavilluwa Kanishta Vidyalaya	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Puttalam	MOH-62061	Attavilluwa	LK-6215095	Attavilluwa Kanishta Vidyalaya	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Puttalam	MOH-62061	Thiladiya	LK-6215050	Thilladi Muslim M.V	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Puttalam	MOH-62061	Puttalam South	LK-6215055	Ananda National School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Puttalam	MOH-62061	Puttalam East	LK-6215040	Fathima National School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Puttalam	MOH-62061	Thiladiya	LK-6215050	Visadarrama temple	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Puttalam	MOH-62061	Puttalam East	LK-6215040	Manalgundu Muslim School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Puttalam	MOH-62061	Palaviya	LK-6215100	Palavi Sinhala School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Puttalam	MOH-62061	Puttalam East	LK-6215040	Divisinal Secretariat Office - Puttalam	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Wennappuwa	MOH-62450	Kolinjadiya West	LK-6245005	Ulhitiyawa	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Wennappuwa	MOH-62450	Kadawatha	LK-6245115	Fransis Xaviour School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Wennappuwa	MOH-62450	South Kolinjadiya		Fransis Xaviour School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Wennappuwa	MOH-62450	Meda Ulhitiyawa	LK-6245070	Fransis Xaviour School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mahawewa	MOH-62390	N/Iranavila		Iranawila Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mahawewa	MOH-62390	B/ Iranavila		Iranawila Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mahawewa	MOH-62390	U/Thoduwwa		St. Anthony Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mahawewa	MOH-62390	Meda Thoduwawa	LK-6239020	St. Anthony Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mahawewa	MOH-62390	D/Thoduwawa		St. Anthony Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Wanni Mundalama	LK-6203025	B.H Kalpitiya	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Anawasala	LK-6203015	B.H Kalpitiya	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Sinnakudirippu	LK-6203020	B.H Kalpitiya	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Dutch Bay		B.H Kalpitiya	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Palliyawatta	LK-6203010	B.H Kalpitiya	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Mandalakudawa	LK-6203030	Al-Aqsha School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Periyakudirippu	LK-6203035	Al-Aqsha School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Pudukudirippuwa	LK-6203040	Al-Aqsha School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Kandakuliya	LK-6203060	Kandakkuliya M.M.V	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Kurinjipitiya North	LK-6203050	Kandakkuliya M.M.V	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Kandakuliya Kudawa	LK-6203045	Kandakkuliya M.M.V	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Thalavila West	LK-6203085	Palakuda School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Thalavila East	LK-6203080	Palakuda School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Palakudawa	LK-6203090	Palakuda School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Thiladiya	LK-6215050	Palakuda School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Eththale		Palakuda School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Kurinjipitiya South	LK-6203055	Musalpitiya School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Palliwasalthure	LK-6203065	Musalpitiya School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Musalpitiya	LK-6203070	Musalpitiya School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Mudalappaliya	LK-6203075	Musalpitiya School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Karamba	LK-6203155	Ulukkapallama M.M.V	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Thethapola	LK-6203150	Ulukkapallama M.M.V	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Nawakkaduwa	LK-6203135	Duluwa Sinhala School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Daluwa	LK-6203145	Duluwa Sinhala School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Nirmalapura	LK-6203140	Duluwa Sinhala School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Norochchola	LK-6203115	Norochcholei M.M.V	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Alankudawa	LK-6203110	Norochcholei M.M.V	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Andankanniya	LK-6203105	Norochcholei M.M.V	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Mampuriya	LK-6203130	Narakkaliya School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Narakkalliya	LK-6203125	Narakkaliya School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Kalpitiya	MOH-62030	Panayadiya	LK-6203120	Narakkaliya School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Nattandiya	MOH-62420	Meda Pahala Katuneriya	LK-6242210	St.Sebestiyan Primary school	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Nattandiya	MOH-62420			St.Sebestiyan Primary school	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Nattandiya	MOH-62420	Lansigama	LK-6242200	St.Sebestiyan Primary school	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mundalama	MOH-62180	Udappuwa	LK-6218130	Udappuwa Hospital	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mundalama	MOH-62180			Udappuwa Hospital	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mundalama	MOH-62180	Thunamitiya		Andimunei School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mundalama	MOH-62180	Kattakaduwa	LK-6218110	Andimunei School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mundalama	MOH-62180	Sinnapaduwa	LK-6218115	Pandalaya	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mundalama	MOH-62180	Walliwasalpadu		Pandalaya	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mundalama	MOH-62180	Kandathoduwawa	LK-6218055	Kandathoduwawa	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Mundalama	MOH-62180	Mukkuthoduwawa	LK-6218050	Mukku thoduwawa	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Chilaw	MOH-62331			Ambakadawila School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Chilaw	MOH-62331			Medawatta	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Chilaw	MOH-62331			Wella Sebesthiyan School	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Chilaw	MOH-62331			Wella Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Chilaw	MOH-62331			Aluthwatta Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300	Karukupane	LK-6230075	Karuppane	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300	Kottapitiya	LK-6230140	Koottapitiya Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300	Kusala	LK-6230135	Koottapitiya Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300	Arachchikattuwa East	LK-6230095	Arachchikattuwa Temple	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300	Arachchikattuwa West	LK-6230090	Arachchikattuwa Temple	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300	Nalladarankattuwa	LK-6230070	Nalladarankattuwa Temple	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300	Sengaloya	LK-6230085	Nalladarankattuwa Temple	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300	Mailawa	LK-6242010	Anavilundawa Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300	Suruvila	LK-6230040	Anavilundawa Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300	Ilakkattuwa	LK-6230045	Anavilundawa Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300	Nagul Eliya		Muthupanthiya Church	Pfizer 2nd dose
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300	Muthupanthiya		Muthupanthiya Church	Pfizer 2nd dose
+Central	LK-2	Matale	LK-22	Hospitals				DH Galewela	Sinopharm 
+Central	LK-2	Matale	LK-22	Hospitals				DH Madipola	Sinopharm 
+Central	LK-2	Matale	LK-22	Hospitals				DH Kongahawela	Sinopharm 
+Central	LK-2	Matale	LK-22	Hospitals				DH Lenadora	Sinopharm 
+Central	LK-2	Matale	LK-22	Wilgamuwa	MOH-22270			Handungamuwa Central College	Sinopharm 
+Central	LK-2	Matale	LK-22	Yatawatta	MOH-22150			Mathalapitiya Viduhala	Sinopharm 
+Central	LK-2	Matale	LK-22	Yatawatta	MOH-22150			Udasgiriya Vidyalaya	Sinopharm 
+Central	LK-2	Matale	LK-22	Ukuwela	MOH-22330			Warakamura Annoor college	Sinopharm 
+Central	LK-2	Matale	LK-22	Rattota	MOH-22300			Rattota Hindu Vidyalaya	Sinopharm 
+Central	LK-2	Matale	LK-22	Ambanganga Korale	MOH-22210			Pussalla Nawodya Vidyalaya	Sinopharm 
+Central	LK-2	Matale	LK-22	Lahugala	MOH-52510			Mahalakotuwa School 	Sinopharm 
+Central	LK-2	Matale	LK-22	Naula	MOH-22090			Sri Naga School	Sinopharm 
+Central	LK-2	Matale	LK-22	Dambulla	MOH-22060			Kandalama DS Vidyalaya	Sinopharm 
+Central	LK-2	Matale	LK-22	Galewela	MOH-22030			Medabedda Maha Vidyalaya	Sinopharm 
+Central	LK-2	Matale	LK-22	Galewela	MOH-22030			Nilagama Temple	Sinopharm 
+Central	LK-2	Matale	LK-22	Matale	MOH-22180			St Thomas College	Sinopharm 
+Central	LK-2	Matale	LK-22	Matale	MOH-22180			Kumbiyangoda Temple	Sinopharm 
+Central	LK-2	Matale	LK-22	Hospitals				DH Galewela	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Hospitals				DH Nalanda	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Hospitals				DH Hettipola	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Hospitals				DH Kongahawela	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Hospitals				DH Handungamuwa	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Hospitals				PMCU Pallepola	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Wilgamuwa	MOH-22270			Nugagolla Central College	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Yatawatta	MOH-22150			Duulewa Viduhala	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Yatawatta	MOH-22150			Udasgiriya Vidyalaya	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Ukuwela	MOH-22330			Tanna Vidyalaya	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Ukuwela	MOH-22330			Leliambe Vidyalaya	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Ukuwela	MOH-22330			Katudeniya Vidyalaya	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Rattota	MOH-22300			Kaikawela Central	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Lahugala	MOH-52510			Mahalakotuwa School	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Lahugala	MOH-52510			Puwakpitiya School	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Lahugala	MOH-52510			Dambulla National school	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Dambulla	MOH-22060			Sigiriya Vidyalaya	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Dambulla	MOH-22060			Digampathaha V	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Naula	MOH-22090			Sri Naga School	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Pallepola	MOH-22120			Millawana M.V	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Galewela	MOH-22030			Nilagama M.V	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Matale	MOH-22180			St Thomas College	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Matale	MOH-22180			Aluwiharaya temple	Moderna 2nd dose
+Central	LK-2	Matale	LK-22	Dambulla	MOH-22060			Dambulla National school	Moderna 2nd dose
+Central	LK-2	Nuwara Eliya	LK-23	Ambagamuwa	MOH-23151			Ginigathena Central College	Sinopharm 
+Central	LK-2	Nuwara Eliya	LK-23	Ragala	MOH-23091			TBM Senananda School	Sinopharm 
+Central	LK-2	Kandy	LK-21	Doluwa	MOH-21420			Doluwa Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Doluwa	MOH-21420			Ranasingharamaya Panvilathenna	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Galagedara				Galagedara central college	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Galagedara				Jabbar Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Galaha				DH Galaha	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Galaha				Karagaskada Maha Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Gangaihala				Royal College - Kurunduwatte	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Gangaihala				Saranapala Vidyalaya - Udagama	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Gangaihala				Ulapane Rathnawali Primary school	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Harispattuwa	MOH-21330			Gohagoda Dharmavijaya Maha Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Harispattuwa	MOH-21330			Nugawela Central College	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Harispattuwa	MOH-21330			Gonigoda College	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Hatharaliyadda	MOH-21340			Hatharaliyadda National School	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Hatharaliyadda	MOH-21340			Dedunupitya School	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Kandy MC				Girls' High School	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Kandy MC				Technical College - Aruppola	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Medadumbara	MOH-21240			National School - Theldeniya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Medadumbara	MOH-21240			National School - Amupitiya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Menikhinna	MOH-21272			Walala School	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Menikhinna	MOH-21272			Menikhinna Balika School	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Panvila	MOH-21150			Rajasinghe Maha Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Panvila	MOH-21150			Kosgama Maha Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Panvila	MOH-21150			Abirami Maha Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Pasbage Korale	MOH-21570			Anurudhakuma Primary College	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Pasbage Korale	MOH-21570			Nawalapitiya Central College	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Pathadumbara	MOH-21120			Wattegama Balika Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Pathadumbara	MOH-21120			Madawala Madeena Vidyalaya 	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Pathadumbara	MOH-21120			Paranagama Madya Maha Vidyalaya - Jambugahapitiya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Pathahewaheta	MOH-21450			Hewahate Central College	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Pathahewaheta	MOH-21450			Mailapitiya Maha Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Pathahewaheta	MOH-21450			Uduwela  Balika Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Poojapitiya	MOH-21060			Poojapitiya Maha Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Poojapitiya	MOH-21060			Poojapitiya Primary School	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Udadumbara	MOH-21180			Dutugemunu Primary School	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Udapalatha	MOH-21510			Wickramabahu Central Collge	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Udapalatha	MOH-21510			Jathika Urumaya (Teachers and frontline staff)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Udapalatha	MOH-21510			Urban Council hall - Pussallawa	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Udunuwara	MOH-21392			Gadaladeniya Maha Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Udunuwara	MOH-21392			Gelioya Maha Vidyalaya	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Yatinuwara	MOH-21360			Ranabima Royal Collage	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Yatinuwara	MOH-21360			Theological College in Nanuoya Kiribathkubura (ලංකා දේවධර්ම ශාස්ත්‍රාලය)	Moderna 2nd dose
+Central	LK-2	Kandy	LK-21	Yatinuwara	MOH-21360			Pelawa Maha viddyalaya	Moderna 2nd dose
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Ayagama	MOH-91300	Madabaddara	LK-9130020	R/ Madabaddara Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Ayagama	MOH-91300	Galathura South		R/ Galathura Vidyalaya 	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Ayagama	MOH-91300	Nikagoda	LK-9130105	R/ Nikagoda Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Balangoda	MOH-91180	Polwathugoda	LK-9118160	R/ Rassagala Sinhala Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Eheliyagoda	MOH-91030	Kiriporuwa	LK-9103185	R/Kiriporuwa Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Eheliyagoda	MOH-91030	Karandana South	LK-9109051	R/Karadana Jinarathana Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Eheliyagoda	MOH-91030	Erepola	LK-9103195	R/Aerepola Shri Mahinda Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Eheliyagoda	MOH-91030	Hindurangala	LK-9103220	R/HIDURANGALA VIDYALAYA	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Eheliyagoda	MOH-91030	Huladduwa	LK-9103055	R/Uduwaka Sidhartha Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Elapatha	MOH-91270	Gangulvitiya	LK-9127070	R/Gagulwitiya Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Elapatha	MOH-91270	Palawela	LK-9127080	R/ Palawela Sri Rathanakara Mha Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Embilipitiya	MOH-91480	Panamura	LK-9148085	"R/Panamure Maha Vidyalaya- Hall No 1, Hall No 2"	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Embilipitiya	MOH-91480	Walalgoda	LK-9148140	R/Walalgoda Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Embilipitiya	MOH-91480	Thunkama	LK-9148180	Gunanandarama temple	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Godakawela	MOH-91420	Madampe North	LK-9142055	R/Madampe Vijaya Maha Vidyalaya 	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Godakawela	MOH-91420	Madampe South	LK-9142065	"R/Demuwatha Maha Vidyalaya,  "	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Kahawaththa	MOH-91390	Nambuluwa	LK-9139050	Bungiriya Vidyalaya/ Pilana Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Kahawaththa	MOH-91390	Panapitiya North	LK-9139045	Panapitiya Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Kiriella	MOH-91090	Munasinhapura	LK-9109050	R/ Epitawala Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Kiriella	MOH-91090	Epitawala	LK-9109045	R/ Epitawala Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Kolonna	MOH-91510	Ambagahayaya	LK-9151085	R/Emb/ Karagahayaya Pri. V	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Kolonna	MOH-91510	Nandanagama	LK-9151080	Nandanagama Sri Saddarama Viharaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Kuruwita	MOH-91060	Delgamuwa	LK-9106145	Kuruwita Central College	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Kuruwita	MOH-91060	Devipahala	LK-9106050	"Gangarama Temple,Devipahala"	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Kuruwita	MOH-91060	Theppanawa Pahalagama	LK-9106175	R/Theppanawa Pahalagama Buddhist College	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Nivithigala	MOH-91360	Dombagammana	LK-9136015	"1. R/Nivithigala Rajakeeya Vidyalaya, Hall No.1"	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Nivithigala	MOH-91360	Yakdehiwatta	LK-9136050	"Yaddehiwatta Sri Sunethradevi Rajamaha Viharaya,Ganegangoda"	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Nivithigala	MOH-91360	Nivithigala	LK-9136045	"Kshethraramaya,Nivithigala"	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Pelmadulla	MOH-91121	Berenduwa	LK-9124015	R/Sri abayathissa vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Pelmadulla	MOH-91121	Rilhena	LK-9124115	"Shri abayawardanaramaya,  "	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Pelmadulla	MOH-91121	Pelmadullagama	LK-9124145	R/Iddamalgoda sri vishuddarama temple	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Pelmadulla	MOH-91121	Pahala Bopitiya	LK-9124120	Sri rathnarama dharmashala	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Ratnapura	MOH-91122	Muwagama	LK-9112195	Sumana Balika Vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Ratnapura PS/MC		Samagipura	LK-9112235	R/Rajakiya vidyalaya	Sinopharm
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Ratnapura PS/MC		Galabada	LK-9112125	St.Francis Xavier church-pre school	Sinopharm
+Sabaragamuwa	LK-9	Kegalle	LK-92	All MOH areas		Mopping-up' program for the community 		MOH Offices	AstraZeneca 1st dose
+Sabaragamuwa	LK-9	Kegalle	LK-92	All MOH areas		Vaccination of pregnant women 		MOH Offices	AstraZeneca 1st dose
+Eastern	LK-5	Batticaloa	LK-51	Batticaloa	MOH-51180			RDHS Office	Sinopharm 
+Eastern	LK-5	Trincomalee	LK-53	Eachchilampatru	MOH-53330			MOH Office	Sinopharm 
+Eastern	LK-5	Trincomalee	LK-53	Gomarankadawala	MOH-53091			MOH Office	Sinopharm 
+Eastern	LK-5	Trincomalee	LK-53	Kanthale	MOH-53210			MOH Office	Sinopharm 
+Eastern	LK-5	Trincomalee	LK-53	Kinniya	MOH-53240			MOH Office	Sinopharm 
+Eastern	LK-5	Trincomalee	LK-53	Kuchchaveli	MOH-53061			MOH Office	Sinopharm 
+Eastern	LK-5	Trincomalee	LK-53	Kurinchakerny				MOH Office	Sinopharm 
+Eastern	LK-5	Trincomalee	LK-53	Muthur	MOH-53272			MOH Office	Sinopharm 
+Eastern	LK-5	Trincomalee	LK-53	Padavisiripura				MOH Office	Sinopharm 
+Eastern	LK-5	Trincomalee	LK-53	Seruvila	MOH-53152			MOH Office	Sinopharm 
+Eastern	LK-5	Trincomalee	LK-53	Thampalagamam	MOH-53180			MOH Office	Sinopharm 
+Eastern	LK-5	Trincomalee	LK-53	Trincomalee	MOH-53153			MOH Office	Sinopharm 
+Eastern	LK-5	Trincomalee	LK-53	Uppuveli	MOH-53154			MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Chankanai	MOH-41060			MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Chavakachcheri	MOH-41300			MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Jaffna	MOH-41360			MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Karainagar 				MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Karaveddy	MOH-41211			MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Kayts	MOH-41031			MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Kopay	MOH-41180			MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Maruthankerny				MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Nallur	MOH-41330			MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Sandilipay	MOH-41090			MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Tellipalai	MOH-41120			MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Uduvil	MOH-41150			MOH Office	Sinopharm 
+Northern	LK-4	Jaffna	LK-41	Velanai 				MOH Office	Sinopharm 
+Northern	LK-4	Mannar	LK-42	Mannar				NAVY Camp	Pfizer 2nd dose
+Northern	LK-4	Mannar	LK-42	Mannar				"RDHS Office, Mannar"	Pfizer 2nd dose
+Northern	LK-4	Mannar	LK-42	Mannar				Teachers - Education Training Center	Pfizer 2nd dose
+Northern	LK-4	Mannar	LK-42	Manthai West	MOH-42060			Pallamadhu	Pfizer 2nd dose
+Northern	LK-4	Mannar	LK-42	Madhu	MOH-42090			M/N Kaddai adampan School	Pfizer 2nd dose
+Northern	LK-4	Mullaitivu	LK-44	Mallavi	MOH-44030			Nandikadal	Sinopharm 
+Northern	LK-4	Kilinochchi	LK-45	Kandawalai	MOH-45060			MOH office	Sinopharm 
+Northern	LK-4	Kilinochchi	LK-45	Poonakary	MOH-45120			MOH office	Sinopharm 
+North Central	LK-7	Anuradhapura	LK-71	Rambewa	MOH-71180			Rambewa Maha Vidyalaya	Sinopharm 
+North Central	LK-7	Anuradhapura	LK-71	NPC				Galkadawala	Sinopharm 
+North Central	LK-7	Anuradhapura	LK-71	NPC				Mahamankadawala	Sinopharm 
