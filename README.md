@@ -126,3 +126,4 @@ pip install covid19-nuuuwan
   * Added scrape_tentative_vax_schedule
   * Done
   * Pre-Merge
+  * Done validating 2021-08-21

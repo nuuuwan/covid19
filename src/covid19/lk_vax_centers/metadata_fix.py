@@ -70,6 +70,24 @@ POLICE_INDEX = {
         'ps_lat': round_x(6.7622160106687215),
         'ps_lng': round_x(80.88585605425267),
     },
+    'Bemmulla': {
+        'ps_name_norm': 'Bemmulla',
+        'ps_id': None,
+        'ps_lat': round_x(7.120846416573023),
+        'ps_lng': round_x(80.02609663461938),
+    },
+    'Ichchalampattu': {
+        'ps_name_norm': 'Ichchalampattu',
+        'ps_id': None,
+        'ps_lat': round_x(8.289548594035875),
+        'ps_lng': round_x(81.35900159044994),
+    },
+    'Rideemaliyadda': {
+        'ps_name_norm': 'Rideemaliyadda',
+        'ps_id': None,
+        'ps_lat': round_x(7.21480693358237),
+        'ps_lng': round_x(81.1246131880584),
+    },
 }
 
 
@@ -84,15 +102,19 @@ def get_correct_district(district, police):
 
     if police in ['Kotmale']:
         district = 'Nuwara Eliya'
+    if police in ['Mahawela']:
+        district = 'Matale'
 
     if police in ['Kotmale']:
         district = 'Nuwara Eliya'
-    if police in ['Mullaitivu']:
+    if police in ['Mullaitivu', 'Oddusuddan']:
         district = 'Mullaitivu'
     if police in ['Kilinochchi']:
         district = 'Kilinochchi'
     if police in ['Adampan']:
         district = 'Mannar'
+    if police in ['Kalmunai']:
+        district = 'Ampara'
 
     if police in ['Valachchenai', 'Kokkadichcholai', 'Kaluwanchikudy']:
         district = 'Batticaloa'

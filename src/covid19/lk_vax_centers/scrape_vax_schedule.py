@@ -11,11 +11,10 @@ I remember
  having one, but can't seem to find it.
 """
 import os
+
 import pandas
-
 from gig import ents
-
-from utils import www, tsv
+from utils import tsv, www
 
 from covid19._utils import log
 from covid19.lk_vax_centers import lk_vax_center_utils
@@ -28,7 +27,9 @@ TENTATIVE_VAX_SCH_URL = os.path.join(
 
 
 def scrape_tentative_vax_schedule():
-    schedule_xlsx_file = lk_vax_center_utils.get_file('latest', 'schedule.xlsx')
+    schedule_xlsx_file = lk_vax_center_utils.get_file(
+        'latest', 'schedule.xlsx'
+    )
     www.download_binary(TENTATIVE_VAX_SCH_URL, schedule_xlsx_file)
     log.info(f'Downloaded {TENTATIVE_VAX_SCH_URL} to {schedule_xlsx_file}')
 
@@ -56,28 +57,36 @@ def scrape_tentative_vax_schedule():
         if province_ents:
             province_ent = province_ents[0]
             province_id = province_ent['id']
-            province  = province_ent['name']
+            province = province_ent['name']
 
         if district in ['Colombo RDHS', 'CMC']:
             district_id = 'LK-11'
         elif district in ['Kalutara NIHS']:
             district_id = 'LK-13'
         else:
-            district_ents = ents.get_entities_by_name_fuzzy(district, filter_entity_type='district', filter_parent_id=province_id)
+            district_ents = ents.get_entities_by_name_fuzzy(
+                district,
+                filter_entity_type='district',
+                filter_parent_id=province_id,
+            )
             district_id = None
             if district_ents:
                 district_ent = district_ents[0]
                 district_id = district_ent['id']
-                district  = district_ent['name']
+                district = district_ent['name']
 
-        moh_ents = ents.get_entities_by_name_fuzzy(moh,  filter_entity_type='moh')
+        moh_ents = ents.get_entities_by_name_fuzzy(
+            moh, filter_entity_type='moh'
+        )
         moh_id = None
         if moh_ents:
             moh_ent = moh_ents[0]
             moh_id = moh_ent['id']
             moh = moh_ent['name']
 
-        gnd_ents = ents.get_entities_by_name_fuzzy(gnd, filter_entity_type='gnd', filter_parent_id=district_id)
+        gnd_ents = ents.get_entities_by_name_fuzzy(
+            gnd, filter_entity_type='gnd', filter_parent_id=district_id
+        )
         gnd_id = None
         if gnd_ents:
             gnd_ent = gnd_ents[0]
@@ -105,10 +114,10 @@ def scrape_tentative_vax_schedule():
         data_list.append(data)
         prev_row = row
 
-
     schedule_tsv_file = lk_vax_center_utils.get_file('latest', 'schedule.tsv')
     tsv.write(schedule_tsv_file, data_list)
     log.info(f'Wrote {len(data_list)} to {schedule_tsv_file}')
+
 
 def analyze():
     schedule_tsv_file = lk_vax_center_utils.get_file('latest', 'schedule.tsv')
@@ -128,9 +137,6 @@ def analyze():
         print(district)
         for vaccine, count in vaccine_to_count.items():
             print('\t', vaccine, ' (', count, 'centers)'),
-
-
-
 
 
 if __name__ == '__main__':
