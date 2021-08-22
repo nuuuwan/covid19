@@ -6,13 +6,13 @@ Colombo	Narahenpita	Army Hospital Narahenpita	False	False	CLMBNRHNPTRMYHSPTLNRHN
 Colombo	Mattakkuliya	Mobile Medical Team - Mattakkuliya	False	True	CLMBMTTKKLYMBLMDCLTMMTTKKLY		Colombo	LK-11	6.869636	80.019598	Mattakkuliya	PS-110213	6.97601	79.879756					#CenterLocationUnknown
 Colombo	Homagama	Mobile Medical Team - Homagama	True	True	CLMBHMGMMBLMDCLTMHMGM		Colombo	LK-11	6.869636	80.019598	Homagama	PS-110470	6.836155	80.003474					#CenterLocationUnknown
 Colombo	Borella	St. Luke's Church - Borella	False	False	CLMBBRLLSTLKSCHRCHBRLL		Colombo	LK-11	6.869636	80.019598	Borella	PS-110323	6.915266	79.87829	6.918035	79.874548	1091 Gnanartha Pradeepa Mawatha, Colombo 00800, Sri Lanka	0.515354	
-Colombo	Kaduwela	MOH Office - Kaduwela	False	False	CLMBKDWLMHFFCKDWL		Colombo	LK-11	6.869636	80.019598									#PoliceLocationUnknown
+Colombo	Kaduwela	MOH Office - Kaduwela	False	False	CLMBKDWLMHFFCKDWL		Colombo	LK-11	6.869636	80.019598	Kaduwela		6.936234	79.970183	6.934127	79.984398	B263, Kaduwela, Sri Lanka	1.586964	
 Colombo	Wellampitiya	MOH Office - Kolonnawa	False	False	CLMBWLLMPTYMHFFCKLNNW		Colombo	LK-11	6.869636	80.019598	Wellampitiya	PS-110465	6.937514	79.896298	6.938303	79.889664	25 Pansalhena 1st Ln, 10600, Sri Lanka	0.737734	
 Colombo	Gothatuwa	MOH Office - Gothatuwa	False	False	CLMBGTHTWMHFFCGTHTW		Colombo	LK-11	6.869636	80.019598	Gothatuwa	PS-110475	6.922617	79.913475	6.922088	79.916237	Mandavila Rd, Kotikawatta, Sri Lanka	0.310602	
 Colombo	Fore shore	MOH Office - Jinthupitiya	False	False	CLMBFRSHRMHFFCJNTHPTY		Colombo	LK-11	6.869636	80.019598	Fore shore	PS-110210	6.949589	79.857355	6.943258	79.859238	No.27 Vivekananda Hill, Colombo 01300, Sri Lanka	0.734247	
 Colombo	Biyagama	Mobile Medical Team - Biyagama	False	True	CLMBBYGMMBLMDCLTMBYGM		Colombo	LK-11	6.869636	80.019598	Biyagama	PS-120131	6.962284	80.009037					#CenterLocationUnknown
 Gampaha	Divulapitiya	MOH Office - Divulapitiya	False	False	GMPHDVLPTYMHFFCDVLPTY		Gampaha	LK-12	7.123598	80.018508	Diulapitiya	PS-120355	7.174215	79.957874	7.215486	80.013606	6287+5CX, Divulapitiya, Sri Lanka	7.67456	
-Kalutara	Kalutara	Mobile Medical Team - Kalutara	True	True	KLTRKLTRMBLMDCLTMKLTR		Kalutara	LK-13	6.577316	80.127363									#CenterLocationUnknown
+Kalutara	Kalutara	Mobile Medical Team - Kalutara	True	True	KLTRKLTRMBLMDCLTMKLTR		Kalutara	LK-13	6.577316	80.127363	Kalutara South		6.584968	79.96102					#CenterLocationUnknown
 Kalutara	Beruwala	MOH Office - Beruwala	False	False	KLTRBRWLMHFFCBRWL		Kalutara	LK-13	6.577316	80.127363	Beruwala	PS-1302102	6.480329	79.983498	6.437559	79.999356	CXQX+2PH, Aluthgama, Sri Lanka	5.069893	
 Kalutara	Matugama	Weththewa Hospital	False	False	KLTRMTGMWTHTHWHSPTL		Kalutara	LK-13	6.577316	80.127363	Mathugama	PS-1302103	6.520881	80.117908	6.523087	80.125192	District Hospital, Hospital Road,Weththewa,., Matugama, Sri Lanka	0.841523	
 Kalutara	Agalawatta	Pimbura Hospital	False	False	KLTRGLWTTPMBRHSPTL		Kalutara	LK-13	6.577316	80.127363	Agalawatta		6.542566	80.157178	6.575949	80.158371	H5G5+98H, කළුතර, Sri Lanka	3.715525	

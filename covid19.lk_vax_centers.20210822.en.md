@@ -21,7 +21,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Borella** Police Area
   * St. Luke's Church - Borella - [1091 Gnanartha Pradeepa Mawatha, Colombo 00800, Sri Lanka](https://www.google.lk/maps/place/6.918035N,79.874548E) 
 * **Kaduwela** Police Area
-  * MOH Office - Kaduwela - (❓ Address not known) 
+  * MOH Office - Kaduwela - [B263, Kaduwela, Sri Lanka](https://www.google.lk/maps/place/6.934127N,79.984398E) 
 * **Wellampitiya** Police Area
   * MOH Office - Kolonnawa - [25 Pansalhena 1st Ln, 10600, Sri Lanka](https://www.google.lk/maps/place/6.938303N,79.889664E) 
 * **Gothatuwa** Police Area
