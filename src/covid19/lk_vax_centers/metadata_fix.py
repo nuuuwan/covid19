@@ -104,6 +104,9 @@ POLICE_INDEX = {
 
 
 def get_correct_district(district, police):
+    if police in ['Biyagama']:
+        district = 'Gampaha'
+
     if police in ['Kalutara South']:
         district = 'Kalutara'
 
@@ -131,11 +134,13 @@ def get_correct_district(district, police):
     if police in ['Valachchenai', 'Kokkadichcholai', 'Kaluwanchikudy']:
         district = 'Batticaloa'
 
-    if police in ['Kuliyapitiya', 'Nikaweratiya', 'Kurunegala']:
+    if police in ['Kuliyapitiya', 'Nikaweratiya', 'Kurunegala', 'Polgahawela']:
         district = 'Kurunegala'
     if police in ['Chilaw']:
         district = 'Puttalam'
 
+    if police in ['Mahiyanganaya']:
+        district = 'Badulla'    
     if police in ['Bibila']:
         district = 'Moneragala'
 
