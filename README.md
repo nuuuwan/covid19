@@ -127,3 +127,4 @@ pip install covid19-nuuuwan
   * Done
   * Pre-Merge
   * Done validating 2021-08-21
+  * Added Kalutara and Kaduwela Police

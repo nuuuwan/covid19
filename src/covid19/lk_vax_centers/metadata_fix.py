@@ -88,6 +88,18 @@ POLICE_INDEX = {
         'ps_lat': round_x(7.21480693358237),
         'ps_lng': round_x(81.1246131880584),
     },
+    'Kalutara': {
+        'ps_name_norm': 'Kalutara South',
+        'ps_id': None,
+        'ps_lat': round_x(6.584968490954541),
+        'ps_lng': round_x(79.96101960969796),
+    },
+    'Kaduwela': {
+        'ps_name_norm': 'Kaduwela',
+        'ps_id': None,
+        'ps_lat': round_x(6.936234138004364),
+        'ps_lng': round_x(79.97018260008049),
+    },
 }
 
 
