@@ -10,13 +10,13 @@ Colombo	Kaduwela	MOH Office - Kaduwela	False	False	CLMBKDWLMHFFCKDWL		Colombo	LK
 Colombo	Wellampitiya	MOH Office - Kolonnawa	False	False	CLMBWLLMPTYMHFFCKLNNW		Colombo	LK-11	6.869636	80.019598	Wellampitiya	PS-110465	6.937514	79.896298	6.938303	79.889664	25 Pansalhena 1st Ln, 10600, Sri Lanka	0.737734	
 Colombo	Gothatuwa	MOH Office - Gothatuwa	False	False	CLMBGTHTWMHFFCGTHTW		Colombo	LK-11	6.869636	80.019598	Gothatuwa	PS-110475	6.922617	79.913475	6.922088	79.916237	Mandavila Rd, Kotikawatta, Sri Lanka	0.310602	
 Colombo	Fore shore	MOH Office - Jinthupitiya	False	False	CLMBFRSHRMHFFCJNTHPTY		Colombo	LK-11	6.869636	80.019598	Fore shore	PS-110210	6.949589	79.857355	6.943258	79.859238	No.27 Vivekananda Hill, Colombo 01300, Sri Lanka	0.734247	
-Colombo	Biyagama	Mobile Medical Team - Biyagama	False	True	CLMBBYGMMBLMDCLTMBYGM		Colombo	LK-11	6.869636	80.019598	Biyagama	PS-120131	6.962284	80.009037					#CenterLocationUnknown
+Gampaha	Biyagama	Mobile Medical Team - Biyagama	False	True	GMPHBYGMMBLMDCLTMBYGM		Gampaha	LK-12	7.123598	80.018508	Biyagama	PS-120131	6.962284	80.009037					#CenterLocationUnknown
 Gampaha	Divulapitiya	MOH Office - Divulapitiya	False	False	GMPHDVLPTYMHFFCDVLPTY		Gampaha	LK-12	7.123598	80.018508	Diulapitiya	PS-120355	7.174215	79.957874	7.215486	80.013606	6287+5CX, Divulapitiya, Sri Lanka	7.67456	
 Kalutara	Kalutara	Mobile Medical Team - Kalutara	True	True	KLTRKLTRMBLMDCLTMKLTR		Kalutara	LK-13	6.577316	80.127363	Kalutara South		6.584968	79.96102					#CenterLocationUnknown
 Kalutara	Beruwala	MOH Office - Beruwala	False	False	KLTRBRWLMHFFCBRWL		Kalutara	LK-13	6.577316	80.127363	Beruwala	PS-1302102	6.480329	79.983498	6.437559	79.999356	CXQX+2PH, Aluthgama, Sri Lanka	5.069893	
 Kalutara	Matugama	Weththewa Hospital	False	False	KLTRMTGMWTHTHWHSPTL		Kalutara	LK-13	6.577316	80.127363	Mathugama	PS-1302103	6.520881	80.117908	6.523087	80.125192	District Hospital, Hospital Road,Weththewa,., Matugama, Sri Lanka	0.841523	
 Kalutara	Agalawatta	Pimbura Hospital	False	False	KLTRGLWTTPMBRHSPTL		Kalutara	LK-13	6.577316	80.127363	Agalawatta		6.542566	80.157178	6.575949	80.158371	H5G5+98H, කළුතර, Sri Lanka	3.715525	
-Kalutara	Polgahawela	MOH Office - Polgahawela	False	False	KLTRPLGHWLMHFFCPLGHWL		Kalutara	LK-13	6.577316	80.127363	Polgahawela	PS-610102	7.333281	80.300363	7.330938	80.29484	06 A6, Polgahawela, Sri Lanka	0.662694	
+Kurunegala	Polgahawela	MOH Office - Polgahawela	False	False	KRNGLPLGHWLMHFFCPLGHWL		Kurunegala	LK-61	7.66477	80.23677	Polgahawela	PS-610102	7.333281	80.300363	7.330938	80.29484	06 A6, Polgahawela, Sri Lanka	0.662694	
 Kandy	Galaha	Karagaskaduwa Maha Vidyalaya	False	False	KNDYGLHKRGSKDWMHVDYLY		Kandy	LK-21	7.27337	80.709602	Galaha	PS-210220	7.196074	80.669961	7.189501	80.672799	Palle, Galaha, Sri Lanka	0.795413	
 Kandy	Gampola	Panvilatenna Ranasingharamaya	False	False	KNDYGMPLPNVLTNNRNSNGHRMY		Kandy	LK-21	7.27337	80.709602	Gampola	PS-210216	7.132941	80.56799	7.15007	80.635402	Panvilatenna, Gampola - Pupuressa Rd, Sri Lanka	7.680132	
 Kandy	Gampola	Doluwa Maha Vidyalaya	False	False	KNDYGMPLDLWMHVDYLY		Kandy	LK-21	7.27337	80.709602	Gampola	PS-210216	7.132941	80.56799	7.18627	80.608269	5JP5+G82, Doluwa, Sri Lanka	7.412597	
@@ -29,7 +29,7 @@ Kandy	Hatharaliyadda	Hatharaliyadda Maha Vidyalaya	False	False	KNDYHTHRLYDDHTHRL
 Matale	Matale	Kumbiyangoda Viharaya	False	False	MTLMTLKMBYNGDVHRY		Matale	LK-22	7.667587	80.731008	Matale	PS-220121	7.462789	80.626211	7.454861	80.613636	Kumbiyangoda Rd, Matale, Sri Lanka	1.64349	
 Matale	Matale	Ukuwela Ajmer Muslim College	False	False	MTLMTLKWLJMRMSLMCLLG		Matale	LK-22	7.667587	80.731008	Matale	PS-220121	7.462789	80.626211	7.470517	80.621246	Kings St, Matale, Sri Lanka	1.019177	
 Matale	Raththota	Bandarapola Maha Vidyalaya	False	False	MTLRTHTHTBNDRPLMHVDYLY		Matale	LK-22	7.667587	80.731008	Rattota	PS-220122	7.520684	80.678809	7.457202	80.645871	Bandarapola, Sri Lanka	7.940581	
-Matale	Mahiyanganaya	MOH Office - Mahiyanganaya	False	False	MTLMHYNGNYMHFFCMHYNGNY		Matale	LK-22	7.667587	80.731008	Mahiyangane	PS-810105	7.334975	80.993108	7.349752	80.949998	Hasalaka, Sri Lanka	5.031818	
+Badulla	Mahiyanganaya	MOH Office - Mahiyanganaya	False	False	BDLLMHYNGNYMHFFCMHYNGNY		Badulla	LK-81	7.074529	81.04486	Mahiyangane	PS-810105	7.334975	80.993108	7.349752	80.949998	Hasalaka, Sri Lanka	5.031818	
 Hambantota	Walasmulla	MOH Office - Walasmulla	False	False	HMBNTTWLSMLLMHFFCWLSMLL		Hambantota	LK-33	6.259779	81.098619	Walasmulla	PS-330151	6.154102	80.698256	6.150889	80.693718	Walasmulla, Sri Lanka	0.616099	
 Hambantota	Tangalle	MOH Office - Tangalle	False	False	HMBNTTTNGLLMHFFCTNGLL		Hambantota	LK-33	6.259779	81.098619	Tangalle	PS-330147	6.023954	80.797255	6.02363	80.795742	2QFW+F75, Tangalle, Sri Lanka	0.171198	
 Hambantota	Katuwana	MOH Office - Katuwana	False	False	HMBNTTKTWNMHFFCKTWN		Hambantota	LK-33	6.259779	81.098619	Katuwana	PS-330153	6.269722	80.690963	6.26627	80.693035	7M8V+G63, Katuwana, Sri Lanka	0.447115	

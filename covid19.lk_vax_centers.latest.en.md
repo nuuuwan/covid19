@@ -28,9 +28,9 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * MOH Office - Gothatuwa - [Mandavila Rd, Kotikawatta, Sri Lanka](https://www.google.lk/maps/place/6.922088N,79.916237E) 
 * **Fore shore** Police Area
   * MOH Office - Jinthupitiya - [No.27 Vivekananda Hill, Colombo 01300, Sri Lanka](https://www.google.lk/maps/place/6.943258N,79.859238E) 
+## Gampaha District
 * **Biyagama** Police Area
   *  (💉 2nd Dose) Mobile Medical Team - Biyagama - (❓ Address not known) 
-## Gampaha District
 * **Divulapitiya** Police Area
   * MOH Office - Divulapitiya - [6287+5CX, Divulapitiya, Sri Lanka](https://www.google.lk/maps/place/7.215486N,80.013606E) 
 ## Kalutara District
@@ -42,6 +42,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * Weththewa Hospital - [District Hospital, Hospital Road,Weththewa,., Matugama, Sri Lanka](https://www.google.lk/maps/place/6.523087N,80.125192E) 
 * **Agalawatta** Police Area
   * Pimbura Hospital - [H5G5+98H, කළුතර, Sri Lanka](https://www.google.lk/maps/place/6.575949N,80.158371E) 
+## Kurunegala District
 * **Polgahawela** Police Area
   * MOH Office - Polgahawela - [06 A6, Polgahawela, Sri Lanka](https://www.google.lk/maps/place/7.330938N,80.29484E) 
 ## Kandy District
@@ -66,6 +67,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * Ukuwela Ajmer Muslim College - [Kings St, Matale, Sri Lanka](https://www.google.lk/maps/place/7.470517N,80.621246E) 
 * **Raththota** Police Area
   * Bandarapola Maha Vidyalaya - [Bandarapola, Sri Lanka](https://www.google.lk/maps/place/7.457202N,80.645871E) 
+## Badulla District
 * **Mahiyanganaya** Police Area
   * MOH Office - Mahiyanganaya - [Hasalaka, Sri Lanka](https://www.google.lk/maps/place/7.349752N,80.949998E) 
 ## Hambantota District
