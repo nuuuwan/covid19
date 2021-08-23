@@ -19,6 +19,9 @@ FUZZY_KEY_TO_ALT_NAME = {
     + ' Muslim Balika Navodaya School',
     'KLTRDDNGDMHFFCDDNGD': '6.540366199937832,80.03661033076219',
     'KLTRPNDRPNDRHSPTL': 'Base Hospital Panadura',
+    'BTTCLVLCHCHNMHFFCNWLD': 'Primary Medical Care Unit, Navalady',
+    'BTTCLVKRMHFFCVKR': 'Divisional Hospital Vakarai',
+    'BTTCLVLLWLKLMGLTMLVDYLY': 'Vellaveli Kalaimagal Maha Vidyalaya',
 }
 
 POLICE_INDEX = {
