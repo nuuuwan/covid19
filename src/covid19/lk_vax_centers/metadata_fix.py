@@ -100,14 +100,19 @@ POLICE_INDEX = {
         'ps_lat': round_x(6.936234138004364),
         'ps_lng': round_x(79.97018260008049),
     },
+    'Pupuressa': {
+        'ps_name_norm': 'Pupuressa',
+        'ps_id': None,
+        'ps_lat': round_x(7.130290549867375),
+        'ps_lng': round_x(80.66366919167224),
+    },
 }
 
 
 def get_correct_district(district, police):
     if police in ['Biyagama']:
         district = 'Gampaha'
-
-    if police in ['Kalutara South']:
+    if police in ['Kalutara South', 'Kalutara']:
         district = 'Kalutara'
 
     if police in ['Elpitiya']:
@@ -115,20 +120,18 @@ def get_correct_district(district, police):
     if police in ['Weligama']:
         district = 'Matara'
 
-    if police in ['Kotmale']:
+    if police in ['Kotmale', 'Nuwara Eliya']:
         district = 'Nuwara Eliya'
     if police in ['Mahawela']:
         district = 'Matale'
 
-    if police in ['Kotmale']:
-        district = 'Nuwara Eliya'
     if police in ['Mullaitivu', 'Oddusuddan']:
         district = 'Mullaitivu'
     if police in ['Kilinochchi']:
         district = 'Kilinochchi'
     if police in ['Adampan']:
         district = 'Mannar'
-    if police in ['Kalmunai']:
+    if police in ['Kalmunai', 'Mangalagama']:
         district = 'Ampara'
 
     if police in ['Valachchenai', 'Kokkadichcholai', 'Kaluwanchikudy']:
@@ -139,8 +142,8 @@ def get_correct_district(district, police):
     if police in ['Chilaw']:
         district = 'Puttalam'
 
-    if police in ['Mahiyanganaya']:
-        district = 'Badulla'    
+    if police in ['Mahiyanganaya', 'Badulla']:
+        district = 'Badulla'
     if police in ['Bibila']:
         district = 'Moneragala'
 

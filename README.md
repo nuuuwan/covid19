@@ -131,3 +131,4 @@ pip install covid19-nuuuwan
   * Updated get_correct_district
 * [2021-08-23 09:54AM] 2021-08-23 Corrections
   * Updated README
+  * Pre-Merge
