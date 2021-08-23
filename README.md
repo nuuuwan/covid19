@@ -129,3 +129,5 @@ pip install covid19-nuuuwan
   * Done validating 2021-08-21
   * Added Kalutara and Kaduwela Police
   * Updated get_correct_district
+* [2021-08-23 09:54AM] 2021-08-23 Corrections
+  * Updated README
