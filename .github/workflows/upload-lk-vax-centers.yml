@@ -47,3 +47,8 @@ jobs:
         git add .
         git commit -m "Updated data $(date)"
         git push origin data
+
+    - name: Trigger vax.covid.ukr.lk update
+      run: |
+        sleep 10s
+        curl -X POST -d {} https://api.netlify.com/build_hooks/${{ secrets.ukrHookId }}
