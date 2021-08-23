@@ -216,18 +216,18 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Batticaloa** Police Area
   * Mobile Medical Team - Batticaloa - (❓ Address not known) 
 * **Vellawali** Police Area
-  * Kalaimagal Tamil Vidyalaya - [CJ95+CR2, Ukuwela, Sri Lanka](https://www.google.lk/maps/place/7.418515N,80.609507E) (❌ Address is likely inaccurate) 
+  * Kalaimagal Tamil Vidyalaya - [Ampilanturai-Veeramunai Rd, Sri Lanka](https://www.google.lk/maps/place/7.503251N,81.730235E) (❌ Address is likely inaccurate) 
 * **Kaluwanchikudy** Police Area
   * Mobile Vaccination - (❓ Address not known) 
   * MOH Office – Kaluwanchikudy - [Colombo - Batticaloa Hwy, Kaluwanchikudy, Sri Lanka](https://www.google.lk/maps/place/7.509333N,81.79204E) 
 * **Valachchenai** Police Area
   * MOH Office - Valachchenai - [WG6M+W46, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.912281N,81.532775E) 
   * MOH Office – Oddamavadi - [WG6M+W46, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.912281N,81.532775E) 
-  * MOH Office – Nawaladi - [Delakada Plaza, Delkada, Nugegoda, Sri Lanka](https://www.google.lk/maps/place/6.862775N,79.901065E) (❌ Address is likely inaccurate) 
+  * MOH Office – Nawaladi - [PPP5+3MR, Kallady, Sri Lanka](https://www.google.lk/maps/place/7.735244N,81.709126E) (❌ Address is likely inaccurate) 
   * Mobile Vaccination - (❓ Address not known) 
   * Valachchenai Base Hospital - [Valaichchenai-Nasuvantivu-Navaladi Road, Sri Lanka](https://www.google.lk/maps/place/7.911315N,81.533046E) 
 * **Vakarai** Police Area
-  * MOH Office - Vakarai - [6287+5CX, Divulapitiya, Sri Lanka](https://www.google.lk/maps/place/7.215486N,80.013606E) (❌ Address is likely inaccurate) 
+  * MOH Office - Vakarai - [Trincomalee Hwy, Vakarai, Sri Lanka](https://www.google.lk/maps/place/8.134552N,81.435328E) (❌ Address is likely inaccurate) 
 * **Kattankudy** Police Area
   * MOH Office – Kattankudy - [MPMJ+C8J, Kattankudy, Sri Lanka](https://www.google.lk/maps/place/7.683586N,81.730767E) 
 * **Eravur** Police Area
