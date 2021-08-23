@@ -47,9 +47,9 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * Town Hall – Negombo - [Negombo, Sri Lanka](https://www.google.lk/maps/place/7.206667N,79.851863E) 
 * **Katana** Police Area
   * MOH Office – Katana - [Katana, Negombo - Mirigama Rd, Negombo, Sri Lanka](https://www.google.lk/maps/place/7.22436N,79.88271E) 
+## Kalutara District
 * **Kalutara** Police Area
   *  (💉 1st Dose, 2nd Dose) Mobile Medical Team - Kalutara - (❓ Address not known) 
-## Kalutara District
 * **Aluthgama** Police Area
   * Aluthgama Hospital - [Hospital Rd, Aluthgama, Sri Lanka](https://www.google.lk/maps/place/6.433865N,80.001921E) 
 * **Beruwala** Police Area
@@ -93,8 +93,8 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * Anurudda Kumara Primary School - [Nawalapitiya - Ginigathena Rd, Nawalapitiya, Sri Lanka](https://www.google.lk/maps/place/7.053484N,80.527436E) 
   * Nawalapitiya Central College - [Weligampola Road, Nawalapitiya, Sri Lanka](https://www.google.lk/maps/place/7.046305N,80.537454E) 
 * **Pupuressa** Police Area
-  * Panvilatenna Ranasingharama Viharaya - (❓ Address not known) 
-  * Delta EstateTamil Vidyalaya - (❓ Address not known) 
+  * Panvilatenna Ranasingharama Viharaya - [Sri Dalada Veediya, Kandy 20000, Sri Lanka](https://www.google.lk/maps/place/7.293609N,80.641325E) 
+  * Delta EstateTamil Vidyalaya - [4MH8+32G, Pupuressa, Sri Lanka](https://www.google.lk/maps/place/7.127692N,80.665089E) 
 * **Galaha** Police Area
   * Pattiyagama Primary School - [5P7G+7XM, Wadiyagoda, Sri Lanka](https://www.google.lk/maps/place/7.163205N,80.72743E) 
 * **Gampola** Police Area
@@ -102,11 +102,12 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * National Heritage Centre - [Hindagala-Naranwita-Gampola Rd, Gampola, Sri Lanka](https://www.google.lk/maps/place/7.162374N,80.574165E) 
 * **Pussellawa** Police Area
   * Town Hall – Pussellawa - [Peradeniya - Badulla - Chenkaladi Hwy, Pussellawa, Sri Lanka](https://www.google.lk/maps/place/7.106515N,80.636264E) 
+## Nuwara Eliya District
 * **Nuwara Eliya** Police Area
   * Mobile Medical Team - Nuwara Eliya - (❓ Address not known) 
-## Nuwara Eliya District
 * **Hanguranketha** Police Area
   * MOH Office – Rikillagaskada - [4QVJ+PJ6, Rikillagaskada, Sri Lanka](https://www.google.lk/maps/place/7.144287N,80.781529E) 
+## Badulla District
 * **Badulla** Police Area
   * MOH Office – Badulla - [Mediriya Road, Badulla, Sri Lanka](https://www.google.lk/maps/place/6.988514N,81.053232E) 
 ## Galle District
@@ -238,5 +239,6 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * Chenkaladi Hospital - [Batticaloa Rd, Chenkaladi, Sri Lanka](https://www.google.lk/maps/place/7.783546N,81.589961E) 
 * **Vavunathivu** Police Area
   * MOH Office – Vavunathivu - [Hospital Rd, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.708253N,81.691368E) (❌ Address is likely inaccurate) 
+## Ampara District
 * **Mangalagama** Police Area
-  * Keviliyamadu Community Health Centre - [Hospital Rd, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.708253N,81.691368E) (❌ Address is likely inaccurate) 
+  * Keviliyamadu Community Health Centre - [A5, Maha Oya, Sri Lanka](https://www.google.lk/maps/place/7.530069N,81.354605E) (❌ Address is likely inaccurate) 

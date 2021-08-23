@@ -20,7 +20,7 @@ Gampaha	Biyagama	MOH Office – Biyagama	False	False
 Gampaha	Divulapitiya	MOH Office – Divulapitiya	False	False
 Gampaha	Negombo	Town Hall – Negombo	False	False
 Gampaha	Katana	MOH Office – Katana	False	False
-Gampaha	Kalutara	Mobile Medical Team - Kalutara	True	True
+Kalutara	Kalutara	Mobile Medical Team - Kalutara	True	True
 Kalutara	Aluthgama	Aluthgama Hospital	False	False
 Kalutara	Beruwala	MOH Office – Beruwala	False	False
 Kalutara	Baduraliya	Mahena Viharaya	False	False
@@ -50,9 +50,9 @@ Kandy	Galaha	Pattiyagama Primary School	False	False
 Kandy	Gampola	Wickramabahu National College	False	False
 Kandy	Gampola	National Heritage Centre	False	False
 Kandy	Pussellawa	Town Hall – Pussellawa	False	False
-Kandy	Nuwara Eliya	Mobile Medical Team - Nuwara Eliya	False	False
+Nuwara Eliya	Nuwara Eliya	Mobile Medical Team - Nuwara Eliya	False	False
 Nuwara Eliya	Hanguranketha	MOH Office – Rikillagaskada	False	False
-Nuwara Eliya	Badulla	MOH Office – Badulla	False	False
+Badulla	Badulla	MOH Office – Badulla	False	False
 Galle	Elpitiya	St. Theresa Primary School	False	False
 Galle	Elpitiya	Ella Rajabishekaramaya	False	False
 Galle	Elpitiya	Pitawala Purana Viharaya	False	False
@@ -122,4 +122,4 @@ Batticaloa	Eravur	Sandiveli Hospital	False	False
 Batticaloa	Eravur	Mobile Vaccination	False	False
 Batticaloa	Eravur	Chenkaladi Hospital	False	False
 Batticaloa	Vavunathivu	MOH Office – Vavunathivu	False	False
-Batticaloa	Mangalagama	Keviliyamadu Community Health Centre	False	False
+Ampara	Mangalagama	Keviliyamadu Community Health Centre	False	False
