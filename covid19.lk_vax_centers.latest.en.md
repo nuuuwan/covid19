@@ -149,9 +149,9 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 ## Moneragala District
 * **Bibila** Police Area
   * Divisional Secretariat - Bibila - [Peradeniya-Badulla-Chenkaladi Hwy, Bibile, Sri Lanka](https://www.google.lk/maps/place/7.156706N,81.224646E) 
-* **Galle** Police Area
-  * Galle - [Galle, Sri Lanka](https://www.google.lk/maps/place/6.057749N,80.217557E) 
 ## Galle District
+* **Galle** Police Area
+  * Galle - [Galle, Sri Lanka](https://www.google.lk/maps/place/6.053519N,80.220977E) 
 * **Elpitiya** Police Area
   * Waturawila Dhamma School - [66HH+8R5, Kahaduwa, Sri Lanka](https://www.google.lk/maps/place/6.228271N,80.229604E) 
   * Miriswatta Primary School - [Yakkatuwa-Kahaduwa Road, Sri Lanka](https://www.google.lk/maps/place/6.22676N,80.186059E) 
@@ -230,14 +230,14 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Kodikamam** Police Area
   * Varani Base Hospital - [M6HP+5MM, Jaffna, Sri Lanka](https://www.google.lk/maps/place/9.677952N,80.236663E) 
 * **Maruthankerny** Police Area
-  * MOH Office - Maruthankerny - (❓ Address not known) 
+  * MOH Office - Maruthankerny - [A7, Karawanella, Sri Lanka](https://www.google.lk/maps/place/7.023407N,80.262082E) (❌ Address is likely inaccurate) 
 * **Chavakachcheri** Police Area
   * Town Hall – Chavakachcheri - [M556+M94, Chavakachcheri, Sri Lanka](https://www.google.lk/maps/place/9.659136N,80.160946E) 
 ## Kilinochchi District
 * **Kilinochchi** Police Area
   * Mobile Vaccination - (❓ Address not known) 
 * **Jayapuram** Police Area
-  * Jayapuram Maha Vidyalaya - (❓ Address not known) 
+  * Jayapuram Maha Vidyalaya - [856G+H9H, Pallawarayankaddu, Sri Lanka](https://www.google.lk/maps/place/9.311436N,80.17598E) 
 * **Pooneryn** Police Area
   * Gnanimadam Primary school - [Pooneryn, Sri Lanka](https://www.google.lk/maps/place/9.503311N,80.211216E) 
 ## Mullaitivu District
@@ -255,8 +255,10 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * MOH Office – Pudukudiruppu - [Parantan-Mullaitivu Hwy, Velikkandal, Sri Lanka](https://www.google.lk/maps/place/9.320965N,80.683013E) (❌ Address is likely inaccurate) 
 * **Mulliyawalai** Police Area
   * PMCU - Mulliyawalai Neeravipiddy - [Mulliyawalai, Sri Lanka](https://www.google.lk/maps/place/9.219215N,80.764395E) (❌ Address is likely inaccurate) 
+## Mannar District
 * **Mannar** Police Area
   * Mobile Medical Team - (❓ Address not known) 
+## Vavuniya District
 * **Vavuniya** Police Area
   * Mobile Medical Team - (❓ Address not known) 
 ## Trincomalee District

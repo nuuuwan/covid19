@@ -76,7 +76,7 @@ Badulla	Ella	Demodara Hospital	False	False	BDLLLLDMDRHSPTL		Badulla	LK-81	7.0745
 Badulla	Ella	Balakotuwa Hospital	False	False	BDLLLLBLKTWHSPTL		Badulla	LK-81	7.074529	81.04486	Ella	PS-810211	6.876609	81.048276	6.874718	81.048151	Ella, Sri Lanka	0.210788	
 Badulla	Uva Paranagama	Uva Paranagama Hospital	False	False	BDLLVPRNGMVPRNGMHSPTL	Divisional Hospital - Uva Paranagama	Badulla	LK-81	7.074529	81.04486	Uvaparanagama	PS-810213	6.958341	80.930364	6.938076	80.890525	Rendapola-Galahagama-Ambagasdowa Rd, Himbiliyagahamadiththa, Sri Lanka	4.942648	
 Moneragala	Bibila	Divisional Secretariat - Bibila	False	False	MNRGLBBLDVSNLSCRTRTBBL		Moneragala	LK-82	6.787517	81.303744	Bibila	PS-820125	7.165232	81.225463	7.156706	81.224646	Peradeniya-Badulla-Chenkaladi Hwy, Bibile, Sri Lanka	0.952622	
-Moneragala	Galle	Galle	False	False	MNRGLGLLGLL		Moneragala	LK-82	6.787517	81.303744	Galle	PS-310120	6.032983	80.21714	6.057749	80.217557	Galle, Sri Lanka	2.755104	
+Galle	Galle	Galle	False	False	GLLGLLGLL		Galle	LK-31	6.222805	80.251977	Galle	PS-310120	6.032983	80.21714	6.053519	80.220977	Galle, Sri Lanka	2.323201	
 Galle	Elpitiya	Waturawila Dhamma School	False	False	GLLLPTYWTRWLDHMMSCHL		Galle	LK-31	6.222805	80.251977	Elpitiya	PS-310235	6.279163	80.142917	6.228271	80.229604	66HH+8R5, Kahaduwa, Sri Lanka	11.131579	
 Galle	Elpitiya	Miriswatta Primary School	False	False	GLLLPTYMRSWTTPRMRYSCHL		Galle	LK-31	6.222805	80.251977	Elpitiya	PS-310235	6.279163	80.142917	6.22676	80.186059	Yakkatuwa-Kahaduwa Road, Sri Lanka	7.53185	
 Matara	Matara	Matara	False	False	MTRMTRMTR		Matara	LK-32	6.142734	80.539994	Matara	PS-320101	5.94904	80.533659	5.95492	80.554956	Matara, Sri Lanka	2.445184	
@@ -121,10 +121,10 @@ Jaffna	Manippai	Manippai Base Hospital	False	False	JFFNMNPPMNPPBSHSPTL		Jaffna	L
 Jaffna	Manippai	Sandilippai Tamil College	False	False	JFFNMNPPSNDLPPTMLCLLG		Jaffna	LK-41	9.691792	80.098594	Manippai	PS-410210	9.727151	79.996905	9.729106	79.992545	Manipay, Sri Lanka	0.525128	
 Jaffna	Manippai	Sandilippai Manimekan Pre School	False	False	JFFNMNPPSNDLPPMNMKNPRSCHL		Jaffna	LK-41	9.691792	80.098594	Manippai	PS-410210	9.727151	79.996905	9.727464	80.000402	Uduvil Rd, Manipay 40000, Sri Lanka	0.384956	
 Jaffna	Kodikamam	Varani Base Hospital	False	False	JFFNKDKMMVRNBSHSPTL		Jaffna	LK-41	9.691792	80.098594	Kodikamam	PS-410217	9.666459	80.132384	9.677952	80.236663	M6HP+5MM, Jaffna, Sri Lanka	11.505299	
-Jaffna	Maruthankerny	MOH Office - Maruthankerny	False	False	JFFNMRTHNKRNYMHFFCMRTHNKRNY		Jaffna	LK-41	9.691792	80.098594									#PoliceLocationUnknown
+Jaffna	Maruthankerny	MOH Office - Maruthankerny	False	False	JFFNMRTHNKRNYMHFFCMRTHNKRNY		Jaffna	LK-41	9.691792	80.098594	Maruthankerny		9.62311	80.397326	7.023407	80.262082	A7, Karawanella, Sri Lanka	289.547303	#CenterFarFromPolice
 Jaffna	Chavakachcheri	Town Hall – Chavakachcheri	False	False	JFFNCHVKCHCHRTWNHLLCHVKCHCHR		Jaffna	LK-41	9.691792	80.098594	Chawakachcheri	PS-410215	9.666459	80.132384	9.659136	80.160946	M556+M94, Chavakachcheri, Sri Lanka	3.236063	
 Kilinochchi	Kilinochchi	Mobile Vaccination	False	False	KLNCHCHKLNCHCHMBLVCCNTN		Kilinochchi	LK-45	9.415742	80.30358	Kilinochchi	PS-450131	9.392265	80.407846					#CenterLocationUnknown
-Kilinochchi	Jayapuram	Jayapuram Maha Vidyalaya	False	False	KLNCHCHJYPRMJYPRMMHVDYLY		Kilinochchi	LK-45	9.415742	80.30358									#PoliceLocationUnknown
+Kilinochchi	Jayapuram	Jayapuram Maha Vidyalaya	False	False	KLNCHCHJYPRMJYPRMMHVDYLY		Kilinochchi	LK-45	9.415742	80.30358	Jayapuram		9.312838	80.159865	9.311436	80.17598	856G+H9H, Pallawarayankaddu, Sri Lanka	1.775707	
 Kilinochchi	Pooneryn	Gnanimadam Primary school	False	False	KLNCHCHPNRYNGNNMDMPRMRYSCHL		Kilinochchi	LK-45	9.415742	80.30358	Pooneryn		9.505717	80.21101	9.503311	80.211216	Pooneryn, Sri Lanka	0.268571	
 Mullaitivu	Mullaitivu	Mobile Medical Team	False	False	MLLTVMLLTVMBLMDCLTM		Mullaitivu	LK-44	9.167643	80.549091	Mullativu	PS-440148	9.212825	80.760159					#CenterLocationUnknown
 Mullaitivu	Mallavi	Mobile Vaccination	False	False	MLLTVMLLVMBLVCCNTN		Mullaitivu	LK-44	9.167643	80.549091	Mallavi	PS-440153	9.137878	80.307257					#CenterLocationUnknown
@@ -134,8 +134,8 @@ Mullaitivu	Mankulam	MOH Office – Mankulam	False	False	MLLTVMNKLMMHFFCMNKLM		Mu
 Mullaitivu	Oddusuddan	MO Office – Oddusuddan	False	False	MLLTVDDSDDNMFFCDDSDDN		Mullaitivu	LK-44	9.167643	80.549091	Oddusudan	PS-440151	9.160983	80.652821	9.153738	80.646338	Mankulam-Mullaitivu Hwy, Oddusuddan, Sri Lanka	1.075281	
 Mullaitivu	Pudukudiruppu	MOH Office – Pudukudiruppu	False	False	MLLTVPDKDRPPMHFFCPDKDRPP		Mullaitivu	LK-44	9.167643	80.549091	Pudukuduiruppu	PS-440149	7.00152	79.95003	9.320965	80.683013	Parantan-Mullaitivu Hwy, Velikkandal, Sri Lanka	270.317914	#CenterFarFromPolice
 Mullaitivu	Mulliyawalai	PMCU - Mulliyawalai Neeravipiddy	False	False	MLLTVMLLYWLPMCMLLYWLNRVPDDY		Mullaitivu	LK-44	9.167643	80.549091	Muliyaweli	PS-440150	6.915266	79.87829	9.219215	80.764395	Mulliyawalai, Sri Lanka	274.216834	#CenterFarFromPolice
-Mullaitivu	Mannar	Mobile Medical Team	False	False	MLLTVMNNRMBLMDCLTM		Mullaitivu	LK-44	9.167643	80.549091	Mannar	PS-420138	8.978123	79.911642					#CenterLocationUnknown
-Mullaitivu	Vavuniya	Mobile Medical Team	False	False	MLLTVVVNYMBLMDCLTM		Mullaitivu	LK-44	9.167643	80.549091	Vavuniya	PS-430119	8.754431	80.498604					#CenterLocationUnknown
+Mannar	Mannar	Mobile Medical Team	False	False	MNNRMNNRMBLMDCLTM		Mannar	LK-42	8.877429	80.088628	Mannar	PS-420138	8.978123	79.911642					#CenterLocationUnknown
+Vavuniya	Vavuniya	Mobile Medical Team	False	False	VVNYVVNYMBLMDCLTM		Vavuniya	LK-43	8.852071	80.467404	Vavuniya	PS-430119	8.754431	80.498604					#CenterLocationUnknown
 Trincomalee	Trincomalee	Trincomalee	False	False	TRNCMLTRNCMLTRNCML		Trincomalee	LK-53	8.551241	81.092014	Trincomalee	PS-530130	8.563946	81.234023	8.587364	81.215212	Trincomalee, Sri Lanka	3.326476	
 Trincomalee	Muttur	MOH Office – Muttur	False	False	TRNCMLMTTRMHFFCMTTR		Trincomalee	LK-53	8.551241	81.092014	Mutur	PS-530138	8.461133	81.259371	8.453916	81.264494	1 Old Batticaloa Rd, Mutur, Sri Lanka	0.980859	
 Trincomalee	Kinniya	MOH Office - Kuruggankeni	False	False	TRNCMLKNNYMHFFCKRGGNKN		Trincomalee	LK-53	8.551241	81.092014	Kinnia	PS-530140	6.907289	79.863819	8.498696	81.179644	F5XH+FVC, Kinniya 31100, Sri Lanka	228.840304	#CenterFarFromPolice
