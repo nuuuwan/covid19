@@ -122,7 +122,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * Galkuliya Vidyalaya - [Puttalam, Sri Lanka](https://www.google.lk/maps/place/7.684519N,79.918904E) 
   * Serukele Vidyalaya - [Puttalam, Sri Lanka](https://www.google.lk/maps/place/7.684519N,79.918904E) 
 * **Mahakumbukkadawala** Police Area
-  * Mahakumbukkadawala Vidyalaya - (❓ Address not known) 
+  * Mahakumbukkadawala Vidyalaya - [RWX3+GCC, Mahakumbukkadawala, Sri Lanka](https://www.google.lk/maps/place/7.848816N,79.90352E) 
 ## Kandy District
 * **Kandy** Police Area
   * Mobile Medical Team - (❓ Address not known) 
@@ -164,6 +164,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Walapane** Police Area
   * Walapane Hospital - [Tennekumbura - Rikillagaskada - Ragala, Walapane, Sri Lanka](https://www.google.lk/maps/place/7.102424N,80.858882E) 
   * Batapola Pussellawa Vidyalaya - [Old Uda Pussellawa Rd, Nuwara Eliya 22200, Sri Lanka](https://www.google.lk/maps/place/6.973742N,80.768537E) 
+## Matale District
 * **Mathale** Police Area
   * Mobile Medical Team - (❓ Address not known) 
 ## Badulla District
@@ -177,6 +178,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * MOH Office – Welimada - [Udapussellawa-Welimada Road, Ambagasdowa, Sri Lanka](https://www.google.lk/maps/place/6.927934N,80.896475E) 
 * **Haputale** Police Area
   * Diyatalawa Base Hospital - [12 Fair Rd, Diyatalawa, Sri Lanka](https://www.google.lk/maps/place/6.80555N,80.956366E) 
+## Moneragala District
 * **Monaragala** Police Area
   * Mobile Medical Team - (❓ Address not known) 
 ## Galle District
@@ -249,7 +251,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Bulathkohupitiya** Police Area
   * MOH Office - Bulathkohupitiya - [485M+MR4, Bulathkohupitiya, Sri Lanka](https://www.google.lk/maps/place/7.109127N,80.334565E) 
 * **Puwakpitiya** Police Area
-  * Puwakpitiya Tamail College - (❓ Address not known) 
+  * Puwakpitiya Tamail College - [Farnham Division Rd, Avissawella, Sri Lanka](https://www.google.lk/maps/place/6.941689N,80.198194E) 
 * **Avissawella** Police Area
   * MOH Office – Dehiowita - [X777+HM4, Talduwa, Sri Lanka](https://www.google.lk/maps/place/6.963895N,80.264191E) 
 ## Anuradhapura District
@@ -369,8 +371,8 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * Kayamaduwa Vidyalaya - [PPC2+362, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.720143N,81.700516E) (❌ Address is likely inaccurate) 
   * Pavakkodichenai Vinayager Vidyalaya - [PPC2+6F6, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.720547N,81.70115E) (❌ Address is likely inaccurate) 
   * Mandapathadi Hospital - [91 Pioneer Rd, Batticaloa, Sri Lanka](https://www.google.lk/maps/place/7.719015N,81.701193E) (❌ Address is likely inaccurate) 
+## Ampara District
 * **Chavalakade** Police Area
   * MOH Office - Navidanveli - [B77, Sri Lanka](https://www.google.lk/maps/place/7.420081N,81.788401E) 
-## Ampara District
 * **Karaitivu** Police Area
   * MOH Office – Karaitivu - [Colombo-Ratnapura-Wellawaya-Batticaloa Highway, Karativu 32250, Sri Lanka](https://www.google.lk/maps/place/7.377712N,81.838796E) (❌ Address is likely inaccurate) 
