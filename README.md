@@ -179,3 +179,4 @@ pip install covid19-nuuuwan
   * Updated lk-vax-schedule workflows
   * Fixed filename bug
   * Fixed filename bug
+  * Fix vax-schedule folder bug
