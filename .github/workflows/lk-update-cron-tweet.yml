@@ -4,7 +4,6 @@ name: LK Update - Cron Tweet
 on:
   schedule:
     - cron:  "00 13 * * *"
-on: workflow_dispatch
 
 jobs:
   tweet:
