@@ -164,3 +164,4 @@ pip install covid19-nuuuwan
 * [2021-08-26 08:36AM] Speedup vax-center pipeline
   * Updated README
   * Done
+  * Pre-Merge
