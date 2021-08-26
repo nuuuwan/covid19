@@ -1,5 +1,4 @@
 git checkout main
-git reset --hard HEAD
 git pull origin main
 
 GOOGLE_API_KEY=$1

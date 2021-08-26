@@ -158,3 +158,4 @@ pip install covid19-nuuuwan
   * Updated README
   * Updated POLICE_INDEX
   * Pre-Merge
+  * Updated local workflows
