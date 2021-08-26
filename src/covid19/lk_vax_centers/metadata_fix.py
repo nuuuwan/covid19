@@ -139,6 +139,43 @@ POLICE_INDEX = {
         'ps_lat': round_x(7.848668416931301),
         'ps_lng': round_x(79.90313163853531),
     },
+
+    'Peththapitiya': {
+        'ps_name_norm': 'Peththapitiya',
+        'ps_id': None,
+        'ps_lat': round_x(7.287977439518023),
+        'ps_lng': round_x(80.49344926011052),
+    },
+    'Pansiyagama': {
+        'ps_name_norm': 'Pansiyagama',
+        'ps_id': None,
+        'ps_lat': round_x(7.7468737516907575),
+        'ps_lng': round_x(80.4829446662558),
+    },
+    'Lankapura': {
+        'ps_name_norm': 'Lankapura',
+        'ps_id': None,
+        'ps_lat': round_x(8.02851042689706),
+        'ps_lng': round_x(81.03246724143054),
+    },
+    'Arayampathy': {
+        'ps_name_norm': 'Arayampathy',
+        'ps_id': None,
+        'ps_lat': round_x(7.6703333093571855),
+        'ps_lng': round_x(81.74578266811524),
+    },
+    'Saindamarudu': {
+        'ps_name_norm': 'Saindamarudu',
+        'ps_id': None,
+        'ps_lat': round_x(7.397352447192513),
+        'ps_lng': round_x(81.84237726745481),
+    },
+    'Dewalagama': {
+        'ps_name_norm': 'Dewalagama',
+        'ps_id': None,
+        'ps_lat': round_x(7.285171101034474),
+        'ps_lng': round_x(80.3219878537455),
+    },
 }
 
 
