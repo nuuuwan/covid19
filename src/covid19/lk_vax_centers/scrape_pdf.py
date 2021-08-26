@@ -7,10 +7,17 @@ from googleapiclient.http import MediaIoBaseDownload
 from utils import timex
 
 from covid19._utils import log
-from covid19.lk_vax_centers import google_utils, lk_vax_center_utils
+from covid19.lk_vax_centers import (google_utils, lk_vax_center_utils,
+                                    scrape_google_id)
 
 
-def scrape_pdf(date_id, google_drive_file_id):
+def scrape_pdf(date_id):
+    pdf_file = lk_vax_center_utils.get_file(date_id, 'pdf')
+    if os.path.exists(pdf_file):
+        log.warn(f'{pdf_file} already exists. Not downloading.')
+        return pdf_file
+
+    google_drive_file_id = scrape_google_id()
     google_api_key = google_utils.get_google_api_key()
     if google_api_key is None:
         log.error('No google_api_key. Aborting.')
@@ -40,11 +47,6 @@ def scrape_pdf(date_id, google_drive_file_id):
             f'Invalid doc_date_id {doc_date_id} (!= {date_id}). Aborting!'
         )
         return False
-
-    pdf_file = lk_vax_center_utils.get_file(date_id, 'pdf')
-    if os.path.exists(pdf_file):
-        log.warn(f'{pdf_file} already exists. Not downloading.')
-        return pdf_file
 
     fh = io.FileIO(pdf_file, 'wb')
     downloader = MediaIoBaseDownload(fh, request)
