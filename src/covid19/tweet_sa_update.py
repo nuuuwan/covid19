@@ -29,7 +29,7 @@ def _get_tweet_text(max_country_ids):
     return '''
 #COVID19 #SouthAsia {_ds}
 
-🔴 Active COVID19 Cases - {max0}
+🔴 New COVID19 Cases - {max0}
 🔴 Daily COVID19 Deaths - {max1}
 🟢 Daily Vaccinations - {max2}
 🟢 People Fully Vaxed - {max3}
@@ -51,8 +51,8 @@ Excl. #Maldives & #Bhutan
 def _plot_images():
     plot_info_list = [
         PlotSouthAsia._plot(
-            'active',
-            'Active COVID19 Cases',
+            'new_confirmed',
+            'New Confirmed COVID19 Cases',
         ),
         PlotSouthAsia._plot(
             'new_deaths',

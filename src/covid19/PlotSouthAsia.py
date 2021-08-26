@@ -29,7 +29,7 @@ class PlotSouthAsia(Figure.Figure):
         left_bottom=(PADDING, PADDING),
         width_height=(1 - PADDING * 2, 1 - PADDING * 2),
         figure_text='',
-        field_key='active',
+        field_key='new_confirmed',
     ):
         super().__init__(
             left_bottom=left_bottom,
@@ -126,6 +126,9 @@ class PlotSouthAsia(Figure.Figure):
 
 
 def _plot(field_key, label):
+    moving_avg_window = (
+        MW if (field_key != 'cum_people_fully_vaccinated') else 1
+    )
     plot = PlotSouthAsia(
         field_key=field_key,
     )
@@ -143,8 +146,8 @@ def _plot(field_key, label):
         date_id,
     )
     Infographic.Infographic(
-        title='{label} per {Q_PEOPLE:,} people'.format(
-            label=label, Q_PEOPLE=Q_PEOPLE
+        title='{label} per {Q_PEOPLE:,} people ({moving_avg_window} day moving average)'.format(
+            label=label, Q_PEOPLE=Q_PEOPLE, moving_avg_window=moving_avg_window,
         ),
         subtitle='COVID19 in South Asia (as of %s)' % date,
         footer_text='\n'.join(
