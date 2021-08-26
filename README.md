@@ -157,3 +157,4 @@ pip install covid19-nuuuwan
 * [2021-08-26 07:44AM] 2021-08-26 Corrections
   * Updated README
   * Updated POLICE_INDEX
+  * Pre-Merge

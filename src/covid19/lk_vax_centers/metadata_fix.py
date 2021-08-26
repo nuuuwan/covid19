@@ -139,7 +139,6 @@ POLICE_INDEX = {
         'ps_lat': round_x(7.848668416931301),
         'ps_lng': round_x(79.90313163853531),
     },
-
     'Peththapitiya': {
         'ps_name_norm': 'Peththapitiya',
         'ps_id': None,
