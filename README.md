@@ -160,3 +160,4 @@ pip install covid19-nuuuwan
   * Pre-Merge
   * Updated local workflows
   * Speedup vax-center pipeline start
+  * Permissions
