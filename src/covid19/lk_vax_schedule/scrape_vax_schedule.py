@@ -21,11 +21,16 @@ from utils import tsv, www
 from covid19._utils import log
 from covid19.lk_vax_centers import lk_vax_center_utils
 
+DIR_DATA_LK_VAX_SCHEDULE = '/tmp/covid19/lk_vax_schedule'
+
 TENTATIVE_VAX_SCH_URL = os.path.join(
     'http://www.health.gov.lk',
     'moh_final/english/public/elfinder/files/feturesArtical/2021',
     'Tentative%20vaccination%20schedule%2020.08.2021.xlsx',
 )
+
+def make_data_dir():
+    os.system(f'mkdir -p {DIR_DATA_LK_VAX_SCHEDULE}')
 
 def scrape_xlsx_file_url():
     URL = 'http://health.gov.lk/moh_final/english/news_read_more.php?id=977'
@@ -39,8 +44,10 @@ def scrape_xlsx_file_url():
 
 
 def scrape_tentative_vax_schedule(xlsx_file_url):
-    schedule_xlsx_file = lk_vax_center_utils.get_file(
-        'latest', 'schedule.xlsx'
+    make_data_dir()
+    schedule_xlsx_file = os.path.join(
+        DIR_DATA_LK_VAX_SCHEDULE,
+        'schedule.latest.xlsx',
     )
     www.download_binary(xlsx_file_url, schedule_xlsx_file)
     log.info(f'Downloaded {xlsx_file_url} to {schedule_xlsx_file}')
@@ -126,7 +133,10 @@ def scrape_tentative_vax_schedule(xlsx_file_url):
         data_list.append(data)
         prev_row = row
 
-    schedule_tsv_file = lk_vax_center_utils.get_file('latest', 'schedule.tsv')
+    schedule_tsv_file = os.path.join(
+        DIR_DATA_LK_VAX_SCHEDULE,
+        'schedule.latest.tsv',
+    )
     tsv.write(schedule_tsv_file, data_list)
     log.info(f'Wrote {len(data_list)} to {schedule_tsv_file}')
 

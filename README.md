@@ -171,3 +171,4 @@ pip install covid19-nuuuwan
 * [2021-08-26 09:08AM] Scrape Tentative Vax Schedule
   * Updated README
   * Pipeline done
+  * new folders
