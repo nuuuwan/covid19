@@ -165,3 +165,5 @@ pip install covid19-nuuuwan
   * Updated README
   * Done
   * Pre-Merge
+* [2021-08-26 08:43AM] Location Corrections
+  * Updated README
