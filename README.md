@@ -161,3 +161,5 @@ pip install covid19-nuuuwan
   * Updated local workflows
   * Speedup vax-center pipeline start
   * Permissions
+* [2021-08-26 08:36AM] Speedup vax-center pipeline
+  * Updated README
