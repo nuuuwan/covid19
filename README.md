@@ -144,3 +144,4 @@ pip install covid19-nuuuwan
   * Updated README
   * New Folders
   * Fixed
+  * Pre-Merge
