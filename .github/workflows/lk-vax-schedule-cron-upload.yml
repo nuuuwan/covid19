@@ -1,7 +1,9 @@
 
-name: Upload Data for LK Vax Schedules
+name: LK Vax Schedules - Cron Upload
 
-on: workflow_dispatch
+on:
+  schedule:
+    - cron:  "0 3 * * *"
 
 jobs:
   upload-data:

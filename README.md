@@ -176,3 +176,4 @@ pip install covid19-nuuuwan
   * Done
   * Pre-Merge
   * Added gig
+  * Updated lk-vax-schedule workflows
