@@ -143,3 +143,4 @@ pip install covid19-nuuuwan
 * [2021-08-26 07:23AM] Add Moderna Dose 2
   * Updated README
   * New Folders
+  * Fixed

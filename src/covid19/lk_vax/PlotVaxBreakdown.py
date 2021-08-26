@@ -43,18 +43,14 @@ class PlotVaxBreakdown(Figure.Figure):
         for k in [
             'cum_covishield_dose1',
             'cum_covishield_dose2',
-
             'cum_sinopharm_dose1',
             'cum_sinopharm_dose2',
-
             'cum_sputnik_dose1',
             'cum_sputnik_dose2',
-
             'cum_pfizer_dose1',
             'cum_pfizer_dose2',
-
             'cum_moderna_dose1',
-            'cum_moderna_dose2'
+            'cum_moderna_dose2',
         ]:
             y = list(
                 map(
@@ -76,16 +72,12 @@ class PlotVaxBreakdown(Figure.Figure):
             [
                 'Covishield (Dose 1)',
                 'Covishield (Dose 2)',
-
                 'Sinopharm (Dose 1)',
                 'Sinopharm (Dose 2)',
-
                 'Sputnik (Dose 1)',
                 'Sputnik (Dose 2)',
-
                 'Pfizer (Dose 1)',
                 'Pfizer (Dose 2)',
-
                 'Moderna (Dose 1)',
                 'Moderna (Dose 2)',
             ],
