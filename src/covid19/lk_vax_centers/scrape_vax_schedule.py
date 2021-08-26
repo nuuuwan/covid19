@@ -13,6 +13,8 @@ I remember
 import os
 
 import pandas
+from bs4 import BeautifulSoup
+
 from gig import ents
 from utils import tsv, www
 
@@ -25,13 +27,23 @@ TENTATIVE_VAX_SCH_URL = os.path.join(
     'Tentative%20vaccination%20schedule%2020.08.2021.xlsx',
 )
 
+def scrape_xlsx_file_url():
+    URL = 'http://health.gov.lk/moh_final/english/news_read_more.php?id=977'
+    html = www.read(URL)
+    soup = BeautifulSoup(html, 'html.parser')
+    for a in soup.find_all('a'):
+        href = a.get('href')
+        if 'xlsx' in href:
+            return href
+    return None
 
-def scrape_tentative_vax_schedule():
+
+def scrape_tentative_vax_schedule(xlsx_file_url):
     schedule_xlsx_file = lk_vax_center_utils.get_file(
         'latest', 'schedule.xlsx'
     )
-    www.download_binary(TENTATIVE_VAX_SCH_URL, schedule_xlsx_file)
-    log.info(f'Downloaded {TENTATIVE_VAX_SCH_URL} to {schedule_xlsx_file}')
+    www.download_binary(xlsx_file_url, schedule_xlsx_file)
+    log.info(f'Downloaded {xlsx_file_url} to {schedule_xlsx_file}')
 
     data_frame = pandas.read_excel(
         schedule_xlsx_file,
@@ -140,5 +152,6 @@ def analyze():
 
 
 if __name__ == '__main__':
-    # scrape_tentative_vax_schedule()
+    xlsx_file_url = scrape_xlsx_file_url()
+    scrape_tentative_vax_schedule(xlsx_file_url)
     analyze()
