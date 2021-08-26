@@ -148,3 +148,4 @@ pip install covid19-nuuuwan
 * [2021-08-26 07:35AM] LK Vax Centers - Split Download and Upload
   * Updated README
   * Done
+  * Pre-Merge
