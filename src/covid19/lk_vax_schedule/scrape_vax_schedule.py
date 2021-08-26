@@ -186,13 +186,19 @@ def parse_xlsx(date_id):
         data_list.append(data)
         prev_row = row
 
-    schedule_tsv_file = schedule_xlsx_file.replace('.xlsx', '.tsv')
+    schedule_tsv_file = os.path.join(
+        DIR_DATA_LK_VAX_SCHEDULE,
+        f'schedule.{date_id}.tsv',
+    )
     tsv.write(schedule_tsv_file, data_list)
     log.info(f'Wrote {len(data_list)} to {schedule_tsv_file}')
 
 
 def analyze(date_id):
-    schedule_tsv_file = lk_vax_center_utils.get_file('latest', 'schedule.tsv')
+    schedule_tsv_file = os.path.join(
+        DIR_DATA_LK_VAX_SCHEDULE,
+        f'schedule.{date_id}.tsv',
+    )
     data_list = tsv.read(schedule_tsv_file)
     district_to_vaccine_to_count = {}
     for data in data_list:
