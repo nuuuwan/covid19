@@ -149,3 +149,5 @@ pip install covid19-nuuuwan
   * Updated README
   * Done
   * Pre-Merge
+* [2021-08-26 07:41AM] Shift Pipelines to Production
+  * Updated README
