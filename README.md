@@ -184,3 +184,4 @@ pip install covid19-nuuuwan
   * Updated README
   * Removed active from SA update
   * Updated workflows
+  * Updated LK Vax Update workflows

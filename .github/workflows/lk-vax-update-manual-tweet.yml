@@ -1,8 +1,7 @@
 
-name: Tweet Vax Update Cron
+name: LK Vax Update - Manual Tweet
 
 on: workflow_dispatch
-
 
 jobs:
   tweet:
