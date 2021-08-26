@@ -71,7 +71,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Katunayaka** Police Area
   * 18 Kanuwa Viharaya - [Kirikiththa Rd, Weliweriya, Sri Lanka](https://www.google.lk/maps/place/7.020539N,80.026375E) (❌ Address is likely inaccurate) 
 * **Mirigama** Police Area
-  * Maladeniya Viharaya - [4X6Q+2X2, Gampaha, Sri Lanka](https://www.google.lk/maps/place/7.110015N,79.989902E) (❌ Address is likely inaccurate) 
+  * Maladeniya Viharaya - [Sri Lanka](https://www.google.lk/maps/place/7.288053N,80.111975E) 
   * Bogahawatta Viharaya - [Nittambuwa - Ruwanwella Rd, Sri Lanka](https://www.google.lk/maps/place/7.113799N,80.135467E) 
 * **Pallewela** Police Area
   * Loluwagoda Primary School - [AB29, Loluwagoda, Sri Lanka](https://www.google.lk/maps/place/7.304085N,80.132936E) 
@@ -539,7 +539,7 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
 * **Uppuveli** Police Area
   * MOH Office - Uppuveli - [Nilaveli Rd, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.607961N,81.216512E) 
 * **Ichchalampattu** Police Area
-  * MOH Office - Ichchalampattu - [Station Road, Rawathawaththa, Moratuwa, Lunawa Station Rd, Moratuwa 10400, Sri Lanka](https://www.google.lk/maps/place/6.788131N,79.883651E) (❌ Address is likely inaccurate) 
+  * MOH Office - Ichchalampattu - [Highway, Ichchalampattu, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.289644N,81.358983E) 
 * **Thambalagamuwa** Police Area
   * MOH Office - Thambalagamuwa - [Hospital Ln, Trincomalee, Sri Lanka](https://www.google.lk/maps/place/8.563603N,81.239584E) (❌ Address is likely inaccurate) 
 * **Gomarankadawala** Police Area
