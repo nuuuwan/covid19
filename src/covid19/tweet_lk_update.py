@@ -17,7 +17,7 @@ def _get_tweet_text():
     unixtime = latest_item['unixtime']
     date = timex.format_time(unixtime, '%Y-%m-%d')
 
-    ts_active = list(map(lambda _i: _i['active'], timeseries))
+    ts_new_confirmed = list(map(lambda _i: _i['new_confirmed'], timeseries))
     ts_new_deaths = list(map(lambda _i: _i['new_deaths'], timeseries))
     ts_new_pcr_tests = list(map(lambda _i: _i['new_pcr_tests'], timeseries))
 
@@ -29,10 +29,10 @@ def _get_tweet_text():
         map(lambda _i: _i['cum_people_fully_vaccinated'], timeseries)
     )
 
-    active = ts_active[-1]
-    active_wa = ts_active[-8]
-    d_active = active - active_wa
-    active_arrow = '🔴' if (d_active > 0) else '🟢'
+    new_confirmed = ts_new_confirmed[-1]
+    new_confirmed_wa = ts_new_confirmed[-8]
+    d_new_confirmed = new_confirmed - new_confirmed_wa
+    new_confirmed_arrow = '🔴' if (d_new_confirmed > 0) else '🟢'
 
     new_deaths_rw = sum(ts_new_deaths[-MW:]) / MW
     new_deaths_rw_wa = sum(ts_new_deaths[-MW - MW: -MW]) / MW
@@ -56,7 +56,7 @@ def _get_tweet_text():
 
     tweet_text = '''{date} #COVID19SL
 
-{active_arrow} Active: {active:,} ({d_active:+,} {MW}days ago)
+{new_confirmed_arrow} Confirmed: {new_confirmed:,} ({d_new_confirmed:+,} {MW}days ago)
 {new_deaths_ar} Deaths/day: {new_deaths_rw:,.0f} ({d_new_deaths:+,.0f})
 {new_pcr_tests_ar} Tests/day: {new_pcr_tests_rw:,.0f} ({d_new_pcr_tests:+,.0f})
 {new_vax_ar} Vaxs/Day: {new_vax_rw:,.0f} ({d_new_vacci:+,.0f})
@@ -69,12 +69,12 @@ def _get_tweet_text():
 @HPBSriLanka @JHUSystems @OurWorldInData #lka #SriLanka
     '''.format(
         MW=MW,
-        active=active,
-        active_arrow=active_arrow,
+        new_confirmed=new_confirmed,
+        new_confirmed_arrow=new_confirmed_arrow,
         new_vax_rw=new_vax_rw,
         date=date,
         d_new_vacci=d_new_vacci,
-        d_active=d_active,
+        d_new_confirmed=d_new_confirmed,
         d_new_deaths=d_new_deaths,
         new_deaths_rw=new_deaths_rw,
         new_deaths_ar=new_deaths_ar,
@@ -90,7 +90,7 @@ def _get_tweet_text():
 
 def _get_status_image_files():
     return [
-        _plot_simple('active', 'blue', 'Active COVID19 Cases'),
+        _plot_simple('new_confirmed', 'blue', 'New Confirmed COVID19 Cases'),
         _plot_with_time_window(
             'new_deaths',
             'red',
