@@ -11,12 +11,12 @@ I remember
  having one, but can't seem to find it.
 """
 import os
+import re
 
 import pandas
 from bs4 import BeautifulSoup
-
 from gig import ents
-from utils import tsv, www
+from utils import timex, tsv, www
 
 from covid19._utils import log
 from covid19.lk_vax_centers import lk_vax_center_utils
@@ -29,10 +29,12 @@ TENTATIVE_VAX_SCH_URL = os.path.join(
     'Tentative%20vaccination%20schedule%2020.08.2021.xlsx',
 )
 
+
 def make_data_dir():
     os.system(f'mkdir -p {DIR_DATA_LK_VAX_SCHEDULE}')
 
-def scrape_xlsx_file_url():
+
+def get_xlsx_file_url():
     URL = 'http://health.gov.lk/moh_final/english/news_read_more.php?id=977'
     html = www.read(URL)
     soup = BeautifulSoup(html, 'html.parser')
@@ -43,29 +45,75 @@ def scrape_xlsx_file_url():
     return None
 
 
-def scrape_tentative_vax_schedule(xlsx_file_url):
-    make_data_dir()
+def scrape_xlsx(date_id):
+    xlsx_file_url = get_xlsx_file_url()
+    if not xlsx_file_url:
+        log.error('Could not find xlsx file URL. Aborting')
+        return None
+
     schedule_xlsx_file = os.path.join(
         DIR_DATA_LK_VAX_SCHEDULE,
-        'schedule.latest.xlsx',
+        f'schedule.{date_id}.xlsx',
     )
+
+    if os.path.exists(schedule_xlsx_file):
+        log.warning(f'{schedule_xlsx_file} already exists. Not downloading')
+        return schedule_xlsx_file
+
+    make_data_dir()
     www.download_binary(xlsx_file_url, schedule_xlsx_file)
     log.info(f'Downloaded {xlsx_file_url} to {schedule_xlsx_file}')
 
+    return schedule_xlsx_file
+
+def parse_xlsx(date_id):
+    schedule_xlsx_file = os.path.join(
+        DIR_DATA_LK_VAX_SCHEDULE,
+        f'schedule.{date_id}.xlsx',
+    )
+
     data_frame = pandas.read_excel(
         schedule_xlsx_file,
+        header=None,
     )
     data_frame = data_frame.fillna(method='ffill', axis=0)
 
     data_list = []
     prev_row = None
     prev_gnd = None
-    for row in data_frame.values.tolist():
+    table = data_frame.values.tolist()
+
+    first_row = table[0]
+    title_cell = str(
+        list(
+            filter(
+                lambda cell: str(cell) != 'nan',
+                first_row,
+            )
+        )[0]
+    )
+
+    is_valid_doc = False
+    results = re.search(r'.*\s(?P<date_str>\d{2}\.\d{2}\.\d{4}).*', title_cell)
+    doc_date_id = None
+    if results:
+        date_str = results.groupdict().get('date_str')
+        ut = timex.parse_time(date_str, '%d.%m.%Y')
+        doc_date_id = timex.get_date_id(ut)
+        if doc_date_id == date_id:
+            is_valid_doc = True
+
+    if not is_valid_doc:
+        log.warning(f'Invalid doc. doc_date_id = {doc_date_id}. Aborting')
+        os.system(f'rm {schedule_xlsx_file}')
+        return None
+
+    for row in table:
         if str(row[1]) == 'nan' or str(row[1]) == 'Province':
             continue
         if str(row) == str(prev_row):
             continue
-        __, province, district, moh, gnd, center, vaccine = row
+        __, province, district, moh, gnd, center, vaccine_str = row
         if gnd == 'GN area':
             gnd = ''
 
@@ -118,6 +166,9 @@ def scrape_tentative_vax_schedule(xlsx_file_url):
         else:
             prev_gnd = gnd
 
+        vaccine = vaccine_str.partition(' ')[0]
+        dose1 = ('1' in vaccine_str)
+        dose2 = ('2' in vaccine_str)
         data = dict(
             province=province,
             province_id=province_id,
@@ -129,19 +180,18 @@ def scrape_tentative_vax_schedule(xlsx_file_url):
             gnd_id=gnd_id,
             center=center,
             vaccine=vaccine,
+            dose1=dose1,
+            dose2=dose2,
         )
         data_list.append(data)
         prev_row = row
 
-    schedule_tsv_file = os.path.join(
-        DIR_DATA_LK_VAX_SCHEDULE,
-        'schedule.latest.tsv',
-    )
+    schedule_tsv_file = schedule_xlsx_file.replace('.xlsx', '.tsv')
     tsv.write(schedule_tsv_file, data_list)
     log.info(f'Wrote {len(data_list)} to {schedule_tsv_file}')
 
 
-def analyze():
+def analyze(date_id):
     schedule_tsv_file = lk_vax_center_utils.get_file('latest', 'schedule.tsv')
     data_list = tsv.read(schedule_tsv_file)
     district_to_vaccine_to_count = {}
@@ -162,6 +212,7 @@ def analyze():
 
 
 if __name__ == '__main__':
-    xlsx_file_url = scrape_xlsx_file_url()
-    scrape_tentative_vax_schedule(xlsx_file_url)
-    analyze()
+    date_id = timex.get_date_id()
+    scrape_xlsx(date_id)
+    parse_xlsx(date_id)
+    analyze(date_id)

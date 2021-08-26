@@ -172,3 +172,4 @@ pip install covid19-nuuuwan
   * Updated README
   * Pipeline done
   * new folders
+  * Pipeline done
