@@ -180,3 +180,5 @@ pip install covid19-nuuuwan
   * Fixed filename bug
   * Fixed filename bug
   * Fix vax-schedule folder bug
+* [2021-08-26 10:27AM] Remove active/recovered from stats
+  * Updated README
