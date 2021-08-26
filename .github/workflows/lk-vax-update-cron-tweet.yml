@@ -1,7 +1,9 @@
 
-name: LK Vax Update - Tweet Cron
+name: LK Vax Update - Cron Tweet
 
-on: workflow_dispatch
+on:
+  schedule:
+    - cron:  "0 12 * * *"
 
 
 jobs:
