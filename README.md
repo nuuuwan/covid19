@@ -159,3 +159,4 @@ pip install covid19-nuuuwan
   * Updated POLICE_INDEX
   * Pre-Merge
   * Updated local workflows
+  * Speedup vax-center pipeline start
