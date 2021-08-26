@@ -22,6 +22,8 @@ FUZZY_KEY_TO_ALT_NAME = {
     'BTTCLVLCHCHNMHFFCNWLD': 'Primary Medical Care Unit, Navalady',
     'BTTCLVKRMHFFCVKR': 'Divisional Hospital Vakarai',
     'BTTCLVLLWLKLMGLTMLVDYLY': 'Vellaveli Kalaimagal Maha Vidyalaya',
+    'GMPHMRGMMLDNYVHRY': 'Maladeniya Temple',
+    'TRNCMLCHCHLMPTTMHFFCCHCHLMPTT': 'Eachchilampattu Hospital',
 }
 
 POLICE_INDEX = {
