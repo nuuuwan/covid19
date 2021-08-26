@@ -1,9 +1,11 @@
 # Auto Generated
 emoji-country-flag
+gig-nuuuwan
 google-api-python-client
 infographics-nuuuwan
 matplotlib
 numpy
+pandas
 pycountry
 pycountry-convert
 pypopulation
@@ -12,3 +14,4 @@ tablex-nuuuwan
 tabula-py
 tweepy
 utils-nuuuwan
+xlrd

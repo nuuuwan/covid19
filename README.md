@@ -175,3 +175,4 @@ pip install covid19-nuuuwan
   * Pipeline done
   * Done
   * Pre-Merge
+  * Added gig

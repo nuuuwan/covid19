@@ -39,6 +39,7 @@ setuptools.setup(
         'google-api-python-client',
         'pandas',
         'xlrd',
+        'gig-nuuuwan',
     ],
     test_suite='nose.collector',
     tests_require=['nose'],
