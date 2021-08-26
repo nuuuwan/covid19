@@ -183,3 +183,4 @@ pip install covid19-nuuuwan
 * [2021-08-26 10:27AM] Remove active/recovered from stats
   * Updated README
   * Removed active from SA update
+  * Updated workflows
