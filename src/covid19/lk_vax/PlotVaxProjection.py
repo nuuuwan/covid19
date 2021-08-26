@@ -5,7 +5,7 @@ import matplotlib.ticker as tkr
 from infographics import Figure, Infographic
 from utils import timex
 
-from covid19 import epid
+from covid19.lk_vax import epid
 
 BASE_IMAGE_FILE = 'src/covid19/assets/lk_map.png'
 FONT_FILE = 'src/covid19/assets/Arial.ttf'

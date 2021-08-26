@@ -20,9 +20,9 @@ jobs:
       with:
         path: ~/.cache/pip
         key: ${{ hashFiles('setup.py') }}-${{ hashFiles('dev-requirements.txt') }}
-        
+
     - name: Install GhostScript
-      run: sudo apt install ghostscript python3-tk        
+      run: sudo apt install ghostscript python3-tk
 
     - name: Test
       uses: nuuuwan/python-repo-test@v1
@@ -30,7 +30,7 @@ jobs:
     - name: Run
       run: |
         export PYTHONPATH="$PYTHONPATH:./src"
-        python src/covid19/upload_data.py
+        python src/covid19/lk_vax/upload_data.py
 
     - name: Checkout repo branch data
       uses: actions/checkout@v2

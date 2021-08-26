@@ -32,7 +32,7 @@ jobs:
     - name: Run
       run: |
         export PYTHONPATH="$PYTHONPATH:./src"
-        python src/covid19/upload_data.py
+        python src/covid19/lk_vax/upload_data.py
 
     - name: Checkout repo branch data
       uses: actions/checkout@v2
