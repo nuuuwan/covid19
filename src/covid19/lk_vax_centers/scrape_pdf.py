@@ -17,7 +17,7 @@ def scrape_pdf(date_id):
         log.warn(f'{pdf_file} already exists. Not downloading.')
         return pdf_file
 
-    google_drive_file_id = scrape_google_id()
+    google_drive_file_id = scrape_google_id.scrape_google_id()
     google_api_key = google_utils.get_google_api_key()
     if google_api_key is None:
         log.error('No google_api_key. Aborting.')
