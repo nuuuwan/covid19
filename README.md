@@ -189,3 +189,4 @@ pip install covid19-nuuuwan
   * Pre-Merge
   * 
   * Fixed scrape_google_id bug
+  * Uncomment non-Sputnik
