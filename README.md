@@ -192,3 +192,4 @@ pip install covid19-nuuuwan
   * Uncomment non-Sputnik
 * [2021-08-29 07:49PM] Analyze Vaccine Gaps
   * Updated README
+  * Done
