@@ -194,3 +194,4 @@ pip install covid19-nuuuwan
   * Updated README
   * Done
   * Done
+  * Pre-Merge
