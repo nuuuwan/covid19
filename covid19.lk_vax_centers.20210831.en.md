@@ -359,9 +359,9 @@ Source Website: [https://www.presidentsoffice.gov.lk/index.php/vaccination-dashb
   * AD Yapa Vidyalaya - [7GCH+X2Q, Kotapola, Sri Lanka](https://www.google.lk/maps/place/6.272469N,80.52761E) 
 * **Akuressa** Police Area
   * Puwakwatta Viharaya - [Akuressa, Sri Lanka](https://www.google.lk/maps/place/6.100139N,80.475957E) 
+## Hambantota District
 * **Hambantota** Police Area
   * Mobile Medical Team - (❓ Address not known) 
-## Hambantota District
   * Galewela Vidyalaya - [Hakmana - Beliatte - Tangalle Rd, Sri Lanka](https://www.google.lk/maps/place/6.07308N,80.704144E) (❌ Address is likely inaccurate) 
   * Suchi Vidyalaya - [Mirijjawila, Hambantota, Sri Lanka](https://www.google.lk/maps/place/6.116489N,81.082615E) 
   * Nimbarama Viharaya - [Main St, Hambantota, Sri Lanka](https://www.google.lk/maps/place/6.125071N,81.120965E) 
