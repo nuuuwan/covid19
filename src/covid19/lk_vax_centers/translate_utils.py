@@ -1,9 +1,11 @@
 from deep_translator import GoogleTranslator
 from utils.cache import cache
 
-from covid19.lk_vax_centers.lk_vax_center_constants import (CACHE_DIR,
-                                                            CACHE_NAME,
-                                                            CACHE_TIMEOUT)
+from covid19.lk_vax_centers.lk_vax_center_constants import (
+    CACHE_DIR,
+    CACHE_NAME,
+    CACHE_TIMEOUT,
+)
 
 translator_si = GoogleTranslator(source='english', target='sinhala')
 

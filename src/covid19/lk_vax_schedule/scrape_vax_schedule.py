@@ -19,7 +19,6 @@ from gig import ents
 from utils import timex, tsv, www
 
 from covid19._utils import log
-from covid19.lk_vax_centers import lk_vax_center_utils
 
 DIR_DATA_LK_VAX_SCHEDULE = '/tmp/covid19/lk_vax_schedule'
 
@@ -65,6 +64,7 @@ def scrape_xlsx(date_id):
     log.info(f'Downloaded {xlsx_file_url} to {schedule_xlsx_file}')
 
     return schedule_xlsx_file
+
 
 def parse_xlsx(date_id):
     schedule_xlsx_file = os.path.join(
@@ -167,8 +167,8 @@ def parse_xlsx(date_id):
             prev_gnd = gnd
 
         vaccine = vaccine_str.partition(' ')[0]
-        dose1 = ('1' in vaccine_str)
-        dose2 = ('2' in vaccine_str)
+        dose1 = '1' in vaccine_str
+        dose2 = '2' in vaccine_str
         data = dict(
             province=province,
             province_id=province_id,

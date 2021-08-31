@@ -208,3 +208,4 @@ pip install covid19-nuuuwan
 >>>>>>> fix-districts-bug
   * Reverted
   * Added Hambantota to get_correct_district
+  * Reverted

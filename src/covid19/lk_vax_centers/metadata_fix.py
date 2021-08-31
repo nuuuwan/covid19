@@ -191,7 +191,7 @@ def get_correct_district(district, police):
     if police in ['Weligama']:
         district = 'Matara'
     if police in ['Hambantota']:
-        district = 'Hambantota'    
+        district = 'Hambantota'
 
     if police in ['Kotmale', 'Nuwara Eliya']:
         district = 'Nuwara Eliya'
