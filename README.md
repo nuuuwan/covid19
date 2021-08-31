@@ -201,3 +201,4 @@ pip install covid19-nuuuwan
   * Pre-Merge
 * [2021-08-31 03:54PM] Fix districts bug
   * Updated README
+  * Pre-Merge

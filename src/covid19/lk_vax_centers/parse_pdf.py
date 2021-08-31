@@ -2,6 +2,7 @@ import logging
 import os
 import re
 
+import matplotlib.pyplot as plt
 import camelot
 from utils import timex, tsv
 
@@ -25,7 +26,11 @@ def parse_pdf(date_id):
         log.error(f'{pdf_file} does not exist. Aborting.')
         return False
 
-    tables = camelot.read_pdf(pdf_file, pages='all')
+    tables = camelot.read_pdf(pdf_file, pages='all', line_scale=500)
+
+    print(tables[5].df.values.tolist())
+
+
     log.info(f'Found {len(tables)} tables in {pdf_file}')
     data_list = []
     prev_district, prev_police = None, None
