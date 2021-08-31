@@ -198,3 +198,4 @@ pip install covid19-nuuuwan
 * [2021-08-30 05:10PM] Analyze Vaccine Gaps 2
   * Updated README
   * Done
+  * Pre-Merge
