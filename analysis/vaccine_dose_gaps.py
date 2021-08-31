@@ -7,16 +7,8 @@ from utils import timex, tsv
 
 from covid19.lk_vax import epid
 
-VACCINE_TYPE_TO_BOUNDS = {
-    'covishield': [8, 12],
-    'pfizer': [3, 4],
-    'moderna': [4, 12],
-    'sputnik': [3, 12],
-    'sinopharm': [3, 4],
-}
-
-
 def get_gaps_data():
+    ut_now = timex.get_unixtime()
     timeseries = epid.load_timeseries()
     vaccine_type = 'covishield'
 
@@ -33,10 +25,20 @@ def get_gaps_data():
             dose2_days += [ut for i in range(0, dose2)]
 
         duts = []
-        for i_dose2, ut2 in enumerate(dose2_days):
-            ut1 = dose1_days[i_dose2]
+        n_dose1 = len(dose1_days)
+        n_dose2 = len(dose2_days)
+        for i in range(0, n_dose2):
+            ut2 = dose2_days[i]
+            ut1 = dose1_days[i]
             dut = (ut2 - ut1) / timex.SECONDS_IN.WEEK
             duts.append(dut)
+
+        duts_no = []
+        for i in range(0, n_dose1 -  n_dose2):
+            ut1 = dose1_days[n_dose2 + i]
+            dut = (ut_now - ut1) / timex.SECONDS_IN.WEEK
+            duts_no.append(dut)
+
 
         data_list.append(dict(
             vaccine_type=vaccine_type,
@@ -53,19 +55,8 @@ def get_gaps_data():
         ax.set_ylabel('People with Vaccine')
         ax.set_xlabel('Duration in Weeks')
 
-        N, bins, patches = plt.hist(duts, bins=30, ec='black')
-        min_weeks, max_weeks = VACCINE_TYPE_TO_BOUNDS[vaccine_type]
-        for i in range(0, len(patches)):
-            bin_mean = (bins[i] + bins[i + 1]) * 0.5
-
-            if bin_mean < min_weeks:
-                color = 'blue'
-            elif bin_mean > max_weeks:
-                color = 'red'
-            else:
-                color = 'green'
-            patches[i].set_facecolor(color)
-
+        plt.hist(duts, color='blue', ec='black')
+        # plt.hist(duts_no, color='red', ec='black')
         fig.set_size_inches(16, 9)
         image_file = f'/tmp/covid19.analysis.vaccine_dose_gaps.{vaccine_type}.png'
         fig.savefig(image_file, dpi=300)
