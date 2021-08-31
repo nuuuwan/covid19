@@ -9,10 +9,13 @@ from covid19.lk_vax_centers.summarise import summarise
 
 if __name__ == '__main__':
     date_id = timex.get_date_id()
+    scrape_pdf(date_id)
+    parse_pdf(date_id)
 
-    if scrape_pdf(date_id):
-        parse_pdf(date_id)
-        expand(date_id)
-        expand_i18n(date_id)
-        summarise(date_id)
-        finalize(date_id)
+
+    # if scrape_pdf(date_id):
+    #     parse_pdf(date_id)
+    #     expand(date_id)
+    #     expand_i18n(date_id)
+    #     summarise(date_id)
+    #     finalize(date_id)
