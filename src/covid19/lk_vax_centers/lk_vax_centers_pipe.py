@@ -9,10 +9,15 @@ from covid19.lk_vax_centers.summarise import summarise
 
 if __name__ == '__main__':
     date_id = timex.get_date_id()
+<<<<<<< HEAD
     scrape_pdf(date_id)
     parse_pdf(date_id)
 
 
+=======
+    parse_pdf(date_id)
+
+>>>>>>> fix-districts-bug
     # if scrape_pdf(date_id):
     #     parse_pdf(date_id)
     #     expand(date_id)
