@@ -212,3 +212,4 @@ pip install covid19-nuuuwan
   * Shell for analysis/mortality_curve.py
 * [2021-09-01 01:32PM] Analyze Mortality Curve
   * Updated README
+  * Pre-Merge
