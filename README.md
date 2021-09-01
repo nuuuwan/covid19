@@ -210,3 +210,5 @@ pip install covid19-nuuuwan
   * Added Hambantota to get_correct_district
   * Reverted
   * Shell for analysis/mortality_curve.py
+* [2021-09-01 01:32PM] Analyze Mortality Curve
+  * Updated README
