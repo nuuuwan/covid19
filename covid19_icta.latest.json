@@ -1,0 +1,581 @@
+{
+  "message": "Available Vaccination Sessions for Registration",
+  "center_list": [
+    {
+      "date": "2021-09-06",
+      "center": "Seeduwa | Raddolugama Praja shalawa",
+      "moh_area": "Seeduwa",
+      "center_name": "Raddolugama Praja shalawa",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Kalutara - All | Pimbura BH",
+      "moh_area": "Kalutara - All",
+      "center_name": "Pimbura BH",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Kalutara - All | Bandaragama Divisional Hospital",
+      "moh_area": "Kalutara - All",
+      "center_name": "Bandaragama Divisional Hospital",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Kalutara - All | DH Matugama",
+      "moh_area": "Kalutara - All",
+      "center_name": "DH Matugama",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Piliyandala | MOH Office Piliyandala",
+      "moh_area": "Piliyandala",
+      "center_name": "MOH Office Piliyandala",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Piliyandala | Sri Vijayanandanaramaya Temple",
+      "moh_area": "Piliyandala",
+      "center_name": "Sri Vijayanandanaramaya Temple",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Pitakotte | Pitakotte  MOH Office ",
+      "moh_area": "Pitakotte",
+      "center_name": "Pitakotte  MOH Office ",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Nugegoda | Pegiriwaththa wiwekaramaya",
+      "moh_area": "Nugegoda",
+      "center_name": "Pegiriwaththa wiwekaramaya",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Maharagama | Sri Vajiragnana Darmayathanaya",
+      "moh_area": "Maharagama",
+      "center_name": "Sri Vajiragnana Darmayathanaya",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Maharagama | Rukmalgama Community Centre",
+      "moh_area": "Maharagama",
+      "center_name": "Rukmalgama Community Centre",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Homagama | Katuwana Pinbima",
+      "moh_area": "Homagama",
+      "center_name": "Katuwana Pinbima",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Kaduwela | Navagamuwa Dewalaya",
+      "moh_area": "Kaduwela",
+      "center_name": "Navagamuwa Dewalaya",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Kaduwela | Athurugiriya Hospital",
+      "moh_area": "Kaduwela",
+      "center_name": "Athurugiriya Hospital",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Kaduwela | MOH Kaduwela",
+      "moh_area": "Kaduwela",
+      "center_name": "MOH Kaduwela",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Kolonnawa | MOH Kolonnawa ",
+      "moh_area": "Kolonnawa",
+      "center_name": "MOH Kolonnawa ",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Ragama | Ragama MOH ",
+      "moh_area": "Ragama",
+      "center_name": "Ragama MOH ",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Biyagama | Biyagama MOH Office",
+      "moh_area": "Biyagama",
+      "center_name": "Biyagama MOH Office",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Dompe | Dompe MOH Office",
+      "moh_area": "Dompe",
+      "center_name": "Dompe MOH Office",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Gampaha | Pahalagama Temple",
+      "moh_area": "Gampaha",
+      "center_name": "Pahalagama Temple",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Katana | MOH Office Demanhandiya",
+      "moh_area": "Katana",
+      "center_name": "MOH Office Demanhandiya",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Divulapitiya | Gnaodaya School, Divulapitiya ",
+      "moh_area": "Divulapitiya",
+      "center_name": "Gnaodaya School, Divulapitiya ",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Negombo | Municipal council",
+      "moh_area": "Negombo",
+      "center_name": "Municipal council",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Negombo | Munnakkaraya Clinic",
+      "moh_area": "Negombo",
+      "center_name": "Munnakkaraya Clinic",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Wattala | Uswetakeiiyawa Central Dispensary",
+      "moh_area": "Wattala",
+      "center_name": "Uswetakeiiyawa Central Dispensary",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Mirigama | Youn nikathanaya Miriga",
+      "moh_area": "Mirigama",
+      "center_name": "Youn nikathanaya Miriga",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Mahara | Kirillawala Central college",
+      "moh_area": "Mahara",
+      "center_name": "Kirillawala Central college",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Ja-ela | St.Xavier's College",
+      "moh_area": "Ja-ela",
+      "center_name": "St.Xavier's College",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Mahara | Mahabodhi Vidiyalaya",
+      "moh_area": "Mahara",
+      "center_name": "Mahabodhi Vidiyalaya",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Attanagalla | Sangabodhi M.V, Nittambuwa",
+      "moh_area": "Attanagalla",
+      "center_name": "Sangabodhi M.V, Nittambuwa",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Attanagalla | Urapola M.V",
+      "moh_area": "Attanagalla",
+      "center_name": "Urapola M.V",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-06",
+      "center": "Minuwangoda | Minuwangoda Rajamaha viharaya",
+      "moh_area": "Minuwangoda",
+      "center_name": "Minuwangoda Rajamaha viharaya",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Kaduwela | Athurugiriya Hospital",
+      "moh_area": "Kaduwela",
+      "center_name": "Athurugiriya Hospital",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Kaduwela | MOH Kaduwela",
+      "moh_area": "Kaduwela",
+      "center_name": "MOH Kaduwela",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Katana | MOH Office Demanhandiya",
+      "moh_area": "Katana",
+      "center_name": "MOH Office Demanhandiya",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Homagama | Meegoda Purana Viharaya",
+      "moh_area": "Homagama",
+      "center_name": "Meegoda Purana Viharaya",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Gampaha | Bendiyamulla Widyakeshara piriwena",
+      "moh_area": "Gampaha",
+      "center_name": "Bendiyamulla Widyakeshara piriwena",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Gampaha | Rathupaswala Bodhiraja Vidyalaya",
+      "moh_area": "Gampaha",
+      "center_name": "Rathupaswala Bodhiraja Vidyalaya",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Maharagama | Rukmalgama Community Centre",
+      "moh_area": "Maharagama",
+      "center_name": "Rukmalgama Community Centre",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Maharagama | Sri Vajiragnana Darmayathanaya",
+      "moh_area": "Maharagama",
+      "center_name": "Sri Vajiragnana Darmayathanaya",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Kelaniya | Peliyagoda Nawaloka P.S.",
+      "moh_area": "Kelaniya",
+      "center_name": "Peliyagoda Nawaloka P.S.",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Nugegoda | Pegiriwaththa wiwekaramaya",
+      "moh_area": "Nugegoda",
+      "center_name": "Pegiriwaththa wiwekaramaya",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Boraleasgamuwa | Boraleasgamuwa MOH office",
+      "moh_area": "Boraleasgamuwa",
+      "center_name": "Boraleasgamuwa MOH office",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Pitakotte | Pitakotte  MOH Office ",
+      "moh_area": "Pitakotte",
+      "center_name": "Pitakotte  MOH Office ",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Kesbewa | Makandina Sudarshanarama temple",
+      "moh_area": "Kesbewa",
+      "center_name": "Makandina Sudarshanarama temple",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Seeduwa | MOH office  Seeduwa",
+      "moh_area": "Seeduwa",
+      "center_name": "MOH office  Seeduwa",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Dompe | Kirindiwela Clinic center",
+      "moh_area": "Dompe",
+      "center_name": "Kirindiwela Clinic center",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Minuwangoda | Mabodala School",
+      "moh_area": "Minuwangoda",
+      "center_name": "Mabodala School",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Piliyandala | MOH Office Piliyandala",
+      "moh_area": "Piliyandala",
+      "center_name": "MOH Office Piliyandala",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Piliyandala | Sri Vijayanandanaramaya Temple",
+      "moh_area": "Piliyandala",
+      "center_name": "Sri Vijayanandanaramaya Temple",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Dompe | Dompe MOH Office",
+      "moh_area": "Dompe",
+      "center_name": "Dompe MOH Office",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Minuwangoda | Korasa Central Dispensary",
+      "moh_area": "Minuwangoda",
+      "center_name": "Korasa Central Dispensary",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Biyagama | Biyagama MOH Office",
+      "moh_area": "Biyagama",
+      "center_name": "Biyagama MOH Office",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Wattala | Uswetakeiiyawa Central Dispensary",
+      "moh_area": "Wattala",
+      "center_name": "Uswetakeiiyawa Central Dispensary",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Wattala | MOH Office-Wattala",
+      "moh_area": "Wattala",
+      "center_name": "MOH Office-Wattala",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Mirigama | Meewetiya\u00a0 Clinic\u00a0",
+      "moh_area": "Mirigama",
+      "center_name": "Meewetiya\u00a0 Clinic\u00a0",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Mirigama | Abapussa Clinic",
+      "moh_area": "Mirigama",
+      "center_name": "Abapussa Clinic",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Mirigama | Maladeniya clinic",
+      "moh_area": "Mirigama",
+      "center_name": "Maladeniya clinic",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Mahara | Kirillawala Central college",
+      "moh_area": "Mahara",
+      "center_name": "Kirillawala Central college",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Mahara | Mahabodhi Vidiyalaya",
+      "moh_area": "Mahara",
+      "center_name": "Mahabodhi Vidiyalaya",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Attanagalla | Mathalaana Viharaya",
+      "moh_area": "Attanagalla",
+      "center_name": "Mathalaana Viharaya",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Attanagalla | President College",
+      "moh_area": "Attanagalla",
+      "center_name": "President College",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Attanagalla | Kuruwamulla Primary school",
+      "moh_area": "Attanagalla",
+      "center_name": "Kuruwamulla Primary school",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Wattala | Mahabage P.S. Building",
+      "moh_area": "Wattala",
+      "center_name": "Mahabage P.S. Building",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Biyagama | Heiyanthuduwa Clinic",
+      "moh_area": "Biyagama",
+      "center_name": "Heiyanthuduwa Clinic",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Ragama | Jayasirigama MCH Clinic",
+      "moh_area": "Ragama",
+      "center_name": "Jayasirigama MCH Clinic",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Negombo | Kochchikade Church",
+      "moh_area": "Negombo",
+      "center_name": "Kochchikade Church",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Negombo | Municipal  Council Negambo",
+      "moh_area": "Negombo",
+      "center_name": "Municipal  Council Negambo",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Kolonnawa | MOH Kolonnawa ",
+      "moh_area": "Kolonnawa",
+      "center_name": "MOH Kolonnawa ",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Battaramulla | Baththaramulla MOH Office",
+      "moh_area": "Battaramulla",
+      "center_name": "Baththaramulla MOH Office",
+      "dose": "DOSE1",
+      "age": "20 - 30"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Ja-ela | Dambuwa temple",
+      "moh_area": "Ja-ela",
+      "center_name": "Dambuwa temple",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Divulapitiya | Gnaodaya School, Divulapitiya ",
+      "moh_area": "Divulapitiya",
+      "center_name": "Gnaodaya School, Divulapitiya ",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    },
+    {
+      "date": "2021-09-07",
+      "center": "Katana | Adiambalama Weluwanarama Temple ",
+      "moh_area": "Katana",
+      "center_name": "Adiambalama Weluwanarama Temple ",
+      "dose": "DOSE1",
+      "age": "20 - Above"
+    }
+  ]
+}
