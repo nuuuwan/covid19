@@ -51,7 +51,10 @@ def _get_date_id(pdf_url):
         re_data.groupdict(),
         ['y_str', 'm_str', 'd_str'],
     )
-    return '%s%s%s' % (y_str, m_str, d_str)
+    date_id = '%s%s%s' % (y_str, m_str, d_str)
+    if date_id == '20210908':
+        return '20210907'
+    return date_id    
 
 
 def _download_parse_single(pdf_url):

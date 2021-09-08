@@ -213,3 +213,4 @@ pip install covid19-nuuuwan
 * [2021-09-01 01:32PM] Analyze Mortality Curve
   * Updated README
   * Pre-Merge
+  * Fixed 20210907 PDF Name bug
