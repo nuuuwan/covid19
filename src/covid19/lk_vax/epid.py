@@ -46,7 +46,7 @@ def _get_pdf_urls():
 def _get_date_id(pdf_url):
     re_data = re.search(REGEX_DATE_ID, pdf_url)
     if not re_data:
-        return None
+        return '20210908'
     (y_str, m_str, d_str) = ds.dict_get(
         re_data.groupdict(),
         ['y_str', 'm_str', 'd_str'],
@@ -54,7 +54,7 @@ def _get_date_id(pdf_url):
     date_id = '%s%s%s' % (y_str, m_str, d_str)
     if date_id == '20210908':
         return '20210907'
-    return date_id    
+    return date_id
 
 
 def _download_parse_single(pdf_url):
