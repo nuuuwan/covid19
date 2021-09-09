@@ -19,7 +19,7 @@ URL_VAX_SUMMARY_LIST = os.path.join(
     'web/index.php?',
     'option=com_content&view=article&id=231&lang=en',
 )
-REGEX_DATE_ID = r'(?P<y_str>\d{4})-(?P<m_str>\d{2})_(?P<d_str>\d{2})'
+REGEX_DATE_ID = r'(?P<y_str>\d{4})-(?P<m_str>\d{2})_(?P<d_str>\d{2})(?P<prefix>.*)'
 LIMITED_TEST_MODE = False
 
 
@@ -46,14 +46,16 @@ def _get_pdf_urls():
 def _get_date_id(pdf_url):
     re_data = re.search(REGEX_DATE_ID, pdf_url)
     if not re_data:
-        return '20210908'
-    (y_str, m_str, d_str) = ds.dict_get(
+        return None
+    (y_str, m_str, d_str, prefix) = ds.dict_get(
         re_data.groupdict(),
-        ['y_str', 'm_str', 'd_str'],
+        ['y_str', 'm_str', 'd_str', 'prefix'],
     )
     date_id = '%s%s%s' % (y_str, m_str, d_str)
     if date_id == '20210908':
-        return '20210907'
+        if prefix == '':
+            return '20210907'
+        return '20210908'
     return date_id
 
 
