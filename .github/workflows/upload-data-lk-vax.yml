@@ -1,5 +1,5 @@
 
-name: Upload Data
+name: LK Vax - Upload Data - Manual
 
 on: workflow_dispatch
 
@@ -22,7 +22,7 @@ jobs:
         key: ${{ hashFiles('setup.py') }}-${{ hashFiles('dev-requirements.txt') }}
 
     - name: Install GhostScript
-      run: sudo apt install ghostscript python3-tk
+      run: sudo apt install --fix-missing ghostscript python3-tk
 
     - name: Test
       uses: nuuuwan/python-repo-test@v1
