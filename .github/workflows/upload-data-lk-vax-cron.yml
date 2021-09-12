@@ -1,5 +1,5 @@
 
-name: Upload Data on Cron
+name: LK Vax - Upload Data - Cron
 
 on:
   schedule:
@@ -27,7 +27,9 @@ jobs:
       uses: nuuuwan/python-repo-test@v1
 
     - name: Install GhostScript
-      run: sudo apt install ghostscript python3-tk
+      run: |
+        sudo apt-get update
+        sudo apt install --fix-missing ghostscript python3-tk
 
     - name: Run
       run: |
