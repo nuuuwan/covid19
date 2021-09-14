@@ -216,3 +216,4 @@ pip install covid19-nuuuwan
   * Fixed 20210907 PDF Name bug
   * Fixed 20210908_1 bug
   * Fixed 20210908_1 bug
+  * Updated upload
