@@ -1,0 +1,338 @@
+province	province_id	district	district_id	moh	moh_id	gnd	gnd_id	center	vaccine	dose1	dose2
+Western	LK-1	Colombo RDHS	LK-11	All MOH areas				MOH office 	Sinopharm	False	False
+Western	LK-1	CMC	LK-11	D1				Sugathadasa outdoor stadium+ mobile	Sinopharm	False	False
+Western	LK-1	CMC	LK-11	D1				mobile vaccination	Sinopharm	False	False
+Western	LK-1	CMC	LK-11	D2A				Gand mosque Rifai Thangal lane	Sinopharm	False	False
+Western	LK-1	CMC	LK-11	D4				MOH/MCH complex	Sinopharm	False	False
+Western	LK-1	CMC	LK-11	D5				mobile vaccination	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Dompe	MOH-12300			MOH Office	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Seeduwa	MOH-12062			Dawamottawa temple	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Kelaniya	MOH-12360			Dalugama clinic	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Gampaha	MOH-12240			Naga piriwen viharaya Ambaraluwa	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Katana	MOH-12061			MOH Office	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Katana	MOH-12061			Nayanalokagama P.S.	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Divulapitiya	MOH-12090			Sayakkaramulla Walukaramaya 	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Divulapitiya	MOH-12090			Aluthepola Temple 	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Divulapitiya	MOH-12090			Dunagaha Ranasinghe Vidyalaya 	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Divulapitiya	MOH-12090			Pinnakale Priyadarshanramaya 	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Divulapitiya	MOH-12090			Kudagammana Viharaya 	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Divulapitiya	MOH-12090			Godigamuwa Viharaya	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Negambo	MOH-12030			MC Negombo 	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Negambo	MOH-12030			Kadolkale Church 	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Negambo	MOH-12030			Wijerathnam Hindu Hall	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Mirigama	MOH-12120			Muddaragama C.D.	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Mahara	MOH-12330			Gongithota 	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Attanagalla	MOH-12270			Vidyananda piriwena	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Jaela				UC Clinic	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				CNTH Ragama	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DGH Gampaha	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DGH Negombo	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				BH Wathupitiwala	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				BH Kiribathgoda	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				BH Minuwangoda	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				BH Mirigama	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Udupila	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Pamunugama	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Biyagama 	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Dompe	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Divulapitiya	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Jaela	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Malwathuhiripitiya	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Radawana	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Akaragama	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Kandana	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				CH Welisara	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				Wijayakumarathunga Hospital	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				Faculty of Medicine Ragama	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Beruwala	MOH-13240			Central Clinic	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Beruwala	MOH-13240			Gnanissara Vidyalaya	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Beruwala	MOH-13240			D S senanayake Vidyalaya	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Beruwala	MOH-13240			Al hambra School	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Kalutara	MOH-13211			Central Clinic	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Kalutara	MOH-13211			Wettumkada Muslim Central college	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Kalutara	MOH-13211			DGH Kalutara	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Madurawala	MOH-13151			MOH Office Clinic	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Bandaragama	MOH-13060			Maithree Hall	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Bandaragama	MOH-13060			Walgama Saddhathissa Vidyalaya	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Bandaragama	MOH-13060			Mobile & MCH vaccination	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Dodangoda				Hayles BOI  Factory(2nd dose)	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Walallawita	MOH-13390			MOH  Office  meegagathenna 	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Mathugama	MOH-13272			Walagedara Clinic	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Bulathsinhala	MOH-13120			Bulathsinghala Auditorium	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Ingiriya	MOH-13100			MOH Ingiriya Mobile	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Millaniya 				MOH Office	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Bandaragama	MOH-13060			DH Bandaragama	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	DH Naboda				DH Naboda	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	BH Pimbura				BH Pimbura	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	DH Baduraliya				DH Baduraliya	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Ingiriya	MOH-13100			DH Ingiriya	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Mathugama	MOH-13272			DH Mathugama	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Bulathsinhala	MOH-13120			DH Bulathsinhala	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	DH Gonaduwa				DH Gonaduwa	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Panadura	MOH-13031			BH Panadura	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	DH Dodangoda				DH Dodangoda	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	DH Galpatha				DH Galpatha	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	DH Katugahahena				DH Katugahahena	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	DH Iththapana				DH Iththapana	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Baddegama	MOH-31270			Jolanka Garment + St Anthonis + Ginimellagaha school+ Town Hall Baddegama	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Balapitiya	MOH-31060			Kandegoda Vidyalya +Rajapaksha Vidyalaya	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Bope-Poddala	MOH-31420			Siridhamma College	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Elpitiya	MOH-31120			Ketandola Estate + Elpitiya Estate + Bentota Estate	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Gonapinuwala	MOH-31340			Manampita Temple and Vouge Tex Garment	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Rathgama	MOH-31362			Dharmadara Vidyalya + Sirisumna Vidyalya	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	TH Mahamodara				Vidyaloka college	Sinopharm	False	False
+Southern	LK-3	Matara	LK-32	Athuraliya	MOH-32151			MOH Office Athuraliya(9.00am - 11.30am)	Sinopharm	False	False
+Southern	LK-3	Matara	LK-32	Athuraliya	MOH-32151			Kuragalahama K.V. Athuraliya(12.00pm - 2.00pm)	Sinopharm	False	False
+Southern	LK-3	Matara	LK-32	Athuraliya	MOH-32151			Sadath M.V. Godapitiya Athuraliya(2.00pm - 4.00pm)	Sinopharm	False	False
+Southern	LK-3	Matara	LK-32	Devinuwara	MOH-32451			MOH Office Devinuwara(10.00am 12.00pm)	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Ambalantota	MOH-33150			MOH Office	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Angunukolapeles	MOH-33180			Divisional Hospital - Angunakolapelessa	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Hambantota	MOH-33120			MOH Office	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Lunugamvehera	MOH-33060			MOH Office	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Sooriyawewa	MOH-33030			MOH Office	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Tangalle	MOH-33330			MOH Office	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Tissamaharama	MOH-33090			MOH Office	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Weeraketiya	MOH-33210			MOH Office	Sinopharm	False	False
+Central	LK-2	Nuwara Eliya	LK-23	all MOH areas		Mop up programme		MOH office	Sinopharm	False	False
+Central	LK-2	Kandy	LK-21	Kandy MC		Bovala, Bogambara, deiyanwala, Hirassagala, Gatabe, Udabovala ( 20 - 29 y)		Pushpadana School	Moderna	True	False
+Central	LK-2	Kandy	LK-21	all MOH areas		Mop up programme		MOH office	Moderna	False	True
+Central	LK-2	Matale	LK-22	all MOH areas				MOH office	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Elapatha	MOH-91270	Magurugoda	LK-9127095	Hangamuwa School	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Elapatha	MOH-91270	Digana	LK-9127090	Hangamuwa School	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Elapatha	MOH-91270	Hangamuwa	LK-9127100	Hangamuwa School	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Opanayaka	MOH-91210	Metihakwala	LK-9121010	Matihakwala vidyalaya	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Opanayaka	MOH-91210	Polwattahena	LK-9121005	Polwaththahena temple	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Opanayaka	MOH-91210	Malmeekanda	LK-9121015	Malmeekanda near Bo tree	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Opanayaka	MOH-91210	Dandeniya	LK-9121065	Dandeniya vidyalaya	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Opanayaka	MOH-91210	Hunuwala South	LK-9121060	Dharmaraja vidyalaya	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Opanayaka	MOH-91210	Hallinna	LK-9121055	Dharmaraja vidyalaya	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Opanayaka	MOH-91210	Hunuwala North	LK-9121050	Hunuwala tamil school	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Weligepola	MOH-91450	Belimaliyadda	LK-9145060	Lendara Temple	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Weligepola	MOH-91450	Gangodagama	LK-9145035	Gangodagama prajashalawa	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Weligepola	MOH-91450	Handagiriya	LK-9145065	Handagiriya Vidyalaya	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Weligepola	MOH-91450	Medaganoya	LK-9145040	Medaganoya Dhammasena Vidyalaya	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Weligepola	MOH-91450	Thalagaskanda	LK-9145090	Thalagaskanda Prajashalawa	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Weligepola	MOH-91450	Udagangoda	LK-9145055	Pollamura Weerasekara Vidyalaya	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Weligepola	MOH-91450	Weligepola	LK-9145050	Weligepola Temple	Sinopharm	False	False
+Sabaragamuwa	LK-9	Ratnapura	LK-91	Weligepola	MOH-91450	Handagirigoda	LK-9145070	Handagirigoda Temple, Handagirigoda Prajashalawa& Handagirigoda Vidyalaya	Sinopharm	False	False
+Sabaragamuwa	LK-9	Kegalle	LK-92	Aranayaka	MOH-92091	Dippitiya	LK-9209155	Rajagiriya M.V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Aranayaka	MOH-92091	Keerapana	LK-9209165	Rajagiriya M.V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Aranayaka	MOH-92091	Duldeniya	LK-9209215	Dippitiya Malpa Viharaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Aranayaka	MOH-92091	Narangammana	LK-9209080	Dippitiya Malpa Viharaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Aranayaka	MOH-92091	Habalakkawa	LK-9209160	Bakulwala K.V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Aranayaka	MOH-92091	Thelleka	LK-9209230	Hakurugammana Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Aranayaka	MOH-92091	Hakurugammana	LK-9209235	Hakurugammana Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Bulathkohupitiya	MOH-92240	Lewala	LK-9224050	Yakella Vidyalaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Bulathkohupitiya	MOH-92240	Higgoda	LK-9212270	Thummuduna Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Bulathkohupitiya	MOH-92240	Rangalla	LK-9224060	Rangalle MV	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Bulathkohupitiya	MOH-92240	Uduwa	LK-9224070	Uduwa MV	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Bulathkohupitiya	MOH-92240	Puspane	LK-9224020	Thanthirimale temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Dehiovita	MOH-92300	Walpola	LK-9230030	Sapumalkanda Tamil school	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Dehiovita	MOH-92300	Dikella	LK-9212120	Dikella Tamil School	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Dehiovita	MOH-92300	Atulugama	LK-9230060	Atalugama Mayadunna Vidyalaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Dehiovita	MOH-92300	Atulugamwela	LK-9230055	Atalugama Mayadunna Vidyalaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Dehiovita	MOH-92300	Kanangama	LK-9230025	Atalugama Mayadunna Vidyalaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Dehiovita	MOH-92300	Magammana	LK-9230020	Magammana KV	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Dehiovita	MOH-92300	Eluwana	LK-9230015	Magammana KV	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Dehiovita	MOH-92300	Kurupetta	LK-9230005	Kurupaththa KV	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Deraniyagala	MOH-92330	Wattegedara	LK-9209090	Sewa Piyasa	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Deraniyagala	MOH-92330	Dodawatta	LK-9233020	Grama Niladhari Office	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Deraniyagala	MOH-92330	Rasnakkanda	LK-9233100	Sewa Piyasa	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Deraniyagala	MOH-92330	Anhettigama	LK-9233055	Anhettigama M.V	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Deraniyagala	MOH-92330	Polgaswatta	LK-9233070	Praja Shalawa	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Deraniyagala	MOH-92330	Deraniyagala South	LK-9233095	Purana wiharaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Galigamuwa	MOH-92150	Batuwatta	LK-9215015	Wattarama Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Galigamuwa	MOH-92150	Helamada	LK-9215005	Wattarama Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Galigamuwa	MOH-92150	Godapola	LK-9215010	Wattarama Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Galigamuwa	MOH-92150	Damunupola	LK-9215190	Damunupola Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Galigamuwa	MOH-92150	Aruggammana	LK-9215255	Arukgammana Vidyalaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Galigamuwa	MOH-92150	Karagala	LK-9215250	Arukgammana Vidyalaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Kegalle	MOH-92092	Meedeniya North	LK-9212205	Meedeniya V	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Kegalle	MOH-92092	Meedeniya South	LK-9212200	Meedeniya V	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Kegalle	MOH-92092	Ambanpitiya	LK-9212070	Ambanpitiya Temple 	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Aluthnuwara	LK-9206200	Aluthnuwara KV	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Kekirigoda	LK-9206190	Kekirigoda Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Ginihappitiya  East	LK-9206305	Palliporuwa Muslim Vidyalaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Ambaruppa	LK-9206310	Malolbowa Vidyalaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Thambavita	LK-9206270	Ambarregoda Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Makadawara	LK-9206105	Ganethenna Sudharsanarama Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Uda Makadawara	LK-9206095	Udamakadawara MV	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Ganethenna	LK-9206100	Awani Hotel	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Dehimaduwa	LK-9206070	Dehimaduwa Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Dodanthale	LK-9206155	Samarasekaramaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Uthuwankanda	LK-9206050	Uthuwankanda Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Hinguloya	LK-9206125	Shira Vidyalaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Weganthale	LK-9206005	Weganthale Vidyalaya	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Yatimahana	LK-9206010	Yatimahana Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Karapane	LK-9206035	Udumahana Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Dunugama Maliyadda	LK-9206030	Maliyadda KV	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Mawanella	MOH-92060	Randiwala	LK-9206090	Randiwala MV	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Rambukkana	MOH-92030	Gabbala North	LK-9203030	Kotawalla  K. V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Rambukkana	MOH-92030	Gabbala South	LK-9203035	Kotawalla  K. V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Rambukkana	MOH-92030	Kotawella	LK-9203105	Kotawalla  K. V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Rambukkana	MOH-92030	Parape South	LK-9203120	Parape  M.V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Rambukkana	MOH-92030	Parape North	LK-9203115	Parape  M.V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Rambukkana	MOH-92030	Kanugolla	LK-9203110	Parape  M.V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Rambukkana	MOH-92030	Udugama	LK-9203185	Thismalpola  V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Rambukkana	MOH-92030	Walgama	LK-9203075	Thismalpola  V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Rambukkana	MOH-92030	Yatagama	LK-9203195	Thismalpola  V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Rambukkana	MOH-92030	Thismalpola	LK-9203190	Thismalpola  V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Ruwanwella	MOH-92210	Medagoda	LK-9221190	Kudagama K.V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Ruwanwella	MOH-92210	Puranpotta	LK-9221130	Puranpotha K.V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Ruwanwella	MOH-92210	Gonagala West	LK-9221150	Gonagala M.V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Ruwanwella	MOH-92210	Mapitigama	LK-9221155	Mapitigama M.V.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Ruwanwella	MOH-92210	Amithirigala North	LK-9221140	Amithirigala North Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Warakapola	MOH-92180	Thalgama	LK-9218065	Beligala m.v.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Warakapola	MOH-92180	Egalla	LK-9218070	Beligala m.v.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Warakapola	MOH-92180	Kumbalgama	LK-9206250	Beligala m.v.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Warakapola	MOH-92180	Akwatta	LK-9218080	Kahambiliyawala k.v.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Warakapola	MOH-92180	Ihala kalugala		Kalugala Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Warakapola	MOH-92180	Kodapaluwa	LK-9218020	Kodapaluwa Praja Shalawa	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Warakapola	MOH-92180	Metiyagane	LK-9218060	Metiyagane k.v	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Warakapola	MOH-92180	Heliyagoda	LK-9218055	Metiyagane k.v	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Warakapola	MOH-92180	Waddeniya	LK-9218005	Waddeniya k.v.	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Warakapola	MOH-92180	Weniwellakaduwa	LK-9218015	Weniwellakaduwa Temple	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Yatiyanthota	MOH-92270	Jayavinda Gama	LK-9227045	Vee Oya School	AstraZeneca	False	True
+Sabaragamuwa	LK-9	Kegalle	LK-92	Yatiyanthota	MOH-92270	Parussella	LK-9227040	YNP Hotel	AstraZeneca	False	True
+North Western	LK-6	Kurunegala	LK-61	Giribawa	MOH-61030	Ihala Maradankadawala	LK-6103130	Samithi Shalawa	Sinopharm	False	False
+North Western	LK-6	Kurunegala	LK-61	Giribawa	MOH-61030	Solewewa	LK-6103080	2/4 School	Sinopharm	False	False
+North Western	LK-6	Kurunegala	LK-61	Maho		All GN Areas		MOH Office Maho	Sinopharm	False	False
+North Western	LK-6	Kurunegala	LK-61	Pannala	MOH-61780	All GN areas		MOH Office Pannala	Sinopharm	False	False
+North Western	LK-6	Kurunegala	LK-61	Polgahawela	MOH-61870			MOH Office Polgahawela	Sinopharm	False	False
+North Western	LK-6	Kurunegala	LK-61	Udubaddawa	MOH-61750			MOH Office Udubaddawa	Sinopharm	False	False
+North Western	LK-6	Kurunegala	LK-61	Ibbagamuwa	MOH-61300			MOH Office Ibbagamuwa	Sinopharm	False	False
+North Western	LK-6	Kurunegala	LK-61	PD Office		All GN Areas		MOH Office Kurunegala	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Wennappuwa	MOH-62450			MOH office	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Nattandiya	MOH-62420			BH Marawila	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Mahawewa	MOH-62390			Mudradevi Hall Mahawewa	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Madampe				MOH office	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Chilaw	MOH-62331			MOH office	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Mundalama	MOH-62180			MOH office	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Anamaduwa	MOH-62211			MOH office	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Arachchikattuwa	MOH-62300			MOH office	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Puttalam	MOH-62061			BH Puttalam	Sinopharm	False	False
+North Central	LK-7	Polonnaruwa	LK-72	Siripura		>30y		Maguldamana KV	Sinopharm	False	False
+North Central	LK-7	Polonnaruwa	LK-72	Siripura		Pregnant mothers		MOH office Siripura	Sinopharm	False	False
+North Central	LK-7	Polonnaruwa	LK-72	Aralaganwila		>30y		MOH Aralaganwila	Sinopharm	False	False
+Uva	LK-8	Moneragala	LK-82	Siyambalanduwa	MOH-82120	Dombagahawela	LK-8212160	Mo/Dombagahawela 	Sinopharm	False	False
+Uva	LK-8	Moneragala	LK-82	Siyambalanduwa	MOH-82120	Madugama	LK-8212130	Mo/Kiwleyaya KV	Sinopharm	False	False
+Uva	LK-8	Moneragala	LK-82	Monaragala	MOH-82091	mop ups 		MOH office	Sinopharm	False	False
+Uva	LK-8	Moneragala	LK-82	Wellawaya	MOH-82210			MOH office	Sinopharm	False	False
+Uva	LK-8	Moneragala	LK-82	Thanamalwila	MOH-82300			MOH office	Sinopharm	False	False
+Uva	LK-8	Moneragala	LK-82	Sevanagala	MOH-82330			MOH office	Sinopharm	False	False
+Uva	LK-8	Moneragala	LK-82	Madulla	MOH-82060			MOH office	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	BADULLA 				NO	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	BANDARAWELA				TRANING CENTER	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	ELLA 				MOH OFFICE 	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	ELLA 				BALLAKETUWA HOSPITAL 	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	ELLA 				DEMODARA HOSPITAL	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	GIRADURUKOTTE				MOH OFFICE 	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	HALDUMMULLA 				NO	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	HALIELA 				ETAMPITIYA HOSPITAL	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	HALIELA 				SPRINWELI HOSPITAL	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	HALIELA 				MOH HALIELA 	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	HAPUTHALE 				NO	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	KANDAKETIYA 				GALAUADA HOSPITAL 	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	KANDAKETIYA 				KANDAKETIYA HOSPITAL	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	LUNUGALA 				MOH LUNUGALA	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	MAHIYANGANAYA				MAHIYANGANAYA HOSPITAL	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	MEEGAHAKIWLA 				MEGASPITIYA COMMIUNTY HALL	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	PASSARA 				NO	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	RIDIMALIYADDA				NO	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	SORANATHOTA 				MOH OFFICE 	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	UVAPARANAGAMA 				KIRKILLS	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	WELIMADA				NO	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Chankanai	MOH-41060			"Kalainagar Community Center
+Supbramaniyam Vidyalayam"	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Chavakachcheri	MOH-41300			"J/NavatkuIy Maha Vidyalayam
+PHC Muruva npulo"	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Jaffna	MOH-41360			"Pasaiyoor Market
+Clinic Center, Suwamiyar Road"	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Karainagar				MOH Office, Karainagar & Mobile Vaccination	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Karaveddy	MOH-41211			"Kalaivani Community Centre, Maththony
+VathiryThamiI Manram C. Centre, Alvai South"	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Kayts	MOH-41031			MOH Office, Kayts	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Kopay	MOH-41180			"Idaikadu, Akkarai
+MOH Office, Kopay
+Valalai Clinic Center, Atchuvely"	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Maruthankerny				Mobile Vaccination in Maruthankerny PHI Area	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Nallur	MOH-41330			MOH Office, Nallur	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Point Pedro	MOH-41212			MOH Office, Point Pedro	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Sandilipay	MOH-41090			"Primary Health Care Center, Mathakal
+J/152 GS Office
+St. Antonys Church
+Uyarapulam Hall St. Jude Church"	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Tellipalai	MOH-41120			MOH Office, Tellipalai	Sinopharm	False	False
+Northern	LK-4	Jaffna	LK-41	Uduvil	MOH-41150			MOH Office Uduvil	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090	Vavuniya Town	LK-4309100	V/Vipulanantha Maha Vidyalayam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			V/Piramandu Maha Vidyalayam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			V/Tamil Madya Maha Vidyalayam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			V/Kanthapuram Vani Vidyalayam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			DH Poovarasankulam, Mannar Road	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			Pavatkulam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			DH Sithamparapuram	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			PMCU Omanthai	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			PMCU Navy	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090	Vavuniya Town North	LK-4309205	DH Puliyankulam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			DH Nedunkerny	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			PMCU Kanakarayankulam 	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			Nainamadu G.T.M.S	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			Kulavichchuddan Center	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			Olumadu G.T.M.S	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			Katkulam Center	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090	Cheddikulam	LK-4312080	Cheddikulam BH 	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			DH Poovarasankulam 	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			PMCU Ganeshapuram	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			DH Pavatkulam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			DH Neriyakulam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090	Vavuniya South		D.H.Mamaduwa	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			PMCU Bogaswewa 	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			V/ Parakum Maha Vidyalaya	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			DH Ulukkulam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			Madukantha Temple	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			Mobile	Sinopharm	False	False
+Northern	LK-4	Kilinochchi	LK-45	Karaichchi				MOH office	Sinopharm	False	False
+Northern	LK-4	Kilinochchi	LK-45	Karaichchi				Mobile (Thiruvaiyaru)	Sinopharm	False	False
+Northern	LK-4	Kilinochchi	LK-45	Karaichchi				Vanavil Garment	Sinopharm	False	False
+Northern	LK-4	Kilinochchi	LK-45	Poonakary	MOH-45120			DH Veravil	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai		Karaitivu		MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai		Sainthamaruthu 01	LK-5225005	MOH Office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai		Alayadivembu	LK-5239110	MOH Office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai		Navithanveli 02	LK-5216080	MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai		Ninthavur 24	LK-5230005	MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai				Mobile	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai		Thirukkovil 3	LK-5245050	MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai		Pothuvila	LK-6127130	MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai				Mobile	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai		Addalachchenai 02	LK-5233075	MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai		Akkaraipattu 9	LK-5239010	MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai		Kaluwana North	LK-2106335	MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai				BH Kalmunai north	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai		Kaluwana South	LK-2106330	MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai		Sammanthurai 08	LK-5218010	MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai				BH Sammanthural	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Kaluwanchikudy	MOH-51360	Periyakallar 1	LK-5136180	Periyakallar	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Kaluwanchikudy	MOH-51360	Periyakallar 1 South	LK-5136185	Periyakallar	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Kaluwanchikudy	MOH-51360	Periyakallar 2 West	LK-5136190	Periyakallar	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Kaluwanchikudy	MOH-51360	Periyakallar 1	LK-5136180	Periyakallar	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Kaluwanchikudy	MOH-51360	Periyakallar 3 South	LK-5136200	Periyakallar	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Kaluwanchikudy	MOH-51360	Periyakallar 2	LK-5136195	Periyakallar	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Kaluwanchikudy	MOH-51360	Thuraineelavanai North	LK-5136210	Periyakallar	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Kaluwanchikudy	MOH-51360	Thuraineelavanai North 1	LK-5136215	Periyakallar	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Kaluwanchikudy	MOH-51360	Thuraineelavanai Souith	LK-5136220	Periyakallar	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Kaluwanchikudy	MOH-51360	Thuraineelavanai South1	LK-5136225	Periyakallar	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Batticaloa	MOH-51180	Navatkudah	LK-5118220	Navatkudha Medthodyist  Church	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Batticaloa	MOH-51180	Kallady	LK-5118155	Vivekananda girls Sckool	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Batticaloa	MOH-51180	Iruthayapuram East	LK-5118095	Municipaal PeriSchool 	Sinopharm	False	False
+Eastern	LK-5	Trincomalee	LK-53	Eachchilampatru	MOH-53330	Iruthayapuram	LK-5327160	MOH Office	Sinopharm	False	False
+Eastern	LK-5	Trincomalee	LK-53	Gomarankadawala	MOH-53091			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Trincomalee	LK-53	Kanthale	MOH-53210			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Trincomalee	LK-53	Kinniya	MOH-53240			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Trincomalee	LK-53	Kuchchaveli	MOH-53061			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Trincomalee	LK-53	Kurinchakerny				MOH Office	Sinopharm	False	False
+Eastern	LK-5	Trincomalee	LK-53	Muthur	MOH-53272			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Trincomalee	LK-53	Padavisiripura				MOH Office	Sinopharm	False	False
+Eastern	LK-5	Trincomalee	LK-53	Seruvila	MOH-53152			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Trincomalee	LK-53	Thampalagamam	MOH-53180			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Trincomalee	LK-53	Trincomalee	MOH-53153			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Trincomalee	LK-53	Uppuveli	MOH-53154			MOH Office	Sinopharm	False	False
