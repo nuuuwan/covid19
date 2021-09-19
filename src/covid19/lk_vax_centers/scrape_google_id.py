@@ -13,7 +13,7 @@ URL_LOAD_TIME = 10
 
 def scrape_google_id():
     options = Options()
-    options.headless = False
+    options.headless = True
 
     driver = webdriver.Firefox(options=options)
 
