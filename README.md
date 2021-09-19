@@ -217,3 +217,4 @@ pip install covid19-nuuuwan
   * Fixed 20210908_1 bug
   * Fixed 20210908_1 bug
   * Updated upload
+  *  (2021-09-19-0650) Extended URL_LOAD_TIME = 20
