@@ -21,10 +21,14 @@ def scrape_pdf(date_id):
         return pdf_file
 
     google_drive_file_id = scrape_google_id.scrape_google_id()
+    if google_drive_file_id is None:
+        log.error('Invalid google_drive_file_id. Aborting.')
+        return False
+
     google_api_key = google_utils.get_google_api_key()
     if google_api_key is None:
         log.error('No google_api_key. Aborting.')
-        return
+        return False
 
     drive_service = build(
         'drive',
@@ -63,7 +67,7 @@ def scrape_pdf(date_id):
                 progress=(float)(status.progress()),
             )
         )
-    return pdf_file
+    return True
 
 
 if __name__ == '__main__':

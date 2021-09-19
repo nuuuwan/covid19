@@ -19,7 +19,9 @@ URL_VAX_SUMMARY_LIST = os.path.join(
     'web/index.php?',
     'option=com_content&view=article&id=231&lang=en',
 )
-REGEX_DATE_ID = r'(?P<y_str>\d{4})-(?P<m_str>\d{2})_(?P<d_str>\d{2})(?P<prefix>.*)'
+REGEX_DATE_ID = (
+    r'(?P<y_str>\d{4})-(?P<m_str>\d{2})_(?P<d_str>\d{2})(?P<prefix>.*)'
+)
 LIMITED_TEST_MODE = False
 
 
