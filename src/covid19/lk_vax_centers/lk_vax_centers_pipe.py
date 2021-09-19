@@ -1,4 +1,5 @@
 import sys
+
 from utils import timex
 
 from covid19.lk_vax_centers.expand import expand

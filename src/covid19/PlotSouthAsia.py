@@ -146,11 +146,8 @@ def _plot(field_key, label):
         date_id,
     )
     Infographic.Infographic(
-        title='{label} per {Q_PEOPLE:,} people ({moving_avg_window} day moving average)'.format(
-            label=label,
-            Q_PEOPLE=Q_PEOPLE,
-            moving_avg_window=moving_avg_window,
-        ),
+        title=f'{label} per {Q_PEOPLE:,} people ({moving_avg_window}'
+        + ' day moving average)',
         subtitle='COVID19 in South Asia (as of %s)' % date,
         footer_text='\n'.join(
             [

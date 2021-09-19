@@ -219,3 +219,4 @@ pip install covid19-nuuuwan
   * Updated upload
   *  (2021-09-19-0650) Extended URL_LOAD_TIME = 20
   *  (2021-09-19-0717) Fixed scrape_pdf bug
+  *  (2021-09-19-0720) Fixed various lint errors

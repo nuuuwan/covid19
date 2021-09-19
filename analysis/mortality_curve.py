@@ -1,4 +1,5 @@
 from utils import timex, tsv
+
 from covid19.lk_vax import epid
 
 WINDOW = 28

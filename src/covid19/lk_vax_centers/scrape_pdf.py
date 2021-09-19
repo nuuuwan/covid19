@@ -7,11 +7,8 @@ from googleapiclient.http import MediaIoBaseDownload
 from utils import timex
 
 from covid19._utils import log
-from covid19.lk_vax_centers import (
-    google_utils,
-    lk_vax_center_utils,
-    scrape_google_id,
-)
+from covid19.lk_vax_centers import (google_utils, lk_vax_center_utils,
+                                    scrape_google_id)
 
 
 def scrape_pdf(date_id):

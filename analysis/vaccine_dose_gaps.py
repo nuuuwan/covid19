@@ -2,7 +2,6 @@ import os
 import statistics
 
 import matplotlib.pyplot as plt
-
 from utils import timex, tsv
 
 from covid19.lk_vax import epid
