@@ -3,7 +3,7 @@ name: LK Vax - Upload Data - Cron
 
 on:
   schedule:
-    - cron:  "30 5 * * *"
+    - cron:  "30 7 * * *"
 
 jobs:
   upload-data:
