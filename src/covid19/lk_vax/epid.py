@@ -58,8 +58,12 @@ def _get_date_id(pdf_url):
         if prefix == '':
             return '20210907'
         return '20210908'
+
     if date_id == '20210923':
-        return '20210922'
+        if prefix == '':
+            return '20210922'
+        return '20210923'
+
     return date_id
 
 
