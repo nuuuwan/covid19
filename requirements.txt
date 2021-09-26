@@ -12,6 +12,6 @@ pypopulation
 scipy
 tablex-nuuuwan
 tabula-py
-tweepy
+tweepy==3.10.0
 utils-nuuuwan
 xlrd

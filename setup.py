@@ -28,7 +28,7 @@ setuptools.setup(
         'pypopulation',
         'utils-nuuuwan',
         'tablex-nuuuwan',
-        'tweepy',
+        'tweepy==3.10.0',
         'matplotlib',
         'numpy',
         'tabula-py',
