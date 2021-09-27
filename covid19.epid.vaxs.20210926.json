@@ -1,0 +1,17 @@
+{
+  "covishield_dose1": 1455310,
+  "covishield_dose2": 1210623,
+  "sinopharm_dose1": 11528574,
+  "sinopharm_dose2": 9195251,
+  "sputnik_dose1": 159089,
+  "sputnik_dose2": 153665,
+  "pfizer_dose1": 457816,
+  "pfizer_dose2": 291474,
+  "moderna_dose1": 790970,
+  "moderna_dose2": 759673,
+  "total_dose1": 14391759,
+  "total_dose2": 11610686,
+  "total": 26002445,
+  "date_id": "20210926",
+  "ut": 1632614400
+}
