@@ -1,0 +1,178 @@
+province	province_id	district	district_id	moh	moh_id	gnd	gnd_id	center	vaccine	dose1	dose2
+Western	LK-1	Colombo RDHS	LK-11	All MOH areas				MOH office 	Sinopharm	False	False
+Western	LK-1	Colombo RDHS	LK-11	Hospitals		Children with comorbidities		Colombo South Teaching Hospital	Pfizer	False	False
+Western	LK-1	Colombo RDHS	LK-11	Hospitals				Maharagama Apeksha hospital	Pfizer	False	False
+Western	LK-1	Colombo RDHS	LK-11	Hospitals				IDH	Pfizer	False	False
+Western	LK-1	Colombo RDHS	LK-11	Hospitals				Sri Jayawardenapura Teaching hospital	Pfizer	False	False
+Western	LK-1	Colombo RDHS	LK-11	Hospitals				Colombo East Base Hospital	Pfizer	False	False
+Western	LK-1	Colombo RDHS	LK-11	Hospitals				BH Awissawella	Pfizer	False	False
+Western	LK-1	Colombo RDHS	LK-11	Hospitals				BH Homagama	Pfizer	False	False
+Western	LK-1	Colombo RDHS	LK-11	Hospitals				Neville Fernandoo Hospital	Pfizer	False	False
+Western	LK-1	CMC	LK-11	D1				NBMH	Sinopharm	False	False
+Western	LK-1	CMC	LK-11	D2A				MOH/MCH complex	Sinopharm	False	False
+Western	LK-1	CMC	LK-11	D2B				Forbes Rd Community center	Sinopharm	False	False
+Western	LK-1	CMC	LK-11	Hospitals 				LRH- 	Pfizer	False	False
+Western	LK-1	Gampaha	LK-12	All MOH areas				MOH office	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals		Pfizer for children 12 - 19 with comorbidities		CNTH Ragama	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DGH Gampaha	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DGH Negombo	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				BH Wathupitiwala	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				BH Kiribathgoda	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				BH Minuwangoda	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				BH Mirigama	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Udupila	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Pamunugama	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Biyagama 	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Dompe	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Divulapitiya	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Jaela	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Malwathuhiripitiya	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Radawana	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Akaragama	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				DH Kandana	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				CH Welisara	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				Wijayakumarathunga Hospital	Sinopharm	False	False
+Western	LK-1	Gampaha	LK-12	Hospitals				Faculty of Medicine Ragama	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Kalutara	MOH-13211			Gangarama Temple	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Kalutara	MOH-13211			Kalutara North Clinic	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Kalutara	MOH-13211			Deshastra GS Office	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Kalutara	MOH-13211			German Temple	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Hospitals		Children with comorbidities		DGH Kalutara	Pfizer	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Beruwala	MOH-13240			mobile vaccination	Sinopharm	False	False
+Western	LK-1	Kalutara NIHS	LK-13	Beruwala	MOH-13240			central clinic Beruwala	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Madurawala	MOH-13151			MOH Office	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Bandaragama	MOH-13060			Mobile Vaccination	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Dodangoda				Dodangoda Clinic Centre	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Wadduwa				Central clinic	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Mathugama	MOH-13272			MOH Clinic	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Mathugama	MOH-13272			Bopitiya /Vogan	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Bulathsinhala	MOH-13120			Cental clinic	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Agalawatta	MOH-13330			Cental clinic	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Millaniya 				Cental clinic	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Bandaragama	MOH-13060			DH Bandaragama	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	DH Naboda				DH Naboda	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Bulathsinhala	MOH-13120			DH Bulathsinhala	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	DH Galpatha				DH Galpatha	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	DH Katugahahena				DH Katugahahena	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	DH Iththapana				DH Iththapana	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	DH Gonaduwa				DH Gonaduwa	Sinopharm	False	False
+Western	LK-1	Kalutara	LK-13	Panadura	MOH-13031			BH Panadura	Pfizer	False	False
+Western	LK-1	Kalutara	LK-13	BH Pimbura				BH Pimbura	Pfizer	False	False
+Western	LK-1	Kalutara	LK-13	Horana	MOH-13090			BH Horana	Pfizer	False	False
+Southern	LK-3	Galle	LK-31	Akmeemana	MOH-31450			MOH Office	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Ambalangoda	MOH-31330			MOH Office	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Baddegama	MOH-31270			MOH office	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Balapitiya	MOH-31060			Moh office	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Bope-Poddala	MOH-31420			Moh Office (pregnant mothers)	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Gonapinuwala	MOH-31340			Moh office	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Habaraduwa	MOH-31540			Moh office	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Imaduwa	MOH-31510			Central Clinic	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Induruwa				Moh office	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Karandeniya	MOH-31090			Moh office	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Neluwa	MOH-31210			Lankagama School	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Niyagama	MOH-31150			Moh office ( pregnant mothers mop up )	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Rathgama	MOH-31362			moh office (all6 week days )	Sinopharm	False	False
+Southern	LK-3	Galle	LK-31	Welipitiya	MOH-32210			moh office+mobile vaccination	Sinopharm	False	False
+Southern	LK-3	Matara	LK-32	Thihagoda	MOH-32360			MOH Office Thihagoda	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Ambalantota	MOH-33150			MOH Office	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Angunukolapeles	MOH-33180			Divisional Hospital Angunakolapelessa	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Angunukolapeles	MOH-33180			Divisional Hospital Hakuruwela	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Angunukolapeles	MOH-33180			Divisional Hospital Kariyamadiththa	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Beliatta	MOH-33300			MOH Office	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Hambantota	MOH-33120			MOH Office	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Lunugamvehera	MOH-33060			MOH Office	Sinopharm	False	False
+Southern	LK-3	Hambantota	LK-33	Sooriyawewa	MOH-33030			MOH Office	Sinopharm	False	False
+Central	LK-2	Nuwara Eliya	LK-23	all MOH areas		Mop up programme		MOH office	Sinopharm	False	False
+Central	LK-2	Kandy	LK-21	all MOH areas				MOH office		False	True
+Central	LK-2	Matale	LK-22	all MOH areas				MOH office	Sinopharm	False	False
+Sabaragamuwa	LK-9	Kegalle	LK-92	Hospitals		Children with comorbidities		DGH Kegalle	Pfizer	False	False
+Sabaragamuwa	LK-9	Kegalle	LK-92	Hospitals				BH Mawanella	Pfizer	False	False
+Sabaragamuwa	LK-9	Kegalle	LK-92	Hospitals				BH Warakapola	Pfizer	False	False
+Sabaragamuwa	LK-9	Kegalle	LK-92	Hospitals				BH Karawanella	Pfizer	False	False
+Sabaragamuwa	LK-9	Kegalle	LK-92	All MOH areas				MOH office	AstraZeneca	False	True
+North Western	LK-6	Kurunegala	LK-61	Udubaddawa	MOH-61750	Kootharippuwa	LK-6175195	Kootharippuwa V.	Sinopharm	False	False
+North Western	LK-6	Kurunegala	LK-61	Udubaddawa	MOH-61750	Kumara Udawela	LK-6175215	Kumbukgahamulla V.	Sinopharm	False	False
+North Western	LK-6	Kurunegala	LK-61	Udubaddawa	MOH-61750	Kumbukgahamulla	LK-6175205	Kumbukgahamulla V.	Sinopharm	False	False
+North Western	LK-6	Kurunegala	LK-61	Udubaddawa	MOH-61750	Ilippugamuwa	LK-6175210	Kumbukgahamulla V.	Sinopharm	False	False
+North Western	LK-6	Kurunegala	LK-61	PDHS OFFICE				MOH Kurunegala	Sinopharm	False	False
+North Western	LK-6	Kurunegala	LK-61	Kurunegala	MOH-61540	Children with comorbidities		TH Kurunegala	Pfizer	False	False
+North Western	LK-6	Puttalam	LK-62	Nattandiya	MOH-62420			MOH Office	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Madampe				MOH Office	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Puttalam	MOH-62061			BH Puttalam	Pfizer	False	False
+North Western	LK-6	Puttalam	LK-62	Anamaduwa	MOH-62211			MOH Office	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Mundalama	MOH-62180			MOH Office	Sinopharm	False	False
+North Western	LK-6	Puttalam	LK-62	Dankotuwa	MOH-62480			mobile	Sinopharm	False	False
+North Central	LK-7	Anuradhapura	LK-71	NPC		Gambirigaswewa	LK-7115015	Gambirigaswewa vidyalaya	Sinopharm	False	False
+North Central	LK-7	Anuradhapura	LK-71	NPC		Helambagaswewa	LK-7109170	Gambirigaswewa vidyalaya	Sinopharm	False	False
+North Central	LK-7	Polonnaruwa	LK-72	Hingurakgoda	MOH-72030	Helabagaswewa		MOH office	Sinopharm	False	False
+North Central	LK-7	Polonnaruwa	LK-72	Siripura				MOH office	Sinopharm	False	False
+Uva	LK-8	Moneragala	LK-82	All MOH area				MOH office	Sinopharm	False	False
+Uva	LK-8	Moneragala	LK-82	All MOH area		Children with comorbidities		DGH Moneragala	Pfizer	False	False
+Uva	LK-8	Moneragala	LK-82	All MOH area				BH Bibile	Pfizer	False	False
+Uva	LK-8	Badulla	LK-81	BADULLA 				Training Center	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	GIRADURUKOTTE				DH GIRADURUKOTTE	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	HALIELA				MOH Office	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	UVAPARANAGAMA 				MOH office	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	KANDAKETIYA 				Kandaketiya Hospital	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	LUNUGALA 				MOH Office	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	SORANATHOTA 				MOH  office	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	WELIMADA				MALIGATHENNA COLLEGE 	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	WELIMADA				IDALGASHINNA RAILWAY STATION	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	WELIMADA				BOWA TEA FACTORY 	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	WELIMADA				ALBIYAN TEMIL COLLEGE 	Sinopharm	False	False
+Uva	LK-8	Badulla	LK-81	Hospitals				PGH Badulla	Pfizer	False	False
+Uva	LK-8	Badulla	LK-81	Hospitals				BH Diyathalawa	Pfizer	False	False
+Northern	LK-4	Mullaitivu	LK-44	Mullaitivu	MOH-44150			Kallappadu GTMS	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			V/Vipulanantha Maha Vidyalayam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			V/Piramandu Maha Vidyalayam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			V/Tamil Madya Maha Vidyalayam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			V/Kanthapuram Vani Vidyalayam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			DH Poovarasankulam, Mannar Road	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			Pavatkulam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			DH Sithamparapuram	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			PMCU Omanthai	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya	MOH-43090			PMCU Navy	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya North	MOH-43031			DH Puliyankulam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya North	MOH-43031			DH Nedunkerny	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya North	MOH-43031			PMCU Kanakarayankulam 	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya North	MOH-43031			Nainamadu G.T.M.S	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya North	MOH-43031			Kulavichchuddan Center	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya North	MOH-43031			Olumadu G.T.M.S	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya North	MOH-43031			Katkulam Center	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Cheddikulam	MOH-43120			Cheddikulam BH 	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Cheddikulam	MOH-43120			DH Poovarasankulam 	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Cheddikulam	MOH-43120			PMCU Ganeshapuram	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Cheddikulam	MOH-43120			DH Pavatkulam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Cheddikulam	MOH-43120			DH Neriyakulam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya South	MOH-43060			D.H.Mamaduwa	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya South	MOH-43060			PMCU Bogaswewa 	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya South	MOH-43060			V/ Parakum Maha Vidyalaya	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya South	MOH-43060			DH Ulukkulam	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya South	MOH-43060			Madukantha Temple	Sinopharm	False	False
+Northern	LK-4	Vavuniya	LK-43	Vavuniya South	MOH-43060			Mobile	Sinopharm	False	False
+Northern	LK-4	Kilinochchi	LK-45	Karaichchi				MOH office	Sinopharm	False	False
+Northern	LK-4	Kilinochchi	LK-45	Kilinochchi	MOH-45090			DGH Killinochchi	Pfizer	False	False
+Northern	LK-4	Mannar	LK-42	All MOH areas				All MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Irakkamam	MOH-52340			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Karaithivu	MOH-52270			Mobile	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Karaithivu	MOH-52270			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Alayadivembu	MOH-52390			Mobile	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Alayadivembu	MOH-52390			RKM College	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Navithanveli	MOH-52160			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Thirukkovil	MOH-52450			MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai North				BH Kalmunai North	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai North				MOH Office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Sainthamaruthu	MOH-52250			MOH office 	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Ninthavur	MOH-52300			MOH office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Pottuvil	MOH-52480			BH Pottuvil	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Pottuvil	MOH-52480			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Pottuvil	MOH-52480			PMCU Komary	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Pottuvil	MOH-52480			Kavivanan Azeez Vid	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Akkaraipattu	MOH-52360			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Addachchenai	MOH-52330			MOH Office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Kalmunai South				MOH Office	Sinopharm	False	False
+Eastern	LK-5	Kalmunai		Sammanthurai	MOH-52180			BH Sammanthurai	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Arayampathy	MOH-51270			MOH Office Arayampathy	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Vakarai	MOH-51030			Rithithenna School	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Vakarai	MOH-51030			Jenthiyaya Clinic center	Sinopharm	False	False
+Eastern	LK-5	Batticaloa	LK-51	Vakarai	MOH-51030			Punanai preSchool	Sinopharm	False	False
