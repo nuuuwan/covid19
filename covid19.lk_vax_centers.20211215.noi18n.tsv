@@ -1,0 +1,155 @@
+district	police	center	dose1	dose2	fuzzy_key	alt_name	district_name_norm	district_id	district_lat	district_lng	ps_name_norm	ps_id	ps_lat	ps_lng	lat	lng	formatted_address	dis_center_to_police	tags
+District / Institution	Police Area	Vaccination Centre Name	False	False	DSTRCTNSTTTNPLCRVCCNTNCNTRNM														#CenterLocationUnknown
+Colombo	Cinnamon Gardens	Viharamahadevi Park	False	False	CLMBCNNMNGRDNSVHRMHDVPRK		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Borella	Lady Ridgeway Hospital	False	False	CLMBBRLLLDYRDGWYHSPTL		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Narahenpita	Army Hospital - Narahenpita	False	False	CLMBNRHNPTRMYHSPTLNRHNPT		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Mt Lavainia	Garden Road Children and Maternity Clinic	False	False	CLMBMTLVNGRDNRDCHLDRNNDMTRNTYCLNC		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Mt Lavainia	Attidiya Maternity Clinic	False	False	CLMBMTLVNTTDYMTRNTYCLNC		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Grandpass	Fouzi Maternity Clinic	False	False	CLMBGRNDPSSFZMTRNTYCLNC		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Homagama	Panagoda Bodhiraja Viharaya	False	False	CLMBHMGMPNGDBDHRJVHRY		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Foreshore	MOH Office - Jinthupitiya	False	False	CLMBFRSHRMHFFCJNTHPTY		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Boralesgamuwa	Kotelawala Defence Hospital	False	False	CLMBBRLSGMWKTLWLDFNCHSPTL		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Thalangama	MOH Office - Battaramulla	False	False	CLMBTHLNGMMHFFCBTTRMLL		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Mirihana	MOH Office - Beddagana	False	False	CLMBMRHNMHFFCBDDGN		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Welikada	Diyatha Uyana	False	False	CLMBWLKDDYTHYN		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Wellampitiya	MOH Office - Kolonnawa	False	False	CLMBWLLMPTYMHFFCKLNNW		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Mulleriyawa	MOH Office - Gothatuwa	False	False	CLMBMLLRYWMHFFCGTHTW		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Kaduwela	MOH Office - Kaduwela	False	False	CLMBKDWLMHFFCKDWL		Colombo	LK-11	6.869685	80.019739	Kaduwela		6.936234	79.970183	6.934127	79.984398	B263, Kaduwela, Sri Lanka	1.586964	
+Colombo	Kosgama	Kosgama Hospital	False	False	CLMBKSGMKSGMHSPTL		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Colombo	Avissawella	BOI – Seethawaka	False	False	CLMBVSSWLLBSTHWK		Colombo	LK-11	6.869685	80.019739									#PoliceLocationUnknown
+Gampaha	Gampaha	Arambagodella Temple	False	False	GMPHGMPHRMBGDLLTMPL		Gampaha	LK-12	7.123584	80.018436									#PoliceLocationUnknown
+Gampaha	Attanagalla	Bopetta Viveka Senasanaya	False	False	GMPHTTNGLLBPTTVVKSNSNY		Gampaha	LK-12	7.123584	80.018436									#PoliceLocationUnknown
+Gampaha	Nittambuwa	BOI – Malwatta	False	False	GMPHNTTMBWBMLWTT		Gampaha	LK-12	7.123584	80.018436									#PoliceLocationUnknown
+Gampaha	Pallewela	Bubula Viharaya	False	False	GMPHPLLWLBBLVHRY		Gampaha	LK-12	7.123584	80.018436									#PoliceLocationUnknown
+Gampaha	Pallewela	Veragoda Viharaya	False	False	GMPHPLLWLVRGDVHRY		Gampaha	LK-12	7.123584	80.018436									#PoliceLocationUnknown
+Gampaha	Mirigama	Kandagamuwa Viharaya	False	False	GMPHMRGMKNDGMWVHRY		Gampaha	LK-12	7.123584	80.018436									#PoliceLocationUnknown
+Gampaha	Ganemulla	Bollatha Sri Bodhi Viharaya	False	False	GMPHGNMLLBLLTHSRBDHVHRY		Gampaha	LK-12	7.123584	80.018436									#PoliceLocationUnknown
+Gampaha	Pugoda	MOH Office – Dompe	False	False	GMPHPGDMHFFCDMP		Gampaha	LK-12	7.123584	80.018436									#PoliceLocationUnknown
+Gampaha	Minuwangoda	Minuwangoda Town Hall	False	False	GMPHMNWNGDMNWNGDTWNHLL		Gampaha	LK-12	7.123584	80.018436									#PoliceLocationUnknown
+Kalutara	Bandaragama	District Hospital Bandaragama	False	False	KLTRBNDRGMDSTRCTHSPTLBNDRGM		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Bandaragama	Bodhirukkarama Viharaya	False	False	KLTRBNDRGMBDHRKKRMVHRY		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Bandaragama	Bandaragama Maithri Hall	False	False	KLTRBNDRGMBNDRGMMTHRHLL		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Panadura	Base Hospital - Panadura	False	False	KLTRPNDRBSHSPTLPNDR		Kalutara	LK-13	6.577363	80.127416	Panadura North		6.756309	79.898939	6.721556	79.906851	A2, Panadura, Sri Lanka	3.963137	
+Kalutara	Anguruwatota	MOH Office - Madurawala	False	False	KLTRNGRWTTMHFFCMDRWL		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Ingiriya	Divisional Hospital - Ingiriya	False	False	KLTRNGRYDVSNLHSPTLNGRY		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Dodangoda	MOH Office - Dodangoda	False	False	KLTRDDNGDMHFFCDDNGD	6.540366199937832,80.03661033076219	Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Dodangoda	Divisional Hospital - Dodangoda	False	False	KLTRDDNGDDVSNLHSPTLDDNGD		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Beruwala	MOH Office - Beruwala	False	False	KLTRBRWLMHFFCBRWL		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Thebuwana	Nebada Hospital	False	False	KLTRTHBWNNBDHSPTL		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Wadduwa	Kalapugama Temple	False	False	KLTRWDDWKLPGMTMPL		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Millaniya	Millaniya Pradeshiya Sabha Office	False	False	KLTRMLLNYMLLNYPRDSHYSBHFFC		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Millaniya	Millaniya Fantasia Factory	False	False	KLTRMLLNYMLLNYFNTSFCTRY		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Matugama	Weththewa Hospital	False	False	KLTRMTGMWTHTHWHSPTL		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kalutara	Agalawatta	District Hospital Pimbura	False	False	KLTRGLWTTDSTRCTHSPTLPMBR		Kalutara	LK-13	6.577363	80.127416	Agalawatta		6.542566	80.157178	6.575506	80.158558	Nagoda - Kalawellawa - Bellapitiya Rd, Sri Lanka	3.667083	
+Kalutara	Horana	Base Hospital - Horana	False	False	KLTRHRNBSHSPTLHRN		Kalutara	LK-13	6.577363	80.127416									#PoliceLocationUnknown
+Kurunegala	Nikaweratiya	MOH Office - Nikaweratiya	False	False	KRNGLNKWRTYMHFFCNKWRTY		Kurunegala	LK-61	7.664752	80.236782									#PoliceLocationUnknown
+Kurunegala	Rasnayakapura	MOH Office - Rasnayakapura	False	False	KRNGLRSNYKPRMHFFCRSNYKPR		Kurunegala	LK-61	7.664752	80.236782									#PoliceLocationUnknown
+Kurunegala	Kotawehera	MOH Office - Kotawehera	False	False	KRNGLKTWHRMHFFCKTWHR		Kurunegala	LK-61	7.664752	80.236782									#PoliceLocationUnknown
+Puttalam	Dankotuwa	Katukenda Vidyalaya	False	False	PTTLMDNKTWKTKNDVDYLY		Puttalam	LK-62	7.973502	79.91392									#PoliceLocationUnknown
+Puttalam	Koswatta	Pothuwatana Community Hall	False	False	PTTLMKSWTTPTHWTNCMMNTYHLL		Puttalam	LK-62	7.973502	79.91392									#PoliceLocationUnknown
+Puttalam	Marawila	MOH Office - Mahawewa	False	False	PTTLMMRWLMHFFCMHWW		Puttalam	LK-62	7.973502	79.91392									#PoliceLocationUnknown
+Puttalam	Marawila	MOH Office - Nattandiya	False	False	PTTLMMRWLMHFFCNTTNDY		Puttalam	LK-62	7.973502	79.91392									#PoliceLocationUnknown
+Puttalam	Gampola	National Heritage Center	False	False	PTTLMGMPLNTNLHRTGCNTR		Puttalam	LK-62	7.973502	79.91392									#PoliceLocationUnknown
+Kandy	Nawalapitiya	MOH Office - Thispane	False	False	KNDYNWLPTYMHFFCTHSPN		Kandy	LK-21	7.273339	80.709712									#PoliceLocationUnknown
+Matale	Matale	Warakamura Hela Klodeen Garment Factory	False	False	MTLMTLWRKMRHLKLDNGRMNTFCTRY		Matale	LK-22	7.667594	80.730964									#PoliceLocationUnknown
+Matale	Matale	Kavatayamuna Viharaya	False	False	MTLMTLKVTYMNVHRY		Matale	LK-22	7.667594	80.730964									#PoliceLocationUnknown
+Matale	Galewela	Galewela Government Hospital	False	False	MTLGLWLGLWLGVRNMNTHSPTL		Matale	LK-22	7.667594	80.730964									#PoliceLocationUnknown
+Matale	Galewela	Nagolla Viharaya	False	False	MTLGLWLNGLLVHRY		Matale	LK-22	7.667594	80.730964									#PoliceLocationUnknown
+Matale	Dambulla	Lenadora Government Hospital	False	False	MTLDMBLLLNDRGVRNMNTHSPTL		Matale	LK-22	7.667594	80.730964									#PoliceLocationUnknown
+Matale	Dambulla	MOH Office - Dambulla	False	False	MTLDMBLLMHFFCDMBLL		Matale	LK-22	7.667594	80.730964									#PoliceLocationUnknown
+Matale	Wilgamuwa	MOH Office - Wilgamuwa	False	False	MTLWLGMWMHFFCWLGMW		Matale	LK-22	7.667594	80.730964									#PoliceLocationUnknown
+Galle	Nagoda	Unnavitiya Vijayarama Viharaya	False	False	GLLNGDNNVTYVJYRMVHRY		Galle	LK-31	6.222873	80.252034									#PoliceLocationUnknown
+Galle	Yakkalamulla	Udumalagala Gangarama Viharaya	False	False	GLLYKKLMLLDMLGLGNGRMVHRY		Galle	LK-31	6.222873	80.252034									#PoliceLocationUnknown
+Galle	Poddala	Godakanda Sunandaramaya	False	False	GLLPDDLGDKNDSNNDRMY		Galle	LK-31	6.222873	80.252034									#PoliceLocationUnknown
+Galle	Hunugalla	Pathiraja Community Hall	False	False	GLLHNGLLPTHRJCMMNTYHLL		Galle	LK-31	6.222873	80.252034									#PoliceLocationUnknown
+Galle	Akmeemana	Bataduwa D.S.I Factory	False	False	GLLKMMNBTDWDSFCTRY		Galle	LK-31	6.222873	80.252034									#PoliceLocationUnknown
+Galle	Galle	Kaluwella International Buddhist Centre	False	False	GLLGLLKLWLLNTRNTNLBDDHSTCNTR		Galle	LK-31	6.222873	80.252034									#PoliceLocationUnknown
+Galle	Habaraduwa	BOI – Koggala	False	False	GLLHBRDWBKGGL		Galle	LK-31	6.222873	80.252034									#PoliceLocationUnknown
+Galle	Karandeniya	MOH Office - Karandeniya	False	False	GLLKRNDNYMHFFCKRNDNY		Galle	LK-31	6.222873	80.252034									#PoliceLocationUnknown
+Galle	Baddegama	Hamingala Community Hall	False	False	GLLBDDGMHMNGLCMMNTYHLL		Galle	LK-31	6.222873	80.252034									#PoliceLocationUnknown
+Matara	Rotumba	Pasgoda Regional Secretariat	False	False	MTRRTMBPSGDRGNLSCRTRT		Matara	LK-32	6.142819	80.540032									#PoliceLocationUnknown
+Matara	Dikwella	Godauda Viharaya	False	False	MTRDKWLLGDDVHRY		Matara	LK-32	6.142819	80.540032									#PoliceLocationUnknown
+Matara	Hakmana	Ellewela Viharaya	False	False	MTRHKMNLLWLVHRY		Matara	LK-32	6.142819	80.540032									#PoliceLocationUnknown
+Matara	Hakmana	Narawella Henri Ariyarathna Maha Vidyalaya	False	False	MTRHKMNNRWLLHNRRYRTHNMHVDYLY		Matara	LK-32	6.142819	80.540032									#PoliceLocationUnknown
+Matara	Weligama	Loadstar Tyre company	False	False	MTRWLGMLDSTRTYRCMPNY		Matara	LK-32	6.142819	80.540032									#PoliceLocationUnknown
+Hambantota	Hambantota	MOH Office - Hambantota	False	False	HMBNTTHMBNTTMHFFCHMBNTT		Hambantota	LK-33	6.259794	81.098488									#PoliceLocationUnknown
+Hambantota	Ambalantota	MOH Office - Ambalantota	False	False	HMBNTTMBLNTTMHFFCMBLNTT		Hambantota	LK-33	6.259794	81.098488									#PoliceLocationUnknown
+Hambantota	Katuwana	Katuwana Viharaya	False	False	HMBNTTKTWNKTWNVHRY		Hambantota	LK-33	6.259794	81.098488									#PoliceLocationUnknown
+Hambantota	Katuwana	Bukendayaya Viharaya	False	False	HMBNTTKTWNBKNDYYVHRY		Hambantota	LK-33	6.259794	81.098488									#PoliceLocationUnknown
+Hambantota	Katuwana	Siyarapitiya Community Hall	False	False	HMBNTTKTWNSYRPTYCMMNTYHLL		Hambantota	LK-33	6.259794	81.098488									#PoliceLocationUnknown
+Hambantota	Katuwana	Nakandawala Viharaya	False	False	HMBNTTKTWNNKNDWLVHRY		Hambantota	LK-33	6.259794	81.098488									#PoliceLocationUnknown
+Hambantota	Beliatta	Beligalla Government Hospital	False	False	HMBNTTBLTTBLGLLGVRNMNTHSPTL		Hambantota	LK-33	6.259794	81.098488									#PoliceLocationUnknown
+Hambantota	Sooriyawewa	MOH Office - Sooriyawewa	False	False	HMBNTTSRYWWMHFFCSRYWW		Hambantota	LK-33	6.259794	81.098488									#PoliceLocationUnknown
+Moneragala	Monaragala	MOH Office - Monaragala	False	False	MNRGLMNRGLMHFFCMNRGL		Moneragala	LK-82	6.787468	81.303753									#PoliceLocationUnknown
+Moneragala	Monaragala	Community Hall- Monaragala	False	False	MNRGLMNRGLCMMNTYHLLMNRGL		Moneragala	LK-82	6.787468	81.303753									#PoliceLocationUnknown
+Moneragala	Badalkumbura	Nishshanka National College	False	False	MNRGLBDLKMBRNSHSHNKNTNLCLLG		Moneragala	LK-82	6.787468	81.303753									#PoliceLocationUnknown
+Moneragala	Bibile	Cultural Hall	False	False	MNRGLBBLCLTRLHLL		Moneragala	LK-82	6.787468	81.303753									#PoliceLocationUnknown
+Rathnapura	Weligepola	Paragahamadiththa Viharaya	False	False	RTHNPRWLGPLPRGHMDTHTHVHRY		Ratnapura	LK-91	6.586845	80.566165									#PoliceLocationUnknown
+Rathnapura	Weligepola	Ilukkumbura Viharaya	False	False	RTHNPRWLGPLLKKMBRVHRY		Ratnapura	LK-91	6.586845	80.566165									#PoliceLocationUnknown
+Rathnapura	Balangoda	Meddekanda Viharaya	False	False	RTHNPRBLNGDMDDKNDVHRY		Ratnapura	LK-91	6.586845	80.566165									#PoliceLocationUnknown
+Rathnapura	Balangoda	Vijinathkumbura Viharaya	False	False	RTHNPRBLNGDVJNTHKMBRVHRY		Ratnapura	LK-91	6.586845	80.566165									#PoliceLocationUnknown
+Rathnapura	Opanayaka	Hattella Health Centre	False	False	RTHNPRPNYKHTTLLHLTHCNTR		Ratnapura	LK-91	6.586845	80.566165									#PoliceLocationUnknown
+Rathnapura	Opanayaka	Hunuwala Tea Factory	False	False	RTHNPRPNYKHNWLTFCTRY		Ratnapura	LK-91	6.586845	80.566165									#PoliceLocationUnknown
+Rathnapura	Opanayaka	Polwattahena Viharaya	False	False	RTHNPRPNYKPLWTTHNVHRY		Ratnapura	LK-91	6.586845	80.566165									#PoliceLocationUnknown
+Rathnapura	Pinnawala	Gurubewila Viharaya	False	False	RTHNPRPNNWLGRBWLVHRY		Ratnapura	LK-91	6.586845	80.566165									#PoliceLocationUnknown
+Anuradhapura	Anuradhapura	Walisinghe Harischandra Ground	False	False	NRDHPRNRDHPRWLSNGHHRSCHNDRGRND		Anuradhapura	LK-71	8.39199	80.512962									#PoliceLocationUnknown
+Anuradhapura	Anuradhapura	MOH Office - Nuwaragampalatha Central	False	False	NRDHPRNRDHPRMHFFCNWRGMPLTHCNTRL		Anuradhapura	LK-71	8.39199	80.512962									#PoliceLocationUnknown
+Anuradhapura	Anuradhapura	MOH Office - Nuwaragampalatha East	False	False	NRDHPRNRDHPRMHFFCNWRGMPLTHST		Anuradhapura	LK-71	8.39199	80.512962									#PoliceLocationUnknown
+Anuradhapura	Mahavilachchiya	MOH Office - Mahavilachchiya	False	False	NRDHPRMHVLCHCHYMHFFCMHVLCHCHY		Anuradhapura	LK-71	8.39199	80.512962									#PoliceLocationUnknown
+Anuradhapura	Mihintale	MOH Office - Mihintale	False	False	NRDHPRMHNTLMHFFCMHNTL		Anuradhapura	LK-71	8.39199	80.512962									#PoliceLocationUnknown
+Anuradhapura	Thirappane	MOH Office - Thirappane	False	False	NRDHPRTHRPPNMHFFCTHRPPN		Anuradhapura	LK-71	8.39199	80.512962									#PoliceLocationUnknown
+Anuradhapura	Point Pedro	MOH Office - Point Pedro	False	False	NRDHPRPNTPDRMHFFCPNTPDR		Anuradhapura	LK-71	8.39199	80.512962									#PoliceLocationUnknown
+Jaffna	Nelliyadi	MOH Office - Karaweddi	False	False	JFFNNLLYDMHFFCKRWDD		Jaffna	LK-41	9.691862	80.098229									#PoliceLocationUnknown
+Jaffna	Pooneryn	MOH Office - Pooneryn	False	False	JFFNPNRYNMHFFCPNRYN		Jaffna	LK-41	9.691862	80.098229	Pooneryn		9.505717	80.21101	9.507968	80.208317	G655+58P, Pooneryn, Sri Lanka	0.387256	
+Jaffna	Mulankavil	Base Hospital Mulankavil	False	False	JFFNMLNKVLBSHSPTLMLNKVL		Jaffna	LK-41	9.691862	80.098229									#PoliceLocationUnknown
+Jaffna	Palai	MOH Office - Palai	False	False	JFFNPLMHFFCPL		Jaffna	LK-41	9.691862	80.098229									#PoliceLocationUnknown
+Kilinochchi	Kilinochchi	MOH Office - Karachchi	False	False	KLNCHCHKLNCHCHMHFFCKRCHCH		Kilinochchi	LK-45	9.415768	80.30362									#PoliceLocationUnknown
+Kilinochchi	Kilinochchi	MOH Office - Kandavalai	False	False	KLNCHCHKLNCHCHMHFFCKNDVL		Kilinochchi	LK-45	9.415768	80.30362									#PoliceLocationUnknown
+Mullaitivu	Welioya	Divisional Hospital - Sampathnuwara	False	False	MLLTVWLYDVSNLHSPTLSMPTHNWR		Mullaitivu	LK-44	9.167644	80.549049									#PoliceLocationUnknown
+Mullaitivu	Mallavi	MOH Office - Mallavi	False	False	MLLTVMLLVMHFFCMLLV		Mullaitivu	LK-44	9.167644	80.549049									#PoliceLocationUnknown
+Mullaitivu	Mullaitivu	MOH Office - Mullaitivu	False	False	MLLTVMLLTVMHFFCMLLTV		Mullaitivu	LK-44	9.167644	80.549049									#PoliceLocationUnknown
+Mullaitivu	Oddusudhan	MOH Office - Oddusudhan	False	False	MLLTVDDSDHNMHFFCDDSDHN		Mullaitivu	LK-44	9.167644	80.549049									#PoliceLocationUnknown
+Trincomalee	Kinniya	MOH Office - Kinniya	False	False	TRNCMLKNNYMHFFCKNNY		Trincomalee	LK-53	8.551064	81.091792									#PoliceLocationUnknown
+Trincomalee	Kinniya	MOH Office - Kurugnankerni	False	False	TRNCMLKNNYMHFFCKRGNNKRN		Trincomalee	LK-53	8.551064	81.091792									#PoliceLocationUnknown
+Trincomalee	Harbour Police	MOH Office - Trincomalee	False	False	TRNCMLHRBRPLCMHFFCTRNCML		Trincomalee	LK-53	8.551064	81.091792									#PoliceLocationUnknown
+Trincomalee	Harbour Police	Base Hospital -Trincomalee	False	False	TRNCMLHRBRPLCBSHSPTLTRNCML		Trincomalee	LK-53	8.551064	81.091792									#PoliceLocationUnknown
+Trincomalee	Uppuveli	MOH Office - Uppuveli	False	False	TRNCMLPPVLMHFFCPPVL		Trincomalee	LK-53	8.551064	81.091792									#PoliceLocationUnknown
+Trincomalee	Ichchalampattu	MOH Office - Ichchalampattu	False	False	TRNCMLCHCHLMPTTMHFFCCHCHLMPTT	Eachchilampattu Hospital	Trincomalee	LK-53	8.551064	81.091792	Ichchalampattu		8.289549	81.359002	8.289644	81.358983	Highway, Ichchalampattu, Trincomalee, Sri Lanka	0.010772	
+Trincomalee	Serunuwara	MOH Office - Serunuwara	False	False	TRNCMLSRNWRMHFFCSRNWR		Trincomalee	LK-53	8.551064	81.091792									#PoliceLocationUnknown
+Trincomalee	Kantale	MOH Office - Kantale	False	False	TRNCMLKNTLMHFFCKNTL		Trincomalee	LK-53	8.551064	81.091792									#PoliceLocationUnknown
+Trincomalee	Gomarankadawala	MOH Office - Gomarankadawala	False	False	TRNCMLGMRNKDWLMHFFCGMRNKDWL		Trincomalee	LK-53	8.551064	81.091792									#PoliceLocationUnknown
+Trincomalee	Thambalagamuwa	MOH Office - Thambalagamuwa	False	False	TRNCMLTHMBLGMWMHFFCTHMBLGMW		Trincomalee	LK-53	8.551064	81.091792									#PoliceLocationUnknown
+Trincomalee	Thambalagamuwa	Al Hikma Muslim College	False	False	TRNCMLTHMBLGMWLHKMMSLMCLLG		Trincomalee	LK-53	8.551064	81.091792									#PoliceLocationUnknown
+Trincomalee	Muttur	MOH Office - Muttur	False	False	TRNCMLMTTRMHFFCMTTR		Trincomalee	LK-53	8.551064	81.091792									#PoliceLocationUnknown
+Batticaloa	Valachchenai	Base Hospital Valachchenai	False	False	BTTCLVLCHCHNBSHSPTLVLCHCHN		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Valachchenai	MOH Office - Valachchenai	False	False	BTTCLVLCHCHNMHFFCVLCHCHN		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Valachchenai	MOH Office - Navallady	False	False	BTTCLVLCHCHNMHFFCNVLLDY		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Valachchenai	MOH Office - Oddamavadi	False	False	BTTCLVLCHCHNMHFFCDDMVD		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Vakarai	MOH Office - Vakarai	False	False	BTTCLVKRMHFFCVKR	Divisional Hospital Vakarai	Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Kaluwanchikudy	Periyakallaru Pillayar Kovil Hall	False	False	BTTCLKLWNCHKDYPRYKLLRPLLYRKVLHLL		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Kaluwanchikudy	Base Hospital Kaluwanchikudy	False	False	BTTCLKLWNCHKDYBSHSPTLKLWNCHKDY		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Batticaloa	MOH Office - Batticaloa	False	False	BTTCLBTTCLMHFFCBTTCL		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Kattankudy	MOH Office - Kattankudy	False	False	BTTCLKTTNKDYMHFFCKTTNKDY		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Kattankudy	MOH Office - Arayampathy	False	False	BTTCLKTTNKDYMHFFCRYMPTHY		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Vavunathivu	MOH Office - Vavunathivu	False	False	BTTCLVVNTHVMHFFCVVNTHV		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Kokkadicholai	MOH Office - Pattipala	False	False	BTTCLKKKDCHLMHFFCPTTPL		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Vellavely	MOH Office - Vellavely	False	False	BTTCLVLLVLYMHFFCVLLVLY		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Eravur	Sandiveli Hospital	False	False	BTTCLRVRSNDVLHSPTL		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Eravur	MOH Office – Eravur	False	False	BTTCLRVRMHFFCRVR		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Eravur	Base Hospital Eravur	False	False	BTTCLRVRBSHSPTLRVR		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Eravur	Divisional Hospital Mawadiwembu	False	False	BTTCLRVRDVSNLHSPTLMWDWMB		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Eravur	MOH Office - Chenkaladi	False	False	BTTCLRVRMHFFCCHNKLD		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Eravur	Divisional Hospital Chenkaladi	False	False	BTTCLRVRDVSNLHSPTLCHNKLD		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Batticaloa	Karadiyanaru	Divisional Hospital Karadiyanaru	False	False	BTTCLKRDYNRDVSNLHSPTLKRDYNR		Batticaloa	LK-51	7.792541	81.486564									#PoliceLocationUnknown
+Ampara	Karaitivu	MOH Office – Karaitivu	False	False	MPRKRTVMHFFCKRTV		Ampara	LK-52	7.237331	81.550219	Karaitivu		9.744059	79.870587	7.377712	81.838796	Colombo-Ratnapura-Wellawaya-Batticaloa Highway, Karativu 32250, Sri Lanka	340.788666	#CenterFarFromPolice
+Ampara	Chavalakade	MOH Office - Navithanveli	False	False	MPRCHVLKDMHFFCNVTHNVL		Ampara	LK-52	7.237331	81.550219									#PoliceLocationUnknown
+Ampara	Sainthamarthu	MOH Office – Sainthamarthu	False	False	MPRSNTHMRTHMHFFCSNTHMRTH		Ampara	LK-52	7.237331	81.550219									#PoliceLocationUnknown
+Ampara	Kalmunai	MOH Office - Kalmunai South	False	False	MPRKLMNMHFFCKLMNSTH		Ampara	LK-52	7.237331	81.550219									#PoliceLocationUnknown
+Ampara	Kalmunai	MOH Office - Kalmunai North	False	False	MPRKLMNMHFFCKLMNNRTH		Ampara	LK-52	7.237331	81.550219									#PoliceLocationUnknown
+Ampara	Akkaraipattu	MOH Office – Addalachenai	False	False	MPRKKRPTTMHFFCDDLCHN		Ampara	LK-52	7.237331	81.550219									#PoliceLocationUnknown
+Ampara	Akkaraipattu	MOH Office - Alayadiwembu	False	False	MPRKKRPTTMHFFCLYDWMB		Ampara	LK-52	7.237331	81.550219									#PoliceLocationUnknown
+Ampara	Akkaraipattu	MOH Office - Akkaraipattu	False	False	MPRKKRPTTMHFFCKKRPTT		Ampara	LK-52	7.237331	81.550219									#PoliceLocationUnknown
+Ampara	Thirukkovil	Thirukkovil Hospital	False	False	MPRTHRKKVLTHRKKVLHSPTL		Ampara	LK-52	7.237331	81.550219									#PoliceLocationUnknown
+Ampara	Sammanthurai	MOH Office - Sammanthurai	False	False	MPRSMMNTHRMHFFCSMMNTHR		Ampara	LK-52	7.237331	81.550219									#PoliceLocationUnknown
+Ampara	Sammanthurai	Base Hospital - Sammanthurai	False	False	MPRSMMNTHRBSHSPTLSMMNTHR		Ampara	LK-52	7.237331	81.550219									#PoliceLocationUnknown
+Ampara	Sammanthurai	MOH Office - Nintavur	False	False	MPRSMMNTHRMHFFCNNTVR		Ampara	LK-52	7.237331	81.550219									#PoliceLocationUnknown
