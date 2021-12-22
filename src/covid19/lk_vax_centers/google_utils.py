@@ -9,7 +9,7 @@ from covid19.lk_vax_centers.lk_vax_center_constants import (CACHE_DIR,
 
 def get_google_api_key():
     """Construct Twitter from Args."""
-    parser = argparse.ArgumentParser(description='lk_vax_centers')
+    parser = argparse.ArgumentParser()
     parser.add_argument(
         '--google_api_key',
         type=str,

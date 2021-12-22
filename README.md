@@ -226,3 +226,4 @@ pip install covid19-nuuuwan
   *  [2021-09-24 05:43PM] Fixed 20210923 bug
   *  [2021-09-26 07:11PM] Changed tweepy version
   *  [2021-11-15 08:57AM] Removed Cron Workflows
+  *  [2021-12-22 08:59AM] More bugs
